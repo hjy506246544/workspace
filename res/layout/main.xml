@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:omni="http://com.gvs.hwcontrol/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:ignore="all" >
+
+    <com.gvs.hwcontrol.widget.Header
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:visibility="gone"
+    	android:background="@color/white"
+        android:orientation="vertical" />
+
+    <LinearLayout
+        android:id="@+id/mainll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+		android:layout_below="@id/header"
+        android:orientation="vertical" >
+
+        <FrameLayout
+	        android:id="@+id/contentll"
+	        android:layout_width="match_parent"
+           	android:layout_height="0dp"
+           	android:layout_weight="1.0"
+	        android:orientation="vertical" />
+
+	    <RadioGroup
+            android:id="@+id/hwcontrolrg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="7dp"
+            android:paddingBottom="7dp"
+	        android:background="@color/white">
+	        <RadioButton
+                android:id="@+id/wdyyrb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_launcher"
+                android:text="我的应用"
+                style="@style/app_medium_textStyle8"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:singleLine="true"
+                 />
+
+	        <RadioButton
+                android:id="@+id/txlrb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_launcher"
+                android:button="@null"
+                android:text="我的应用"
+                style="@style/app_medium_textStyle2"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:singleLine="true" />
+	        <RadioButton
+                android:id="@+id/bhjprb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_launcher"
+                android:button="@null"
+                android:text="我的应用"
+                style="@style/app_medium_textStyle2"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:singleLine="true" />
+	        <RadioButton
+                android:id="@+id/merb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/ic_launcher"
+                android:button="@null"
+                android:paddingRight="15dp"
+                android:text="我的应用"
+                style="@style/app_medium_textStyle2"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:singleLine="true"
+                android:checked="true" />
+
+	    </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>

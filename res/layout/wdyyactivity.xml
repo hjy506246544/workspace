@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:omni="http://fala.cellcom.com.cn/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg"
+    tools:ignore="all" >
+
+    <GridView
+	    android:id="@+id/listgv"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:dividerHeight="0dp"
+	    android:numColumns="3"
+	    android:layout_marginTop="20dp"
+	    android:listSelector="#00000000"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="10dp" />
+
+</RelativeLayout>
