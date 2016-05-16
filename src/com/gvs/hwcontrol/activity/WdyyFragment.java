@@ -53,7 +53,7 @@ public class WdyyFragment extends Fragment {
     // 设置信息
     private String[] info = new String[] {
     		"信息：该产品···", "信息：该产品好东西", "信息：该产品很好",
-    		"信息：该产品还不错", "信息：该产品···", "信息：该产品···",
+    		"信息：该产品不错", "信息：该产品···", "信息：该产品···",
     		"信息：该产品呵呵", "信息：该产品···", "信息：该产品···"};
     private List listitem = new ArrayList();
 
@@ -135,7 +135,8 @@ public class WdyyFragment extends Fragment {
 			@Override
 			public void onClick(View v) {
 				//打开手机自带系统设置界面
-				startActivity(new Intent(Settings.ACTION_SETTINGS));
+				//startActivity(new Intent(Settings.ACTION_SETTINGS));
+				startActivity(new Intent(mainActivity,SetActivity.class));
 
 			}
 		});

@@ -56,16 +56,20 @@ public class GridViewAdapter extends BaseAdapter {
 			view=LayoutInflater.from(parent.getContext()).inflate(R.layout.gridview, null);
 			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.iv_headview);
 			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.nametv);
+			viewHolder.statetv=(TextView) view.findViewById(R.id.statetv);
+			viewHolder.infotv=(TextView) view.findViewById(R.id.infotv);
 			view.setTag(R.drawable.ic_launcher,viewHolder);
 		}
 		holder=(ViewHolder) view.getTag(R.drawable.ic_launcher);
 		Map map = (Map) listitem.get(position);
 		holder.iv_headView.setImageResource((Integer) map.get("image"));
 		holder.tv_displerName.setText(map.get("title") + "");
+		holder.statetv.setText(map.get("state") + "");
+		holder.infotv.setText(map.get("info") + "");
 		return view;
 	}
 	public class ViewHolder{
 		ImageView iv_headView;
-		TextView tv_displerName;
+		TextView tv_displerName,statetv,infotv;
 	}
 }
