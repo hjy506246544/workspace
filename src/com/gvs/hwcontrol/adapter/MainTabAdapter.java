@@ -57,6 +57,7 @@ public class MainTabAdapter extends FragmentBase implements RadioGroup.OnChecked
 					fragmentActivity.header.setVisibility(View.GONE);
 //					fragmentActivity.header.setTitle("我的应用");
 					break;
+					/*
 				case R.id.txlrb:
 					fragmentActivity.header.setVisibility(View.GONE);
 					//fragmentActivity.header.setTitle("通讯录");
@@ -69,6 +70,7 @@ public class MainTabAdapter extends FragmentBase implements RadioGroup.OnChecked
 					fragmentActivity.header.setVisibility(View.GONE);
 					//fragmentActivity.header.setTitle("我的");
 					break;
+					*/
 				default:
 					break;
 				}

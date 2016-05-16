@@ -1,6 +1,6 @@
 package com.gvs.hwcontrol.activity;
-
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,13 +9,17 @@ import com.gvs.hwcontrol.adapter.GridViewAdapter;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 /**
  * 我的应用主界面
@@ -26,27 +30,21 @@ import android.widget.GridView;
 public class WdyyFragment extends Fragment {
 	private MainActivity mainActivity;
 	private GridView listgv;
+	private TextView timetv;
+	private ImageView setiv;
 	private GridViewAdapter gridViewAdapter;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher,
-            R.drawable.ic_launcher, R.drawable.ic_launcher};
+            R.drawable.main_dsj_, R.drawable.main_bx_,
+            R.drawable.main_cl_, R.drawable.main_dsj_,
+            R.drawable.main_bx_, R.drawable.main_cl_,
+            R.drawable.main_dsj_, R.drawable.main_bx_,
+            R.drawable.main_cl_};
     // 设置标题
     private String[] title = new String[] {
-    		"相机", "定位", "画笔", "视频", "声音",
-    		"相机", "相机", "定位", "画笔", "视频",
-             "声音", "相机","定位", "画笔", "视频",
-             "声音","定位", "画笔", "视频", "声音",
-             "相机", "定位"};
+    		"电视机", "冰箱", "窗帘",
+    		"电视机", "冰箱", "窗帘",
+    		"电视机", "冰箱", "窗帘"};
     private List listitem = new ArrayList();
 
 	@Override
@@ -69,8 +67,9 @@ public class WdyyFragment extends Fragment {
 
     private void initView(View view, Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-    	//textView = (TextView) view.findViewById(R.id.zjth);
+    	timetv = (TextView) view.findViewById(R.id.timetv);
 		listgv=(GridView) view.findViewById(R.id.listgv);
+		setiv = (ImageView) view.findViewById(R.id.setiv);
 	}
 
 	@Override
@@ -102,7 +101,29 @@ public class WdyyFragment extends Fragment {
 				}else if (position==4) {
 					Intent intent5  = new Intent(mainActivity,TestActivity.class);
 					startActivity(intent5);
+				}else if (position==5) {
+					Intent intent6  = new Intent(mainActivity,TestActivity.class);
+					startActivity(intent6);
+				}else if (position==6) {
+					Intent intent7  = new Intent(mainActivity,TestActivity.class);
+					startActivity(intent7);
+				}else if (position==7) {
+					Intent intent8  = new Intent(mainActivity,TestActivity.class);
+					startActivity(intent8);
+				}else if (position==8) {
+					Intent intent9  = new Intent(mainActivity,TestActivity.class);
+					startActivity(intent9);
 				}
+			}
+		});
+
+    	setiv.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				//打开手机自带系统设置界面
+				startActivity(new Intent(Settings.ACTION_SETTINGS));
+
 			}
 		});
 	}
@@ -115,14 +136,23 @@ public class WdyyFragment extends Fragment {
             map.put("title", title[i]);
             listitem.add(map);
         }
+
+        //获取当前系统时间
+		Calendar c = Calendar.getInstance();
+		int mYear = c.get(Calendar.YEAR);
+		int mMonth = c.get(Calendar.MONTH);
+		int mDay = c.get(Calendar.DAY_OF_MONTH);
+		int mHour = c.get(Calendar.HOUR_OF_DAY);
+		int mMinute = c.get(Calendar.MINUTE);
+		timetv.setText(mYear +
+        "年 " + mMonth +
+        "月 " + mDay +
+        "日  " + mHour +
+        ": " + mMinute);
+
 		gridViewAdapter=new GridViewAdapter(mainActivity,listitem);
 		listgv.setAdapter(gridViewAdapter);
 	}
-
-	@Override
-    public void onStart() {
-        super.onStart();
-    }
 
     @Override
     public void onResume() {

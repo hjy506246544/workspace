@@ -61,6 +61,7 @@
     <color name="translucent_2">#20000000</color>
     <color name="translucent_8">#80000000</color>
     <color name="translucent_9">#90000000</color>
+    <color name="translucent_3">#292421</color>
     <color name="grzlinput">#f3f3f3</color>
     <color name="qunqing">#4e72b8</color> <!-- 群青色 -->
     <color name="Translucent_black">#50000000</color> <!-- 半透明黑色 -->
@@ -141,4 +142,6 @@
     <color name="caldroid_holo_blue_dark">#ff0099cc</color>
     <!-- A really bright Holo shade of blue -->
     <color name="caldroid_sky_blue">#FFA3E8F7</color>
+
+    <color name="main_white">#ffffff</color>
 </resources>

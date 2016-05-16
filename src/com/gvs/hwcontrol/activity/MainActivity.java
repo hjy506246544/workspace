@@ -39,9 +39,9 @@ public class MainActivity extends FragmentActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         fragments.add(new WdyyFragment());
-        fragments.add(new TxlFragment());
-        fragments.add(new BhjpFragment());
-        fragments.add(new MeFragment());
+//        fragments.add(new TxlFragment());
+//        fragments.add(new BhjpFragment());
+//        fragments.add(new MeFragment());
 		initView();
 		initData();
 		initListener();
@@ -70,7 +70,9 @@ public class MainActivity extends FragmentActivityBase {
 					txlrb.setTextColor(getResources().getColor(R.color.gray));
 					bhjprb.setTextColor(getResources().getColor(R.color.gray));
 					merb.setTextColor(getResources().getColor(R.color.gray));
-				}else if(checkedId==R.id.txlrb){
+				}
+				/*
+				else if(checkedId==R.id.txlrb){
 					wdyyrb.setTextColor(getResources().getColor(R.color.gray));
 					txlrb.setTextColor(getResources().getColor(R.color.green));
 					bhjprb.setTextColor(getResources().getColor(R.color.gray));
@@ -86,6 +88,7 @@ public class MainActivity extends FragmentActivityBase {
 					bhjprb.setTextColor(getResources().getColor(R.color.gray));
 					merb.setTextColor(getResources().getColor(R.color.green));
 				}
+				*/
 			}
 		});
 	}

@@ -1,20 +1,22 @@
 package com.gvs.hwcontrol.adapter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
 import com.gvs.hwcontrol.R;
 import com.gvs.hwcontrol.activity.MainActivity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
+/**
+ * 九宫格适配器
+ * 2016-5-13
+ * @author hjy
+ *
+ */
 public class GridViewAdapter extends BaseAdapter {
 	private MainActivity activity;
 	private List listitem;
@@ -53,7 +55,7 @@ public class GridViewAdapter extends BaseAdapter {
 			ViewHolder viewHolder=new ViewHolder();
 			view=LayoutInflater.from(parent.getContext()).inflate(R.layout.gridview, null);
 			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.iv_headview);
-			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.tv_displername);
+			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.nametv);
 			view.setTag(R.drawable.ic_launcher,viewHolder);
 		}
 		holder=(ViewHolder) view.getTag(R.drawable.ic_launcher);
