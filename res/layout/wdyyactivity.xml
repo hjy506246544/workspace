@@ -35,8 +35,7 @@
             android:layout_height="wrap_content"
         	android:layout_centerVertical="true"
         	android:gravity="center"
-        	android:layout_marginLeft="20dp"
-            android:text="2016年5月16日   9:30" />
+        	android:layout_marginLeft="20dp" />
 
         <ImageView
             android:id="@+id/setiv"
