@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/translucent_8"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/backiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        	android:gravity="center"
+            android:src="@drawable/return2" />
+
+        <TextView
+	        style="@style/app_textStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:gravity="center"
+        	android:layout_marginRight="20dp"
+            android:text="设置" />
+    </LinearLayout>
+
+    <com.gvs.hwcontrol.widget.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header" >
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+
+		    <TextView
+		        android:id="@+id/tv_displername"
+		        android:text="选项"
+		        style="@style/app_textStyle2"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项一" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项二" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项三" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <TextView
+		        android:id="@+id/tv_displername"
+		        android:text="选项2"
+		        style="@style/app_textStyle2"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项一" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项二" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项三" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <TextView
+		        android:id="@+id/tv_displername"
+		        android:text="选项3"
+		        style="@style/app_textStyle2"
+		        android:layout_marginLeft="20dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项一" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项二" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		
+		    <RelativeLayout
+		        android:id="@+id/xxrl3"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="45dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+		
+		        <TextView
+		            style="@style/app_textStyle"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:drawableLeft="@drawable/main_bx"
+		            android:gravity="center_vertical"
+		            android:drawablePadding="5dp"
+		            android:layout_marginLeft="20dp"
+		            android:text="选项三" />
+		
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="20dp"
+		            android:scaleType="center"
+		            android:src="@drawable/me_yj" />
+		    </RelativeLayout>
+		
+		    <ImageView
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginLeft="20dp"
+		        android:background="@drawable/cxian2"/>
+		</LinearLayout>
+
+    </com.gvs.hwcontrol.widget.BounceScrollView>
+
+</RelativeLayout>
