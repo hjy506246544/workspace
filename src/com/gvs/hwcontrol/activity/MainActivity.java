@@ -15,7 +15,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 /**
- *主界面
+ * 主界面
  * @author hjy
  *
  */

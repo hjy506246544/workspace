@@ -45,6 +45,16 @@ public class WdyyFragment extends Fragment {
     		"电视机", "冰箱", "窗帘",
     		"电视机", "冰箱", "窗帘",
     		"电视机", "冰箱", "窗帘"};
+    // 设置状态
+    private String[] state = new String[] {
+    		"状态：off", "状态：on", "状态：off",
+    		"状态：on", "状态：off", "状态：on",
+    		"状态：off", "状态：on", "状态：off"};
+    // 设置信息
+    private String[] info = new String[] {
+    		"信息：该产品···", "信息：该产品好东西", "信息：该产品很好",
+    		"信息：该产品还不错", "信息：该产品···", "信息：该产品···",
+    		"信息：该产品呵呵", "信息：该产品···", "信息：该产品···"};
     private List listitem = new ArrayList();
 
 	@Override
@@ -66,7 +76,6 @@ public class WdyyFragment extends Fragment {
     }
 
     private void initView(View view, Bundle savedInstanceState) {
-		// TODO Auto-generated method stub
     	timetv = (TextView) view.findViewById(R.id.timetv);
 		listgv=(GridView) view.findViewById(R.id.listgv);
 		setiv = (ImageView) view.findViewById(R.id.setiv);
@@ -80,12 +89,12 @@ public class WdyyFragment extends Fragment {
     }
 
     private void InitListener() {
+    	//GridView list事件
     	listgv.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				// TODO Auto-generated method stub
 				if(position==0){
 					Intent intent  = new Intent(mainActivity,TestActivity.class);
 					startActivity(intent);
@@ -117,6 +126,10 @@ public class WdyyFragment extends Fragment {
 			}
 		});
 
+    	/**
+    	 * 设置按钮
+    	 * 打开手机自带系统设置界面
+    	 */
     	setiv.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -134,6 +147,8 @@ public class WdyyFragment extends Fragment {
             Map map = new HashMap();
             map.put("image", imageId[i]);
             map.put("title", title[i]);
+            map.put("state", state[i]);
+            map.put("info", info[i]);
             listitem.add(map);
         }
 
