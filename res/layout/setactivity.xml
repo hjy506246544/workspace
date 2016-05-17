@@ -25,7 +25,7 @@
             android:src="@drawable/return2" />
 
         <TextView
-	        style="@style/app_textStyle"
+	        style="@style/app_textStyle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
         	android:gravity="center"
@@ -53,7 +53,7 @@
 		        android:gravity="center_vertical"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" />
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl"
 		        android:layout_width="match_parent"
@@ -63,7 +63,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -73,8 +73,8 @@
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="选项一" />
-		
+		            android:text="背景替换" />
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -84,13 +84,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl2"
 		        android:layout_width="match_parent"
@@ -100,7 +100,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项二" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -121,13 +121,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl3"
 		        android:layout_width="match_parent"
@@ -137,7 +137,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项三" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -158,13 +158,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项2"
@@ -176,7 +176,7 @@
 		        android:gravity="center_vertical"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" />
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl"
 		        android:layout_width="match_parent"
@@ -186,7 +186,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -197,7 +197,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项一" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -207,13 +207,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl2"
 		        android:layout_width="match_parent"
@@ -223,7 +223,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -234,7 +234,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项二" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -244,13 +244,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl3"
 		        android:layout_width="match_parent"
@@ -260,7 +260,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -271,7 +271,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项三" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -281,13 +281,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项3"
@@ -299,7 +299,7 @@
 		        android:gravity="center_vertical"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" />
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl"
 		        android:layout_width="match_parent"
@@ -309,7 +309,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -320,7 +320,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项一" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -330,13 +330,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl2"
 		        android:layout_width="match_parent"
@@ -346,7 +346,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -357,7 +357,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项二" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -367,13 +367,13 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
-		
+
 		    <RelativeLayout
 		        android:id="@+id/xxrl3"
 		        android:layout_width="match_parent"
@@ -383,7 +383,7 @@
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
-		
+
 		        <TextView
 		            style="@style/app_textStyle"
 		            android:layout_width="wrap_content"
@@ -394,7 +394,7 @@
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
 		            android:text="选项三" />
-		
+
 		        <ImageView
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
@@ -404,7 +404,7 @@
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
-		
+
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
