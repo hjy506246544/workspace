@@ -57,6 +57,14 @@ public class WdyyFragment extends Fragment {
     		"信息：该产品呵呵", "信息：该产品···", "信息：该产品···"};
     private List listitem = new ArrayList();
 
+	public GridView getListgv() {
+		return listgv;
+	}
+
+	public void setListgv(GridView listgv) {
+		this.listgv = listgv;
+	}
+
 	@Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);

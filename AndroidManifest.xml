@@ -27,8 +27,14 @@
             android:name="com.gvs.hwcontrol.activity.TestActivity"
             android:label="@string/app_name" >
         </activity>
+        <!-- 设置 -->
         <activity
             android:name="com.gvs.hwcontrol.activity.SetActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 背景图替换-->
+        <activity
+            android:name="com.gvs.hwcontrol.activity.BjtActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

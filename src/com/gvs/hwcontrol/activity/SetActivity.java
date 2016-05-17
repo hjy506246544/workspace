@@ -47,7 +47,7 @@ public class SetActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(SetActivity.this,TestActivity.class));
+				startActivity(new Intent(SetActivity.this,BjtActivity.class));
 			}
 		});
 
