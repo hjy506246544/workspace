@@ -1,0 +1,13 @@
+
+1.换皮肤：如果页面要换皮肤都要重写这个方法和初始化皮肤的方法
+	@Override
+    protected void onResume() {
+    	//初始化皮肤
+    	//layout=new LinearLayout[layouts.length];
+    	//for(int i=0; i<layouts.length; i++){
+    		//layout[i]=(LinearLayout) findViewById(layouts[i]);
+    		mSettingManager=new SkinSettingManager(MainActivity.this,listgv);
+    		mSettingManager.initSkins();
+    	//}
+    	super.onResume();
+    }

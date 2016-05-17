@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/translucent_8"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/backiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        	android:gravity="center"
+            android:src="@drawable/return2" />
+
+        <TextView
+	        style="@style/app_textStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:gravity="center"
+        	android:layout_marginRight="20dp"
+            android:text="背景图替换" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1" >
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/main_bj" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/wallpaper_a" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.5" >
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/wallpaper_b" />
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/wallpaper_c" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="2.5" >
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/wallpaper_d" />
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:scaleType="center"
+            android:src="@drawable/wallpaper_f" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+<!--  2016-5-17 hjy
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:orientation="vertical"
+    android:background="@color/app_bg" >
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/translucent_8"
+        android:gravity="center"
+        android:minHeight="45dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/backiv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+        	android:gravity="center"
+            android:src="@drawable/return2" />
+
+        <TextView
+	        style="@style/app_textStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+        	android:gravity="center"
+        	android:layout_marginRight="20dp"
+            android:text="背景图替换" />
+    </LinearLayout>
+
+    <LinearLayout
+           android:id="@+id/bjtll"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:paddingLeft="20dp"
+           android:minHeight="45dp"
+           android:background="@drawable/bjt_"
+           android:gravity="center_vertical"
+           android:orientation="horizontal" >
+	       <TextView
+	        	android:id="@+id/bjttv"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:layout_weight="1"
+	            style="@style/app_medium_textStyle"
+	            android:text="背景图一" />
+
+	       <RadioButton
+	        	android:id="@+id/bjtrb"
+	        	android:layout_marginRight="40dp"
+	            android:layout_height="wrap_content"
+	            android:button="@drawable/txl_cheakfalse"
+	            android:layout_width="wrap_content" />
+
+     </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/cxian2"/>
+
+     <LinearLayout
+           android:id="@+id/bjtll2"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:paddingLeft="20dp"
+           android:minHeight="45dp"
+           android:background="@drawable/bjt_"
+           android:gravity="center_vertical"
+           android:orientation="horizontal" >
+	       <TextView
+	        	android:id="@+id/bjttv2"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:layout_weight="1"
+	            style="@style/app_medium_textStyle"
+	            android:text="背景图二" />
+
+	       <RadioButton
+	        	android:id="@+id/bjtrb2"
+	        	android:layout_marginRight="40dp"
+	            android:layout_height="wrap_content"
+	            android:button="@drawable/txl_cheakfalse"
+	            android:layout_width="wrap_content" />
+
+     </LinearLayout>
+
+     <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/cxian2"/>
+
+     <LinearLayout
+           android:id="@+id/bjtll3"
+           android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:paddingLeft="20dp"
+           android:minHeight="45dp"
+           android:background="@drawable/bjt_"
+           android:gravity="center_vertical"
+           android:orientation="horizontal" >
+	       <TextView
+	        	android:id="@+id/bjttv3"
+	            android:layout_height="wrap_content"
+	            android:layout_width="wrap_content"
+	            android:layout_weight="1"
+	            style="@style/app_medium_textStyle"
+	            android:text="背景图三" />
+
+	       <RadioButton
+	        	android:id="@+id/bjtrb3"
+	        	android:layout_marginRight="40dp"
+	            android:layout_height="wrap_content"
+	            android:button="@drawable/txl_cheakfalse"
+	            android:layout_width="wrap_content" />
+
+     </LinearLayout>
+
+</LinearLayout>
+-->
