@@ -43,8 +43,29 @@
     <string name="app_btnyes">确定</string>
     <string name="app_btnno">取消</string>
 
-    <!-- 我的应用 -->
-    <string name="wdyytitle">我的应用</string>
+    <!-- 灯光 -->
+    <string name="light_title">灯光</string>
+
+    <!-- 窗帘 -->
+    <string name="curtain_title">窗帘</string>
+
+    <!-- 空调 -->
+    <string name="aircondition_title">空调</string>
+
+    <!-- 电视机 -->
+    <string name="tv_title">电视机</string>
+
+    <!-- 家庭影院 -->
+    <string name="hometheatre_title">家庭影院</string>
+
+    <!-- 背景音乐 -->
+    <string name="bgmusic_title">背景音乐</string>
+
+    <!-- 场景 -->
+    <string name="scene_title">场景</string>
+
+    <!-- 安防监控 -->
+    <string name="securitymonitor_title">安防监控</string>
 
 
     <!-- xlistview -->
