@@ -3,8 +3,8 @@ import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.MainActivity;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
+
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,13 +17,12 @@ import android.widget.TextView;
  * @author hjy
  *
  */
-public class GridViewAdapter extends BaseAdapter {
+public class Main_GridViewAdapter extends BaseAdapter {
 	private MainActivity activity;
 	private List listitem;
-	private Bitmap defultBitmap;
-	public GridViewAdapter(MainActivity activity,List listitem){
-		this.activity=activity;
-		defultBitmap=BitmapFactory.decodeResource(activity.getResources(), R.drawable.ic_launcher);
+	private Context context;
+	public Main_GridViewAdapter(Context context,List listitem){
+		this.context=context;
         this.listitem = listitem;
 	}
 	public void setData(List names){
@@ -56,20 +55,16 @@ public class GridViewAdapter extends BaseAdapter {
 			view=LayoutInflater.from(parent.getContext()).inflate(R.layout.gridview, null);
 			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.iv_headview);
 			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.nametv);
-			viewHolder.statetv=(TextView) view.findViewById(R.id.statetv);
-			viewHolder.infotv=(TextView) view.findViewById(R.id.infotv);
 			view.setTag(R.drawable.ic_launcher,viewHolder);
 		}
 		holder=(ViewHolder) view.getTag(R.drawable.ic_launcher);
 		Map map = (Map) listitem.get(position);
 		holder.iv_headView.setImageResource((Integer) map.get("image"));
 		holder.tv_displerName.setText(map.get("title") + "");
-		holder.statetv.setText(map.get("state") + "");
-		holder.infotv.setText(map.get("info") + "");
 		return view;
 	}
 	public class ViewHolder{
 		ImageView iv_headView;
-		TextView tv_displerName,statetv,infotv;
+		TextView tv_displerName/*,statetv,infotv*/;
 	}
 }

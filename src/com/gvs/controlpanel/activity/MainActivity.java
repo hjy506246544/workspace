@@ -5,8 +5,16 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
+import com.gvs.controlpanel.activity.aircondition.AirConditionActivity;
+import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
-import com.gvs.controlpanel.adapter.GridViewAdapter;
+import com.gvs.controlpanel.activity.curtain.CurtainActivity;
+import com.gvs.controlpanel.activity.hometheatre.HomeTheatreActivity;
+import com.gvs.controlpanel.activity.light.LightActivity;
+import com.gvs.controlpanel.activity.scene.SceneActivity;
+import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
+import com.gvs.controlpanel.activity.tv.TVActivity;
+import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import com.gvs.controlpanel.widget.Header;
 import android.content.Context;
@@ -18,8 +26,6 @@ import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
@@ -36,7 +42,7 @@ public class MainActivity extends FragmentActivityBase {
 	private GridView listgv;
 	private TextView timetv;
 	private ImageView setiv;
-	private GridViewAdapter gridViewAdapter;
+	private Main_GridViewAdapter gridViewAdapter;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
             R.drawable.main_dsj_, R.drawable.main_bx_,
@@ -46,9 +52,10 @@ public class MainActivity extends FragmentActivityBase {
             R.drawable.main_cl_};
     // 设置标题
     private String[] title = new String[] {
-    		"电视机", "冰箱", "窗帘",
-    		"电视机", "冰箱", "窗帘",
-    		"电视机", "冰箱", "窗帘"};
+    		"灯光", "窗帘", "空调",
+    		"电视机", "家庭影院", "背景音乐",
+    		"场景", "安防监控"};
+    /*
     // 设置状态
     private String[] state = new String[] {
     		"状态：off", "状态：on", "状态：off",
@@ -59,6 +66,7 @@ public class MainActivity extends FragmentActivityBase {
     		"信息：该产品···", "信息：该产品好东西", "信息：该产品很好",
     		"信息：该产品不错", "信息：该产品···", "信息：该产品···",
     		"信息：该产品呵呵", "信息：该产品···", "信息：该产品···"};
+    		*/
     private List listitem = new ArrayList();
 	private SkinSettingManager mSettingManager;
 
@@ -72,22 +80,15 @@ public class MainActivity extends FragmentActivityBase {
     }
 
     private void initData() {
-//		header.setTitle(getResources().getString(R.string.wdyytitle));
-
-//		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				MainActivity.this.finish();
-//			}
-//		});
     	// 将上述资源转化为list集合
         for (int i = 0; i < title.length; i++) {
             Map map = new HashMap();
             map.put("image", imageId[i]);
             map.put("title", title[i]);
+            /*
             map.put("state", state[i]);
             map.put("info", info[i]);
+            */
             listitem.add(map);
         }
 
@@ -104,7 +105,7 @@ public class MainActivity extends FragmentActivityBase {
         "日  " + mHour +
         ": " + mMinute);
 
-		gridViewAdapter=new GridViewAdapter(MainActivity.this,listitem);
+		gridViewAdapter=new Main_GridViewAdapter(MainActivity.this,listitem);
 		listgv.setAdapter(gridViewAdapter);
 	}
 
@@ -114,33 +115,38 @@ public class MainActivity extends FragmentActivityBase {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
+				//灯光
 				if(position==0){
-					Intent intent  = new Intent(MainActivity.this,TestActivity.class);
+					Intent intent  = new Intent(MainActivity.this,LightActivity.class);
 					startActivity(intent);
 				}else if (position==1) {
-					Intent intent2  = new Intent(MainActivity.this,TestActivity.class);
+					//窗帘
+					Intent intent2  = new Intent(MainActivity.this,CurtainActivity.class);
 					startActivity(intent2);
 				}else if (position==2) {
-					Intent intent3  = new Intent(MainActivity.this,TestActivity.class);
+					//空调
+					Intent intent3  = new Intent(MainActivity.this,AirConditionActivity.class);
 					startActivity(intent3);
 				}else if (position==3) {
-					Intent intent4  = new Intent(MainActivity.this,TestActivity.class);
+					//电视机
+					Intent intent4  = new Intent(MainActivity.this,TVActivity.class);
 					startActivity(intent4);
 				}else if (position==4) {
-					Intent intent5  = new Intent(MainActivity.this,TestActivity.class);
+					//家庭影院
+					Intent intent5  = new Intent(MainActivity.this,HomeTheatreActivity.class);
 					startActivity(intent5);
 				}else if (position==5) {
-					Intent intent6  = new Intent(MainActivity.this,TestActivity.class);
+					//背景音乐
+					Intent intent6  = new Intent(MainActivity.this,BgMusicActivity.class);
 					startActivity(intent6);
 				}else if (position==6) {
-					Intent intent7  = new Intent(MainActivity.this,TestActivity.class);
+					//场景
+					Intent intent7  = new Intent(MainActivity.this,SceneActivity.class);
 					startActivity(intent7);
 				}else if (position==7) {
-					Intent intent8  = new Intent(MainActivity.this,TestActivity.class);
+					//安防监控
+					Intent intent8  = new Intent(MainActivity.this,SecurityMonitorActivity.class);
 					startActivity(intent8);
-				}else if (position==8) {
-					Intent intent9  = new Intent(MainActivity.this,TestActivity.class);
-					startActivity(intent9);
 				}
 			}
 		});

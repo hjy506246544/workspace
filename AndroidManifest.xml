@@ -22,9 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+		<!-- 灯光 -->
         <activity
-            android:name="com.gvs.controlpanel.activity.TestActivity"
+            android:name="com.gvs.controlpanel.activity.light.LightActivity"
             android:label="@string/app_name" >
         </activity>
         <!-- 设置 -->
@@ -35,6 +35,41 @@
         <!-- 背景图替换-->
         <activity
             android:name="com.gvs.controlpanel.activity.BjtActivity"
+            android:label="@string/app_name" >
+        </activity>
+		<!-- 家庭影院 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.hometheatre.HomeTheatreActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 窗帘 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.curtain.CurtainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 空调 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.aircondition.AirConditionActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 电视机 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.tv.TVActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 背景音乐 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 场景 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.scene.SceneActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 安防监控 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

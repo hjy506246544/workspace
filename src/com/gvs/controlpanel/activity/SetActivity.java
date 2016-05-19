@@ -1,6 +1,7 @@
 package com.gvs.controlpanel.activity;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
+import com.gvs.controlpanel.activity.light.LightActivity;
 import com.gvs.controlpanel.widget.Header;
 import android.content.Context;
 import android.content.Intent;
@@ -55,7 +56,7 @@ public class SetActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(SetActivity.this,TestActivity.class));
+				startActivity(new Intent(SetActivity.this,LightActivity.class));
 			}
 		});
 
@@ -63,7 +64,7 @@ public class SetActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(SetActivity.this,TestActivity.class));
+				startActivity(new Intent(SetActivity.this,LightActivity.class));
 			}
 		});
 	}
