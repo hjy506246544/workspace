@@ -1,3 +1,4 @@
 eclipse.preferences.version=1
-encoding//src/com/gvs/hwcontrol/util/AESEncoding.java=UTF-8
+encoding//src/com/gvs/controlpanel/util/AESEncoding.java=UTF-8
+encoding//src/com/gvs/controlpanel/util/SkinSettingManager.java=UTF-8
 encoding/<project>=UTF-8

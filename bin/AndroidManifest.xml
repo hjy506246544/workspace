@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.gvs.hwcontrol"
+    package="com.gvs.controlpanel"
     android:versionCode="1"
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="10"
         android:targetSdkVersion="21" />
 
     <application
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.gvs.hwcontrol.activity.MainActivity"
+            android:name="com.gvs.controlpanel.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +24,17 @@
         </activity>
 
         <activity
-            android:name="com.gvs.hwcontrol.activity.TestActivity"
+            android:name="com.gvs.controlpanel.activity.TestActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 设置 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.SetActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 背景图替换-->
+        <activity
+            android:name="com.gvs.controlpanel.activity.BjtActivity"
             android:label="@string/app_name" >
         </activity>
     </application>

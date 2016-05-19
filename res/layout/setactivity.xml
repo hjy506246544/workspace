@@ -33,7 +33,7 @@
             android:text="设置" />
     </LinearLayout>
 
-    <com.gvs.hwcontrol.widget.BounceScrollView
+    <com.gvs.controlpanel.widget.BounceScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/header" >
@@ -412,6 +412,6 @@
 		        android:background="@drawable/cxian2"/>
 		</LinearLayout>
 
-    </com.gvs.hwcontrol.widget.BounceScrollView>
+    </com.gvs.controlpanel.widget.BounceScrollView>
 
 </RelativeLayout>
