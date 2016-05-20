@@ -4,21 +4,22 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
+import com.gvs.controlpanel.activity.MainActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
-import com.gvs.controlpanel.widget.ColorPickerView;
-import com.gvs.controlpanel.widget.ColorPickerView.onColorChangedListener;
+import com.gvs.controlpanel.util.ToastUtils;
+import com.gvs.controlpanel.widget.ColorPickView;
+import com.gvs.controlpanel.widget.ColorPickView.OnColorChangedListener;
 import com.gvs.controlpanel.widget.Header;
-import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 /**
  * 灯光主界面
@@ -34,13 +35,13 @@ public class LightActivity extends FragmentActivityBase {
 
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-            R.drawable.main_dsj_, R.drawable.main_bx_,
+            R.drawable.main_dsj_, R.drawable.main_afjk_,
             R.drawable.main_cl_};
     // 设置标题
     private String[] title = new String[] {
     		"茶几顶", "台灯", "激光灯"};
     private List listitem = new ArrayList();
-	private AlertDialog dialog;
+	private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,43 +82,142 @@ public class LightActivity extends FragmentActivityBase {
 					int position, long id) {
 				//茶几顶
 				if(position==0){
-					showDialogTip();
+					showTeaTableDialogTip();
 				}else if (position==1) {
 					//台灯
+					showDeskLampDialogTip();
 				}else if (position==2) {
 					//激光灯
+					showLaserDialogTip();
 				}
 			}
 		});
 	}
 
-	private void showDialogTip() {
-	    dialog = new AlertDialog.Builder(LightActivity.this).create();
-	    dialog.show();
-	    dialog.getWindow().setContentView(R.layout.teatable_dialog);
-//	    Button zbrz = (Button) dialog.getWindow().findViewById(R.id.qdbtn);
-	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.rgbtv);
-//	    tstv.setText(ts);
-//	    zbrz.setOnClickListener(new OnClickListener() {
-//	      @Override
-//	      public void onClick(View v) {
-//	        dialog.dismiss();
-//	      }
-//	    });
-	    ColorPickerView colorPickerView = (ColorPickerView) dialog.getWindow().findViewById(R.id.cpv);
-        colorPickerView.setColorChangedListener(new onColorChangedListener() {
+	/**
+	 * 茶几顶
+	 * 自定义弹出框
+	 * 2016-5-20
+	 * hjy
+	 */
+	private void showTeaTableDialogTip() {
+	    dialog = new Dialog(this,R.style.dialog);
+	    dialog.setContentView(R.layout.light_teatable_dialog);
+	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.teatable_rgbtv);
+	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.teatable_minusib);
+	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.teatable_jiaib);
+	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.teatable_cpv);
+	    minusib.setOnClickListener(new OnClickListener() {
 
 			@Override
-			public void colorChanged(int red, int blue, int green) {
-				Toast.makeText(LightActivity.this, "red="+red+"  blue="+blue+"   green="+green,
-						Toast.LENGTH_SHORT).show();
-				//rgbtv.setTextColor(red);
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				ToastUtils.show(LightActivity.this, "该功能正在开发");
 			}
 		});
-	    WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
-	    WindowManager windowManager = (WindowManager) LightActivity.this.getSystemService(Context.WINDOW_SERVICE);
-	    params.width = windowManager.getDefaultDisplay().getWidth() - 100;
-	    dialog.getWindow().setAttributes(params);
+
+	    jiaib.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				ToastUtils.show(LightActivity.this, "该功能正在开发");
+			}
+		});
+	    colorPickerView.setOnColorChangedListener(new OnColorChangedListener() {
+
+			@Override
+			public void onColorChange(int color) {
+				rgbtv.setTextColor(color);
+			}
+
+		});
+	    dialog.setCancelable(true);
+		dialog.show();
+	}
+
+	/**
+	 * 台灯
+	 * 自定义弹出框
+	 * 2016-5-20
+	 * hjy
+	 */
+	private void showDeskLampDialogTip() {
+	    dialog = new Dialog(this,R.style.dialog);
+	    dialog.setContentView(R.layout.light_desklamp_dialog);
+	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.desklamp_rgbtv);
+	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.desklamp_minusib);
+	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.desklamp_jiaib);
+	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.desklamp_cpv);
+	    minusib.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				ToastUtils.show(LightActivity.this, "该功能正在开发");
+			}
+		});
+
+	    jiaib.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				ToastUtils.show(LightActivity.this, "该功能正在开发");
+			}
+		});
+	    colorPickerView.setOnColorChangedListener(new OnColorChangedListener() {
+
+			@Override
+			public void onColorChange(int color) {
+				rgbtv.setTextColor(color);
+			}
+
+		});
+	    dialog.setCancelable(true);
+		dialog.show();
+	}
+
+	/**
+	 * 激光灯
+	 * 自定义弹出框
+	 * 2016-5-20
+	 * hjy
+	 */
+	private void showLaserDialogTip() {
+	    dialog = new Dialog(this,R.style.dialog);
+	    dialog.setContentView(R.layout.light_laser_dialog);
+	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.laser_rgbtv);
+	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.laser_minusib);
+	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.laser_jiaib);
+	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.laser_cpv);
+	    minusib.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				ToastUtils.show(LightActivity.this, "该功能正在开发");
+			}
+		});
+
+	    jiaib.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				ToastUtils.show(LightActivity.this, "该功能正在开发");
+			}
+		});
+	    colorPickerView.setOnColorChangedListener(new OnColorChangedListener() {
+
+			@Override
+			public void onColorChange(int color) {
+				rgbtv.setTextColor(color);
+			}
+
+		});
+	    dialog.setCancelable(true);
+		dialog.show();
 	}
 
     private void initView() {

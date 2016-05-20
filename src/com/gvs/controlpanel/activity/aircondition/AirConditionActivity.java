@@ -26,7 +26,7 @@ public class AirConditionActivity extends FragmentActivityBase {
 
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-            R.drawable.main_dsj_, R.drawable.main_bx_,
+            R.drawable.main_dsj_, R.drawable.main_afjk_,
             R.drawable.main_cl_};
     // 设置标题
     private String[] title = new String[] {
