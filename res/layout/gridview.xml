@@ -9,7 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
     	android:background="@drawable/main_gridviewitem"
-    	android:layout_marginLeft="15dp"
+    	android:layout_marginLeft="40dp"
     	android:layout_marginRight="15dp"
         android:orientation="vertical" >
 
@@ -24,8 +24,7 @@
 
 	    <TextView
 	        android:id="@+id/nametv"
-	        style="@style/app_textStyle3"
-	        android:text="dsgdfhd"
+	        style="@style/app_textStyle1"
 	        android:layout_gravity="center"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content" />

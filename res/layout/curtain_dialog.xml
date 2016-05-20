@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:layout_marginBottom="40dp"
+    tools:ignore="all">
+
+    <TextView
+        android:id="@+id/cltv"
+        style="@style/app_textStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/main_cl"
+        android:drawablePadding="10dp"
+        android:text="窗帘开关"
+        android:minHeight="45dp" />
+
+    <com.gvs.controlpanel.widget.SlideSwitch
+        android:id="@+id/curtain_slideswitch"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/cltv"
+        android:layout_marginBottom="40dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

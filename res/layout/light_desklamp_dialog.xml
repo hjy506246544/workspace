@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:layout_marginBottom="20dp"
+    tools:ignore="all">
+
+    <TextView
+        android:id="@+id/desklamp_rgbtv"
+        style="@style/app_textStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/main_light"
+        android:drawablePadding="10dp"
+        android:text="RGB颜色选择"
+        android:minHeight="45dp" />
+
+    <com.gvs.controlpanel.widget.ColorPickView
+        android:id="@+id/desklamp_cpv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/desklamp_rgbtv"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/desklamp_lightxztv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="灯光亮度选择"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/desklamp_cpv"
+        android:drawableLeft="@drawable/main_light"
+        android:drawablePadding="10dp"
+       	android:minHeight="45dp"
+        style="@style/app_textStyle1" />
+
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:layout_below="@+id/desklamp_lightxztv" >
+
+        <ImageButton
+            android:id="@+id/desklamp_minusib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/aircondition_minus_" />
+
+        <ImageView
+            android:id="@+id/desklamp_jdttv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/light_bjt"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/desklamp_minusib"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/desklamp_jiaib"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/desklamp_jdttv"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/aircondition_jia_" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

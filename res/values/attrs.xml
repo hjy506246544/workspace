@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+    <declare-styleable name="color_picker">
+
+        <!-- 背景圆的半径 -->
+        <attr name="circle_radius" format="dimension" />
+        <!-- 可滑动小球的半径 -->
+        <attr name="center_radius" format="dimension" />
+        <!-- 可滑动小球的颜色 -->
+        <attr name="center_color" format="color" />
+    </declare-styleable>
+
     <!-- JazzyViewPager -->
     <declare-styleable name="JazzyViewPager">
         <attr name="style">
@@ -20,8 +31,8 @@
         <attr name="outlineEnabled" format="boolean" />
         <attr name="outlineColor" format="color|reference" />
     </declare-styleable>
-    
-    
+
+
     <!-- TitleIndicator -->
     <declare-styleable name="TitleIndicator">
         <attr name="titlePadding" format="dimension" />
@@ -34,12 +45,12 @@
         <attr name="footerColor" format="color" />
         <attr name="footerTriangleHeight" format="dimension" />
     </declare-styleable>
-    
+
     <!-- RightSlidingMenu -->
     <declare-styleable name="RightSlidingMenu">
         <attr name="leftPadding" format="dimension"/>
     </declare-styleable>
-    
+
     <!-- ViewFlow -->
     <declare-styleable name="ViewFlow">
         <attr name="sidebuffer" format="integer" />
@@ -61,7 +72,7 @@
 		<attr name="circleSeparation" format="dimension" />
 		<attr name="activeRadius" format="dimension" />
     </declare-styleable>
-    
+
     <!-- FButton openlibrary -->
     <declare-styleable name="FButton">
         <attr name="shadowEnabled" format="boolean" />
@@ -70,8 +81,8 @@
         <attr name="shadowHeight" format="dimension" />
         <attr name="cornerRadius" format="dimension" />
     </declare-styleable>
-    
-    
+
+
     <!-- JazzyListView openlibrary -->
     <declare-styleable name="JazzyListView">
         <attr name="effect" format="enum">
@@ -107,7 +118,7 @@
     	</attr>
         <attr name="radius" format="dimension"/>
     </declare-styleable>
-    
+
     <!-- Styles -->
     <attr name="styleCaldroidViewLayout" format="reference"/>
     <attr name="styleCaldroidLeftArrow" format="reference"/>
@@ -131,7 +142,7 @@
         <attr name="android:textColor" />
         <attr name="android:background" />
     </declare-styleable>
-    
+
     <attr name="borderRadius" format="dimension" />
     <attr name="type">
         <enum name="circle" value="0" />
