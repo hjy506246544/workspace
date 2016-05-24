@@ -16,11 +16,11 @@ import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import com.gvs.controlpanel.widget.SlideSwitch;
 import com.gvs.controlpanel.widget.SlideSwitch.OnStateChangedListener;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -201,18 +201,24 @@ public class MainActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
+	int wd = 26;
 	private void showAirConditionDialogTip() {
 		dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.aircondition_dialog);
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.minusib);
 	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.jiaib);
+	    final TextView ktwdtv = (TextView) dialog.getWindow().findViewById(R.id.ktwdtv);
+	    ktwdtv.setText(wd +"℃");
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.aircondition_slideswitch);
 	    minusib.setOnClickListener(new OnClickListener() {
-
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(MainActivity.this, "该功能正在开发");
+		        if(wd>16){
+	                wd--;
+			        ktwdtv.setText(wd +"℃");
+		        }else {
+					ToastUtils.show(MainActivity.this, "超过最低温度了！");
+				}
 			}
 		});
 
@@ -220,8 +226,12 @@ public class MainActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(MainActivity.this, "该功能正在开发");
+		        if(wd <32){
+	                wd++;
+			        ktwdtv.setText(wd +"℃");
+		        }else {
+					ToastUtils.show(MainActivity.this, "超过最高温度了！");
+				}
 			}
 		});
 

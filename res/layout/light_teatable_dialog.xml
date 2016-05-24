@@ -1,11 +1,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_dialog"
     android:layout_marginBottom="20dp"
-    tools:ignore="all">
+    android:background="@drawable/bg_dialog"
+    android:orientation="vertical"
+    tools:ignore="all" >
 
     <TextView
         android:id="@+id/teatable_rgbtv"
@@ -54,8 +54,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/aircondition_minus_" />
-
+		<!--
         <ImageView
             android:id="@+id/teatable_jdttv"
             android:layout_width="wrap_content"
@@ -65,15 +66,27 @@
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/teatable_minusib"
             android:gravity="center" />
-
+            android:progressDrawable="@drawable/light_bjt"
+ 		-->
+        <SeekBar
+            android:id="@+id/teatable_jdtsb"
+            android:layout_width="130dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true"
+            android:max="3"
+            android:progressDrawable="@drawable/seekbar_style"
+        	android:thumb="@drawable/light_bjt2"
+            android:layout_toRightOf="@+id/teatable_minusib" />
         <ImageButton
             android:id="@+id/teatable_jiaib"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/teatable_jdttv"
+            android:layout_toRightOf="@+id/teatable_jdtsb"
             android:layout_marginLeft="10dp"
             android:background="@drawable/aircondition_jia_" />
+
 
     </RelativeLayout>
 

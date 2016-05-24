@@ -14,11 +14,13 @@ import com.gvs.controlpanel.widget.Header;
 import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
 /**
@@ -100,19 +102,28 @@ public class LightActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
+	int ld = 2;
 	private void showTeaTableDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.light_teatable_dialog);
 	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.teatable_rgbtv);
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.teatable_minusib);
 	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.teatable_jiaib);
+	    final SeekBar teatable_jdtsb = (SeekBar) dialog.getWindow().findViewById(R.id.teatable_jdtsb);
+        teatable_jdtsb.setProgress(ld);
 	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.teatable_cpv);
 	    minusib.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(LightActivity.this, "该功能正在开发");
+				if(ld>0){
+					ld--;
+					Log.e("ld=", "ld="+ld);
+			        teatable_jdtsb.setProgress(ld);
+					Log.e("ld2=", "ld2="+ld);
+		        }else {
+					ToastUtils.show(LightActivity.this, "超过最低亮度了！");
+				}
 			}
 		});
 
@@ -120,8 +131,14 @@ public class LightActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(LightActivity.this, "该功能正在开发");
+				if(ld<3){
+					ld++;
+					Log.e("ld3=", "ld3="+ld);
+			        teatable_jdtsb.setProgress(ld);
+					Log.e("ld4=", "ld4="+ld);
+		        }else {
+					ToastUtils.show(LightActivity.this, "超过最高亮度了！");
+				}
 			}
 		});
 	    colorPickerView.setOnColorChangedListener(new OnColorChangedListener() {

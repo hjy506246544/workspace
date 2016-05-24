@@ -64,8 +64,7 @@
             style="@style/app_textStyle6"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/minusib"
-            android:gravity="center"
-            android:text="26℃" />
+            android:gravity="center" />
 
         <ImageButton
             android:id="@+id/jiaib"
