@@ -5,6 +5,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Color;
 import android.util.AttributeSet;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
@@ -74,6 +75,8 @@ public class Header extends RelativeLayout {
 	public void setTextViewRes(int text, OnClickListener listener) {
         TextView tv = new TextView(getContext());
         tv.setText(text);
+        tv.setTextSize(14);
+        tv.setGravity(500);
         tv.setTextColor(getResources().getColor(R.color.white));
         setRightView(tv, listener);
     }

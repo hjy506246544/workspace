@@ -83,6 +83,18 @@
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>
+        <!-- 添加场景 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.scene.AddSceneActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 修改场景 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.scene.UpdateSceneActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
     </application>
 
 </manifest>
