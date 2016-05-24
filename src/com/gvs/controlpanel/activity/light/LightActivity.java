@@ -102,7 +102,7 @@ public class LightActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	int ld = 2;
+	int teatable_ld = 2;
 	private void showTeaTableDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.light_teatable_dialog);
@@ -110,17 +110,17 @@ public class LightActivity extends FragmentActivityBase {
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.teatable_minusib);
 	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.teatable_jiaib);
 	    final SeekBar teatable_jdtsb = (SeekBar) dialog.getWindow().findViewById(R.id.teatable_jdtsb);
-        teatable_jdtsb.setProgress(ld);
+        teatable_jdtsb.setProgress(teatable_ld);
 	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.teatable_cpv);
 	    minusib.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				if(ld>0){
-					ld--;
-					Log.e("ld=", "ld="+ld);
-			        teatable_jdtsb.setProgress(ld);
-					Log.e("ld2=", "ld2="+ld);
+				if(teatable_ld>0){
+					teatable_ld--;
+					Log.e("ld=", "ld="+teatable_ld);
+			        teatable_jdtsb.setProgress(teatable_ld);
+					Log.e("ld2=", "ld2="+teatable_ld);
 		        }else {
 					ToastUtils.show(LightActivity.this, "超过最低亮度了！");
 				}
@@ -131,11 +131,11 @@ public class LightActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				if(ld<3){
-					ld++;
-					Log.e("ld3=", "ld3="+ld);
-			        teatable_jdtsb.setProgress(ld);
-					Log.e("ld4=", "ld4="+ld);
+				if(teatable_ld<3){
+					teatable_ld++;
+					Log.e("ld3=", "ld3="+teatable_ld);
+			        teatable_jdtsb.setProgress(teatable_ld);
+					Log.e("ld4=", "ld4="+teatable_ld);
 		        }else {
 					ToastUtils.show(LightActivity.this, "超过最高亮度了！");
 				}
@@ -159,19 +159,28 @@ public class LightActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
+	int desklamp_ld = 2;
 	private void showDeskLampDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.light_desklamp_dialog);
 	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.desklamp_rgbtv);
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.desklamp_minusib);
 	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.desklamp_jiaib);
+	    final SeekBar teatable_jdtsb = (SeekBar) dialog.getWindow().findViewById(R.id.desklamp_jdtsb);
+        teatable_jdtsb.setProgress(desklamp_ld);
 	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.desklamp_cpv);
 	    minusib.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(LightActivity.this, "该功能正在开发");
+				if(desklamp_ld>0){
+					desklamp_ld--;
+					Log.e("ld=", "ld="+desklamp_ld);
+			        teatable_jdtsb.setProgress(desklamp_ld);
+					Log.e("ld2=", "ld2="+desklamp_ld);
+		        }else {
+					ToastUtils.show(LightActivity.this, "超过最低亮度了！");
+				}
 			}
 		});
 
@@ -179,8 +188,14 @@ public class LightActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(LightActivity.this, "该功能正在开发");
+				if(desklamp_ld<3){
+					desklamp_ld++;
+					Log.e("ld3=", "ld3="+desklamp_ld);
+			        teatable_jdtsb.setProgress(desklamp_ld);
+					Log.e("ld4=", "ld4="+desklamp_ld);
+		        }else {
+					ToastUtils.show(LightActivity.this, "超过最高亮度了！");
+				}
 			}
 		});
 	    colorPickerView.setOnColorChangedListener(new OnColorChangedListener() {
@@ -201,19 +216,28 @@ public class LightActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
+	int laser_ld = 2;
 	private void showLaserDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.light_laser_dialog);
 	    final TextView rgbtv = (TextView) dialog.getWindow().findViewById(R.id.laser_rgbtv);
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.laser_minusib);
 	    ImageButton jiaib = (ImageButton) dialog.getWindow().findViewById(R.id.laser_jiaib);
+	    final SeekBar teatable_jdtsb = (SeekBar) dialog.getWindow().findViewById(R.id.laser_jdtsb);
+        teatable_jdtsb.setProgress(laser_ld);
 	    ColorPickView colorPickerView = (ColorPickView) dialog.getWindow().findViewById(R.id.laser_cpv);
 	    minusib.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(LightActivity.this, "该功能正在开发");
+				if(laser_ld>0){
+					laser_ld--;
+					Log.e("ld=", "ld="+laser_ld);
+			        teatable_jdtsb.setProgress(laser_ld);
+					Log.e("ld2=", "ld2="+laser_ld);
+		        }else {
+					ToastUtils.show(LightActivity.this, "超过最低亮度了！");
+				}
 			}
 		});
 
@@ -221,8 +245,14 @@ public class LightActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				ToastUtils.show(LightActivity.this, "该功能正在开发");
+				if(laser_ld<3){
+					laser_ld++;
+					Log.e("ld3=", "ld3="+laser_ld);
+			        teatable_jdtsb.setProgress(laser_ld);
+					Log.e("ld4=", "ld4="+laser_ld);
+		        }else {
+					ToastUtils.show(LightActivity.this, "超过最高亮度了！");
+				}
 			}
 		});
 	    colorPickerView.setOnColorChangedListener(new OnColorChangedListener() {
