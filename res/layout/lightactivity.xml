@@ -7,7 +7,7 @@
     <com.gvs.controlpanel.widget.Header
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="45dp"
+        android:layout_height="70dp"
     	android:background="@color/translucent_8"
         android:orientation="vertical" />
 

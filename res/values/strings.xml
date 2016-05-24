@@ -64,6 +64,10 @@
     <!-- 场景 -->
     <string name="scene_title">场景</string>
 
+    <!-- 自定义场景 -->
+    <string name="scenezdy_title">自定义场景</string>
+    <string name="scenezdy_ljcj">立即创建</string>
+
     <!-- 安防监控 -->
     <string name="securitymonitor_title">安防监控</string>
 
