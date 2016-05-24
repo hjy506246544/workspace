@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog"
+    android:layout_marginBottom="20dp"
+    tools:ignore="all">
+
+    <TextView
+        android:id="@+id/rgbtv"
+        style="@style/app_textStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/main_light"
+        android:drawablePadding="10dp"
+        android:text="RGB颜色选择"
+        android:minHeight="45dp" />
+
+    <com.gvs.controlpanel.widget.ColorPickView
+        android:id="@+id/cpv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rgbtv" />
+
+    <TextView
+        android:id="@+id/lightxztv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="灯光亮度选择"
+        android:layout_marginLeft="20dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/cpv"
+        android:drawableLeft="@drawable/main_light"
+        android:drawablePadding="10dp"
+       	android:minHeight="45dp"
+        style="@style/app_textStyle1" />
+
+</RelativeLayout>
