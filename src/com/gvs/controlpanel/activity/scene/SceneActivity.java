@@ -6,19 +6,18 @@ import java.util.Map;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.adapter.SceneAdapter;
+import com.gvs.controlpanel.bean.Scene;
 import com.gvs.controlpanel.widget.Header;
-import com.gvs.controlpanel.widget.pulltorefreshswipemenulistview.PullToRefreshSwipeMenuListView;
-import com.gvs.controlpanel.widget.pulltorefreshswipemenulistview.PullToRefreshSwipeMenuListView.IXListViewListener;
-import com.gvs.controlpanel.widget.pulltorefreshswipemenulistview.PullToRefreshSwipeMenuListView.OnMenuItemClickListener;
-import com.gvs.controlpanel.widget.pulltorefreshswipemenulistview.swipemenulistview.SwipeMenu;
-import com.gvs.controlpanel.widget.pulltorefreshswipemenulistview.swipemenulistview.SwipeMenuCreator;
-import com.gvs.controlpanel.widget.pulltorefreshswipemenulistview.swipemenulistview.SwipeMenuItem;
+import com.gvs.controlpanel.widget.swipemenulistview.SwipeMenu;
+import com.gvs.controlpanel.widget.swipemenulistview.SwipeMenuCreator;
+import com.gvs.controlpanel.widget.swipemenulistview.SwipeMenuItem;
+import com.gvs.controlpanel.widget.swipemenulistview.SwipeMenuListView;
+import com.gvs.controlpanel.widget.swipemenulistview.SwipeMenuListView.OnMenuItemClickListener;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -31,11 +30,12 @@ import android.widget.AdapterView.OnItemLongClickListener;
  * @author hjy
  *
  */
-public class SceneActivity extends FragmentActivityBase  implements IXListViewListener {
+public class SceneActivity extends FragmentActivityBase{
 	public Header header;
 	static Context context;
-	private PullToRefreshSwipeMenuListView listView;
+	private SwipeMenuListView listView;
 	private SceneAdapter sceneAdapter;
+	private Scene scene = new Scene();
 
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
@@ -82,9 +82,6 @@ public class SceneActivity extends FragmentActivityBase  implements IXListViewLi
 		});
 		getListItems();
         sceneAdapter = new SceneAdapter(SceneActivity.this,listitem);//创建适配器
-		listView.setPullLoadEnable(true);
-		listView.setPullRefreshEnable(true);
-		listView.setXListViewListener(this);
 		listView.setAdapter(sceneAdapter);
 	}
 
@@ -130,20 +127,22 @@ public class SceneActivity extends FragmentActivityBase  implements IXListViewLi
                 menu.addMenuItem(deleteItem);
             }
         };
+
         // set creator
         listView.setMenuCreator(creator);
 
         // step 2. listener item click event
         listView.setOnMenuItemClickListener(new OnMenuItemClickListener() {
-            @Override
-            public void onMenuItemClick(int position, SwipeMenu menu, int index) {
-                switch (index) {
-                case 0:
-                	//deleteListItems(position);
-                    break;
-                }
-            }
-        });
+
+			@Override
+			public void onMenuItemClick(int position, SwipeMenu menu, int index) {
+				switch (index) {
+	              case 0:
+	              	//deleteListItems(position);
+	                  break;
+	            }
+			}
+		});
 	}
 
 	private int dp2px(int dp) {
@@ -152,42 +151,6 @@ public class SceneActivity extends FragmentActivityBase  implements IXListViewLi
 
     private void initView() {
 		header = (Header) findViewById(R.id.header);
-		listView = (PullToRefreshSwipeMenuListView) findViewById(R.id.listview);
-	}
-
-	@Override
-	public void onRefresh() {
-		// TODO Auto-generated method stub
-		new Handler().postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				page = 1;
-				getListItems();
-				onLoad();
-			}
-		}, 2000);
-	}
-
-	@Override
-	public void onLoadMore() {
-		// TODO Auto-generated method stub
-		new Handler().postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				if (totalRecord) {
-					onLoad();
-				} else {
-					page = page + 1;
-					// 刷新操作
-					getListItems();
-					onLoad();
-				}
-			}
-		}, 2000);
-	}
-
-	private void onLoad() {
-		listView.stopRefresh();
-		listView.stopLoadMore();
+		listView = (SwipeMenuListView) findViewById(R.id.listview);
 	}
 }

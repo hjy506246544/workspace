@@ -1,11 +1,21 @@
 package com.gvs.controlpanel.activity.backgroundmusic;
+import java.util.ArrayList;
+import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
-import com.gvs.controlpanel.widget.Header;
+import com.gvs.controlpanel.adapter.BgMusicAdapter;
+import com.gvs.controlpanel.bean.MusicInfo;
+import com.gvs.controlpanel.util.Saomiao;
+import com.gvs.controlpanel.util.ToastUtils;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 /**
  * 背景音乐主界面
  * 2016-5-19
@@ -13,35 +23,70 @@ import android.view.View.OnClickListener;
  *
  */
 public class BgMusicActivity extends FragmentActivityBase {
-	public Header header;
+	private ImageView backiv;
+	private Button bcbtn;
 	static Context context;
+	private BgMusicAdapter bgMusicAdapter;
+	private List<MusicInfo> musicList;
+	private ListView lvSongs;
+	private Saomiao saomiao;
+	private int pos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bgmusic_activity);
+		saomiao=new Saomiao();
+		musicList=new ArrayList<MusicInfo>();
+		musicList=saomiao.query(this);
 		initView();
 		initData();
 		initListener();
     }
 
     private void initData() {
-    	header.setTitle(getResources().getString(R.string.bgmusic_title));
+		bgMusicAdapter = new BgMusicAdapter(BgMusicActivity.this, musicList);
+		lvSongs.setAdapter(bgMusicAdapter);
+	}
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+	private void initListener() {
+		lvSongs.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				pos = position;
+				if(musicList.get(pos).isSelect_box()){
+					musicList.get(pos).setSelect_box(false);
+                }else{
+                	musicList.get(pos).setSelect_box(true);
+                }
+		        //通知跟新界面
+				bgMusicAdapter.notifyDataSetChanged();
+			}
+		});
+
+		backiv.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				BgMusicActivity.this.finish();
 			}
 		});
-	}
 
-	private void initListener() {
+		bcbtn.setOnClickListener(new OnClickListener() {
 
+			@Override
+			public void onClick(View v) {
+				pos = pos+1;
+				ToastUtils.show(BgMusicActivity.this, "选择第"+pos+"首背景音乐成功！");
+				BgMusicActivity.this.finish();
+			}
+		});
 	}
 
     private void initView() {
-		header = (Header) findViewById(R.id.header);
+		backiv = (ImageView) findViewById(R.id.backiv);
+		bcbtn = (Button) findViewById(R.id.bcbtn);
+		lvSongs = (ListView) findViewById(R.id.lvSongs);
 	}
 }
