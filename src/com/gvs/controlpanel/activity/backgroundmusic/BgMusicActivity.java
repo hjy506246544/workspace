@@ -31,6 +31,7 @@ public class BgMusicActivity extends FragmentActivityBase {
 	private ListView lvSongs;
 	private Saomiao saomiao;
 	private int pos;
+	private boolean flag; //标记是否到达最大数量
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,13 +56,29 @@ public class BgMusicActivity extends FragmentActivityBase {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				pos = position;
-				if(musicList.get(pos).isSelect_box()){
-					musicList.get(pos).setSelect_box(false);
-                }else{
-                	musicList.get(pos).setSelect_box(true);
-                }
-		        //通知跟新界面
-				bgMusicAdapter.notifyDataSetChanged();
+				//1.首先遍历数据源有多少被选中
+			    int currNum=0;
+			    for(int i=0; i<musicList.size();i++){
+			    	MusicInfo info = musicList.get(i);
+			    	if(currNum<1){
+			    		  if(info.isSelect_box()){
+			    			  currNum++;
+			    		  }
+		    	    }else {
+		    	    	ToastUtils.show(BgMusicActivity.this, "只支持选择1首背景音乐，重新选择请返回！");
+		    	    	flag = true; //标注已达到最大数量
+					}
+			    }
+			    // 2. 点击选中，并改变对象的选中状态
+			    if(!flag){
+					if(musicList.get(pos).isSelect_box()){
+						musicList.get(pos).setSelect_box(false);
+	                }else{
+	                	musicList.get(pos).setSelect_box(true);
+	                }
+			        //通知跟新界面
+					bgMusicAdapter.notifyDataSetChanged();
+			    }
 			}
 		});
 
