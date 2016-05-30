@@ -18,6 +18,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -45,8 +46,6 @@ public class SceneActivity extends FragmentActivityBase{
     private String[] title = new String[] {
     		"晨起模式", "聚餐模式", "自定义场景"};
     private List listitem = new ArrayList();
-	private int page=1;
-	private boolean totalRecord;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -90,7 +89,7 @@ public class SceneActivity extends FragmentActivityBase{
 
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,int position, long id) {
-				if(position==3){
+				if(position==2){
 					Intent intent = new Intent(SceneActivity.this,AddSceneActivity.class);
 					startActivity(intent);
 				}else {

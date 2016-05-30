@@ -5,12 +5,15 @@
     android:minHeight="60dp"
     android:padding="2dp" >
 
-    <ImageView
+    <RadioButton
         android:id="@+id/albumPhoto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:layout_marginLeft="30dp"
         android:layout_centerVertical="true" />
 

@@ -3,12 +3,18 @@ package com.gvs.controlpanel.bean;
 import java.io.Serializable;
 
 public class MusicInfo implements Serializable{
-
+	private String id;
 	public String singer;
 	public String path;
 	public String music_name;
 	private String duration;
 	public boolean isSelect_box=false;
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
 	public boolean isSelect_box() {
 		return isSelect_box;
 	}
