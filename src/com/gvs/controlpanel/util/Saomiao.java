@@ -42,8 +42,7 @@ public class Saomiao {
 
 				String path=c.getString(c.getColumnIndex(MediaStore.Audio.Media.DATA));
 
-				String duration=c.getString(c.getColumnIndex(MediaStore.Audio.Media.DURATION));
-
+				int duration=c.getInt(c.getColumnIndex(MediaStore.Audio.Media.DURATION));
 				//System.out.println(""+music_name);
 				//System.out.println(""+singer);
 				//System.out.println(""+path);
@@ -51,6 +50,7 @@ public class Saomiao {
 				MusicInfo.setMusic_name(music_name);
 				MusicInfo.setSinger(singer);
 				MusicInfo.setPath(path);
+				MusicInfo.setDuration(duration);
 
 				arraylist.add(MusicInfo);
 

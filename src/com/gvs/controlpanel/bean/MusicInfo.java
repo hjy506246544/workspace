@@ -7,7 +7,7 @@ public class MusicInfo implements Serializable{
 	public String singer;
 	public String path;
 	public String music_name;
-	private String duration;
+	private int duration;
 	public boolean isSelect_box=false;
 	public String getId() {
 		return id;
@@ -21,10 +21,10 @@ public class MusicInfo implements Serializable{
 	public void setSelect_box(boolean isSelect_box) {
 		this.isSelect_box = isSelect_box;
 	}
-	public String getDuration() {
+	public int getDuration() {
 		return duration;
 	}
-	public void setDuration(String duration) {
+	public void setDuration(int duration) {
 		this.duration = duration;
 	}
 	public String getMusic_name() {

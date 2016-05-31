@@ -19,8 +19,17 @@ public class BgMusicAdapter extends BaseAdapter{
     //存储所有主题的项目的选中状态，遍历这个容器可以获取选中的项目信息
     private HashMap<Integer,Boolean> subjectItemMap;
     private HashMap<String,Boolean> states=new HashMap<String,Boolean>();//用于记录每个RadioButton的状态，并保证只可选一个
+    private int positions=1;
 
-    public void setSubjectItemMap(HashMap<Integer, Boolean> subjectItemMap) {
+    public int getPositions() {
+		return positions;
+	}
+
+	public void setPositions(int positions) {
+		this.positions = positions;
+	}
+
+	public void setSubjectItemMap(HashMap<Integer, Boolean> subjectItemMap) {
 		this.subjectItemMap = subjectItemMap;
 	}
 
@@ -65,6 +74,7 @@ public class BgMusicAdapter extends BaseAdapter{
 	@Override
 	public View getView(final int position, View convertView, ViewGroup parent) {
 		viewhodler viewHolder;
+		positions = position;
 		if(convertView == null){
 			viewHolder=new viewhodler();
 			convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.bgmusic_item, null);
@@ -79,7 +89,7 @@ public class BgMusicAdapter extends BaseAdapter{
 		final RadioButton radio=(RadioButton) convertView.findViewById(R.id.albumPhoto);
 		viewHolder.pImageView = radio;
 		viewHolder.pTitle.setText(musicList.get(position).getMusic_name());
-		viewHolder.pDuration.setText(musicList.get(position).getDuration());
+		viewHolder.pDuration.setText(musicList.get(position).getDuration()+"");
 		viewHolder.pArtist.setText(musicList.get(position).getSinger());
 //		//显示被选择图标
 //		if(musicList.get(position).isSelect_box()){
@@ -94,7 +104,6 @@ public class BgMusicAdapter extends BaseAdapter{
 		viewHolder.pImageView.setOnClickListener(new View.OnClickListener() {
 
 	           public void onClick(View v) {
-
 	               //重置，确保最多只有一项被选中
 	               for(String key:states.keySet()){
 	                   states.put(key, false);

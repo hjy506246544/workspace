@@ -1,16 +1,21 @@
 package com.gvs.controlpanel.activity.backgroundmusic;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.adapter.BgMusicAdapter;
 import com.gvs.controlpanel.adapter.BgMusicAdapter.viewhodler;
-import com.gvs.controlpanel.adapter.Main_GridViewAdapter.ViewHolder;
 import com.gvs.controlpanel.bean.MusicInfo;
 import com.gvs.controlpanel.util.Saomiao;
 import com.gvs.controlpanel.util.ToastUtils;
+
+import android.content.ComponentName;
 import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -20,7 +25,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.AdapterView.OnItemClickListener;
-import android.widget.RadioButton;
+import android.widget.Toast;
 /**
  * 背景音乐主界面
  * 2016-5-19
@@ -40,6 +45,9 @@ public class BgMusicActivity extends FragmentActivityBase {
     // 用来保存单选主题当前选中的项目，这样用户在切换选择同一个主题下其它选项时能够将之前选中的项目的状态设置为未选状态
     private HashMap<String, String> radioButtonSelectedMaps;
     public int checkNum = 0; // 记录选中的条目数量
+    private PackageManager mPackageManager;
+    private Context mContext;
+    public List<ResolveInfo> mAllApps = new ArrayList<ResolveInfo>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,18 +72,39 @@ public class BgMusicActivity extends FragmentActivityBase {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				pos = position;
-				viewhodler holder = (viewhodler) view.getTag();
+//				Intent intent =new Intent(Intent.ACTION_VIEW,null);
+//				intent.addCategory(Intent.CATEGORY_DEFAULT);
+//				intent.setType("video/*");
+//				PackageManager manager = BgMusicActivity.this.getPackageManager();
+//				mAllApps = manager.queryIntentActivities(intent, PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
+//				startActivity(intent);
 
-				//重置，确保最多只有一项被选中
-                for(String key:bgMusicAdapter.getStates().keySet()){
-            	   bgMusicAdapter.getStates().put(key, false);
+				//--------------------------
+				// 通过包名获取要跳转的app，创建intent对象
+				Intent intent = getPackageManager().getLaunchIntentForPackage("com.example.musicplayer1");
+				// 这里如果intent为空，就说名没有安装要跳转的应用嘛
+				Log.e("23523", "fwegter");
+				if (intent != null) {
+				    // 这里跟Activity传递参数一样的嘛，不要担心怎么传递参数，还有接收参数也是跟Activity和Activity传参数一样
+				    intent.putExtra("musicname", musicList.get(pos).getMusic_name());
+				    Log.e("musicname", "musicname="+musicList.get(pos).getMusic_name());
+				    intent.putExtra("singer", musicList.get(pos).getSinger());
+				    Log.e("singer", "singer="+musicList.get(pos).getSinger());
+				    /*
+				    intent.putExtra("musicid", musicList.get(position-1).getId());
+				    Log.e("musicid", "musicid="+musicList.get(position-1).getId());
+				    */
+				    intent.putExtra("duration", musicList.get(pos).getDuration());
+				    Log.e("duration", "duration="+musicList.get(pos).getDuration());
+				    startActivity(intent);
+				} else {
+				    // 没有安装要跳转的app应用，提醒一下
+					Log.e("23523", "fwesadfer");
+				    Toast.makeText(getApplicationContext(), "哟，赶紧下载安装这个APP吧", Toast.LENGTH_LONG).show();
+					Log.e("23", "fter");
+				}
 
-                }
-                bgMusicAdapter.getStates().put(String.valueOf(position), holder.pImageView.isChecked());
-                lvSongs.setChoiceMode(position);
-                bgMusicAdapter.notifyDataSetChanged();
-
-
+//-------------------------------------------------------
 //				// 取得ViewHolder对象，这样就省去了通过层层的findViewById去实例化我们需要的cb实例的步骤
 //				// 改变CheckBox的状态
 //				holder.pImageView.toggle();
@@ -148,8 +177,12 @@ public class BgMusicActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				pos = pos+1;
-				ToastUtils.show(BgMusicActivity.this, "选择第"+pos+"首背景音乐成功！");
+				ToastUtils.show(BgMusicActivity.this,"选择背景音乐成功！");
+//				ToastUtils.show(BgMusicActivity.this,
+//						"你选择"+musicList.get(bgMusicAdapter.getPositions()).getSinger()+"唱的"+musicList.get(bgMusicAdapter.getPositions()).getMusic_name()+"为背景音乐！");
+				Log.e("getSinger", "getSinger()="+musicList.get(bgMusicAdapter.getPositions()).getSinger());
+				Log.e("getMusic_name", "getMusic_name="+musicList.get(bgMusicAdapter.getPositions()).getMusic_name());
+				Log.e("pos", "pos="+bgMusicAdapter.getPositions());
 				BgMusicActivity.this.finish();
 			}
 		});
