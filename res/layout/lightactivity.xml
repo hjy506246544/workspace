@@ -10,7 +10,14 @@
         android:layout_height="70dp"
     	android:background="@color/translucent_8"
         android:orientation="vertical" />
-
+    <com.gvs.controlpanel.widget.HorizontalListView
+        android:id="@+id/hsm_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp" />
+    <!--
     <GridView
 	    android:id="@+id/lightgv"
 	    android:layout_below="@+id/header"
@@ -21,6 +28,5 @@
 	    android:paddingTop="12dp"
 	    android:listSelector="#00000000"
         android:stretchMode="columnWidth"
-        android:verticalSpacing="10dp" />
-
+        android:verticalSpacing="10dp" />-->
 </RelativeLayout>

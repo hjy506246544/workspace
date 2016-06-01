@@ -1,7 +1,5 @@
 package com.gvs.controlpanel.activity.backgroundmusic;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
@@ -10,11 +8,9 @@ import com.gvs.controlpanel.adapter.BgMusicAdapter.viewhodler;
 import com.gvs.controlpanel.bean.MusicInfo;
 import com.gvs.controlpanel.util.Saomiao;
 import com.gvs.controlpanel.util.ToastUtils;
-
-import android.content.ComponentName;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.util.Log;
@@ -24,6 +20,7 @@ import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 /**
@@ -41,12 +38,6 @@ public class BgMusicActivity extends FragmentActivityBase {
 	private ListView lvSongs;
 	private Saomiao saomiao;
 	private int pos;
-	private boolean flag = true; //标记是否到达最大数量
-    // 用来保存单选主题当前选中的项目，这样用户在切换选择同一个主题下其它选项时能够将之前选中的项目的状态设置为未选状态
-    private HashMap<String, String> radioButtonSelectedMaps;
-    public int checkNum = 0; // 记录选中的条目数量
-    private PackageManager mPackageManager;
-    private Context mContext;
     public List<ResolveInfo> mAllApps = new ArrayList<ResolveInfo>();
 
     @Override
@@ -61,9 +52,11 @@ public class BgMusicActivity extends FragmentActivityBase {
 		initListener();
     }
 
+    @SuppressLint("InlinedApi")
     private void initData() {
 		bgMusicAdapter = new BgMusicAdapter(BgMusicActivity.this, musicList);
 		lvSongs.setAdapter(bgMusicAdapter);
+
 	}
 
 	private void initListener() {
@@ -72,15 +65,16 @@ public class BgMusicActivity extends FragmentActivityBase {
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
 				pos = position;
-//				Intent intent =new Intent(Intent.ACTION_VIEW,null);
-//				intent.addCategory(Intent.CATEGORY_DEFAULT);
-//				intent.setType("video/*");
-//				PackageManager manager = BgMusicActivity.this.getPackageManager();
-//				mAllApps = manager.queryIntentActivities(intent, PackageManager.COMPONENT_ENABLED_STATE_DEFAULT);
-//				startActivity(intent);
 
-				//--------------------------
-				// 通过包名获取要跳转的app，创建intent对象
+				viewhodler holder= (viewhodler) view.getTag();
+				holder.pImageView.toggle();
+				final RadioButton radio=(RadioButton) view.findViewById(R.id.albumPhoto);
+				holder.pImageView = radio;
+				for(String key:bgMusicAdapter.getStates().keySet()){
+					bgMusicAdapter.getStates().put(key, false);
+				}
+				bgMusicAdapter.getStates().put(String.valueOf(position), radio.isChecked());
+				bgMusicAdapter.notifyDataSetChanged();
 				Intent intent = getPackageManager().getLaunchIntentForPackage("com.example.musicplayer1");
 				// 这里如果intent为空，就说名没有安装要跳转的应用嘛
 				Log.e("23523", "fwegter");
@@ -99,69 +93,8 @@ public class BgMusicActivity extends FragmentActivityBase {
 				    startActivity(intent);
 				} else {
 				    // 没有安装要跳转的app应用，提醒一下
-					Log.e("23523", "fwesadfer");
 				    Toast.makeText(getApplicationContext(), "哟，赶紧下载安装这个APP吧", Toast.LENGTH_LONG).show();
-					Log.e("23", "fter");
 				}
-
-//-------------------------------------------------------
-//				// 取得ViewHolder对象，这样就省去了通过层层的findViewById去实例化我们需要的cb实例的步骤
-//				// 改变CheckBox的状态
-//				holder.pImageView.toggle();
-//				// 将CheckBox的选中状况记录下来
-//				bgMusicAdapter.getSubjectItemMap().put(position, holder.pImageView.isChecked());
-//                // 调整选定条目
-//    		    if(holder.pImageView.isChecked()){
-//				  Log.e("checkNum4=", "已选中"+checkNum+"项");
-//				  checkNum++;
-//				  Log.e("checkNum2=", "已选中"+checkNum+"项");
-//    		    }else {
-//    			  checkNum--;
-//    		    }
-//    		    if(checkNum>0){
-//    			  Log.e("checkNum3=", "已选中"+checkNum+"项");
-//    			  ToastUtils.show(BgMusicActivity.this, "只支持选择1首背景音乐！");
-//    			  flag = true; //标注已达到最大数量
-//    			  return;
-//    		    }
-//    		    bgMusicAdapter.notifyDataSetChanged();
-
-//------------------------------------------
-//                if (holder.pImageView.isChecked()) {
-//                    Log.e("checkNum5=", "已选中"+checkNum+"项");
-//                    checkNum++;
-//                    return;
-//                } else {
-//                    Log.e("checkNum6=", "已选中"+checkNum+"项");
-//                    checkNum--;
-//                }
-		        //通知跟新界面
-				//bgMusicAdapter.notifyDataSetChanged();
-				/*
-				//1.首先遍历数据源有多少被选中
-			    int currNum=0;
-			    for(int i=0; i<musicList.size();i++){
-			    	MusicInfo info = musicList.get(i);
-			    	if(currNum<1){
-			    		  if(info.isSelect_box()){
-			    			  currNum++;
-			    		  }
-		    	    }else {
-		    	    	ToastUtils.show(BgMusicActivity.this, "只支持选择1首背景音乐，重新选择请返回！");
-		    	    	flag = true; //标注已达到最大数量
-					}
-			    }
-			    // 2. 点击选中，并改变对象的选中状态
-			    if(!flag){
-					if(musicList.get(pos).isSelect_box()){
-						musicList.get(pos).setSelect_box(false);
-	                }else{
-	                	musicList.get(pos).setSelect_box(true);
-	                }
-			        //通知跟新界面
-					bgMusicAdapter.notifyDataSetChanged();
-			    }
-			    */
 			}
 		});
 

@@ -125,6 +125,7 @@ public class BgMusicAdapter extends BaseAdapter{
 	       viewHolder.pImageView.setChecked(res);
 		return convertView;
 	}
+
 	public class viewhodler{
 		public TextView pTitle,pDuration,pArtist;
 		public RadioButton pImageView;

@@ -43,19 +43,18 @@ public class MainActivity extends FragmentActivityBase {
 
 	private GridView listgv;
 	private TextView timetv;
-	private ImageView setiv;
 	private Main_GridViewAdapter gridViewAdapter;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
             R.drawable.main_light_, R.drawable.main_cl_,
             R.drawable.main_kt_, R.drawable.main_dsj_,
             R.drawable.main_jtyy_, R.drawable.main_bgmusic_,
-            R.drawable.main_scene_, R.drawable.main_afjk_};
+            R.drawable.main_scene_, R.drawable.main_afjk_,R.drawable.main_set_};
     // 设置标题
     private String[] title = new String[] {
     		"灯光", "窗帘", "空调",
     		"电视机", "家庭影院", "背景音乐",
-    		"场景", "安防监控"};
+    		"场景", "安防监控", "设置"};
     /*
     // 设置状态
     private String[] state = new String[] {
@@ -145,6 +144,10 @@ public class MainActivity extends FragmentActivityBase {
 					//安防监控
 					Intent intent8  = new Intent(MainActivity.this,SecurityMonitorActivity.class);
 					startActivity(intent8);
+				}else if (position==8) {
+					//设置按钮
+					Intent intent = new Intent(MainActivity.this,SetActivity.class);
+					startActivity(intent);
 				}
 			}
 		});
@@ -152,7 +155,6 @@ public class MainActivity extends FragmentActivityBase {
     	/**
     	 * 设置按钮
     	 * 打开手机自带系统设置界面
-    	 */
     	setiv.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -164,6 +166,7 @@ public class MainActivity extends FragmentActivityBase {
 
 			}
 		});
+    	 */
 	}
 
 	/**
@@ -315,7 +318,6 @@ public class MainActivity extends FragmentActivityBase {
     private void initView() {
     	timetv = (TextView) findViewById(R.id.timetv);
 		listgv=(GridView) findViewById(R.id.listgv);
-		setiv = (ImageView) findViewById(R.id.setiv);
 	}
 
     //每个页面都要重写这个方法和初始化皮肤的方法

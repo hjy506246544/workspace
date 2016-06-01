@@ -12,7 +12,7 @@
 	    android:background="@color/translucent_8"
 	    android:gravity="center"
 	    android:minHeight="70dp" >
-
+		<!-- 2016-6-1 hjy gai
 	    <LinearLayout
 	        android:layout_width="230dp"
 	        android:layout_height="70dp"
@@ -27,16 +27,14 @@
 	            android:src="@drawable/main_home" />
 
 	    </LinearLayout>
-
+		 -->
         <TextView
             android:id="@+id/timetv"
 	        style="@style/app_textStyle1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-        	android:layout_centerVertical="true"
-        	android:gravity="center"
-        	android:layout_marginLeft="70dp" />
-
+        	android:gravity="center" />
+		<!-- 2016-6-1 hjy
         <ImageView
             android:id="@+id/setiv"
             android:layout_width="60dp"
@@ -46,6 +44,7 @@
         	android:layout_centerVertical="true"
         	android:layout_toRightOf="@+id/timetv"
             android:src="@drawable/main_set" />
+             -->
     </RelativeLayout>
 
     <GridView
@@ -55,7 +54,9 @@
 	    android:layout_height="match_parent"
 	    android:dividerHeight="0dp"
 	    android:numColumns="3"
-	    android:paddingTop="12dp"
+	    android:layout_centerInParent="true"
+	    android:paddingTop="15dp"
+	    android:paddingBottom="15dp"
 	    android:background="@drawable/main_bj"
 	    android:listSelector="#00000000"
         android:stretchMode="columnWidth"
