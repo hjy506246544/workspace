@@ -42,6 +42,7 @@
     <string name="callwait_ts4">由运营商收取接听或漫游费用.</string>
     <string name="app_btnyes">确定</string>
     <string name="app_btnno">取消</string>
+    <string name="scene_exists">亲，您已经选择过该场景哦！</string>
 
     <!-- 灯光 -->
     <string name="light_title">灯光</string>
