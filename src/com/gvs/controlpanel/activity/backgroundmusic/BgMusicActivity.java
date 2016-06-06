@@ -77,7 +77,6 @@ public class BgMusicActivity extends FragmentActivityBase {
 				bgMusicAdapter.notifyDataSetChanged();
 				Intent intent = getPackageManager().getLaunchIntentForPackage("com.example.musicplayer1");
 				// 这里如果intent为空，就说名没有安装要跳转的应用嘛
-				Log.e("23523", "fwegter");
 				if (intent != null) {
 				    // 这里跟Activity传递参数一样的嘛，不要担心怎么传递参数，还有接收参数也是跟Activity和Activity传参数一样
 				    intent.putExtra("musicname", musicList.get(pos).getMusic_name());

@@ -17,3 +17,38 @@
 3.2016-5-27
 	完成背景音乐
 	优化场景界面
+
+4.2016-6-3 出现ADB server didn't ACK
+		  解决方法：
+		  在cmd窗口:
+		C:\Users\lizy>adb nodaemon server
+		cannot bind 'tcp:5037'
+
+		C:\Users\lizy>netstat -ano | findstr "5037"
+		  TCP    127.0.0.1:5037         0.0.0.0:0              LISTENING       8516
+		  TCP    127.0.0.1:5037         127.0.0.1:59163        TIME_WAIT       0
+		  TCP    127.0.0.1:5037         127.0.0.1:59164        TIME_WAIT       0
+		  TCP    127.0.0.1:5037         127.0.0.1:59167        TIME_WAIT       0
+		  ......
+		C:\Users\lizy>tasklist | findstr "8516"
+		sjk_daemon                        8516 Console                    1     3,071 K
+
+		哦，原来是sjk_daemon进程占了adb的端口。
+
+		C:\Users\lizy>tasklist
+
+		Image Name                     PID Session Name        Session#    Mem Usage
+		========================= ======== ================ =========== ============
+		System Idle Process              0 Services                   0         24 K
+		System                           4 Services                   0      1,128 K
+		sjk_daemon                     963 Console                    1      3,071 K
+		tasklist.exe                  1260 Console                    1      5,856 K
+
+		将这个进程kill掉：
+		C:\Users\lizy>taskkill /f /pid 963
+		如果这个命令提示无权限，那么，可以去windows的“任务管理器”中“进程”那个窗口，找到这个进程，将它杀掉。
+
+5.2016-6-6
+  1.完成场景的增删改查，选中效果没加进去
+  2.弹框底图和图标换了
+

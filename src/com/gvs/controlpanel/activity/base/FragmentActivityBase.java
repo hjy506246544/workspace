@@ -1,17 +1,14 @@
 package com.gvs.controlpanel.activity.base;
-
 import java.lang.reflect.Field;
-
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.widget.CustomProgressDialog;
 import com.gvs.controlpanel.widget.LoadProgressDialog;
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 
@@ -20,6 +17,7 @@ public abstract class FragmentActivityBase extends FragmentActivity {
 	protected static final int SHOW_TIME = 1;
 	private CustomProgressDialog m_ProgressDialog;
 	private LoadProgressDialog loadProgressDialog;
+	Context context;
 
 	public boolean isRun() {
 		return isRun;

@@ -9,7 +9,7 @@
 
     <TextView
         android:id="@+id/teatable_rgbtv"
-        style="@style/app_textStyle1"
+        style="@style/app_textStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -55,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="30dp"
-            android:background="@drawable/aircondition_minus_" />
+            android:background="@drawable/aircondition_minus" />
 		<!--
         <ImageView
             android:id="@+id/teatable_jdttv"
@@ -87,7 +87,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/teatable_jdtsb"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/aircondition_jia_" />
+            android:background="@drawable/aircondition_jia" />
 
 
     </RelativeLayout>

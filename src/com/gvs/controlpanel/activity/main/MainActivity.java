@@ -9,6 +9,7 @@ import com.gvs.controlpanel.activity.SetActivity;
 import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.light.LightActivity;
+import com.gvs.controlpanel.activity.scene.AddSceneActivity;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;

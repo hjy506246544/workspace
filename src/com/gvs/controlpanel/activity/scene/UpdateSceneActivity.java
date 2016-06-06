@@ -6,15 +6,21 @@ import java.util.Map;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.adapter.SceneaddListAdapter;
+import com.gvs.controlpanel.adapter.SceneaddListAdapter.ListItemView;
+import com.gvs.controlpanel.db.MySQLiteOpenDatabaseHelper;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
-import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.AdapterView.OnItemClickListener;
 /**
  * 修改场景主界面
  * 2016-5-24
@@ -23,32 +29,29 @@ import android.widget.ListView;
  */
 public class UpdateSceneActivity extends FragmentActivityBase {
 	public Header header;
-	static Context context;
 	private ListView scenelist;
 	private SceneaddListAdapter sceneaddListAdapter;
 	private ImageView backiv;
 	private Button bcbtn;
+	public EditText scenenameet;
 	// 设置适配器的图片资源
     private int[] imgiv = new int[] {
             R.drawable.main_light, R.drawable.main_cl,
             R.drawable.main_kt, R.drawable.main_dsj,
             R.drawable.main_jtyy, R.drawable.main_bgmusic,
             R.drawable.main_afjk};
-    // 设置适配器的图片资源
-    private int[] dxiv = new int[] {
-            R.drawable.scene_checkfalse, R.drawable.scene_checkfalse,
-            R.drawable.scene_checkfalse, R.drawable.scene_checkfalse,
-            R.drawable.scene_checkfalse, R.drawable.scene_checkfalse,
-            R.drawable.scene_checkfalse};
     // 设置标题
     private String[] nametv = new String[] {
     		"灯光", "窗帘", "空调", "电视机", "家庭影院", "背景音乐", "安防监控"};
     private List listitem = new ArrayList();
+	private int positions;
+	private MySQLiteOpenDatabaseHelper dbHelper;// 数据库工具类
+	private List<Map<String, Object>> totaList = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sceneadd_activity);
+        setContentView(R.layout.sceneupdate_activity);
 		initView();
 		initData();
 		initListener();
@@ -62,45 +65,37 @@ public class UpdateSceneActivity extends FragmentActivityBase {
         for (int i = 0; i < imgiv.length; i++) {
             Map map = new HashMap();
             map.put("imgiv", imgiv[i]);
-            map.put("dxiv", dxiv[i]);
             map.put("nametv", nametv[i]);
             listitem.add(map);
         }
 	}
 
     private void initData() {
-//    	header.setTitle(getResources().getString(R.string.scenezdy_title));
-//
-//		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				AddSceneActivity.this.finish();
-//			}
-//
-//		});
-//
-//		header.setRightImageViewRes(R.drawable.scenecreate_, new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				ToastUtils.show(AddSceneActivity.this, "创建成功！");
-//				AddSceneActivity.this.finish();
-//			}
-//		});
-//		header.setTextViewRes(R.string.scenezdy_ljcj, new OnClickListener() {
-//
-//			@Override
-//			public void onClick(View v) {
-//				ToastUtils.show(AddSceneActivity.this, "创建成功2！");
-//			}
-//		});
+		scenenameet.setText(getIntent().getStringExtra("scenename"));
+		// 创建数据库和表 执行完构造方法后会执行onCreate中的db.exec方法 创建表
+		dbHelper = new MySQLiteOpenDatabaseHelper(this);
 		getListItems();
 		sceneaddListAdapter = new SceneaddListAdapter(UpdateSceneActivity.this,listitem);//创建适配器
 		scenelist.setAdapter(sceneaddListAdapter);
 	}
 
 	private void initListener() {
+
+		scenelist.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				positions = position;
+				ListItemView  listItemView = (ListItemView) view.getTag();
+				listItemView.dxiv.toggle();
+				final CheckBox radio=(CheckBox) view.findViewById(R.id.dxiv);
+				listItemView.dxiv = radio;
+				sceneaddListAdapter.getSubjectItemMap().put(String.valueOf(position), radio.isChecked());
+				sceneaddListAdapter.notifyDataSetChanged();
+			}
+		});
+
 		backiv.setOnClickListener(new OnClickListener() {
 
 			@Override
@@ -113,16 +108,25 @@ public class UpdateSceneActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				ToastUtils.show(UpdateSceneActivity.this, "创建成功！");
+				String id = getIntent().getStringExtra("id");
+				Log.e("id2", "id2="+id);
+				String scenename = scenenameet.getText().toString();
+				boolean flag = dbHelper.execData(
+						"update db_controlpanel set scenename=? where _id=?",
+						new Object[] { scenename, id });
+				if (!flag) {
+					ToastUtils.show(UpdateSceneActivity.this, "修改失败！");
+				}
+				ToastUtils.show(UpdateSceneActivity.this, "修改成功！");
 				UpdateSceneActivity.this.finish();
 			}
 		});
 	}
 
     private void initView() {
-		//header = (Header) findViewById(R.id.header);
 		scenelist = (ListView) findViewById(R.id.scenelist);
 		backiv = (ImageView) findViewById(R.id.backiv);
 		bcbtn = (Button) findViewById(R.id.bcbtn);
+		scenenameet = (EditText) findViewById(R.id.scenenameet);
 	}
 }

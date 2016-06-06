@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.gvs.controlpanel.R;
+import com.gvs.controlpanel.bean.Scene;
 
 import android.content.Context;
 import android.util.Log;
@@ -78,9 +79,13 @@ public class SceneAdapter extends BaseAdapter{
         }
 
         Map map = (Map) listItems.get(position);
-        listItemView.iv_headView.setImageResource((Integer) map.get("image"));
+        //listItemView.iv_headView.setImageResource((Integer) map.get("image"));
         listItemView.tv_displerName.setText(map.get("title") + "");
-
+        /*
+        Scene scene = listItems.get(position);
+        //listItemView.iv_headView.setImageResource(R.drawable.main_scene);
+        listItemView.tv_displerName.setText(scene.getSceneName());
+		*/
         return convertView;
 	}
 

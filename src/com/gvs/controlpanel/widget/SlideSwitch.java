@@ -1,4 +1,5 @@
 package com.gvs.controlpanel.widget;
+import android.R;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -98,7 +99,7 @@ public class SlideSwitch extends View{
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(lineWidth);
         /*左边部分的线，紫色*/
-        mPaint.setColor(com.gvs.controlpanel.R.color.purple);
+        mPaint.setColor(Color.BLUE);
         canvas.drawLine(lineStart, centerY, curX, centerY, mPaint);
         /*右边部分的线，灰色*/
         mPaint.setColor(Color.GRAY);
@@ -109,7 +110,7 @@ public class SlideSwitch extends View{
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setColor(Color.GRAY);
         canvas.drawCircle(lineEnd, centerY, lineWidth / 2, mPaint);
-        mPaint.setColor(com.gvs.controlpanel.R.color.purple);
+        mPaint.setColor(Color.BLUE);
         canvas.drawCircle(lineStart, centerY, lineWidth / 2, mPaint);
         /*圆形滑块*/
         mPaint.setColor(Color.LTGRAY);

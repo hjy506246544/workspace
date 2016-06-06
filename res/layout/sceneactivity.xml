@@ -24,4 +24,15 @@
         android:layout_below="@+id/header"
         android:listSelector="@android:color/transparent" />
 
+    <TextView
+        android:id="@+id/textView_main_emptyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:layout_below="@+id/header"
+        android:gravity="center"
+        style="@style/app_textStyle1"
+        android:layout_gravity="center_vertical"
+        android:text="空" />
+
 </RelativeLayout>
