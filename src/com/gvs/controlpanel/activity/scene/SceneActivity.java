@@ -3,7 +3,7 @@ import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
-import com.gvs.controlpanel.db.MySQLiteOpenDatabaseHelper;
+import com.gvs.controlpanel.db.MySQLiteHelper;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.util.WriteToSD;
 import com.gvs.controlpanel.widget.Header;
@@ -38,7 +38,7 @@ public class SceneActivity extends FragmentActivityBase{
 	public Header header;
 	static Context context;
 	private SwipeMenuListView listView;
-	private MySQLiteOpenDatabaseHelper dbHelper;// 数据库工具类
+	private MySQLiteHelper dbHelper;// 数据库工具类
 	private List<Map<String, Object>> totaList = null;
 	private SimpleAdapter adapter = null;
 	private TextView textView_main_emptyInfo;
@@ -87,7 +87,7 @@ public class SceneActivity extends FragmentActivityBase{
 
     private void initData() {
 		// 创建数据库和表 执行完构造方法后会执行onCreate中的db.exec方法 创建表
-		dbHelper = new MySQLiteOpenDatabaseHelper(this);
+		dbHelper = new MySQLiteHelper(this);
     	header.setTitle(getResources().getString(R.string.scene_title));
 
 		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {

@@ -8,7 +8,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class MySQLiteOpenDatabaseHelper extends SQLiteOpenHelper {
+public class MySQLiteHelper extends SQLiteOpenHelper {
 
 	private final static String DB_NAME = "db_controlpanel";
 
@@ -16,7 +16,7 @@ public class MySQLiteOpenDatabaseHelper extends SQLiteOpenHelper {
 
 	private SQLiteDatabase dbConn = null;
 
-	public MySQLiteOpenDatabaseHelper(Context context) {
+	public MySQLiteHelper(Context context) {
 		super(context, DB_NAME, null, VERSION);
 		// TODO Auto-generated constructor stub
 		dbConn = this.getReadableDatabase();

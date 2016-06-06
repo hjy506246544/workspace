@@ -7,7 +7,7 @@ import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.adapter.SceneaddListAdapter;
 import com.gvs.controlpanel.adapter.SceneaddListAdapter.ListItemView;
-import com.gvs.controlpanel.db.MySQLiteOpenDatabaseHelper;
+import com.gvs.controlpanel.db.MySQLiteHelper;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import android.os.Bundle;
@@ -50,7 +50,7 @@ public class AddSceneActivity extends FragmentActivityBase {
     //private List<Map<String, Object>> listitem = null;
     private List listitem = new ArrayList();
 	private int positions;
-	private MySQLiteOpenDatabaseHelper dbHelper;// 数据库工具类
+	private MySQLiteHelper dbHelper;// 数据库工具类
 	private int img = R.drawable.main_light;
 	private SimpleAdapter adapter = null;
 
@@ -95,7 +95,7 @@ public class AddSceneActivity extends FragmentActivityBase {
 
     private void initData() {
 		// 创建数据库和表 执行完构造方法后会执行onCreate中的db.exec方法 创建表
-		dbHelper = new MySQLiteOpenDatabaseHelper(this);
+		dbHelper = new MySQLiteHelper(this);
 		getListItems();
 //		scenelist.setAdapter(adapter);
 //		scenelist.setEmptyView(textView_main_emptyInfo);// 无数据时显示此View

@@ -9,7 +9,6 @@ import com.gvs.controlpanel.activity.SetActivity;
 import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.light.LightActivity;
-import com.gvs.controlpanel.activity.scene.AddSceneActivity;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
@@ -22,8 +21,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
@@ -56,18 +53,6 @@ public class MainActivity extends FragmentActivityBase {
     		"灯光", "窗帘", "空调",
     		"电视机", "家庭影院", "背景音乐",
     		"场景", "安防监控", "设置"};
-    /*
-    // 设置状态
-    private String[] state = new String[] {
-    		"状态：off", "状态：on", "状态：off",
-    		"状态：on", "状态：off", "状态：on",
-    		"状态：off", "状态：on", "状态：off"};
-    // 设置信息
-    private String[] info = new String[] {
-    		"信息：该产品···", "信息：该产品好东西", "信息：该产品很好",
-    		"信息：该产品不错", "信息：该产品···", "信息：该产品···",
-    		"信息：该产品呵呵", "信息：该产品···", "信息：该产品···"};
-    		*/
     private List listitem = new ArrayList();
 	private SkinSettingManager mSettingManager;
 	private Dialog dialog;
@@ -87,10 +72,6 @@ public class MainActivity extends FragmentActivityBase {
             Map map = new HashMap();
             map.put("image", imageId[i]);
             map.put("title", title[i]);
-            /*
-            map.put("state", state[i]);
-            map.put("info", info[i]);
-            */
             listitem.add(map);
         }
 
@@ -116,7 +97,6 @@ public class MainActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
 				MainActivity.this.finish();
 			}
 		});
@@ -331,7 +311,9 @@ public class MainActivity extends FragmentActivityBase {
 		backiv = (ImageView) findViewById(R.id.backiv);
 	}
 
-    //每个页面都要重写这个方法和初始化皮肤的方法
+    /**
+     * 每个页面都要重写这个方法和初始化皮肤的方法
+     */
     @Override
     protected void onResume() {
     	//初始化皮肤

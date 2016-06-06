@@ -7,7 +7,7 @@ import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.adapter.SceneaddListAdapter;
 import com.gvs.controlpanel.adapter.SceneaddListAdapter.ListItemView;
-import com.gvs.controlpanel.db.MySQLiteOpenDatabaseHelper;
+import com.gvs.controlpanel.db.MySQLiteHelper;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import android.os.Bundle;
@@ -45,7 +45,7 @@ public class UpdateSceneActivity extends FragmentActivityBase {
     		"灯光", "窗帘", "空调", "电视机", "家庭影院", "背景音乐", "安防监控"};
     private List listitem = new ArrayList();
 	private int positions;
-	private MySQLiteOpenDatabaseHelper dbHelper;// 数据库工具类
+	private MySQLiteHelper dbHelper;// 数据库工具类
 	private List<Map<String, Object>> totaList = null;
 
     @Override
@@ -73,7 +73,7 @@ public class UpdateSceneActivity extends FragmentActivityBase {
     private void initData() {
 		scenenameet.setText(getIntent().getStringExtra("scenename"));
 		// 创建数据库和表 执行完构造方法后会执行onCreate中的db.exec方法 创建表
-		dbHelper = new MySQLiteOpenDatabaseHelper(this);
+		dbHelper = new MySQLiteHelper(this);
 		getListItems();
 		sceneaddListAdapter = new SceneaddListAdapter(UpdateSceneActivity.this,listitem);//创建适配器
 		scenelist.setAdapter(sceneaddListAdapter);
