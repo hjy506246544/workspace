@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/app_bg" >
+    android:background="@drawable/main_bj" >
 
     <LinearLayout
         android:id="@+id/header"
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/translucent_8"
         android:gravity="center"
-        android:minHeight="45dp"
+        android:minHeight="70dp"
         android:orientation="horizontal" >
 
         <ImageView
@@ -45,7 +45,7 @@
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项"
-		        style="@style/app_textStyle2"
+		        style="@style/app_textStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -61,15 +61,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -88,7 +88,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
@@ -98,15 +97,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -125,7 +124,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
@@ -135,15 +133,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -162,13 +160,12 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项2"
-		        style="@style/app_textStyle2"
+		        style="@style/app_textStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -184,15 +181,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -211,7 +208,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
@@ -221,15 +217,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -248,7 +244,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
@@ -258,15 +253,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -285,13 +280,12 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项3"
-		        style="@style/app_textStyle2"
+		        style="@style/app_textStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -307,15 +301,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -334,7 +328,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
@@ -344,15 +337,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -371,7 +364,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
@@ -381,15 +373,15 @@
 		        android:minHeight="45dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt_"
+		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle"
+		            style="@style/app_textStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_bx"
+		            android:drawableLeft="@drawable/main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -408,7 +400,6 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:layout_marginLeft="20dp"
 		        android:background="@drawable/cxian2"/>
 		</LinearLayout>
 

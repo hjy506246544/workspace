@@ -39,7 +39,7 @@
         android:drawableLeft="@drawable/main_kt3"
         android:drawablePadding="10dp"
        	android:minHeight="45dp"
-        style="@style/app_textStyle1" />
+        style="@style/app_textStyle" />
 
     <RelativeLayout
         android:layout_height="wrap_content"
