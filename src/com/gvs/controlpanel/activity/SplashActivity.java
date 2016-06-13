@@ -9,6 +9,7 @@ import android.widget.Toast;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.main.MainActivity;
+import com.gvs.controlpanel.activity.main.MainThreeActivity;
 import com.gvs.controlpanel.activity.main.MainTwoActivity;
 /**
  * 主题选择
@@ -16,7 +17,7 @@ import com.gvs.controlpanel.activity.main.MainTwoActivity;
  * 2016-6-2
  */
 public class SplashActivity extends FragmentActivityBase {
-	private Button themeone_btn,themeTwo_btn;
+	private Button themeone_btn,themeTwo_btn,themeThree_btn;
 	private long mExitTime;
 
     @Override
@@ -47,8 +48,17 @@ public class SplashActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent  = new Intent(SplashActivity.this,MainTwoActivity.class);
-				startActivity(intent);
+				Intent intent2  = new Intent(SplashActivity.this,MainTwoActivity.class);
+				startActivity(intent2);
+			}
+		});
+
+		themeThree_btn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent3  = new Intent(SplashActivity.this,MainThreeActivity.class);
+				startActivity(intent3);
 			}
 		});
 	}
@@ -56,6 +66,7 @@ public class SplashActivity extends FragmentActivityBase {
     private void initView() {
     	themeone_btn = (Button) findViewById(R.id.themeOne_btn);
     	themeTwo_btn = (Button) findViewById(R.id.themeTwo_btn);
+    	themeThree_btn = (Button) findViewById(R.id.themeThree_btn);
 	}
 
     @Override

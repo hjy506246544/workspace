@@ -41,6 +41,12 @@
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>
+        <!-- 主题三-->
+        <activity
+            android:name="com.gvs.controlpanel.activity.main.MainThreeActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
 		<!-- 灯光 -->
         <activity
             android:name="com.gvs.controlpanel.activity.light.LightActivity"
