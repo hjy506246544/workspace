@@ -8,6 +8,7 @@
 	<color name="whiteColor">#ffffff</color>
 	<color name="blackColor">#ff000000</color>
 	<color name="grayColor">#88231715</color>
+	<color name="redColor">#cf000d</color>
 	<color name="appwidget_error_color">#FCCC</color>
 	<color name="bubble_dark_background">#B2191919</color>
 	<color name="transparency">#00000000</color>

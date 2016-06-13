@@ -61,4 +61,18 @@
         android:background="@drawable/bjt2_"
         android:text="主题二" />
 
+    <Button
+        android:id="@+id/themeThree_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="55dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@+id/themeTwo_btn"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        style="@style/app_textStyle1"
+        android:background="@drawable/bjt2_"
+        android:text="主题三" />
+
 </RelativeLayout>
