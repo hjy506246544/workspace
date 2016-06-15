@@ -43,6 +43,8 @@
     <string name="app_btnyes">确定</string>
     <string name="app_btnno">取消</string>
     <string name="scene_exists">亲，您已经选择过该场景哦！</string>
+    <string name="bjt_title">背景图替换</string>
+    <string name="set_title">设置</string>
 
     <!-- 灯光 -->
     <string name="light_title">灯光</string>
