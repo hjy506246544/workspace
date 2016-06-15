@@ -25,7 +25,7 @@
             android:src="@drawable/return2" />
 		 -->
         <TextView
-	        style="@style/app_titleStyle1"
+	        style="@style/Style5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
         	android:gravity="center"

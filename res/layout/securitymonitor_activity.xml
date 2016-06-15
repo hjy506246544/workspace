@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -12,15 +12,84 @@
     	android:background="@color/translucent_8"
         android:orientation="vertical" />
 
-    <TextView
-        android:textColor="@color/black"
-        android:id="@+id/tv_displername"
-        android:text="选项一······"
-        style="@style/app_textStyle"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@id/header"
+        android:background="@color/grayColor"  >
 
-</LinearLayout>
+		<LinearLayout
+		    android:id="@+id/ll_title"
+		    android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="70dp"
+            android:gravity="center" >
+
+		    <RelativeLayout
+	            android:id="@+id/titlerl"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_gravity="center_vertical"
+		        android:layout_weight="1" >
+	            <ImageView
+	                android:id="@+id/iv"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:paddingRight="2dp"
+	                android:layout_marginTop="3dp" />
+
+	            <TextView
+	                android:id="@+id/tv_title1"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/iv"
+	                android:paddingLeft="2dp"
+	                android:gravity="center"
+	                style="@style/app_titleStyle2"
+	                android:text="监控预览" />
+            </RelativeLayout>
+
+		    <RelativeLayout
+	            android:id="@+id/titlerl2"
+		        android:layout_width="match_parent"
+		        android:layout_height="match_parent"
+		        android:gravity="center"
+		        android:layout_gravity="center_vertical"
+		        android:layout_weight="1" >
+	            <ImageView
+	                android:id="@+id/iv2"
+	                android:layout_height="wrap_content"
+	                android:layout_width="wrap_content"
+	                android:paddingRight="2dp"
+	                android:layout_marginTop="4dp" />
+	            <TextView
+	                android:id="@+id/tv_title2"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toRightOf="@+id/iv2"
+	                android:paddingLeft="2dp"
+	                android:gravity="center"
+	                style="@style/app_titleStyle1"
+	                android:text="影像回放" />
+            </RelativeLayout>
+        </LinearLayout>
+      <ImageView
+            android:id="@+id/cursor"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:contentDescription="@null"
+            android:layout_marginBottom="1dp"
+            android:scaleType="fitXY"
+            android:src="@color/gray" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/category_layout" />
+
+</RelativeLayout>
