@@ -18,12 +18,14 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -36,6 +38,8 @@ import android.widget.AdapterView.OnItemLongClickListener;
  */
 public class SceneActivity extends FragmentActivityBase{
 	public Header header;
+	private ImageView backiv;
+	private Button bcbtn;
 	static Context context;
 	private SwipeMenuListView listView;
 	private MySQLiteHelper dbHelper;// 数据库工具类
@@ -88,24 +92,48 @@ public class SceneActivity extends FragmentActivityBase{
     private void initData() {
 		// 创建数据库和表 执行完构造方法后会执行onCreate中的db.exec方法 创建表
 		dbHelper = new MySQLiteHelper(this);
-    	header.setTitle(getResources().getString(R.string.scene_title));
+//    	header.setTitle(getResources().getString(R.string.scene_title));
+//
+//		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				SceneActivity.this.finish();
+//			}
+//		});
+		getListItems();
+		// 给ListView 设置适配器
+		listView.setAdapter(adapter);
+		listView.setEmptyView(textView_main_emptyInfo);// 无数据时显示此View
+		if(totaList.size()<0){
+			bcbtn.setVisibility(View.VISIBLE);
+			Log.e("totaList.size()", "totaList.size()"+totaList.size());
+		}else {
+			bcbtn.setVisibility(View.GONE);
+			Log.e("totaList.size()2", "totaList.size()2"+totaList.size());
+		}
+//      sceneAdapter = new SceneAdapter(SceneActivity.this,listitem);//创建适配器
+//		listView.setAdapter(sceneAdapter);
+	}
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+	private void initListener() {
+		backiv.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				SceneActivity.this.finish();
 			}
 		});
-		getListItems();
-		// 给ListView 设置适配器
-		listView.setAdapter(adapter);
-		listView.setEmptyView(textView_main_emptyInfo);// 无数据时显示此View
-//      sceneAdapter = new SceneAdapter(SceneActivity.this,listitem);//创建适配器
-//		listView.setAdapter(sceneAdapter);
-	}
 
-	private void initListener() {
+		bcbtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(SceneActivity.this,AddSceneActivity.class);
+				startActivity(intent);
+			}
+		});
+
 		listView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -169,6 +197,7 @@ public class SceneActivity extends FragmentActivityBase{
 	  				  if("1".equals(totaList.get(position).get("_id").toString())
 	  						  || "2".equals(totaList.get(position).get("_id").toString())
 	  						  || "3".equals(totaList.get(position).get("_id").toString())
+	  						  || "4".equals(totaList.get(position).get("_id").toString())
 	  				  ){
 	  					  ToastUtils.show(SceneActivity.this, "该项不可删除！");
 	  				  }else {
@@ -232,8 +261,10 @@ public class SceneActivity extends FragmentActivityBase{
 	}
 
     private void initView() {
-		header = (Header) findViewById(R.id.header);
+		//header = (Header) findViewById(R.id.header);
 		listView = (SwipeMenuListView) findViewById(R.id.listview);
 		textView_main_emptyInfo = (TextView) findViewById(R.id.textView_main_emptyInfo);
+		backiv = (ImageView) findViewById(R.id.backiv);
+		bcbtn = (Button) findViewById(R.id.bcbtn);
 	}
 }

@@ -35,8 +35,8 @@ public class AddSceneActivity extends FragmentActivityBase {
 	private ListView scenelist;
 	private SceneaddListAdapter sceneaddListAdapter;
 	private ImageView backiv;
-	private EditText scenenameet;
 	private Button bcbtn;
+	private EditText scenenameet;
 	private TextView textView_main_emptyInfo;
 	// 设置适配器的图片资源
     private int[] imgiv = new int[] {

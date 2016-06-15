@@ -19,7 +19,6 @@ import android.widget.RelativeLayout;
 public class SetActivity extends FragmentActivityBase {
 	public Header header;
 	static Context context;
-	private ImageView backiv;
 	private RelativeLayout xxrl,xxrl2,xxrl3;
 
     @Override
@@ -32,17 +31,18 @@ public class SetActivity extends FragmentActivityBase {
     }
 
     private void initData() {
+    	header.setTitle(getResources().getString(R.string.set_title));
 
-	}
-
-	private void initListener() {
-    	backiv.setOnClickListener(new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				SetActivity.this.finish();
 			}
 		});
+	}
+
+	private void initListener() {
 
     	xxrl.setOnClickListener(new OnClickListener() {
 
@@ -70,9 +70,9 @@ public class SetActivity extends FragmentActivityBase {
 	}
 
     private void initView() {
-    	backiv = (ImageView) findViewById(R.id.backiv);
     	xxrl = (RelativeLayout) findViewById(R.id.xxrl);
     	xxrl2 = (RelativeLayout) findViewById(R.id.xxrl2);
     	xxrl3 = (RelativeLayout) findViewById(R.id.xxrl3);
+		header = (Header) findViewById(R.id.header);
 	}
 }

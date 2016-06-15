@@ -16,7 +16,7 @@ public class SkinSettingManager {
 
 	private int[] skinResources = { R.drawable.main_bj,
 			R.drawable.wallpaper_e,R.drawable.wallpaper_b,R.drawable.wallpaper_c,
-			R.drawable.wallpaper_d,R.drawable.wallpaper_f
+			R.drawable.main_bj2,R.drawable.wallpaper_f
 	};
 
 	private Activity mActivity;

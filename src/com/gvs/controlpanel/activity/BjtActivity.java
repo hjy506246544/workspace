@@ -1,7 +1,10 @@
 package com.gvs.controlpanel.activity;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
+import com.gvs.controlpanel.activity.light.LightActivity;
 import com.gvs.controlpanel.util.SkinSettingManager;
+import com.gvs.controlpanel.widget.Header;
+
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -14,7 +17,8 @@ import android.widget.ImageView;
  */
 public class BjtActivity extends FragmentActivityBase implements OnClickListener {
 	private SkinSettingManager mSettingManager;
-	private ImageView iv1,iv2,iv3,iv4,iv5,iv6,backiv;
+	private ImageView iv1,iv2,iv3,iv4,iv5,iv6;
+	public Header header;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,8 +45,6 @@ public class BjtActivity extends FragmentActivityBase implements OnClickListener
 		iv5.setOnClickListener(BjtActivity.this);
 		iv6=(ImageView) findViewById(R.id.imageView6);
 		iv6.setOnClickListener(BjtActivity.this);
-		backiv=(ImageView) findViewById(R.id.backiv);
-		backiv.setOnClickListener(BjtActivity.this);
 	}
 
     @Override
@@ -66,16 +68,22 @@ public class BjtActivity extends FragmentActivityBase implements OnClickListener
 		case R.id.imageView6:
 			mSettingManager.toggleSkins(5);
 			break;
-		case R.id.backiv:
-			BjtActivity.this.finish();
-			break;
 		}
 	}
 
 	private void initListener() {
+		header.setTitle(getResources().getString(R.string.bjt_title));
 
+		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				BjtActivity.this.finish();
+			}
+		});
 	}
 
     private void initView() {
+		header = (Header) findViewById(R.id.header);
 	}
 }
