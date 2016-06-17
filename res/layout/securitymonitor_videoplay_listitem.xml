@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+	    android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp" >
+
+	    <ImageView
+	        android:id="@+id/iv_headview"
+	        android:layout_width="70dp"
+	        android:layout_height="70dp"
+	        android:src="@drawable/afjk_logo"
+	        android:layout_gravity="center"
+	        android:scaleType="fitXY" />
+
+	    <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_centerVertical="true"
+	        android:layout_marginLeft="10dp"
+	        android:layout_toRightOf="@+id/iv_headview" >
+
+	        <TextView
+	        	android:id="@+id/lxnametv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="客厅的录影"
+	            style="@style/app_titleStyle6" />
+
+	        <TextView
+	        	android:id="@+id/lxtimetv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="2016-6-16 1小时50分"
+	            android:layout_below="@+id/lxnametv"
+	            style="@style/app_big_textStyle6" />
+
+	    </RelativeLayout>
+
+	    <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="40dp"
+	        android:layout_alignParentRight="true" >
+
+	        <ImageView
+	        	android:id="@+id/playiv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginRight="30dp"
+	            android:src="@drawable/videoplay" />
+
+	        <ImageView
+	        	android:id="@+id/deliv"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_toRightOf="@+id/playiv"
+	            android:src="@drawable/del" />
+
+	    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/xian"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.2dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_below="@+id/rl"
+	    android:src="@color/gray" />
+</RelativeLayout>

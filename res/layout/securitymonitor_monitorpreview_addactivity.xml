@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:background="@color/app_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+    	android:background="@color/black"
+        android:orientation="vertical" />
+
+    <com.gvs.controlpanel.widget.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header" >
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content" >
+
+		    <ImageView
+		        android:id="@+id/logoiv"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"
+		        android:layout_below="@+id/header"
+		        android:src="@drawable/monitorpreview_logo" />
+
+		    <RelativeLayout
+		        android:id="@+id/devicenamerl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"
+		        android:minHeight="70dp"
+		        android:layout_below="@+id/logoiv" >
+
+		        <TextView
+		        	android:id="@+id/devicenametv"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="40dp"
+			        style="@style/app_titleStyle2"
+		            android:text="设  备  名  称：" />
+
+		        <EditText
+			        android:id="@+id/devicenameet"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_toRightOf="@+id/devicenametv"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+			        android:paddingLeft="10dp"
+			        style="@style/app_big_textStyle2"
+			        android:background="@drawable/monitorpreview_srk"
+			        android:focusable="true"
+			        android:minHeight="70dp"
+			        android:maxLength="10"
+			        android:inputType="text"
+			        android:focusableInTouchMode="true"
+				    android:textColorHint="@color/Translucent_gray"
+				    android:hint="请输入设备名称"
+			        android:singleLine="true" />
+
+		    </RelativeLayout>
+
+		    <RelativeLayout
+		        android:id="@+id/deviceidrl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="70dp"
+		        android:layout_below="@+id/devicenamerl" >
+
+		        <TextView
+		        	android:id="@+id/deviceidtv"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="40dp"
+			        style="@style/app_titleStyle2"
+		            android:text=" 设备序列号：" />
+
+		        <EditText
+			        android:id="@+id/deviceidet"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_toRightOf="@+id/deviceidtv"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+			        android:paddingLeft="10dp"
+			        style="@style/app_big_textStyle2"
+			        android:background="@drawable/monitorpreview_srk"
+			        android:focusable="true"
+			        android:maxLength="20"
+			        android:minHeight="70dp"
+			        android:inputType="text"
+			        android:focusableInTouchMode="true"
+				    android:textColorHint="@color/Translucent_gray"
+				    android:hint="请输入设备序列号"
+			        android:singleLine="true" />
+
+		    </RelativeLayout>
+
+		    <RelativeLayout
+		        android:id="@+id/devicepwdrl"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="70dp"
+		        android:layout_below="@+id/deviceidrl" >
+
+		        <TextView
+		        	android:id="@+id/devicepwdtv"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_marginLeft="40dp"
+			        style="@style/app_titleStyle2"
+		            android:text=" 设 备 密 码 ：" />
+
+		        <EditText
+			        android:id="@+id/devicepwdet"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_toRightOf="@+id/devicepwdtv"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+			        android:paddingLeft="10dp"
+			        android:background="@drawable/monitorpreview_srk"
+			        style="@style/app_big_textStyle2"
+			        android:focusable="true"
+			        android:maxLength="10"
+			        android:minHeight="70dp"
+			        android:inputType="textPassword"
+			        android:focusableInTouchMode="true"
+				    android:textColorHint="@color/Translucent_gray"
+				    android:hint="请输入设备密码"
+			        android:singleLine="true" />
+
+		        <ImageView
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_marginRight="60dp"
+		            android:src="@drawable/monitorpreview_guanpwd" />
+
+		    </RelativeLayout>
+
+		    <Button
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="60dp"
+		        android:layout_marginRight="60dp"
+		        android:layout_marginTop="20dp"
+		        android:layout_below="@+id/devicepwdrl"
+		        android:layout_alignParentBottom="true"
+			    style="@style/app_titleStyle2"
+		        android:gravity="center"
+		        android:background="@drawable/monitorpreview_btn_"
+		        android:text="提交" />
+
+	    </RelativeLayout>
+
+    </com.gvs.controlpanel.widget.BounceScrollView>
+
+</RelativeLayout>
