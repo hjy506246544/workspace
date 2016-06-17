@@ -2,7 +2,7 @@ package com.gvs.controlpanel.adapter;
 import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
-import com.gvs.controlpanel.activity.main.MainThreeActivity;
+import com.gvs.controlpanel.activity.main.MainTwoActivity;
 
 import android.content.Context;
 import android.view.LayoutInflater;

@@ -3,6 +3,7 @@ import com.gvs.controlpanel.R;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.widget.GridView;
+import android.widget.RelativeLayout;
 
 /**
  * 皮肤管理器
@@ -14,14 +15,13 @@ public class SkinSettingManager {
 	public final static String SKIN_PREF = "skinSetting";
 	public SharedPreferences skinSettingPreference;
 
-	private int[] skinResources = { R.drawable.main_bj,
-			R.drawable.wallpaper_e,R.drawable.wallpaper_b,R.drawable.wallpaper_c,
+	private int[] skinResources = { R.drawable.main_bj,R.color.translucent_8,R.drawable.wallpaper_b,R.drawable.wallpaper_c,
 			R.drawable.main_bj2,R.drawable.wallpaper_f
 	};
 
 	private Activity mActivity;
-    private GridView mlayout;
-	public SkinSettingManager(Activity activity,GridView layout) {
+    private RelativeLayout mlayout;
+	public SkinSettingManager(Activity activity,RelativeLayout layout) {
 		this.mActivity = activity;
 		this.mlayout=layout;
 		skinSettingPreference = mActivity.getSharedPreferences(SKIN_PREF, 3);

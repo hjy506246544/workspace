@@ -1,22 +1,22 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:layout_marginBottom="20dp"
-    android:background="@drawable/bg_dialog"
+    android:background="@drawable/bg_white2"
     android:orientation="vertical"
     tools:ignore="all" >
 
     <TextView
         android:id="@+id/teatable_rgbtv"
-        style="@style/app_textStyle"
+        style="@style/app_titleStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:gravity="center_vertical"
-        android:drawableLeft="@drawable/main_light3"
+        android:drawableLeft="@drawable/main_light"
         android:drawablePadding="10dp"
         android:text="RGB颜色选择"
         android:minHeight="45dp" />
@@ -36,16 +36,16 @@
         android:layout_marginLeft="20dp"
         android:gravity="center_vertical"
         android:layout_below="@+id/teatable_cpv"
-        android:drawableLeft="@drawable/main_light3"
+        android:drawableLeft="@drawable/main_light"
         android:drawablePadding="10dp"
        	android:minHeight="45dp"
-        style="@style/app_textStyle1" />
+        style="@style/app_titleStyle1" />
 
     <RelativeLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_centerInParent="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="80dp"
         android:gravity="center"
         android:layout_below="@+id/teatable_lightxztv" >
 

@@ -3,27 +3,28 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/bg_dialog"
+    android:background="@drawable/bg_white2"
     android:layout_marginBottom="20dp"
+    android:minHeight="200dp"
     tools:ignore="all">
 
     <TextView
         android:id="@+id/jtyytv"
-        style="@style/app_textStyle"
+        style="@style/app_titleStyle1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:gravity="center_vertical"
-        android:drawableLeft="@drawable/main_jtyy3"
+        android:drawableLeft="@drawable/main_jtyy"
         android:drawablePadding="10dp"
         android:text="家庭影院开关"
         android:minHeight="45dp" />
 
     <com.gvs.controlpanel.widget.SlideSwitch
         android:id="@+id/hometheatre_slideswitch"
-        android:layout_width="80dp"
+        android:layout_width="100dp"
         android:layout_height="80dp"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/jtyytv"

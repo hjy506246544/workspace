@@ -19,11 +19,12 @@
 	        android:src="@drawable/main_scene_"
 	        android:layout_marginTop="5dp"
 	        android:layout_gravity="center"
-	        android:scaleType="fitXY" />
+	        android:scaleType="fitXY"
+   			android:adjustViewBounds="true" />
 
 	    <TextView
 	        android:id="@+id/nametv"
-	        style="@style/app_textStyle1"
+	        style="@style/app_titleStyle1"
 	        android:layout_gravity="center"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content" />

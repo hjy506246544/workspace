@@ -8,7 +8,7 @@
     <com.gvs.controlpanel.widget.Header
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
     	android:background="@color/translucent_8"
         android:orientation="vertical" />
 
@@ -16,14 +16,14 @@
         android:id="@+id/category_layout"
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:layout_below="@id/header"
-        android:background="@color/grayColor"  >
+        android:background="@color/translucent_2"
+        android:layout_below="@id/header"  >
 
 		<LinearLayout
 		    android:id="@+id/ll_title"
 		    android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="70dp"
+            android:minHeight="80dp"
             android:gravity="center" >
 
 		    <RelativeLayout
@@ -47,7 +47,7 @@
 	                android:layout_toRightOf="@+id/iv"
 	                android:paddingLeft="2dp"
 	                android:gravity="center"
-	                style="@style/app_titleStyle2"
+	                style="@style/app_titleStyle6"
 	                android:text="监控预览" />
             </RelativeLayout>
 
@@ -56,6 +56,7 @@
 		        android:layout_width="match_parent"
 		        android:layout_height="match_parent"
 		        android:gravity="center"
+            	android:minHeight="80dp"
 		        android:layout_gravity="center_vertical"
 		        android:layout_weight="1" >
 	            <ImageView

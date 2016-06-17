@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:minHeight="60dp"
+    android:minHeight="80dp"
     android:padding="2dp" >
 
     <RadioButton
@@ -10,33 +10,34 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
         android:clickable="false"
         android:focusable="false"
         android:focusableInTouchMode="false"
-        android:layout_marginLeft="30dp"
-        android:layout_centerVertical="true" />
+        android:layout_marginLeft="30dp" />
 
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/albumPhoto"
         android:layout_marginLeft="15dp"
         android:text="Title"
-        style="@style/app_big_textStyle1" />
+        style="@style/app_titleStyle1" />
 
     <TextView
         android:id="@+id/artist"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
         android:layout_below="@+id/title"
         android:layout_toRightOf="@+id/albumPhoto"
         android:layout_marginLeft="15dp"
         android:text="artist"
-        style="@style/app_medium_textStyle1" />
+        style="@style/app_textStyle1" />
 
     <TextView
         android:id="@+id/duration"

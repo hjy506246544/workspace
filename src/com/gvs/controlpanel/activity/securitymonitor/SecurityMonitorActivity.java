@@ -151,8 +151,6 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
             case 0:
                 tv_title1.setTextColor(getResources().getColor(R.color.gray));
                 tv_title2.setTextColor(getResources().getColor(R.color.white));
-//    	        iv.setImageDrawable(getResources().getDrawable(R.drawable.txl_xlb_yy));
-//      	        iv2.setImageDrawable(getResources().getDrawable(R.drawable.txl_xlb_text2));
                 if (currIndex == 1) { // currIndex为之前页
 					animation = new TranslateAnimation(one, 0, 0, 0);
 				}else if (currIndex == 2) {
@@ -162,8 +160,6 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
             case 1:
                 tv_title1.setTextColor(getResources().getColor(R.color.white));
                 tv_title2.setTextColor(getResources().getColor(R.color.gray));
-//    	        iv.setImageDrawable(getResources().getDrawable(R.drawable.txl_xlb_yy2));
-//      	        iv2.setImageDrawable(getResources().getDrawable(R.drawable.txl_xlb_text));
                 if (currIndex == 0) {
 					animation = new TranslateAnimation(offset, one, 0, 0);
 				}

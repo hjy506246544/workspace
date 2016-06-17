@@ -47,7 +47,7 @@
 		        android:id="@+id/nametv"
 			    android:layout_width="wrap_content"
 			    android:layout_height="wrap_content"
-			    style="@style/app_textStyle1"
+			    style="@style/app_titleStyle1"
 			    android:layout_marginLeft="10dp"
 			    android:text="空调" />
 		</LinearLayout>

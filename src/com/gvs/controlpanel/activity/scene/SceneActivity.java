@@ -105,7 +105,7 @@ public class SceneActivity extends FragmentActivityBase{
 		// 给ListView 设置适配器
 		listView.setAdapter(adapter);
 		listView.setEmptyView(textView_main_emptyInfo);// 无数据时显示此View
-		if(totaList.size()<0){
+		if(totaList.size()<1){
 			bcbtn.setVisibility(View.VISIBLE);
 			Log.e("totaList.size()", "totaList.size()"+totaList.size());
 		}else {

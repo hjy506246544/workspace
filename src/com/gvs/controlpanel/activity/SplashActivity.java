@@ -9,8 +9,8 @@ import android.widget.Toast;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.main.MainActivity;
-import com.gvs.controlpanel.activity.main.MainThreeActivity;
 import com.gvs.controlpanel.activity.main.MainTwoActivity;
+import com.gvs.controlpanel.activity.main.MainActivity;
 /**
  * 主题选择
  * @author hjy
@@ -52,21 +52,11 @@ public class SplashActivity extends FragmentActivityBase {
 				startActivity(intent2);
 			}
 		});
-
-		themeThree_btn.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent intent3  = new Intent(SplashActivity.this,MainThreeActivity.class);
-				startActivity(intent3);
-			}
-		});
 	}
 
     private void initView() {
     	themeone_btn = (Button) findViewById(R.id.themeOne_btn);
     	themeTwo_btn = (Button) findViewById(R.id.themeTwo_btn);
-    	themeThree_btn = (Button) findViewById(R.id.themeThree_btn);
 	}
 
     @Override

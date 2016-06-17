@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/main_bj" >
+    android:background="@color/black2" >
 
     <com.gvs.controlpanel.widget.Header
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
     	android:background="@color/translucent_8"
         android:orientation="vertical" />
 
@@ -21,12 +21,14 @@
         <LinearLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="40dp"
+	        android:layout_marginRight="40dp"
 	        android:orientation="vertical" >
 
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项"
-		        style="@style/app_textStyle1"
+		        style="@style/app_titleStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -39,14 +41,14 @@
 		        android:id="@+id/xxrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -61,7 +63,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -75,14 +77,14 @@
 		        android:id="@+id/xxrl2"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -97,7 +99,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -111,14 +113,14 @@
 		        android:id="@+id/xxrl3"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -133,7 +135,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -146,7 +148,7 @@
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项2"
-		        style="@style/app_textStyle1"
+		        style="@style/app_titleStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -159,14 +161,14 @@
 		        android:id="@+id/xxrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -181,7 +183,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -195,14 +197,14 @@
 		        android:id="@+id/xxrl2"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -217,7 +219,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -231,14 +233,14 @@
 		        android:id="@+id/xxrl3"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -253,7 +255,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -266,7 +268,7 @@
 		    <TextView
 		        android:id="@+id/tv_displername"
 		        android:text="选项3"
-		        style="@style/app_textStyle1"
+		        style="@style/app_titleStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -279,14 +281,14 @@
 		        android:id="@+id/xxrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -301,7 +303,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -315,14 +317,14 @@
 		        android:id="@+id/xxrl2"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -337,7 +339,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>
@@ -351,14 +353,14 @@
 		        android:id="@+id/xxrl3"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="45dp"
+		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_textStyle1"
+		            style="@style/app_titleStyle1"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
@@ -373,7 +375,7 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_centerVertical="true"
-		            android:layout_marginRight="20dp"
+		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
 		            android:src="@drawable/me_yj" />
 		    </RelativeLayout>

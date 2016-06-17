@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
     	android:background="@color/translucent_8"
         android:gravity="center_vertical"
-        android:minHeight="70dp"
+        android:minHeight="80dp"
         android:orientation="horizontal" >
 
         <ImageView
@@ -31,11 +31,11 @@
         <Button
             android:id="@+id/bcbtn"
             android:layout_width="wrap_content"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:text="@string/scenezdy_ljcj"
-            android:layout_marginRight="35dp"
+            android:layout_marginRight="40dp"
             android:gravity="center"
-            style="@style/app_medium_textStyle1"
+            style="@style/app_big_textStyle1"
             android:background="@drawable/scenecreate_" />
     </LinearLayout>
 
@@ -66,14 +66,14 @@
         android:orientation="vertical" >
 	    <EditText
 	        android:id="@+id/scenenameet"
-	        android:layout_width="200dp"
-	        android:layout_height="45dp"
+	        android:layout_width="400dp"
+	        android:layout_height="80dp"
 	        android:layout_marginLeft="20dp"
 	        android:layout_marginTop="20dp"
 	        android:gravity="center_vertical"
 	        android:layout_gravity="center"
 	        android:paddingLeft="10dp"
-	        style="@style/app_textStyle1"
+	        style="@style/app_titleStyle1"
 	        android:focusable="true"
 	        android:maxLength="10"
 	        android:inputType="text"

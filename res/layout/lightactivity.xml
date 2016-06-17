@@ -7,16 +7,16 @@
     <com.gvs.controlpanel.widget.Header
         android:id="@+id/header"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
     	android:background="@color/translucent_8"
         android:orientation="vertical" />
     <com.gvs.controlpanel.widget.HorizontalListView
         android:id="@+id/hsm_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="40dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="750dp"
+        android:layout_marginLeft="40dp"
+        android:layout_alignParentBottom="true" />
     <!--
     <GridView
 	    android:id="@+id/lightgv"

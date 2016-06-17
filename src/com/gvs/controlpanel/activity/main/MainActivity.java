@@ -21,19 +21,22 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 /**
- * 主界面
+ * 主题界面二
  * @author hjy
- *
+ * 2016-6-2
  */
 public class MainActivity extends FragmentActivityBase {
 	public Header header;
@@ -41,18 +44,31 @@ public class MainActivity extends FragmentActivityBase {
     private ImageView backiv;
 	private GridView listgv;
 	private TextView timetv;
+	private RelativeLayout main;
 	private Main_GridViewAdapter gridViewAdapter;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-            R.drawable.main_light_, R.drawable.main_cl_,
-            R.drawable.main_kt_, R.drawable.main_dsj_,
-            R.drawable.main_jtyy_, R.drawable.main_bgmusic_,
-            R.drawable.main_scene_, R.drawable.main_afjk_,R.drawable.main_set_};
+            R.drawable.main_light2_, R.drawable.main_cl2_,
+            R.drawable.main_kt2_, R.drawable.main_dsj2_,
+            R.drawable.main_jtyy2_, R.drawable.main_bgmusic2_,
+            R.drawable.main_scene2_, R.drawable.main_afjk2_,R.drawable.main_set2_};
     // 设置标题
     private String[] title = new String[] {
     		"灯光", "窗帘", "空调",
     		"电视机", "家庭影院", "背景音乐",
     		"场景", "安防监控", "设置"};
+    /*
+    // 设置状态
+    private String[] state = new String[] {
+    		"状态：off", "状态：on", "状态：off",
+    		"状态：on", "状态：off", "状态：on",
+    		"状态：off", "状态：on", "状态：off"};
+    // 设置信息
+    private String[] info = new String[] {
+    		"信息：该产品···", "信息：该产品好东西", "信息：该产品很好",
+    		"信息：该产品不错", "信息：该产品···", "信息：该产品···",
+    		"信息：该产品呵呵", "信息：该产品···", "信息：该产品···"};
+    		*/
     private List listitem = new ArrayList();
 	private SkinSettingManager mSettingManager;
 	private Dialog dialog;
@@ -72,6 +88,10 @@ public class MainActivity extends FragmentActivityBase {
             Map map = new HashMap();
             map.put("image", imageId[i]);
             map.put("title", title[i]);
+            /*
+            map.put("state", state[i]);
+            map.put("info", info[i]);
+            */
             listitem.add(map);
         }
 
@@ -97,6 +117,7 @@ public class MainActivity extends FragmentActivityBase {
 
 			@Override
 			public void onClick(View v) {
+				// TODO Auto-generated method stub
 				MainActivity.this.finish();
 			}
 		});
@@ -309,18 +330,17 @@ public class MainActivity extends FragmentActivityBase {
     	timetv = (TextView) findViewById(R.id.timetv);
 		listgv=(GridView) findViewById(R.id.listgv);
 		backiv = (ImageView) findViewById(R.id.backiv);
+    	main = (RelativeLayout) findViewById(R.id.main);
 	}
 
-    /**
-     * 每个页面都要重写这个方法和初始化皮肤的方法
-     */
+    //每个页面都要重写这个方法和初始化皮肤的方法
     @Override
     protected void onResume() {
     	//初始化皮肤
     	//layout=new LinearLayout[layouts.length];
     	//for(int i=0; i<layouts.length; i++){
     		//layout[i]=(LinearLayout) findViewById(layouts[i]);
-    		mSettingManager=new SkinSettingManager(MainActivity.this,listgv);
+    		mSettingManager=new SkinSettingManager(MainActivity.this,main);
     		mSettingManager.initSkins();
     	//}
     	super.onResume();

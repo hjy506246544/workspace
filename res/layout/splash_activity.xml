@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:background="@color/translucent_8"
         android:gravity="center"
-        android:minHeight="70dp"
+        android:minHeight="80dp"
         android:orientation="horizontal" >
 		<!--
         <ImageView
@@ -37,13 +37,13 @@
         android:id="@+id/themeOne_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="55dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:minHeight="70dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
         android:layout_below="@+id/header"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         android:gravity="center"
-        style="@style/app_textStyle1"
+        style="@style/app_titleStyle1"
         android:background="@drawable/bjt2_"
         android:text="主题一" />
 
@@ -51,28 +51,14 @@
         android:id="@+id/themeTwo_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:minHeight="55dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
+        android:minHeight="70dp"
+        android:layout_marginLeft="120dp"
+        android:layout_marginRight="120dp"
         android:layout_below="@+id/themeOne_btn"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="60dp"
         android:gravity="center"
-        style="@style/app_textStyle1"
+        style="@style/app_titleStyle1"
         android:background="@drawable/bjt2_"
         android:text="主题二" />
-
-    <Button
-        android:id="@+id/themeThree_btn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:minHeight="55dp"
-        android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"
-        android:layout_below="@+id/themeTwo_btn"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        style="@style/app_textStyle1"
-        android:background="@drawable/bjt2_"
-        android:text="主题三" />
 
 </RelativeLayout>

@@ -5,7 +5,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.widget.TextView;
 /**
  * 监控预览主界面
  * @author hjy
@@ -13,6 +15,7 @@ import android.view.ViewGroup;
  */
 public class MonitorPreviewFragment extends FragmentBase{
 	private SecurityMonitorActivity securityMonitorActivity;
+	private TextView tv;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -34,6 +37,7 @@ public class MonitorPreviewFragment extends FragmentBase{
 	}
 
 	private void initView(View view, Bundle savedInstanceState) {
+		tv = (TextView) view.findViewById(R.id.tv);
 	}
 
 	@Override
@@ -44,6 +48,14 @@ public class MonitorPreviewFragment extends FragmentBase{
     }
 
 	private void InitListener() {
+		tv.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				OpenActivity(AddMonitorPreviewActivity.class);
+			}
+		});
 	}
 
 	private void initData() {

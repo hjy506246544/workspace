@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
+import com.gvs.controlpanel.adapter.Light_GridViewAdapter;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.ColorPickView;
@@ -31,14 +32,14 @@ import android.widget.AdapterView.OnItemClickListener;
 public class LightActivity extends FragmentActivityBase {
 	public Header header;
 	static Context context;
-	private Main_GridViewAdapter gridViewAdapter;
+	private Light_GridViewAdapter gridViewAdapter;
 
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-            R.drawable.main_light_, R.drawable.main_light_,
-            R.drawable.main_light_, R.drawable.main_light_,
-            R.drawable.main_light_, R.drawable.main_light_,
-            R.drawable.main_light_};
+            R.drawable.main_light2_, R.drawable.main_light2_,
+            R.drawable.main_light2_, R.drawable.main_light2_,
+            R.drawable.main_light2_, R.drawable.main_light2_,
+            R.drawable.main_light2_};
     // 设置标题
     private String[] title = new String[] {
     		"茶几顶", "台灯", "激光灯", "台灯", "激光灯", "台灯", "激光灯"};
@@ -72,7 +73,7 @@ public class LightActivity extends FragmentActivityBase {
             map.put("title", title[i]);
             listitem.add(map);
         }
-		gridViewAdapter=new Main_GridViewAdapter(LightActivity.this,listitem);
+		gridViewAdapter=new Light_GridViewAdapter(LightActivity.this,listitem);
 		hsm_container.setAdapter(gridViewAdapter);
 	}
 

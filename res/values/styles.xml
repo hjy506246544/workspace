@@ -180,6 +180,11 @@
         <item name="android:textSize">22sp</item>
     </style>
 
+    <style name="app_titleStyle6">
+        <item name="android:textColor">@color/grayColor4</item>
+        <item name="android:textSize">22sp</item>
+    </style>
+
     <!-- app content text big文本样式 -->
     <style name="app_big_textStyle">
         <item name="android:textColor">@color/black</item>
@@ -211,6 +216,10 @@
         <item name="android:textSize">18sp</item>
     </style>
 
+    <style name="app_big_textStyle6">
+        <item name="android:textColor">@color/grayColor4</item>
+        <item name="android:textSize">18sp</item>
+    </style>
 
     <!-- app content text namal文本样式 -->
     <style name="app_textStyle">
@@ -390,6 +399,15 @@
         <item name="android:windowBackground">@color/transparent</item>
         <item name="android:backgroundDimEnabled">true</item>
         <item name="android:windowAnimationStyle">@style/PopupwindowAnimation</item>
+    </style>
+
+    <style name="text_flag_01">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/flag_01</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
     </style>
 
 </resources>

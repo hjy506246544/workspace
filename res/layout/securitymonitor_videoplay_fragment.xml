@@ -4,10 +4,161 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-	<TextView
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="Video playback"
-	    style="@style/app_big_textStyle1" />
+	<com.gvs.controlpanel.widget.FlowLayout
+        android:id="@+id/flowLayout"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+	    <TextView
+        	android:id="@+id/allyeartv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="全部年份" />
+
+        <TextView
+        	android:id="@+id/liutv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2016" />
+
+        <TextView
+        	android:id="@+id/wutv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2015" />
+
+        <TextView
+        	android:id="@+id/sitv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2014" />
+
+        <TextView
+        	android:id="@+id/santv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2013" />
+
+        <TextView
+        	android:id="@+id/ertv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2012" />
+
+        <TextView
+        	android:id="@+id/yitv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2011" />
+
+	</com.gvs.controlpanel.widget.FlowLayout>
+
+	<com.gvs.controlpanel.widget.FlowLayout
+        android:id="@+id/flowLayout2"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@+id/flowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+	    <TextView
+        	android:id="@+id/allmonthtv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="全部月份" />
+
+        <TextView
+        	android:id="@+id/januarytv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="1月" />
+
+        <TextView
+        	android:id="@+id/februarytv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="2月" />
+
+        <TextView
+        	android:id="@+id/marchtv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="3月" />
+
+        <TextView
+        	android:id="@+id/apriltv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="4月" />
+
+        <TextView
+        	android:id="@+id/maytv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="5月" />
+
+        <TextView
+        	android:id="@+id/junetv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="6月" />
+
+        <TextView
+        	android:id="@+id/julytv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="7月" />
+
+        <TextView
+        	android:id="@+id/augusttv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="8月" />
+
+        <TextView
+        	android:id="@+id/septembertv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="9月" />
+
+        <TextView
+        	android:id="@+id/octobertv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="10月" />
+
+        <TextView
+        	android:id="@+id/novembertv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="11月" />
+
+        <TextView
+        	android:id="@+id/decembertv"
+            style="@style/text_flag_01"
+            android:background="@drawable/flag_02"
+            android:text="12月" />
+
+	</com.gvs.controlpanel.widget.FlowLayout>
+
+	<ImageView
+        android:id="@+id/xian"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.2dp"
+	    android:layout_marginTop="10dp"
+	    android:layout_below="@+id/flowLayout2"
+	    android:src="@color/gray" />
+
+	<ListView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/xian"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent" />
 
 </RelativeLayout>
