@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+	    android:id="@+id/rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="40dp" >
+
+	    <ImageView
+	        android:id="@+id/iv_headview"
+	        android:layout_width="70dp"
+	        android:layout_height="70dp"
+	        android:src="@drawable/afjk_logo"
+	        android:layout_gravity="center"
+	        android:scaleType="fitXY" />
+
+        <TextView
+        	android:id="@+id/sxjnametv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_centerVertical="true"
+        	android:layout_marginLeft="10dp"
+        	android:layout_toRightOf="@+id/iv_headview"
+            android:text="客厅"
+            style="@style/app_titleStyle6" />
+
+	    <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginRight="40dp"
+	        android:layout_alignParentRight="true" >
+
+	        <com.gvs.controlpanel.widget.SlideSwitch
+		        android:id="@+id/sxj_slideswitch"
+		        android:layout_width="100dp"
+		        android:layout_height="80dp"
+		        android:layout_marginTop="10dp"/>
+
+	    </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/xian"
+	    android:layout_width="match_parent"
+	    android:layout_height="0.2dp"
+	    android:layout_marginLeft="40dp"
+	    android:layout_below="@+id/rl"
+	    android:src="@color/gray" />
+</RelativeLayout>
