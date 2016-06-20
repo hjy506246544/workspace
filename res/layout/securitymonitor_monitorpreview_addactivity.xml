@@ -35,7 +35,8 @@
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="20dp"
-		        android:minHeight="70dp"
+		        android:layout_marginLeft="300dp"
+		        android:minHeight="80dp"
 		        android:layout_below="@+id/logoiv" >
 
 		        <TextView
@@ -45,7 +46,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginLeft="40dp"
 			        style="@style/app_titleStyle2"
-		            android:text="设  备  名  称：" />
+		            android:text=" 设 备 名 称 " />
 
 		        <EditText
 			        android:id="@+id/devicenameet"
@@ -58,7 +59,7 @@
 			        style="@style/app_big_textStyle2"
 			        android:background="@drawable/monitorpreview_srk"
 			        android:focusable="true"
-			        android:minHeight="70dp"
+			        android:minHeight="80dp"
 			        android:maxLength="10"
 			        android:inputType="text"
 			        android:focusableInTouchMode="true"
@@ -72,7 +73,8 @@
 		        android:id="@+id/deviceidrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="70dp"
+		        android:minHeight="80dp"
+		        android:layout_marginLeft="300dp"
 		        android:layout_below="@+id/devicenamerl" >
 
 		        <TextView
@@ -82,7 +84,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginLeft="40dp"
 			        style="@style/app_titleStyle2"
-		            android:text=" 设备序列号：" />
+		            android:text=" 设备序列号" />
 
 		        <EditText
 			        android:id="@+id/deviceidet"
@@ -96,7 +98,7 @@
 			        android:background="@drawable/monitorpreview_srk"
 			        android:focusable="true"
 			        android:maxLength="20"
-			        android:minHeight="70dp"
+			        android:minHeight="80dp"
 			        android:inputType="text"
 			        android:focusableInTouchMode="true"
 				    android:textColorHint="@color/Translucent_gray"
@@ -109,7 +111,8 @@
 		        android:id="@+id/devicepwdrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
-		        android:minHeight="70dp"
+		        android:minHeight="80dp"
+		        android:layout_marginLeft="300dp"
 		        android:layout_below="@+id/deviceidrl" >
 
 		        <TextView
@@ -119,7 +122,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginLeft="40dp"
 			        style="@style/app_titleStyle2"
-		            android:text=" 设 备 密 码 ：" />
+		            android:text=" 设 备 密 码 " />
 
 		        <EditText
 			        android:id="@+id/devicepwdet"
@@ -133,7 +136,7 @@
 			        style="@style/app_big_textStyle2"
 			        android:focusable="true"
 			        android:maxLength="10"
-			        android:minHeight="70dp"
+			        android:minHeight="80dp"
 			        android:inputType="textPassword"
 			        android:focusableInTouchMode="true"
 				    android:textColorHint="@color/Translucent_gray"
@@ -144,17 +147,17 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
-		            android:layout_marginRight="60dp"
+		            android:layout_marginRight="380dp"
 		            android:src="@drawable/monitorpreview_guanpwd" />
 
 		    </RelativeLayout>
 
 		    <Button
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:layout_marginLeft="60dp"
-		        android:layout_marginRight="60dp"
-		        android:layout_marginTop="20dp"
+		        android:layout_width="500dp"
+		        android:layout_height="120dp"
+		        android:layout_marginLeft="315dp"
+		        android:layout_marginRight="120dp"
+		        android:layout_marginTop="40dp"
 		        android:layout_below="@+id/devicepwdrl"
 		        android:layout_alignParentBottom="true"
 			    style="@style/app_titleStyle2"

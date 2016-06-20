@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.gvs.controlpanel.activity.SplashActivity"
+            android:name="com.gvs.controlpanel.activity.SplashTwoActivity"
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
             <intent-filter>
@@ -28,7 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!-- 主题一 -->
+        <!-- 主题一-->
         <activity
             android:name="com.gvs.controlpanel.activity.main.MainActivity"
             android:screenOrientation="landscape"
@@ -41,6 +41,7 @@
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>
+
 		<!-- 灯光 -->
         <activity
             android:name="com.gvs.controlpanel.activity.light.LightActivity"
@@ -117,6 +118,12 @@
         <!-- 添加摄像头 -->
         <activity
             android:name="com.gvs.controlpanel.activity.securitymonitor.AddMonitorPreviewActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+        <!-- 添加摄像头 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.securitymonitor.UpdateMonitorPreviewActivity"
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>

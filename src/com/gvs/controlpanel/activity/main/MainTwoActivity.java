@@ -50,6 +50,7 @@ public class MainTwoActivity extends FragmentActivityBase {
 	private TextView timetv,datetv,weektv;
 	private LinearLayout lightll,clll,ktll,dsjll;
 	private Mainthree_GridViewAdapter gridViewAdapter;
+	private long mExitTime;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
             R.drawable.main_light6, R.drawable.main_cl6,
@@ -76,6 +77,8 @@ public class MainTwoActivity extends FragmentActivityBase {
     private List listitem = new ArrayList();
 	private SkinSettingManager mSettingManager;
 	private Dialog dialog;
+
+
 
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -195,7 +198,7 @@ public class MainTwoActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	private void showCurtainDialogTip() {
+	public void showCurtainDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.curtain_dialog);
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.curtain_slideswitch);
@@ -225,7 +228,7 @@ public class MainTwoActivity extends FragmentActivityBase {
 	 * hjy
 	 */
 	int wd = 26;
-	private void showAirConditionDialogTip() {
+	public void showAirConditionDialogTip() {
 		dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.aircondition_dialog);
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.minusib);
@@ -283,7 +286,7 @@ public class MainTwoActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	private void showTVDialogTip() {
+	public void showTVDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.tv_dialog);
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.tv_slideswitch);
@@ -312,7 +315,7 @@ public class MainTwoActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	private void showHomeThertreDialogTip() {
+	public void showHomeThertreDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.hometheatre_dialog);
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.hometheatre_slideswitch);
@@ -360,4 +363,32 @@ public class MainTwoActivity extends FragmentActivityBase {
     	//}
     	super.onResume();
     }
+
+    @Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if ((System.currentTimeMillis() - mExitTime) > 2000) {
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				mExitTime = System.currentTimeMillis();
+			} else {
+				finish();
+			}
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event){
+		if (event.getAction() == KeyEvent.KEYCODE_HOME) {
+			if ((System.currentTimeMillis() - mExitTime) > 2000) {
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				mExitTime = System.currentTimeMillis();
+			} else {
+				finish();
+			}
+			return true;
+		}
+		return super.dispatchKeyEvent(event);
+	}
 }

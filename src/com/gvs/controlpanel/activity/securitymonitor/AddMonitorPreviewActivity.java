@@ -25,7 +25,7 @@ public class AddMonitorPreviewActivity extends FragmentActivityBase {
     }
 
     private void initData() {
-    	header.setTitle(getResources().getString(R.string.set_title));
+    	header.setTitle(getResources().getString(R.string.addsxt_title));
 
 		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
 

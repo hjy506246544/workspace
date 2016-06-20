@@ -26,7 +26,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
 		db.execSQL("create table if not exists db_controlpanel(_id integer primary key autoincrement,scenename,typename)");
-		//db.execSQL("create table if not exists db_type(_id integer primary key autoincrement,typename)");
+		//db.execSQL("create table if not exists db_sxt(_id integer primary key sxtname,typename)");
 	}
 
 	@Override
