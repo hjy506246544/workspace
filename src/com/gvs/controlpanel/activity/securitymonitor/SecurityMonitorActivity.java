@@ -3,6 +3,7 @@ import java.util.ArrayList;
 import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
+import com.gvs.controlpanel.bean.Camera;
 import com.gvs.controlpanel.util.ContextUtil;
 import com.gvs.controlpanel.util.PixelUtils;
 import com.gvs.controlpanel.widget.Header;
@@ -34,7 +35,7 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
     private ViewPager pager;
 	private RelativeLayout titlerl,titlerl2;
 	private TextView tv_title1,tv_title2;// 页卡头标
-	private MonitorPreviewFragment monitorPreviewFragment;
+	private static MonitorPreviewFragment monitorPreviewFragment;
 	private VideoPlaybackFragment videoPlaybackFragment;
     private MyPagerAdapter adapter;
     public ArrayList<Fragment> mFragments = new ArrayList<Fragment>(); // Tab页面列表
@@ -205,5 +206,14 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
 	    pager.setAdapter(new MyPagerAdapter(SecurityMonitorActivity.this.getSupportFragmentManager(), mFragments));
 	    pager.setCurrentItem(0);
 	    pager.setOnPageChangeListener(new MyOnPageChangeListener());
+	}
+
+    /**
+     * 删除摄像头
+     * @param position
+     * @param listitem
+     */
+	public static void delCamera(int position,Camera camera) {
+		monitorPreviewFragment.deldelCamera(position,camera);
 	}
 }

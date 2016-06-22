@@ -1,6 +1,8 @@
 package com.gvs.controlpanel.activity.base;
 import java.lang.reflect.Field;
+import cn.bmob.v3.Bmob;
 import com.gvs.controlpanel.R;
+import com.gvs.controlpanel.net.FlowConsts;
 import com.gvs.controlpanel.widget.CustomProgressDialog;
 import com.gvs.controlpanel.widget.LoadProgressDialog;
 import android.app.AlertDialog;
@@ -136,6 +138,9 @@ public abstract class FragmentActivityBase extends FragmentActivity {
 	protected void onCreate(Bundle arg0) {
 		// TODO Auto-generated method stub
 		super.onCreate(arg0);
+		 // 初始化 Bmob SDK
+        // 使用时请将第二个参数Application ID替换成你在Bmob服务器端创建的Application ID
+		Bmob.initialize(this, FlowConsts.Bmob_APPID);
 		onRun();
 	}
 

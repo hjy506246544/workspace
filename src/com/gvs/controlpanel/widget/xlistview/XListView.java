@@ -22,7 +22,6 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Scroller;
 import android.widget.TextView;
-import cellcom.com.cn.util.LogMgr;
 
 public class XListView extends ListView implements OnScrollListener {
 
@@ -173,12 +172,10 @@ public class XListView extends ListView implements OnScrollListener {
 	 * stop load more, reset footer view.
 	 */
 	public void stopLoadMore() {
-		LogMgr.showLog("mPullLoading--------2-------->" + mPullLoading);
 		if (mPullLoading == true) {
 			mPullLoading = false;
 			mFooterView.setState(XListViewFooter.STATE_NORMAL);
 		}
-		LogMgr.showLog("mPullLoading---------3------->" + mPullLoading);
 	}
 
 	/**
@@ -260,7 +257,6 @@ public class XListView extends ListView implements OnScrollListener {
 
 	private void startLoadMore() {
 		mPullLoading = true;
-		LogMgr.showLog("mPullLoading---------------->" + mPullLoading);
 		mFooterView.setState(XListViewFooter.STATE_LOADING);
 		if (mListViewListener != null) {
 			mListViewListener.onLoadMore();

@@ -153,6 +153,7 @@
 		    </RelativeLayout>
 
 		    <Button
+		        android:id="@+id/tjbtn"
 		        android:layout_width="500dp"
 		        android:layout_height="120dp"
 		        android:layout_marginLeft="315dp"

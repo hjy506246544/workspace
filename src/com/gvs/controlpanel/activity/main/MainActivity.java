@@ -12,6 +12,7 @@ import com.gvs.controlpanel.activity.light.LightActivity;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
+import com.gvs.controlpanel.bean.Camera;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;

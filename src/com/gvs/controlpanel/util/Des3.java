@@ -1,37 +1,35 @@
 package com.gvs.controlpanel.util;
 
+
 import java.security.Key;
+
 import javax.crypto.Cipher;
 import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.DESedeKeySpec;
 import javax.crypto.spec.IvParameterSpec;
 
 /**
- * 3DES���ܹ�����
+ * 3DES加密工具类
  * 
  * @author liufeng 
  * @date 2012-10-11
  */
 public class Des3 {
-	// ��Կ
+	// 密钥
 	private final static String secretKey = "liuyunqiang@lx100$#365#$";
-	// ��
-	public final static String iv = "01234567";
-	// �ӽ���ͳһʹ�õı��뷽ʽ
+	// 向量
+	private final static String iv = "cell2yyw";
+	// 加解密统一使用的编码方式
 	private final static String encoding = "utf-8";
 
 	/**
-	 * 3DES����
+	 * 3DES加密
 	 * 
-	 * @param plainText ��ͨ�ı�
+	 * @param plainText 普通文本
 	 * @return
 	 * @throws Exception 
 	 */
-	public static String encode(String plainText,String secretKey/*,String iv*/) throws Exception {
-//		if(iv == ""){
-//			iv="01234567";
-//		}
-		
+	public static String encode(String plainText,String secretKey) throws Exception {
 		Key deskey = null;
 		DESedeKeySpec spec = new DESedeKeySpec(secretKey.getBytes());
 		SecretKeyFactory keyfactory = SecretKeyFactory.getInstance("desede");
@@ -45,16 +43,13 @@ public class Des3 {
 	}
 
 	/**
-	 * 3DES����
+	 * 3DES解密
 	 * 
-	 * @param encryptText �����ı�
+	 * @param encryptText 加密文本
 	 * @return
 	 * @throws Exception
 	 */
-	public static String decode(String encryptText,String secretKey/*,String iv*/) throws Exception {
-//		if(iv == ""){
-//			iv="01234567";
-//		}
+	public static String decode(String encryptText,String secretKey) throws Exception {
 		Key deskey = null;
 		DESedeKeySpec spec = new DESedeKeySpec(secretKey.getBytes());
 		SecretKeyFactory keyfactory = SecretKeyFactory.getInstance("desede");
@@ -67,10 +62,4 @@ public class Des3 {
 
 		return new String(decryptData, encoding);
 	}
-
-	public static void main(String[] args) throws Exception {
-		 System.out.println(Des3.encode("test","cellcomfala1234567890000"/*,"efalacom"*/));
-		 System.out.println(Des3.decode("11dA/rktdCc=","cellcomfala1234567890000"/*,"efalacom"*/));
-	}
-
 }

@@ -19,7 +19,6 @@ import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
-import cellcom.com.cn.util.MD5;
 
 public class ContextUtil {
 	public static boolean isNumeric(String str) {
@@ -64,7 +63,7 @@ public class ContextUtil {
 
 	/**
 	 * 创建文件或覆盖文件 【不管文件目录是否存在】
-	 * 
+	 *
 	 * @param filePath
 	 *            文件路径
 	 * @param bool
@@ -127,7 +126,7 @@ public class ContextUtil {
 
 	/**
 	 * 获取程序外部的缓存目录
-	 * 
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -438,7 +437,7 @@ public class ContextUtil {
 
 	/**
 	 * MD5加密
-	 * 
+	 *
 	 * @param str
 	 * @return
 	 */
@@ -451,7 +450,7 @@ public class ContextUtil {
 
 //	/**
 //	 * 判断白天和黑夜
-//	 * 
+//	 *
 //	 * @return
 //	 */
 //	public static boolean isNight() {
@@ -462,34 +461,34 @@ public class ContextUtil {
 //		}
 //		return true;
 //	}
-	
+
 	/**
 	 * 判断白天和黑夜
-	 * 
+	 *
 	 * @return
 	 */
 	public static boolean isNight() {
 		Date date = new Date();
 		int month = date.getMonth();
 		SimpleDateFormat sdf =   new SimpleDateFormat("HH:mm");
-		String str = sdf.format(new Date());		
+		String str = sdf.format(new Date());
 //		if(DateCompare(str,"7")){
-//			
+//
 //		}
-		Log.e("sssssssss",month+"");	
+		Log.e("sssssssss",month+"");
 		switch (month) {
 			case 0:
 				if (DateCompare("18:00",str) && DateCompare(str,"7:00")) {
 					return false;
 				}
 				break;
-				
+
 			case 1:
 				if(DateCompare("18:30",str) && DateCompare(str,"7:00")){
 					return false;
 				}
-				break;	
-			
+				break;
+
 			case 2:
 				if (DateCompare("18:30",str) && DateCompare(str,"6:30")) {
 					return false;
@@ -524,28 +523,28 @@ public class ContextUtil {
 					return false;
 				}
 				break;
-				
+
 			default:
 				break;
 		}
 		return true;
 	}
-	
-	public static boolean DateCompare(String s1,String s2) 
-	{ 
-		//设定时间的模板 
-		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm"); 
-		//得到指定模范的时间		
+
+	public static boolean DateCompare(String s1,String s2)
+	{
+		//设定时间的模板
+		SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+		//得到指定模范的时间
 		try {
 			Date d1 = sdf.parse(s1);
-			Date d2 = sdf.parse(s2); 
+			Date d2 = sdf.parse(s2);
 			if(d1.getTime() >d2.getTime()){
 				return true;
 			}
 		} catch (ParseException e) {
 			e.printStackTrace();
-		} 	
+		}
 		return false;
 	}
-	
+
 }

@@ -1,11 +1,16 @@
 package com.gvs.controlpanel.activity.securitymonitor;
+import cn.bmob.v3.listener.SaveListener;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
+import com.gvs.controlpanel.bean.Camera;
+import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
-import android.content.Context;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
 /**
  * 添加摄像头界面
  * 2016-6-16
@@ -13,7 +18,8 @@ import android.view.View.OnClickListener;
  */
 public class AddMonitorPreviewActivity extends FragmentActivityBase {
 	public Header header;
-	static Context context;
+	private Button tjbtn;
+	private EditText devicenameet,deviceidet,devicepwdet;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +43,52 @@ public class AddMonitorPreviewActivity extends FragmentActivityBase {
 	}
 
 	private void initListener() {
+		tjbtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String devicename = devicenameet.getText().toString();
+				String deviceid = deviceidet.getText().toString();
+				String devicepwd = devicepwdet.getText().toString();
+				if(TextUtils.isEmpty(devicename)){
+					ToastUtils.show(AddMonitorPreviewActivity.this,"请填写设备名称");
+					return;
+				}
+				if(TextUtils.isEmpty(deviceid)){
+					ToastUtils.show(AddMonitorPreviewActivity.this,"请填写设备序列号");
+					return;
+				}
+				if(TextUtils.isEmpty(devicepwd)){
+					ToastUtils.show(AddMonitorPreviewActivity.this,"请填写设备密码");
+					return;
+				}
+				Camera camera = new Camera();
+				camera.setDeviceName(devicename);
+				camera.setDeviceId(deviceid);
+				camera.setDevicePwd(devicepwd);
+				camera.save(AddMonitorPreviewActivity.this, new SaveListener() {
+
+					@Override
+					public void onSuccess() {
+						ToastUtils.show(AddMonitorPreviewActivity.this,"添加摄像头成功!");
+						setResult(RESULT_OK);
+						finish();
+					}
+
+					@Override
+					public void onFailure(int arg0, String arg1) {
+						ToastUtils.show(AddMonitorPreviewActivity.this,"添加摄像头失败:"+arg0);
+					}
+				});
+			}
+		});
 	}
 
     private void initView() {
 		header = (Header) findViewById(R.id.header);
+		devicepwdet = (EditText) findViewById(R.id.devicepwdet);
+		deviceidet = (EditText) findViewById(R.id.deviceidet);
+		devicenameet = (EditText) findViewById(R.id.devicenameet);
+		tjbtn = (Button) findViewById(R.id.tjbtn);
 	}
 }

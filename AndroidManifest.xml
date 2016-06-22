@@ -12,6 +12,11 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
     <uses-permission android:name="android.permission.EGL_SWAP_BEHAVIOR_PRESERVED"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
 
     <application
         android:allowBackup="true"
@@ -99,13 +104,13 @@
         <!-- 安防监控 -->
         <activity
             android:name="com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
         </activity>
         <!-- 添加场景 -->
         <activity
             android:name="com.gvs.controlpanel.activity.scene.AddSceneActivity"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:label="@string/app_name" >
         </activity>
         <!-- 修改场景 -->
@@ -124,6 +129,13 @@
         <!-- 添加摄像头 -->
         <activity
             android:name="com.gvs.controlpanel.activity.securitymonitor.UpdateMonitorPreviewActivity"
+            android:screenOrientation="landscape"
+            android:label="@string/app_name" >
+        </activity>
+
+        <!-- 添加摄像头 -->
+        <activity
+            android:name="com.gvs.controlpanel.activity.set.AddressConfigurationActivity"
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>
