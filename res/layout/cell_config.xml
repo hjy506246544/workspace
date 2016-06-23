@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/namell"
+        android:layout_width="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:minHeight="70dp"
+        android:layout_height="wrap_content" >
+        <ImageView
+	        android:id="@+id/iv"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_centerVertical="true"
+	        android:layout_marginLeft="40dp"
+		    android:src="@drawable/ic_launcher" />
+
+		<TextView
+	        android:id="@+id/nametv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        style="@style/app_titleStyle"
+	        android:gravity="center_vertical"
+	        android:layout_below="@+id/iv"
+	        android:layout_marginTop="15dp"
+	        android:layout_marginLeft="40dp"
+	        android:text="@string/config_name" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="70dp"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:layout_alignParentRight="true">
+
+   		<Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/address"
+            android:gravity="center"
+            android:background="@drawable/set_config_bg"
+            android:layout_weight="1" />
+
+   		<ImageView
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content"
+   		    android:layout_gravity="bottom"
+   		    android:src="@drawable/set_config_dian" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/address"
+            android:gravity="center"
+            android:background="@drawable/set_config_bg"
+            android:layout_weight="1" />
+
+
+   		<ImageView
+   		    android:layout_width="wrap_content"
+   		    android:layout_height="wrap_content"
+   		    android:layout_gravity="bottom"
+   		    android:src="@drawable/set_config_dian" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/address"
+            android:gravity="center"
+            android:background="@drawable/set_config_bg"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</RelativeLayout>
