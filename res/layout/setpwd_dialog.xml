@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white2"
+    android:minHeight="200dp"
+    android:layout_marginBottom="40dp"
+    tools:ignore="all">
+
+    <TextView
+        android:id="@+id/pwdtv"
+        style="@style/app_titleStyle1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/main_cl"
+        android:drawablePadding="10dp"
+        android:text="密码变更"
+        android:minHeight="45dp" />
+
+    <EditText
+        android:id="@+id/pwdet"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/pwdtv"
+        android:paddingLeft="10dp"
+        style="@style/app_titleStyle1"
+        android:focusable="true"
+        android:maxLength="10"
+        android:inputType="number"
+        android:focusableInTouchMode="true"
+	    android:background="@drawable/scene_srk"
+	    android:textColorHint="@color/Translucent_gray"
+	    android:hint="请输入密码"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/qdbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pwdet"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        style="@style/app_titleStyle2"
+        android:text="确定"
+        android:minHeight="70dp" />
+
+</RelativeLayout>

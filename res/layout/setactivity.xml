@@ -147,7 +147,7 @@
 
 		    <TextView
 		        android:id="@+id/tv_displername"
-		        android:text="选项2"
+		        android:text="模式"
 		        style="@style/app_titleStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
@@ -158,7 +158,7 @@
 		        android:layout_height="wrap_content" />
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl"
+		        android:id="@+id/xxrl4"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -176,7 +176,7 @@
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="选项一" />
+		            android:text="密码替换" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -194,7 +194,7 @@
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl2"
+		        android:id="@+id/xxrl5"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -212,7 +212,7 @@
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="选项二" />
+		            android:text="模式选择" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -230,7 +230,7 @@
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl3"
+		        android:id="@+id/xxrl6"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"

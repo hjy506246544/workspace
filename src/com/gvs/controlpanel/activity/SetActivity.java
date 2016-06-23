@@ -2,17 +2,31 @@ package com.gvs.controlpanel.activity;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.light.LightActivity;
+import com.gvs.controlpanel.activity.main.MainMenuActivity;
+import com.gvs.controlpanel.activity.securitymonitor.AddMonitorPreviewActivity;
 import com.gvs.controlpanel.activity.set.AddressConfigurationActivity;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
+import com.gvs.controlpanel.widget.SlideSwitch;
+import com.gvs.controlpanel.widget.SlideSwitch.OnStateChangedListener;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.os.Handler;
+import android.text.TextUtils;
 import android.view.View;
+import android.view.WindowManager;
 import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 /**
  * 设置界面
  * 2016-5-16
@@ -22,9 +36,10 @@ import android.widget.RelativeLayout;
 public class SetActivity extends FragmentActivityBase {
 	public Header header;
 	static Context context;
-	private RelativeLayout xxrl,xxrl2,xxrl3;
+	private RelativeLayout xxrl,xxrl2,xxrl4,xxrl5;
     MyReceiver myReceiver;
     IntentFilter intentFilter;
+	private Dialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,11 +86,19 @@ public class SetActivity extends FragmentActivityBase {
 			}
 		});
 
-    	xxrl3.setOnClickListener(new OnClickListener() {
+    	xxrl4.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				startActivity(new Intent(SetActivity.this,LightActivity.class));
+				showPwdDialogTip();
+			}
+		});
+
+    	xxrl5.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				showDialogTip();
 			}
 		});
 	}
@@ -95,8 +118,85 @@ public class SetActivity extends FragmentActivityBase {
     private void initView() {
     	xxrl = (RelativeLayout) findViewById(R.id.xxrl);
     	xxrl2 = (RelativeLayout) findViewById(R.id.xxrl2);
-    	xxrl3 = (RelativeLayout) findViewById(R.id.xxrl3);
+    	xxrl4 = (RelativeLayout) findViewById(R.id.xxrl4);
+    	xxrl5 = (RelativeLayout) findViewById(R.id.xxrl5);
 		header = (Header) findViewById(R.id.header);
+	}
+
+    /**
+	 * 替换密码
+	 * 自定义弹出框
+	 * 2016-5-20
+	 * hjy
+	 */
+	public void showPwdDialogTip() {
+	    dialog = new Dialog(this,R.style.dialog);
+	    dialog.setContentView(R.layout.setpwd_dialog);
+	    final EditText pwdet = (EditText) dialog.getWindow().findViewById(R.id.pwdet);
+	    Button qrbtn = (Button) dialog.getWindow().findViewById(R.id.qdbtn);
+	    qrbtn.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String pwdtxt = pwdet.getText().toString();
+				if(TextUtils.isEmpty(pwdtxt)){
+					ToastUtils.show(SetActivity.this,"请输入密码");
+					return;
+				}
+				ToastUtils.show(SetActivity.this,"替换密码成功");
+				dialog.dismiss();
+			}
+		});
+	    dialog.setCancelable(true);
+		dialog.show();
+	}
+
+	private void showDialogTip() {
+	    dialog = new Dialog(this,R.style.dialog);
+	    //dialog.show();
+	    dialog.setContentView(R.layout.setmodeselection_dialog);
+	    LinearLayout modeselectionll = (LinearLayout) dialog.getWindow().findViewById(R.id.modeselectionll);
+	    LinearLayout usermodell = (LinearLayout) dialog.getWindow().findViewById(R.id.usermodell);
+	    final RadioButton modeselectioniv = (RadioButton) dialog.getWindow().findViewById(R.id.modeselectioniv);
+	    final RadioButton usermodeiv = (RadioButton) dialog.getWindow().findViewById(R.id.usermodeiv);
+
+//	    if("普通模式".equals(txwaytv.getText().toString())){
+//	    	modeselectioniv.setButtonDrawable(R.drawable.txl_cheaktrue);
+//	    }
+//	    if("用户模式".equals(txwaytv.getText().toString())){
+//	    	usermodeiv.setButtonDrawable(R.drawable.txl_cheaktrue);
+//	    }
+	    modeselectionll.setOnClickListener(new OnClickListener() {
+		      @Override
+		      public void onClick(View v) {
+		    	  modeselectioniv.setButtonDrawable(R.drawable.txl_cheaktrue);
+		    	  usermodeiv.setButtonDrawable(R.drawable.txl_cheakfalse);
+		    	  new Handler().postDelayed(new Runnable() {
+		  			@Override
+		  			public void run() {
+		  				dialog.dismiss();
+				    	//txwaytv.setText("普通模式");
+		  			}
+		  		  }, 200);
+		      }
+	    });
+
+	    usermodell.setOnClickListener(new OnClickListener() {
+		      @Override
+		      public void onClick(View v) {
+		    	  usermodeiv.setButtonDrawable(R.drawable.txl_cheaktrue);
+		    	  modeselectioniv.setButtonDrawable(R.drawable.txl_cheakfalse);
+		    	  new Handler().postDelayed(new Runnable() {
+		  			@Override
+		  			public void run() {
+		  				dialog.dismiss();
+				    	//txwaytv.setText("用户模式");
+		  			}
+		  		  }, 200);
+		      }
+	    });
+	    dialog.setCancelable(true);
+		dialog.show();
 	}
 
     public class MyReceiver extends BroadcastReceiver{
