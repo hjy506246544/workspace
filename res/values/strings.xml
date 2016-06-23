@@ -47,6 +47,7 @@
     <string name="set_title">设置</string>
     <string name="addsxt_title">添加摄像头</string>
     <string name="updatesxt_title">修改摄像头</string>
+    <string name="config_name">窗帘</string>
 
     <!-- 灯光 -->
     <string name="light_title">灯光</string>

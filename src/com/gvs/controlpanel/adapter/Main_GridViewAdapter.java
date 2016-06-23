@@ -2,7 +2,7 @@ package com.gvs.controlpanel.adapter;
 import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
-import com.gvs.controlpanel.activity.main.MainActivity;
+import com.gvs.controlpanel.activity.main.MainMenuActivity;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -18,7 +18,7 @@ import android.widget.TextView;
  *
  */
 public class Main_GridViewAdapter extends BaseAdapter {
-	private MainActivity activity;
+	private MainMenuActivity activity;
 	private List listitem;
 	private Context context;
 	public Main_GridViewAdapter(Context context,List listitem){

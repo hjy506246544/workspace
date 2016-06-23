@@ -55,18 +55,18 @@ public class AddressConfigurationAdapter extends BaseAdapter{
 			viewHolder=new viewhodler2();
 			convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.addressconfiguration_item, null);
 			//viewHolder.pImageView = (RadioButton) convertView.findViewById(R.id.albumPhoto);
-			viewHolder.pTitle = (TextView) convertView.findViewById(R.id.title);
+			//viewHolder.pTitle = (TextView) convertView.findViewById(R.id.title);
 			convertView.setTag(viewHolder);
 		}else{
 			viewHolder=(viewhodler2) convertView.getTag();
 		}
-		final RadioButton radio=(RadioButton) convertView.findViewById(R.id.albumPhoto);
-		viewHolder.pImageView = radio;
 
 		//Map map = (Map) listitem.get(position);
-		viewHolder.pTitle.setText(/*map.get("title") + ""*/listitem.get(position).getConfigurationName());
+//		viewHolder.pTitle.setText(/*map.get("title") + ""*/listitem.get(position).getConfigurationName());
 //		//显示被选择图标
-
+/*
+		final RadioButton radio=(RadioButton) convertView.findViewById(R.id.albumPhoto);
+		viewHolder.pImageView = radio;
 		//当RadioButton被选中时，将其状态记录进States中，并更新其他RadioButton的状态使它们不被选中
 		viewHolder.pImageView.setOnClickListener(new View.OnClickListener() {
 
@@ -90,6 +90,7 @@ public class AddressConfigurationAdapter extends BaseAdapter{
 	           res = true;
 
 	       viewHolder.pImageView.setChecked(res);
+	       */
 		return convertView;
 	}
 

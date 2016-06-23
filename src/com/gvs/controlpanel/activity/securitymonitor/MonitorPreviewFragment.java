@@ -98,28 +98,19 @@ public class MonitorPreviewFragment extends FragmentBase{
 //		bmobQuery.setLimit(10);
 //		bmobQuery.order("createdAt");
 		//先判断是否有缓存
-//		boolean isCache = bmobQuery.hasCachedResult(securityMonitorActivity,Camera.class);
-//		if(isCache){
-//			bmobQuery.setCachePolicy(CachePolicy.CACHE_ELSE_NETWORK);	// 先从缓存取数据，如果没有的话，再从网络取。
-//		}else{
-//			bmobQuery.setCachePolicy(CachePolicy.NETWORK_ELSE_CACHE);	// 如果没有缓存的话，则先从网络中取
-//		}
+		boolean isCache = bmobQuery.hasCachedResult(securityMonitorActivity,Camera.class);
+		if(isCache){
+			bmobQuery.setCachePolicy(CachePolicy.CACHE_ELSE_NETWORK);	// 先从缓存取数据，如果没有的话，再从网络取。
+		}else{
+			bmobQuery.setCachePolicy(CachePolicy.NETWORK_ELSE_CACHE);	// 如果没有缓存的话，则先从网络中取
+		}
 		bmobQuery.findObjects(securityMonitorActivity, new FindListener<Camera>() {
 
 			@Override
 			public void onSuccess(List<Camera> object) {
 				Log.e("","查询成功：共"+object.size()+"条数据。");
-				for (Camera person : object) {
-					Log.e("", "Name = "+person.getDeviceName());
-					Camera camera = new Camera();
-					String name = person.getDeviceName();
-					camera.setDeviceName(name);
-					object.add(camera);
-					//listitem.addAll(object);
-					//Log.d("", "ObjectId = "+person.getObjectId());
-				}
 				listitem.addAll(object);
-				//monitorPreview_Adapter.notifyDataSetChanged();
+				monitorPreview_Adapter.notifyDataSetChanged();
 			}
 
 			@Override
@@ -162,9 +153,9 @@ public class MonitorPreviewFragment extends FragmentBase{
 	}
 
 	private void initData() {
-		getListItems();
 		// 给ListView 设置适配器
 		monitorPreview_Adapter = new MonitorPreview_Adapter(securityMonitorActivity, listitem);
+		getListItems();
 		listView.setAdapter(monitorPreview_Adapter);
 	}
 
@@ -176,7 +167,6 @@ public class MonitorPreviewFragment extends FragmentBase{
     @Override
     public void onResume() {
         super.onResume();
-        getListItems();
     }
 
     @Override
@@ -199,8 +189,8 @@ public class MonitorPreviewFragment extends FragmentBase{
 		pos = position;
 		Camera camera2 =new Camera();
 		String p = Integer.toString(pos);
-		camera2.setObjectId(p);
-		Log.e("", "lost.getDeviceId()="+camera2.getDeviceId());
+		camera2.setObjectId(camera.getObjectId());
+		Log.e("", "camera.getObjectId()="+camera.getObjectId());
 		Log.e("", "pos="+pos);
 		Log.e("", "p="+p);
 		camera2.delete(securityMonitorActivity, new DeleteListener() {

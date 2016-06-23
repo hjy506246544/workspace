@@ -41,10 +41,50 @@
             android:background="@drawable/scenecreate_" />
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/nametv"
+        android:layout_below="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/app_titleStyle"
+        android:layout_marginLeft="40dp"
+        android:text="电视机" />
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_below="@+id/header"
+        android:layout_toRightOf="@+id/nametv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/address"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/address"
+            android:layout_weight="1" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:entries="@array/address"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
 	<ListView
         android:id="@+id/lvaddress"
         android:layout_width="match_parent"
-        android:layout_below="@+id/header"
+        android:visibility="gone"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>

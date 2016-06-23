@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:minHeight="80dp"
     android:padding="2dp" >
-
+<!--
     <RadioButton
         android:id="@+id/albumPhoto"
         android:layout_width="wrap_content"
@@ -28,5 +28,5 @@
         android:layout_marginLeft="15dp"
         android:text="Title"
         style="@style/app_titleStyle1" />
-
+  -->
 </RelativeLayout>

@@ -1,11 +1,8 @@
 package com.gvs.controlpanel.adapter;
 import java.util.List;
-import java.util.Map;
 import com.gvs.controlpanel.R;
-import com.gvs.controlpanel.activity.main.MainActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.bean.Camera;
-import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.SlideSwitch;
 import com.gvs.controlpanel.widget.SlideSwitch.OnStateChangedListener;
 import android.content.Context;
@@ -75,7 +72,7 @@ public class MonitorPreview_Adapter extends BaseAdapter {
         }
 
         final Camera map = listitem.get(position);
-        listItemView.tv_displerName.setText(map.getDeviceName() + "");
+        listItemView.tv_displerName.setText(map.getDeviceName());
         listItemView.sxj_slideswitch.setOnStateChangedListener(new OnStateChangedListener(){
 
             @Override

@@ -4,6 +4,8 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TimeZone;
+
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.SetActivity;
 import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
@@ -12,7 +14,7 @@ import com.gvs.controlpanel.activity.light.LightActivity;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
-import com.gvs.controlpanel.bean.Camera;
+import com.gvs.controlpanel.adapter.Mainthree_GridViewAdapter;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
@@ -30,29 +32,31 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.OnItemClickListener;
 /**
- * 主题界面二
+ * 主题界面三
  * @author hjy
  * 2016-6-2
  */
-public class MainActivity extends FragmentActivityBase {
-	public Header header;
+public class MainMenuActivity extends FragmentActivityBase {
 	static Context context;
     private ImageView backiv;
 	private GridView listgv;
-	private TextView timetv;
 	private RelativeLayout main;
-	private Main_GridViewAdapter gridViewAdapter;
+	private TextView timetv,datetv,weektv;
+	private LinearLayout lightll,clll,ktll,dsjll;
+	private Mainthree_GridViewAdapter gridViewAdapter;
+	private long mExitTime;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-            R.drawable.main_light2_, R.drawable.main_cl2_,
-            R.drawable.main_kt2_, R.drawable.main_dsj2_,
-            R.drawable.main_jtyy2_, R.drawable.main_bgmusic2_,
-            R.drawable.main_scene2_, R.drawable.main_afjk2_,R.drawable.main_set2_};
+            R.drawable.main_light6, R.drawable.main_cl6,
+            R.drawable.main_kt6, R.drawable.main_dsj6,
+            R.drawable.main_jtyy6, R.drawable.main_bgmusic6,
+            R.drawable.main_scene6, R.drawable.main_afjk6,R.drawable.main_set6};
     // 设置标题
     private String[] title = new String[] {
     		"灯光", "窗帘", "空调",
@@ -74,10 +78,12 @@ public class MainActivity extends FragmentActivityBase {
 	private SkinSettingManager mSettingManager;
 	private Dialog dialog;
 
+
+
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainactivity);
+        setContentView(R.layout.mainthree_activity);
 		initView();
 		initData();
 		initListener();
@@ -89,40 +95,61 @@ public class MainActivity extends FragmentActivityBase {
             Map map = new HashMap();
             map.put("image", imageId[i]);
             map.put("title", title[i]);
-            /*
-            map.put("state", state[i]);
-            map.put("info", info[i]);
-            */
             listitem.add(map);
         }
 
         //获取当前系统时间
 		Calendar c = Calendar.getInstance();
-		int mYear = c.get(Calendar.YEAR);
-		int mMonth = c.get(Calendar.MONTH)+1;
-		int mDay = c.get(Calendar.DAY_OF_MONTH);
-		int mHour = c.get(Calendar.HOUR_OF_DAY);
-		int mMinute = c.get(Calendar.MINUTE);
-		timetv.setText(mYear +
-        "年" + mMonth +
-        "月" + mDay +
-        "日  " + mHour +
-        " : " + mMinute);
+		c.setTimeZone(TimeZone.getTimeZone("GMT+8:00"));
+		String mYear = String.valueOf(c.get(Calendar.YEAR));
+		String mMonth = String.valueOf(c.get(Calendar.MONTH)+1);
+		String mDay = String.valueOf(c.get(Calendar.DAY_OF_MONTH));
+		String mHour = String.valueOf(c.get(Calendar.HOUR_OF_DAY));
+		String mMinute = String.valueOf(c.get(Calendar.MINUTE));
+		String mWay = String.valueOf(c.get(Calendar.DAY_OF_WEEK));
+		if("1".equals(mWay)){
+			mWay ="日";
+		}else if("2".equals(mWay)){
+			mWay ="一";
+		}else if("3".equals(mWay)){
+			mWay ="二";
+		}else if("4".equals(mWay)){
+			mWay ="三";
+		}else if("5".equals(mWay)){
+			mWay ="四";
+		}else if("6".equals(mWay)){
+			mWay ="五";
+		}else if("7".equals(mWay)){
+			mWay ="六";
+		}
+		timetv.setText(mHour + ":" + mMinute);
+		datetv.setText(mYear +
+		        "-" + mMonth +
+		        "-" + mDay);
+		weektv.setText("星期" + mWay);
 
-		gridViewAdapter=new Main_GridViewAdapter(MainActivity.this,listitem);
+		gridViewAdapter=new Mainthree_GridViewAdapter(MainMenuActivity.this,listitem);
 		listgv.setAdapter(gridViewAdapter);
 	}
 
 	private void initListener() {
+		/*
+		lightll.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				lightll.setBackgroundResource(R.drawable.main_guan);
+			}
+		});
 		backiv.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				MainActivity.this.finish();
+				MainThreeActivity.this.finish();
 			}
 		});
-
+		*/
 		listgv.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -130,7 +157,7 @@ public class MainActivity extends FragmentActivityBase {
 					int position, long id) {
 				//灯光
 				if(position==0){
-					Intent intent  = new Intent(MainActivity.this,LightActivity.class);
+					Intent intent  = new Intent(MainMenuActivity.this,LightActivity.class);
 					startActivity(intent);
 				}else if (position==1) {
 					//窗帘
@@ -146,39 +173,23 @@ public class MainActivity extends FragmentActivityBase {
 					showHomeThertreDialogTip();
 				}else if (position==5) {
 					//背景音乐
-					Intent intent6  = new Intent(MainActivity.this,BgMusicActivity.class);
+					Intent intent6  = new Intent(MainMenuActivity.this,BgMusicActivity.class);
 					startActivity(intent6);
 				}else if (position==6) {
 					//场景
-					Intent intent7  = new Intent(MainActivity.this,SceneActivity.class);
+					Intent intent7  = new Intent(MainMenuActivity.this,SceneActivity.class);
 					startActivity(intent7);
 				}else if (position==7) {
 					//安防监控
-					Intent intent8  = new Intent(MainActivity.this,SecurityMonitorActivity.class);
+					Intent intent8  = new Intent(MainMenuActivity.this,SecurityMonitorActivity.class);
 					startActivity(intent8);
 				}else if (position==8) {
 					//设置按钮
-					Intent intent = new Intent(MainActivity.this,SetActivity.class);
+					Intent intent = new Intent(MainMenuActivity.this,SetActivity.class);
 					startActivity(intent);
 				}
 			}
 		});
-
-    	/**
-    	 * 设置按钮
-    	 * 打开手机自带系统设置界面
-    	setiv.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				//打开手机自带系统设置界面
-				//startActivity(new Intent(Settings.ACTION_SETTINGS));
-				Intent intent = new Intent(MainActivity.this,SetActivity.class);
-				startActivity(intent);
-
-			}
-		});
-    	 */
 	}
 
 	/**
@@ -187,7 +198,7 @@ public class MainActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	private void showCurtainDialogTip() {
+	public void showCurtainDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.curtain_dialog);
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.curtain_slideswitch);
@@ -197,11 +208,11 @@ public class MainActivity extends FragmentActivityBase {
             public void onStateChanged(boolean state) {
                 if(true == state)
                 {
-                    Toast.makeText(MainActivity.this, "开关已打开", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已打开", 1000).show();
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "开关已关闭", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已关闭", 1000).show();
                 }
             }
 
@@ -217,7 +228,7 @@ public class MainActivity extends FragmentActivityBase {
 	 * hjy
 	 */
 	int wd = 26;
-	private void showAirConditionDialogTip() {
+	public void showAirConditionDialogTip() {
 		dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.aircondition_dialog);
 	    ImageButton minusib = (ImageButton) dialog.getWindow().findViewById(R.id.minusib);
@@ -232,7 +243,7 @@ public class MainActivity extends FragmentActivityBase {
 	                wd--;
 			        ktwdtv.setText(wd +"℃");
 		        }else {
-					ToastUtils.show(MainActivity.this, "超过最低温度了！");
+					ToastUtils.show(MainMenuActivity.this, "超过最低温度了！");
 				}
 			}
 		});
@@ -245,7 +256,7 @@ public class MainActivity extends FragmentActivityBase {
 	                wd++;
 			        ktwdtv.setText(wd +"℃");
 		        }else {
-					ToastUtils.show(MainActivity.this, "超过最高温度了！");
+					ToastUtils.show(MainMenuActivity.this, "超过最高温度了！");
 				}
 			}
 		});
@@ -256,11 +267,11 @@ public class MainActivity extends FragmentActivityBase {
             public void onStateChanged(boolean state) {
                 if(true == state)
                 {
-                    Toast.makeText(MainActivity.this, "开关已打开", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已打开", 1000).show();
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "开关已关闭", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已关闭", 1000).show();
                 }
             }
 
@@ -275,7 +286,7 @@ public class MainActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	private void showTVDialogTip() {
+	public void showTVDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.tv_dialog);
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.tv_slideswitch);
@@ -285,11 +296,11 @@ public class MainActivity extends FragmentActivityBase {
             public void onStateChanged(boolean state) {
                 if(true == state)
                 {
-                    Toast.makeText(MainActivity.this, "开关已打开", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已打开", 1000).show();
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "开关已关闭", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已关闭", 1000).show();
                 }
             }
 
@@ -304,7 +315,7 @@ public class MainActivity extends FragmentActivityBase {
 	 * 2016-5-20
 	 * hjy
 	 */
-	private void showHomeThertreDialogTip() {
+	public void showHomeThertreDialogTip() {
 	    dialog = new Dialog(this,R.style.dialog);
 	    dialog.setContentView(R.layout.hometheatre_dialog);
 	    SlideSwitch sSwitch = (SlideSwitch) dialog.getWindow().findViewById(R.id.hometheatre_slideswitch);
@@ -314,11 +325,11 @@ public class MainActivity extends FragmentActivityBase {
             public void onStateChanged(boolean state) {
                 if(true == state)
                 {
-                    Toast.makeText(MainActivity.this, "开关已打开", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已打开", 1000).show();
                 }
                 else
                 {
-                    Toast.makeText(MainActivity.this, "开关已关闭", 1000).show();
+                    Toast.makeText(MainMenuActivity.this, "开关已关闭", 1000).show();
                 }
             }
 
@@ -329,9 +340,15 @@ public class MainActivity extends FragmentActivityBase {
 
     private void initView() {
     	timetv = (TextView) findViewById(R.id.timetv);
-		listgv=(GridView) findViewById(R.id.listgv);
-		backiv = (ImageView) findViewById(R.id.backiv);
+    	weektv = (TextView) findViewById(R.id.weektv);
+    	datetv = (TextView) findViewById(R.id.datetv);
     	main = (RelativeLayout) findViewById(R.id.main);
+//    	lightll = (LinearLayout) findViewById(R.id.lightll);
+//    	clll = (LinearLayout) findViewById(R.id.clll);
+//    	ktll = (LinearLayout) findViewById(R.id.ktll);
+//    	dsjll = (LinearLayout) findViewById(R.id.dsjll);
+		listgv=(GridView) findViewById(R.id.listgv2);
+		//backiv = (ImageView) findViewById(R.id.backiv);
 	}
 
     //每个页面都要重写这个方法和初始化皮肤的方法
@@ -341,9 +358,37 @@ public class MainActivity extends FragmentActivityBase {
     	//layout=new LinearLayout[layouts.length];
     	//for(int i=0; i<layouts.length; i++){
     		//layout[i]=(LinearLayout) findViewById(layouts[i]);
-    		mSettingManager=new SkinSettingManager(MainActivity.this,main);
+    		mSettingManager=new SkinSettingManager(MainMenuActivity.this,main);
     		mSettingManager.initSkins();
     	//}
     	super.onResume();
     }
+
+    @Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		if (keyCode == KeyEvent.KEYCODE_BACK) {
+			if ((System.currentTimeMillis() - mExitTime) > 2000) {
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				mExitTime = System.currentTimeMillis();
+			} else {
+				finish();
+			}
+			return true;
+		}
+		return super.onKeyDown(keyCode, event);
+	}
+
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event){
+		if (event.getAction() == KeyEvent.KEYCODE_HOME) {
+			if ((System.currentTimeMillis() - mExitTime) > 2000) {
+				Toast.makeText(this, "再按一次退出程序", Toast.LENGTH_SHORT).show();
+				mExitTime = System.currentTimeMillis();
+			} else {
+				finish();
+			}
+			return true;
+		}
+		return super.dispatchKeyEvent(event);
+	}
 }

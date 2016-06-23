@@ -8,9 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
-import com.gvs.controlpanel.activity.main.MainActivity;
-import com.gvs.controlpanel.activity.main.MainTwoActivity;
-import com.gvs.controlpanel.activity.main.MainActivity;
+import com.gvs.controlpanel.activity.main.MainMenuActivity;
 /**
  * 主题选择
  * @author hjy
@@ -35,20 +33,20 @@ public class SplashActivity extends FragmentActivityBase {
 
 	private void initListener() {
 
-		themeone_btn.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-				Intent intent  = new Intent(SplashActivity.this,MainActivity.class);
-				startActivity(intent);
-			}
-		});
+//		themeone_btn.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				Intent intent  = new Intent(SplashActivity.this,MainActivity.class);
+//				startActivity(intent);
+//			}
+//		});
 
 		themeTwo_btn.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
-				Intent intent2  = new Intent(SplashActivity.this,MainTwoActivity.class);
+				Intent intent2  = new Intent(SplashActivity.this,MainMenuActivity.class);
 				startActivity(intent2);
 			}
 		});

@@ -10,7 +10,7 @@ import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.curtain.CurtainActivity;
 import com.gvs.controlpanel.activity.light.LightActivity;
-import com.gvs.controlpanel.activity.main.MainTwoActivity;
+import com.gvs.controlpanel.activity.main.MainMenuActivity;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.activity.tv.TVActivity;
@@ -36,7 +36,7 @@ public class SplashTwoActivity extends FragmentActivityBase {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.splashtwo_activity);
         SplashTwoActivity.this.finish();
-        startActivity(new Intent(SplashTwoActivity.this, MainTwoActivity.class));
+        startActivity(new Intent(SplashTwoActivity.this, MainMenuActivity.class));
 //        if(getIntent().getExtras().get("intent").equals(LIGHT)){
 //        	Log.e("8923gadg", "8923gadg");
 //        	startActivity(new Intent(SplashTwoActivity.this, LightActivity.class));
