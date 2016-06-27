@@ -8,9 +8,11 @@ import java.util.TimeZone;
 
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.SetActivity;
+import com.gvs.controlpanel.activity.aircondition.AirConditionActivity;
 import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
-import com.gvs.controlpanel.activity.light.LightActivity;
+import com.gvs.controlpanel.activity.curtain.CurtainDetailActivity;
+import com.gvs.controlpanel.activity.light.Activity_Light;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
@@ -20,6 +22,7 @@ import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import com.gvs.controlpanel.widget.SlideSwitch;
 import com.gvs.controlpanel.widget.SlideSwitch.OnStateChangedListener;
+
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -157,14 +160,18 @@ public class MainMenuActivity extends FragmentActivityBase {
 					int position, long id) {
 				//灯光
 				if(position==0){
-					Intent intent  = new Intent(MainMenuActivity.this,LightActivity.class);
+					Intent intent  = new Intent(MainMenuActivity.this,Activity_Light.class);
 					startActivity(intent);
 				}else if (position==1) {
-					//窗帘
-					showCurtainDialogTip();
+					//窗帘Activity_curtain.java
+					//showCurtainDialogTip();
+					Intent intent2  = new Intent(MainMenuActivity.this,CurtainDetailActivity.class);
+					startActivity(intent2);
 				}else if (position==2) {
 					//空调
-					showAirConditionDialogTip();
+//					showAirConditionDialogTip();
+					
+					startActivity(new Intent(MainMenuActivity.this,AirConditionActivity.class));
 				}else if (position==3) {
 					//电视机
 					showTVDialogTip();

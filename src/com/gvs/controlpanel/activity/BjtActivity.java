@@ -1,7 +1,6 @@
 package com.gvs.controlpanel.activity;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
-import com.gvs.controlpanel.activity.light.LightActivity;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import com.gvs.controlpanel.widget.Header;
 
