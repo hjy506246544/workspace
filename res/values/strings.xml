@@ -48,6 +48,7 @@
     <string name="addsxt_title">添加摄像头</string>
     <string name="updatesxt_title">修改摄像头</string>
     <string name="config_name">窗帘</string>
+    <string name="curtaindetail_name">窗帘</string>
 
     <!-- 灯光 -->
     <string name="light_title">灯光</string>
@@ -104,4 +105,48 @@
         <item>Accordion</item>
     </string-array>
 
+	<string name="about_msg">Serial Port API sample v1.1\n
+\n
+This program is the sample application provided with project android-serialport-api.\n
+\n
+More information and bug report on [http://code.google.com/p/android-serialport-api]\n
+\n
+Copyright 2010-2011 Cedric Priscal\n
+\n
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at\n
+\n
+http://www.apache.org/licenses/LICENSE-2.0\n
+\n
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.\n</string>
+    <string name="error_configuration">Please configure your serial port first.</string>
+    <string name="error_security">You do not have read/write permission to the serial
+		port.</string>
+
+
+<string name="controlcenter_mainmenu_light">Light</string>
+    <string name="controlcenter_mainmenu_curtain">Curtain</string>
+    <string name="controlcenter_mainmenu_ac">A.C</string>
+    <string name="controlcenter_mainmenu_cinemal">Cinema</string>
+    <string name="controlcenter_mainmenu_bgmusic">Music</string>
+    <string name="controlcenter_mainmenu_scene">Scene</string>
+    <string name="controlcenter_mainmenu_monitor">Monitor</string>
+    <string name="controlcenter_mainmenu_setup">Setup</string>
+    <string name="controlcenter_add_new">Add new</string>
+    <string name="add_curtain_name">input new device name</string>
+    <string name="add_curtain_type">set device type</string>
+    
+    <string name="add_curtain_ok">create success</string>
+    <string name="name_have_exist">name have been used</string>
+    <string name="curtain">curtain:</string>
+    <string name="delete_success">delete success</string>
+    <string name="target_not_exist">target not exist</string>
+    <string name="adj_temp">adjust temperature</string>
+    <string name="indoor_temp">current temperature</string>
+    <string name="set_temp">preset temperature</string>
 </resources>

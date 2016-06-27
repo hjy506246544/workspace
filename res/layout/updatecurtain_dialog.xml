@@ -1,13 +1,15 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:omni="http://fala.cellcom.com.cn/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/bg_white2"
+    android:minHeight="200dp"
+    android:layout_marginBottom="40dp"
     tools:ignore="all">
 
     <LinearLayout
+	    android:id="@+id/ll"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical" >
@@ -18,35 +20,31 @@
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:gravity="center_vertical"
-	        android:text="模式选择"
+	        android:text="修改窗帘"
 	        android:layout_marginLeft="20dp"
 	        android:minHeight="45dp" />
 
         <LinearLayout
-	        android:id="@+id/modeselectionll"
+	        android:id="@+id/modeclll"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="20dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:minHeight="45dp"
             android:background="@drawable/bjt2_"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
-	        <TextView
-	        	android:id="@+id/modeselectiontv"
+	        <ImageView
+	        	android:id="@+id/modecltv"
 	            android:layout_height="wrap_content"
 	            android:layout_width="wrap_content"
 	            android:layout_weight="1"
-	            android:gravity="center_vertical"
-	            android:drawableLeft="@drawable/set_gcs"
-	            android:drawablePadding="5dp"
-	            style="@style/app_big_textStyle1"
-	            android:text="普通模式" />
+	            android:src="@drawable/curtain2_icon"
+	            android:gravity="center_vertical" />
 
 	        <RadioButton
-	        	android:id="@+id/modeselectioniv"
+	        	android:id="@+id/modecliv"
 	            android:layout_weight="1"
 	            android:layout_marginLeft="60dp"
 	            android:layout_height="wrap_content"
@@ -56,30 +54,25 @@
         </LinearLayout>
 
         <LinearLayout
-	        android:id="@+id/usermodell"
+	        android:id="@+id/blindwindowll"
             android:layout_height="wrap_content"
             android:layout_width="match_parent"
             android:layout_weight="1"
-            android:paddingLeft="20dp"
             android:minHeight="45dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
             android:background="@drawable/bjt2_"
             android:gravity="center_vertical"
             android:orientation="horizontal" >
-	        <TextView
-	        	android:id="@+id/usermodetv"
+	        <ImageView
+	        	android:id="@+id/blindwindowtv"
 	            android:layout_height="wrap_content"
 	            android:layout_width="wrap_content"
 	            android:layout_weight="1"
-	            android:drawableLeft="@drawable/set_user"
-	            android:drawablePadding="5dp"
-	            android:gravity="center_vertical"
-	            style="@style/app_big_textStyle1"
-	            android:text="用户模式" />
+	            android:src="@drawable/curtain_icon" />
 
 	        <RadioButton
-	        	android:id="@+id/usermodeiv"
+	        	android:id="@+id/blindwindowiv"
 	            android:layout_weight="1"
 	            android:layout_marginLeft="60dp"
 	            android:layout_height="wrap_content"
@@ -89,5 +82,36 @@
         </LinearLayout>
 
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/nameet"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/ll"
+        android:paddingLeft="10dp"
+        style="@style/app_titleStyle1"
+        android:focusable="true"
+        android:maxLength="10"
+        android:inputType="text"
+        android:focusableInTouchMode="true"
+	    android:background="@drawable/scene_srk"
+	    android:textColorHint="@color/Translucent_gray"
+	    android:hint="请输入窗帘名称"
+        android:singleLine="true" />
+
+    <Button
+        android:id="@+id/qdbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameet"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        style="@style/app_titleStyle2"
+        android:text="确定"
+        android:minHeight="70dp" />
 
 </RelativeLayout>

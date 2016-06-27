@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar_curtain_ctrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_tranparent" >
+
+        <TextView
+            android:id="@+id/txtview_curtain_ctrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/controlcenter_mainmenu_curtain"
+            android:textSize="@dimen/main_activity_txtsize" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar_curtain_ctrl"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/curtain_ctrl_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/curtain_bg" />
+        <View 
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+        <ImageView
+            android:id="@+id/curtain_type_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <View 
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+<LinearLayout 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:orientation="horizontal">
+            
+            <ImageView
+                android:id="@+id/blinds_open"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/btn_blinds_open" />
+
+            <ImageView
+                android:id="@+id/blinds_stop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/btn_blinds_stop" />
+
+            <ImageView
+                android:id="@+id/blinds_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/btn_blinds_close"/>
+            </LinearLayout>
+    </LinearLayout>
+
+    
+
+
+</RelativeLayout>

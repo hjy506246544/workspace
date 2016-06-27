@@ -1,0 +1,87 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="40dp"
+    android:background="@color/window_background"
+    android:minHeight="200dp"
+    android:orientation="vertical"
+    tools:ignore="all" >
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/modetv"
+            style="@style/app_titleStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:minHeight="45dp"
+            android:text="@string/add_curtain_type" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" 
+            android:id="@+id/config_type_radio_group_curtain">
+
+            <RadioButton
+                android:id="@+id/RadioButton_curtain_type1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/curtain_type1" />
+
+            <RadioButton
+                android:id="@+id/RadioButton_curtain_type2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" 
+                android:background="@drawable/curtain_type2"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/modetv"
+            style="@style/app_titleStyle1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:gravity="center_vertical"
+            android:minHeight="45dp"
+            android:text="@string/add_curtain_name" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/nameet"
+        style="@style/app_titleStyle1"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/ll"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/scene_srk"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center_vertical"
+        android:hint="@string/add_curtain_name"
+        android:inputType="text"
+        android:maxLength="20"
+        android:paddingLeft="10dp"
+        android:singleLine="false"
+        android:textColorHint="@color/Translucent_gray" />
+
+    <Button
+        android:id="@+id/qdbtn"
+        style="@style/app_titleStyle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nameet"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:minHeight="70dp"
+        android:text="OK" />
+
+</RelativeLayout>

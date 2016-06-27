@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/title_bar_light_ctrl"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/bg_tranparent" >
+
+        <TextView
+            android:id="@+id/txtview_light_ctrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/controlcenter_mainmenu_curtain"
+            android:textSize="@dimen/main_activity_txtsize" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/title_bar_light_ctrl"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/light_bg" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="50dp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp" >
+
+            <ImageView
+                android:id="@+id/light_type_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"/>
+
+            <com.gvs.controlpanel.widget.SlideSwitch
+                android:id="@+id/light_slideswitch"
+                android:layout_width="100dp"
+                android:layout_height="80dp" 
+                android:layout_alignParentRight="true"
+                />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="100dp" />
+
+        <LinearLayout
+            android:id="@+id/light_ctrl_erea"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:weightSum="22" >
+
+            <ImageView
+                android:id="@+id/btn_light_dec"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/btn_light_dec" />
+
+            <SeekBar
+                android:id="@+id/seekbar_light_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10" />
+
+            <ImageView
+                android:id="@+id/btn_light_inc"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/btn_light_inc" />
+
+            <ImageView
+                android:id="@+id/btn_light_rgb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="10"
+                android:src="@drawable/btn_light_rgb" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

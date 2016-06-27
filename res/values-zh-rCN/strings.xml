@@ -31,4 +31,25 @@
     <string name="workspace_is_empty">当前工作区为空</string>
     <string name="main_option_menu_title">桌面设置</string>
     <string name="unknown">未知</string>
+    
+    <string name="controlcenter_mainmenu_light">灯光</string>
+    <string name="controlcenter_mainmenu_curtain">窗帘</string>
+    <string name="controlcenter_mainmenu_ac">空调</string>
+    <string name="controlcenter_mainmenu_cinemal">家庭影院</string>
+    <string name="controlcenter_mainmenu_bgmusic">背景音乐</string>
+    <string name="controlcenter_mainmenu_scene">场景</string>
+    <string name="controlcenter_mainmenu_monitor">安防</string>
+    <string name="controlcenter_mainmenu_setup">设置</string>
+    <string name="controlcenter_add_new">添加</string>
+    <string name="app_name">控制中心</string>
+    <string name="add_curtain_name">输入新建对象的名字</string>
+    <string name="add_curtain_type">选择新建类型</string>
+    <string name="add_curtain_ok">创建成功</string>
+    <string name="name_have_exist">该名字已经存在，请再次输入</string>
+    <string name="curtain">窗帘:</string>
+    <string name="delete_success">删除成功</string>
+    <string name="target_not_exist">当前目标设备不存在</string>
+    <string name="adj_temp">温度调节</string>
+    <string name="indoor_temp">室内温度</string>
+    <string name="set_temp">设定温度</string>
 </resources>

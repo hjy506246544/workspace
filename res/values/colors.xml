@@ -149,4 +149,7 @@
     <color name="caldroid_sky_blue">#FFA3E8F7</color>
 
     <color name="main_white">#ffffff</color>
+
+    <color name="bg_tranparent">#56565656</color>
+    <color name="tranparent">#00000000</color>
 </resources>
