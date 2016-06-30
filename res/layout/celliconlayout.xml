@@ -2,21 +2,22 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:minHeight="140dp"
+    android:gravity="center"
+    android:layout_gravity="center"
     android:orientation="vertical" >
-    <ImageView 
+    <ImageView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/cellicon_icon"
         android:layout_gravity="center"/>
-        
-    
-    <TextView 
+
+    <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:id="@+id/cellicon_text"
-        android:textSize="@dimen/main_activity_txtsize"
+        style="@style/Style7"
         android:singleLine="true"
         android:layout_gravity="center"/>
-        
-   
+
 </LinearLayout>

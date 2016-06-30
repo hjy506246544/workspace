@@ -86,21 +86,17 @@ public class BgMusicAdapter extends BaseAdapter{
 		}else{
 			viewHolder=(viewhodler) convertView.getTag();
 		}
-		final RadioButton radio=(RadioButton) convertView.findViewById(R.id.albumPhoto);
+		final CheckBox radio=(CheckBox) convertView.findViewById(R.id.albumPhoto);
 		viewHolder.pImageView = radio;
 		viewHolder.pTitle.setText(musicList.get(position).getMusic_name());
 		viewHolder.pDuration.setText(musicList.get(position).getDuration()+"");
 		viewHolder.pArtist.setText(musicList.get(position).getSinger());
 //		//显示被选择图标
-//		if(musicList.get(position).isSelect_box()){
-//			viewHolder.pImageView.setBackgroundResource(R.drawable.scene_checktrue);
-//		}else{
-//			viewHolder.pImageView.setBackgroundResource(R.drawable.scene_checkfalse);
-//		}
 		// 根据isSelected来设置checkbox的选中状况
 		//viewHolder.pImageView.setChecked(getSubjectItemMap().get(position));
 
 		//当RadioButton被选中时，将其状态记录进States中，并更新其他RadioButton的状态使它们不被选中
+		/*
 		viewHolder.pImageView.setOnClickListener(new View.OnClickListener() {
 
 	           public void onClick(View v) {
@@ -123,11 +119,21 @@ public class BgMusicAdapter extends BaseAdapter{
 	           res = true;
 
 	       viewHolder.pImageView.setChecked(res);
+	       */
+		boolean res=false;
+        if(states.get(String.valueOf(position)) == null || states.get(String.valueOf(position))== false){
+           res=false;
+           states.put(String.valueOf(position), false);
+        }
+        else
+           res = true;
+
+        viewHolder.pImageView.setChecked(res);
 		return convertView;
 	}
 
 	public class viewhodler{
 		public TextView pTitle,pDuration,pArtist;
-		public RadioButton pImageView;
+		public CheckBox pImageView;
 	}
 }

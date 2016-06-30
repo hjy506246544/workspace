@@ -34,7 +34,7 @@ public class SplishActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_splish);
-		mImageView = (ImageView) findViewById(R.id.image);
+		mImageView = (ImageView) findViewById(R.id.activity_splish_image);
 
 		mImageView.setImageResource(R.drawable.flashball_01);
 

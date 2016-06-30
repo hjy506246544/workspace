@@ -9,6 +9,7 @@ import java.util.zip.Inflater;
 
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.util.ToastUtils;
+import com.gvs.controlpanel.widget.Header;
 import com.gvs.edwin.activity.AppIcon;
 import com.gvs.edwin.activity.IconAdapter;
 
@@ -38,6 +39,7 @@ import android.widget.Toast;
 public class CurtainDetailActivity extends Activity implements OnItemClickListener,
 		OnItemLongClickListener {
 	AppIcon appicon;
+	public Header header;
 	public ArrayList<String> mNameList;
 	public ArrayList<Drawable> mDrawableList;
 	public boolean isDeleteMode = false;
@@ -58,6 +60,7 @@ public class CurtainDetailActivity extends Activity implements OnItemClickListen
 		setContentView(R.layout.activity_curtain);
 		dBManager = DBHelper.getInstance(this);
 		appicon = (AppIcon) findViewById(R.id.gridview_curtain);
+		header = (Header) findViewById(R.id.curtain_activity_header);
 
 		mNameList = new ArrayList<String>();
 		mDrawableList = new ArrayList<Drawable>();
@@ -74,14 +77,22 @@ public class CurtainDetailActivity extends Activity implements OnItemClickListen
 				mNameList.add(tmpEntity.getStrText());
 				mDrawableList.add(getResources().getDrawable(
 						tmpEntity.getIconId()));
-                 
+
 			}
 		}
 		mNameList.add(getString(R.string.controlcenter_add_new));
 
 		mDrawableList.add(getResources().getDrawable(R.drawable.btn_add_new));
 
-		
+		header.setTitle(getResources().getString(R.string.curtain));
+
+		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				CurtainDetailActivity.this.finish();
+			}
+		});
 
 	}
 
@@ -93,23 +104,23 @@ public class CurtainDetailActivity extends Activity implements OnItemClickListen
 
 			if ((mNameList.size() - 1) != position) {
 				// delete
-				
+
 
 				List<CurtainEntity> mList;
 
 				mList = dBManager.select(mNameList
 						.get(position));
-				
+
 				Log.d("TAG", String.valueOf(position)+mNameList
 						.get(position));
-				
-				
-			
-				
+
+
+
+
 				if (mList.isEmpty()) {
 					ToastUtils.show(CurtainDetailActivity.this, "删除的对象不存在");
 					return;
-					
+
 				} else {
 					dBManager.DeleteCurtainEntityById(mList.get(0).getId());
 				}
@@ -188,12 +199,12 @@ public class CurtainDetailActivity extends Activity implements OnItemClickListen
 					}
 				}
 				mNameList.add(mDrawableList.size()-1, nametxt);
-				mDrawable = R.drawable.curtain_type1;
+				mDrawable = R.drawable.icon_curtain_type1;
 				if (isType1)
-					mDrawable = R.drawable.curtain_type1;
+					mDrawable = R.drawable.icon_curtain_type1;
 
 				else
-					mDrawable = R.drawable.curtain_type2;
+					mDrawable = R.drawable.icon_curtain_type2;
 
 				mDrawableList.add(mDrawableList.size()-1, getResources()
 						.getDrawable(mDrawable));

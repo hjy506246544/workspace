@@ -16,8 +16,8 @@ public class ApplicationSmart extends Application {
 	private static DaoMaster daoMaster;
 	private static DaoSession daoSession;
 	public static SQLiteDatabase db;
-	public static final String DB_NAME = "com.gvs.controlcenter.db";
-
+	public static final String DB_NAME = "3.gvs.controlcenter.db";
+    static public ApplicationSmart instance;
 
 
 	@Override
@@ -25,7 +25,11 @@ public class ApplicationSmart extends Application {
 		// TODO Auto-generated method stub
 
 		super.onCreate();
+        this.instance=this;
+	}
 
+	public static ApplicationSmart getInstance() {
+		return instance;
 	}
 
 	/**

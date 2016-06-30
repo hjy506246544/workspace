@@ -1,33 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/app_bg" >
 
-    <RelativeLayout
-        android:id="@+id/title_bar_light_ctrl"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/bg_tranparent" >
-
-        <TextView
-            android:id="@+id/txtview_light_ctrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/controlcenter_mainmenu_curtain"
-            android:textSize="@dimen/main_activity_txtsize" />
-    </RelativeLayout>
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/setup_activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+    	android:background="@color/translucent_4"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/title_bar_light_ctrl"
+        android:layout_below="@id/setup_activity_header"
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:src="@drawable/light_bg" />
 
         <View
@@ -48,8 +44,9 @@
 
             <com.gvs.controlpanel.widget.SlideSwitch
                 android:id="@+id/light_slideswitch"
-                android:layout_width="100dp"
-                android:layout_height="80dp" 
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_marginRight="20dp"
                 android:layout_alignParentRight="true"
                 />
         </RelativeLayout>

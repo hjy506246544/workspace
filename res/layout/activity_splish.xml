@@ -5,7 +5,7 @@
     android:background="#ffffff">
 
     <ImageView
-        android:id="@+id/image"
+        android:id="@+id/activity_splish_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
@@ -19,7 +19,7 @@
 
     <LinearLayout
         android:layout_marginBottom="18dp"
-        android:layout_above="@+id/title"
+        android:layout_above="@+id/activity_splish_title"
         android:layout_width="wrap_content"
 
       android:layout_centerHorizontal="true"
@@ -33,7 +33,7 @@
             android:src="@drawable/actionsheet_bottom_normal" />
 
         <TextView
-            android:id="@+id/app_name"
+            android:id="@+id/activity_splish_app_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
@@ -45,7 +45,7 @@
 
 
     <TextView
-        android:id="@+id/title"
+        android:id="@+id/activity_splish_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

@@ -3,7 +3,7 @@ import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.main.MainMenuActivity;
 import com.gvs.controlpanel.activity.securitymonitor.AddMonitorPreviewActivity;
-import com.gvs.controlpanel.activity.set.AddressConfigurationActivity;
+import com.gvs.controlpanel.activity.set.Activity_AddressConfiguration;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import com.gvs.controlpanel.widget.SlideSwitch;
@@ -80,7 +80,7 @@ public class SetActivity extends FragmentActivityBase {
 			@Override
 			public void onClick(View v) {
 				//完成地址配置，暂时隐藏 2016-6-22
-				startActivity(new Intent(SetActivity.this,AddressConfigurationActivity.class));
+				startActivity(new Intent(SetActivity.this,Activity_AddressConfiguration.class));
 				//startActivity(new Intent(SetActivity.this,LightActivity.class));
 			}
 		});
@@ -115,11 +115,11 @@ public class SetActivity extends FragmentActivityBase {
     }
 
     private void initView() {
-    	xxrl = (RelativeLayout) findViewById(R.id.xxrl);
-    	xxrl2 = (RelativeLayout) findViewById(R.id.xxrl2);
-    	xxrl4 = (RelativeLayout) findViewById(R.id.xxrl4);
-    	xxrl5 = (RelativeLayout) findViewById(R.id.xxrl5);
-		header = (Header) findViewById(R.id.header);
+    	xxrl = (RelativeLayout) findViewById(R.id.setup_activity_xxrl);
+    	xxrl2 = (RelativeLayout) findViewById(R.id.setup_activity_xxrl2);
+    	xxrl4 = (RelativeLayout) findViewById(R.id.setup_activity_xxrl4);
+    	xxrl5 = (RelativeLayout) findViewById(R.id.setup_activity_xxrl5);
+		header = (Header) findViewById(R.id.setup_activity_header);
 	}
 
     /**
@@ -164,12 +164,6 @@ public class SetActivity extends FragmentActivityBase {
 	    final RadioButton modeselectioniv = (RadioButton) dialog.getWindow().findViewById(R.id.modeselectioniv);
 	    final RadioButton usermodeiv = (RadioButton) dialog.getWindow().findViewById(R.id.usermodeiv);
 
-//	    if("普通模式".equals(txwaytv.getText().toString())){
-//	    	modeselectioniv.setButtonDrawable(R.drawable.txl_cheaktrue);
-//	    }
-//	    if("用户模式".equals(txwaytv.getText().toString())){
-//	    	usermodeiv.setButtonDrawable(R.drawable.txl_cheaktrue);
-//	    }
 	    modeselectionll.setOnClickListener(new OnClickListener() {
 		      @Override
 		      public void onClick(View v) {
@@ -179,7 +173,6 @@ public class SetActivity extends FragmentActivityBase {
 		  			@Override
 		  			public void run() {
 		  				dialog.dismiss();
-				    	//txwaytv.setText("普通模式");
 		  			}
 		  		  }, 200);
 		      }
@@ -194,7 +187,6 @@ public class SetActivity extends FragmentActivityBase {
 		  			@Override
 		  			public void run() {
 		  				dialog.dismiss();
-				    	//txwaytv.setText("用户模式");
 		  			}
 		  		  }, 200);
 		      }

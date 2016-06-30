@@ -52,4 +52,5 @@
     <string name="adj_temp">温度调节</string>
     <string name="indoor_temp">室内温度</string>
     <string name="set_temp">设定温度</string>
+    <string name="address_setup">地址配置</string>
 </resources>

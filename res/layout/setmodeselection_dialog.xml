@@ -14,7 +14,7 @@
 
 	    <TextView
 	        android:id="@+id/modetv"
-	        style="@style/app_titleStyle1"
+	        style="@style/app_titleStyle2"
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
 	        android:gravity="center_vertical"
@@ -42,8 +42,8 @@
 	            android:gravity="center_vertical"
 	            android:drawableLeft="@drawable/set_gcs"
 	            android:drawablePadding="5dp"
-	            style="@style/app_big_textStyle1"
-	            android:text="普通模式" />
+	            style="@style/app_titleStyle2"
+	            android:text="用户模式" />
 
 	        <RadioButton
 	        	android:id="@+id/modeselectioniv"
@@ -75,8 +75,8 @@
 	            android:drawableLeft="@drawable/set_user"
 	            android:drawablePadding="5dp"
 	            android:gravity="center_vertical"
-	            style="@style/app_big_textStyle1"
-	            android:text="用户模式" />
+	            style="@style/app_titleStyle2"
+	            android:text="工程模式" />
 
 	        <RadioButton
 	        	android:id="@+id/usermodeiv"

@@ -1,18 +1,28 @@
 package com.gvs.controlpanel.adapter;
+import greendao.DBHelper;
+import greendao.LightEntity;
+
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import com.gvs.controlpanel.R;
+import com.gvs.controlpanel.activity.scene.AddSceneActivity;
 import com.gvs.controlpanel.bean.Scene;
+import com.gvs.edwin.activity.IconAdapter;
 
 import android.content.Context;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.CheckBox;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 /**
  * 联系人适配器
@@ -24,6 +34,8 @@ public class SceneaddListAdapter extends BaseAdapter{
 	private List<Scene> listItems;//信息集合
 	private LayoutInflater listContainer;           //视图容器
     private HashMap<String,Boolean> subjectItemMap = new HashMap<String, Boolean>();
+	public ArrayList<String> mNameList;
+	public ArrayList<Drawable> mDrawableList;
 
 	public HashMap<String, Boolean> getSubjectItemMap() {
 		return subjectItemMap;
@@ -42,6 +54,7 @@ public class SceneaddListAdapter extends BaseAdapter{
 		private TextView nametv;
 		private ImageView imgiv;
 		public CheckBox dxiv;
+		private ListView sceneaddlist;
 	}
 
 	public SceneaddListAdapter(Context context, List<Scene> listItems) {
@@ -81,6 +94,7 @@ public class SceneaddListAdapter extends BaseAdapter{
             listItemView.imgiv=(ImageView) convertView.findViewById(R.id.imgiv);
             listItemView.dxiv=(CheckBox) convertView.findViewById(R.id.dxiv);
             listItemView.nametv=(TextView) convertView.findViewById(R.id.nametv);
+            listItemView.sceneaddlist = (ListView) convertView.findViewById(R.id.sceneaddlist);
             //设置控件集到convertView
             convertView.setTag(listItemView);
         }else {
@@ -101,6 +115,35 @@ public class SceneaddListAdapter extends BaseAdapter{
            res = true;
 
 	    listItemView.dxiv.setChecked(res);
+
+
+		mNameList = new ArrayList<String>();
+		mDrawableList = new ArrayList<Drawable>();
+		listItemView.sceneaddlist.setAdapter(new IconAdapter2(context, mNameList, mDrawableList));
+
+
+	    List<LightEntity> listentity = AddSceneActivity.getdBManager().loadAllLightEntity();
+		if (listentity.size() >= 1) {
+			for (int i = 0; i < listentity.size(); i++) {
+				LightEntity tmpEntity = listentity.get(i);
+
+				mNameList.add(tmpEntity.getStrText());
+				mDrawableList.add(context.getResources().getDrawable(
+						tmpEntity.getIconId()));
+
+			}
+		}
+
+		listItemView.sceneaddlist.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+
+			}
+		});
+
         return convertView;
 	}
 }

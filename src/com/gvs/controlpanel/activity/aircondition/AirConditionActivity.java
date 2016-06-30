@@ -1,18 +1,14 @@
 package com.gvs.controlpanel.activity.aircondition;
-
-import greendao.CurtainEntity;
 import greendao.DBHelper;
 import greendao.ACEntity;
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
-
 import com.gvs.controlpanel.R;
+import com.gvs.controlpanel.activity.curtain.CurtainDetailActivity;
 import com.gvs.controlpanel.util.ToastUtils;
+import com.gvs.controlpanel.widget.Header;
 import com.gvs.edwin.activity.AppIcon;
 import com.gvs.edwin.activity.IconAdapter;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
@@ -20,25 +16,24 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * 空调界面
+ * @author hjy
+ * 2016-06-30
+ */
 public class AirConditionActivity extends Activity implements OnItemClickListener,
 		OnItemLongClickListener {
 	AppIcon appicon;
+	public Header header;
 	public ArrayList<String> mNameList;
 	public ArrayList<Drawable> mDrawableList;
 	public boolean isDeleteMode = false;
@@ -59,6 +54,7 @@ public class AirConditionActivity extends Activity implements OnItemClickListene
 		setContentView(R.layout.activity_ac);
 		dBManager = DBHelper.getInstance(this);
 		appicon = (AppIcon) findViewById(R.id.gridview_ac);
+		header = (Header) findViewById(R.id.activity_header);
 
 		mNameList = new ArrayList<String>();
 		mDrawableList = new ArrayList<Drawable>();
@@ -75,15 +71,22 @@ public class AirConditionActivity extends Activity implements OnItemClickListene
 				mNameList.add(tmpEntity.getStrText());
 				mDrawableList.add(getResources().getDrawable(
 						tmpEntity.getIconId()));
-                 
+
 			}
 		}
 		mNameList.add(getString(R.string.controlcenter_add_new));
 
 		mDrawableList.add(getResources().getDrawable(R.drawable.btn_add_new));
 
-		
+		header.setTitle(getResources().getString(R.string.aircondition_title));
 
+		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				AirConditionActivity.this.finish();
+			}
+		});
 	}
 
 	@Override
@@ -94,23 +97,23 @@ public class AirConditionActivity extends Activity implements OnItemClickListene
 
 			if ((mNameList.size() - 1) != position) {
 				// delete
-				
+
 
 				List<ACEntity> mList;
 
 				mList = dBManager.select_AC(mNameList
 						.get(position));
-				
+
 				Log.d("TAG", String.valueOf(position)+mNameList
 						.get(position));
-				
-				
-			
-				
+
+
+
+
 				if (mList.isEmpty()) {
 					ToastUtils.show(AirConditionActivity.this, "删除的对象不存在");
 					return;
-					
+
 				} else {
 					dBManager.DeleteACEntityById(mList.get(0).getId());
 				}
@@ -189,12 +192,12 @@ public class AirConditionActivity extends Activity implements OnItemClickListene
 					}
 				}
 				mNameList.add(mDrawableList.size()-1, nametxt);
-				mDrawable = R.drawable.ac_type1;
+				mDrawable = R.drawable.icon_kt_gs;
 				if (isType1)
-					mDrawable = R.drawable.ac_type1;
+					mDrawable = R.drawable.icon_kt_gs;
 
 				else
-					mDrawable = R.drawable.ac_type2;
+					mDrawable = R.drawable.icon_kt_ls;
 
 				mDrawableList.add(mDrawableList.size()-1, getResources()
 						.getDrawable(mDrawable));

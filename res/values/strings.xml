@@ -149,4 +149,5 @@ limitations under the License.\n</string>
     <string name="adj_temp">adjust temperature</string>
     <string name="indoor_temp">current temperature</string>
     <string name="set_temp">preset temperature</string>
+    <string name="address_setup">Address setup</string>
 </resources>

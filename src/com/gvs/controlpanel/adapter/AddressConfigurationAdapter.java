@@ -53,7 +53,7 @@ public class AddressConfigurationAdapter extends BaseAdapter{
 		viewhodler2 viewHolder;
 		if(convertView == null){
 			viewHolder=new viewhodler2();
-			convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.addressconfiguration_item, null);
+			convertView = LayoutInflater.from(parent.getContext()).inflate(R.layout.address_config_fragment, null);
 			//viewHolder.pImageView = (RadioButton) convertView.findViewById(R.id.albumPhoto);
 			//viewHolder.pTitle = (TextView) convertView.findViewById(R.id.title);
 			convertView.setTag(viewHolder);

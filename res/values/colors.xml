@@ -64,6 +64,7 @@
     <color name="transparent">#00000000</color>
     <color name="translucent">#50000000</color>
     <color name="translucent_2">#20000000</color>
+    <color name="translucent_4">#808080</color>
     <color name="translucent_8">#80000000</color>
     <color name="translucent_9">#90000000</color>
     <color name="translucent_3">#292421</color>

@@ -5,8 +5,8 @@
     android:versionName="4.0" >
 
     <uses-sdk
-        android:minSdkVersion="10"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -23,17 +23,17 @@
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" 
+        android:theme="@style/AppTheme"
         android:name="common.ApplicationSmart">
         <activity
             android:name="com.gvs.controlpanel.activity.main.MainMenuActivity"
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
-            
+
         </activity>
 
 
-       
+
 
 		<!-- 灯光 -->
         <activity
@@ -126,7 +126,7 @@
 
         <!-- address configuration -->
         <activity
-            android:name="com.gvs.controlpanel.activity.set.AddressConfigurationActivity"
+            android:name="com.gvs.controlpanel.activity.set.Activity_AddressConfiguration"
             android:screenOrientation="landscape"
             android:label="@string/app_name" >
         </activity>

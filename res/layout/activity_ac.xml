@@ -1,34 +1,29 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    >
+    android:background="@color/app_bg"
+    android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/title_bar_ac"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/bg_tranparent" >
-
-        <TextView
-            android:id="@+id/txtview_ac"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/controlcenter_mainmenu_ac"
-            android:textSize="@dimen/main_activity_txtsize" />
-    </RelativeLayout>
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+    	android:background="@color/translucent_4"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="fill_parent" 
+        android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_below="@id/title_bar_ac">
+        android:layout_below="@id/activity_header">
 
         <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" 
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:src="@drawable/ac_bg"/>
 
         <com.gvs.edwin.activity.AppIcon
@@ -39,10 +34,10 @@
             android:cacheColorHint="#00000000"
             android:drawSelectorOnTop="false"
             android:listSelector="@color/tranparent"
-            android:numColumns="4"
-            android:stretchMode="columnWidth" 
-            android:paddingTop="100dp"
-            android:verticalSpacing="50dp"
+            android:numColumns="6"
+            android:stretchMode="columnWidth"
+            android:paddingTop="60dp"
+            android:verticalSpacing="60dp"
             >
         </com.gvs.edwin.activity.AppIcon>
     </LinearLayout>

@@ -1,44 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
+    android:background="@drawable/main_bj"
     android:layout_height="match_parent" >
 
-    <RelativeLayout
-        android:id="@+id/namell"
+    <View
+        android:id="@+id/address_config_fragment_break"
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"/>
+
+    <LinearLayout
+        android:id="@+id/address_config_fragment_left"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:minHeight="70dp"
-        android:layout_height="wrap_content" >
+        android:layout_below="@id/address_config_fragment_break"
+        android:minHeight="80dp"
+        android:orientation="vertical"
+         >
         <ImageView
-	        android:id="@+id/iv"
+	        android:id="@+id/address_config_fragment_iv"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
 		    android:layout_centerVertical="true"
-	        android:layout_marginLeft="40dp"
-		    android:src="@drawable/ic_launcher" />
+	        android:layout_marginLeft="40dp" />
 
 		<TextView
-	        android:id="@+id/nametv"
+	        android:id="@+id/address_config_fragment_nametv"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        style="@style/app_titleStyle"
+	        style="@style/app_titleStyle1"
 	        android:gravity="center_vertical"
 	        android:layout_below="@+id/iv"
-	        android:layout_marginTop="15dp"
+	        android:layout_marginTop="25dp"
 	        android:layout_marginLeft="40dp"
 	        android:text="@string/config_name" />
-    </RelativeLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minHeight="70dp"
-        android:layout_centerVertical="true"
         android:orientation="horizontal"
-        android:layout_alignParentRight="true">
+        android:layout_marginRight="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/address_config_fragment_break">
 
    		<Spinner
-            android:id="@+id/spinner1"
+            android:id="@+id/address_config_fragment_spinner1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/address"
@@ -46,14 +54,16 @@
             android:background="@drawable/set_config_bg"
             android:layout_weight="1" />
 
-   		<ImageView
+   		<TextView
    		    android:layout_width="wrap_content"
    		    android:layout_height="wrap_content"
-   		    android:layout_gravity="bottom"
-   		    android:src="@drawable/set_config_dian" />
+   		    android:text="."
+   		    android:layout_marginTop="20dp"
+   		    android:gravity="bottom"
+   		    style="@style/app_Style5" />
 
         <Spinner
-            android:id="@+id/spinner2"
+            android:id="@+id/address_config_fragment_spinner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/address"
@@ -62,14 +72,16 @@
             android:layout_weight="1" />
 
 
-   		<ImageView
+   		<TextView
    		    android:layout_width="wrap_content"
    		    android:layout_height="wrap_content"
-   		    android:layout_gravity="bottom"
-   		    android:src="@drawable/set_config_dian" />
+   		    android:text="."
+   		    android:layout_marginTop="20dp"
+   		    android:gravity="bottom"
+   		    style="@style/app_Style5" />
 
         <Spinner
-            android:id="@+id/spinner3"
+            android:id="@+id/address_config_fragment_spinner3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:entries="@array/address"

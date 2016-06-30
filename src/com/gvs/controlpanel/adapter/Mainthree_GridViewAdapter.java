@@ -52,8 +52,8 @@ public class Mainthree_GridViewAdapter extends BaseAdapter {
 		if(view==null){
 			ViewHolder viewHolder=new ViewHolder();
 			view=LayoutInflater.from(parent.getContext()).inflate(R.layout.main_gridviewthree, null);
-			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.iv_headview2);
-			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.nametv2);
+			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.maingridview_icon);
+			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.maingridview_name);
 			view.setTag(R.drawable.ic_launcher,viewHolder);
 		}
 		holder=(ViewHolder) view.getTag(R.drawable.ic_launcher);

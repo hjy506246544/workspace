@@ -122,7 +122,7 @@
 
     <style name="app_Style4">
         <item name="android:textColor">@color/redColor</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:textSize">50sp</item>
     </style>
 
     <style name="app_Style5">
@@ -147,6 +147,16 @@
     <style name="Style5">
         <item name="android:textColor">@color/white</item>
         <item name="android:textSize">26sp</item>
+    </style>
+
+    <style name="Style6">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="Style7">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:textSize">36sp</item>
     </style>
 
     <!-- app title text文本样式 -->

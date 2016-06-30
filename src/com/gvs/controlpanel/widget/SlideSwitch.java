@@ -99,7 +99,7 @@ public class SlideSwitch extends View{
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeWidth(lineWidth);
         /*左边部分的线，紫色*/
-        mPaint.setColor(Color.BLUE);
+        mPaint.setColor(Color.GREEN);
         canvas.drawLine(lineStart, centerY, curX, centerY, mPaint);
         /*右边部分的线，灰色*/
         mPaint.setColor(Color.GRAY);
@@ -110,7 +110,7 @@ public class SlideSwitch extends View{
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setColor(Color.GRAY);
         canvas.drawCircle(lineEnd, centerY, lineWidth / 2, mPaint);
-        mPaint.setColor(Color.BLUE);
+        mPaint.setColor(Color.GREEN);
         canvas.drawCircle(lineStart, centerY, lineWidth / 2, mPaint);
         /*圆形滑块*/
         mPaint.setColor(Color.LTGRAY);

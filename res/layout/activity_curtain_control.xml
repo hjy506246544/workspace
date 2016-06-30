@@ -1,54 +1,50 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent"
+    android:background="@color/app_bg" >
 
-    <RelativeLayout
-        android:id="@+id/title_bar_curtain_ctrl"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:background="@color/bg_tranparent" >
-
-        <TextView
-            android:id="@+id/txtview_curtain_ctrl"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="@string/controlcenter_mainmenu_curtain"
-            android:textSize="@dimen/main_activity_txtsize" />
-    </RelativeLayout>
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/curtain_activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+    	android:background="@color/translucent_4"
+        android:orientation="vertical" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/title_bar_curtain_ctrl"
+        android:layout_below="@id/curtain_activity_header"
         android:orientation="vertical" >
 
         <ImageView
-            android:id="@+id/curtain_ctrl_bg"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
             android:src="@drawable/curtain_bg" />
-        <View 
+        <View
             android:layout_width="wrap_content"
             android:layout_height="100dp"/>
 
         <ImageView
             android:id="@+id/curtain_type_icon"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="40dp"
             android:layout_height="wrap_content"/>
-        <View 
+        <View
             android:layout_width="wrap_content"
             android:layout_height="100dp"/>
 
-<LinearLayout 
+		<LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
             android:orientation="horizontal">
-            
+
             <ImageView
                 android:id="@+id/blinds_open"
                 android:layout_width="wrap_content"
@@ -72,7 +68,7 @@
             </LinearLayout>
     </LinearLayout>
 
-    
+
 
 
 </RelativeLayout>

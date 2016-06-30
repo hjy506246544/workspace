@@ -18,6 +18,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.RadioButton;
@@ -68,12 +69,14 @@ public class BgMusicActivity extends FragmentActivityBase {
 
 				viewhodler holder= (viewhodler) view.getTag();
 				holder.pImageView.toggle();
-				final RadioButton radio=(RadioButton) view.findViewById(R.id.albumPhoto);
+				final CheckBox radio=(CheckBox) view.findViewById(R.id.albumPhoto);
 				holder.pImageView = radio;
-				for(String key:bgMusicAdapter.getStates().keySet()){
-					bgMusicAdapter.getStates().put(key, false);
-				}
+//				for(String key:bgMusicAdapter.getStates().keySet()){
+//					bgMusicAdapter.getStates().put(key, false);
+//				}
 				bgMusicAdapter.getStates().put(String.valueOf(position), radio.isChecked());
+				Log.e("position=", "position="+String.valueOf(position));
+
 				bgMusicAdapter.notifyDataSetChanged();
 				Intent intent = getPackageManager().getLaunchIntentForPackage("com.example.musicplayer1");
 				// 这里如果intent为空，就说名没有安装要跳转的应用嘛

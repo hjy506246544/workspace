@@ -8,7 +8,7 @@
     android:background="@color/black2" >
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/header"
+        android:id="@+id/setup_activity_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
     	android:background="@color/translucent_8"
@@ -17,7 +17,7 @@
     <com.gvs.controlpanel.widget.BounceScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/header" >
+        android:layout_below="@+id/setup_activity_header" >
         <LinearLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
@@ -26,9 +26,9 @@
 	        android:orientation="vertical" >
 
 		    <TextView
-		        android:id="@+id/tv_displername"
+		        android:id="@+id/setup_activity_tv_displername"
 		        android:text="选项"
-		        style="@style/app_titleStyle1"
+		        style="@style/Style5"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -38,7 +38,7 @@
 		        android:layout_height="wrap_content" />
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl"
+		        android:id="@+id/setup_activity_xxrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -52,7 +52,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/set_bjt"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -74,7 +74,7 @@
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl2"
+		        android:id="@+id/setup_activity_xxrl2"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -88,7 +88,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/set_address"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -107,14 +107,16 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
+		        android:visibility="gone"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl3"
+		        android:id="@+id/setup_activity_xxrl3"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
+		        android:visibility="gone"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
@@ -124,7 +126,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/set_updatepwd"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -146,9 +148,9 @@
 		        android:background="@drawable/cxian2"/>
 
 		    <TextView
-		        android:id="@+id/tv_displername"
+		        android:id="@+id/setup_activity_tv_displername"
 		        android:text="模式"
-		        style="@style/app_titleStyle1"
+		        style="@style/Style5"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -158,7 +160,7 @@
 		        android:layout_height="wrap_content" />
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl4"
+		        android:id="@+id/setup_activity_xxrl4"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -172,7 +174,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/set_updatepwd"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -194,7 +196,7 @@
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl5"
+		        android:id="@+id/setup_activity_xxrl5"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -208,7 +210,7 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/set_modeselect"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -230,11 +232,12 @@
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl6"
+		        android:id="@+id/setup_activity_xxrl6"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
+		        android:visibility="gone"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
@@ -263,14 +266,16 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
+		        android:visibility="gone"
 		        android:background="@drawable/cxian2"/>
 
 		    <TextView
-		        android:id="@+id/tv_displername"
+		        android:id="@+id/setup_activity_tv_displername"
 		        android:text="选项3"
 		        style="@style/app_titleStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
+		        android:visibility="gone"
 		        android:layout_marginBottom="5dp"
 		        android:layout_gravity="center_vertical"
 		        android:gravity="center_vertical"
@@ -278,11 +283,12 @@
 		        android:layout_height="wrap_content" />
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl"
+		        android:id="@+id/setup_activity_xxrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
+		        android:visibility="gone"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
@@ -311,14 +317,16 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
+		        android:visibility="gone"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl2"
+		        android:id="@+id/setup_activity_xxrl2"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
+		        android:visibility="gone"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >
@@ -347,14 +355,16 @@
 		    <ImageView
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
+		        android:visibility="gone"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/xxrl3"
+		        android:id="@+id/setup_activity_xxrl3"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
+		        android:visibility="gone"
 		        android:paddingBottom="5dp"
 		     	android:background="@drawable/bjt2_"
 		        android:orientation="horizontal" >

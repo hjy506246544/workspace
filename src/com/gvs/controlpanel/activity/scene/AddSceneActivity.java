@@ -1,4 +1,7 @@
 package com.gvs.controlpanel.activity.scene;
+import greendao.DBHelper;
+import greendao.LightEntity;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -40,13 +43,12 @@ public class AddSceneActivity extends FragmentActivityBase {
 	private TextView textView_main_emptyInfo;
 	// 设置适配器的图片资源
     private int[] imgiv = new int[] {
-            R.drawable.main_light, R.drawable.main_cl,
-            R.drawable.main_kt, R.drawable.main_dsj,
-            R.drawable.main_jtyy, R.drawable.main_bgmusic,
-            R.drawable.main_afjk};
+            R.drawable.scene_light, R.drawable.scene_cl,
+            R.drawable.scene_kt, R.drawable.scene_bgmusic,
+            R.drawable.scene_mode};
     // 设置标题
     private String[] nametv = new String[] {
-    		"灯光", "窗帘", "空调", "电视机", "家庭影院", "背景音乐", "安防监控"};
+    		"灯光", "窗帘", "空调", "背景音乐", "执行模式"};
     //private List<Map<String, Object>> listitem = null;
     private List listitem = new ArrayList();
 	private int positions;
@@ -54,13 +56,23 @@ public class AddSceneActivity extends FragmentActivityBase {
 	private int img = R.drawable.main_light;
 	private SimpleAdapter adapter = null;
 
-    @Override
+
+
+	private static DBHelper dBManager;
+
+    public static DBHelper getdBManager() {
+		return dBManager;
+	}
+
+	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sceneadd_activity);
+        dBManager = DBHelper.getInstance(this);
 		initView();
 		initData();
 		initListener();
+
     }
 
     /**
@@ -167,5 +179,8 @@ public class AddSceneActivity extends FragmentActivityBase {
 		bcbtn = (Button) findViewById(R.id.bcbtn);
 		scenenameet = (EditText) findViewById(R.id.scenenameet);
 		textView_main_emptyInfo = (TextView) findViewById(R.id.textView_main_emptyInfo);
+
+
+
 	}
 }
