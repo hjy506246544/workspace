@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg01"
+    android:orientation="vertical"
+    tools:ignore="all" >
+
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/activity_addressconfiguration_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/translucent_8"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="40dp"
+        android:layout_below="@id/activity_addressconfiguration_header"
+        android:background="@color/translucent_8" >
+
+        <RadioGroup
+            android:id="@+id/activity_addressconfiguration_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="160dp"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/activity_addressconfiguration_light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawablePadding="10dp"
+                style="@style/Style5"
+                android:drawableRight="@drawable/scene_light"
+                android:text="@string/light_title"/>
+
+            <RadioButton
+                android:id="@+id/activity_addressconfiguration_curtain"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="1"
+                android:drawablePadding="15dp"
+                style="@style/Style5"
+                android:drawableRight="@drawable/scene_cl"
+                android:text="@string/curtain_title"/>
+
+            <RadioButton
+                android:id="@+id/activity_addressconfiguration_ac"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="80dp"
+                android:layout_weight="1"
+                style="@style/Style5"
+                android:drawablePadding="15dp"
+                android:text="@string/aircondition_title"
+                android:drawableRight="@drawable/scene_kt" />
+        </RadioGroup>
+
+
+            <ListView
+            android:id="@+id/activity_addressconfiguration_list"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/activity_addressconfiguration_radiogroup"
+            android:background="@color/bg_tranparent">
+
+            </ListView>
+
+        <FrameLayout
+            android:id="@+id/activity_addressconfiguration_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/activity_addressconfiguration_list"
+            android:layout_below="@id/activity_addressconfiguration_radiogroup"
+            android:background="@color/bg_tranparent">
+
+        </FrameLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
