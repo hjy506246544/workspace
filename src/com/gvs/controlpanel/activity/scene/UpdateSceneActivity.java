@@ -36,10 +36,10 @@ public class UpdateSceneActivity extends FragmentActivityBase {
 	public EditText scenenameet;
 	// 设置适配器的图片资源
     private int[] imgiv = new int[] {
-            R.drawable.main_light, R.drawable.main_cl,
-            R.drawable.main_kt, R.drawable.main_dsj,
-            R.drawable.main_jtyy, R.drawable.main_bgmusic,
-            R.drawable.main_afjk};
+            R.drawable.icon_main_light, R.drawable.icon_main_cl,
+            R.drawable.icon_main_kt, R.drawable.icon_main_dsj,
+            R.drawable.icon_main_jtyy, R.drawable.icon_main_bgmusic,
+            R.drawable.icon_main_afjk};
     // 设置标题
     private String[] nametv = new String[] {
     		"灯光", "窗帘", "空调", "电视机", "家庭影院", "背景音乐", "安防监控"};
@@ -124,9 +124,9 @@ public class UpdateSceneActivity extends FragmentActivityBase {
 	}
 
     private void initView() {
-		scenelist = (ListView) findViewById(R.id.scenelist);
-		backiv = (ImageView) findViewById(R.id.backiv);
-		bcbtn = (Button) findViewById(R.id.bcbtn);
-		scenenameet = (EditText) findViewById(R.id.scenenameet);
+		scenelist = (ListView) findViewById(R.id.activity_updatescene_scenelist);
+		backiv = (ImageView) findViewById(R.id.activity_updatescene_backiv);
+		bcbtn = (Button) findViewById(R.id.activity_updatescene_bcbtn);
+		scenenameet = (EditText) findViewById(R.id.activity_updatescene_scenenameet);
 	}
 }

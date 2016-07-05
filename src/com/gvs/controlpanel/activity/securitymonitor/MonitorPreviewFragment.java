@@ -69,8 +69,8 @@ public class MonitorPreviewFragment extends FragmentBase{
 	}
 
 	private void initView(View view, Bundle savedInstanceState) {
-		addiv = (ImageView) view.findViewById(R.id.addiv);
-		listView = (ListView) view.findViewById(R.id.listview);
+		addiv = (ImageView) view.findViewById(R.id.activity_monitorpreview_addiv);
+		listView = (ListView) view.findViewById(R.id.activity_monitorpreview_listview);
 	}
 
 	@Override

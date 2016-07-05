@@ -33,7 +33,7 @@ public class AddMonitorPreviewActivity extends FragmentActivityBase {
     private void initData() {
     	header.setTitle(getResources().getString(R.string.addsxt_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -85,10 +85,10 @@ public class AddMonitorPreviewActivity extends FragmentActivityBase {
 	}
 
     private void initView() {
-		header = (Header) findViewById(R.id.header);
-		devicepwdet = (EditText) findViewById(R.id.devicepwdet);
-		deviceidet = (EditText) findViewById(R.id.deviceidet);
-		devicenameet = (EditText) findViewById(R.id.devicenameet);
-		tjbtn = (Button) findViewById(R.id.tjbtn);
+		header = (Header) findViewById(R.id.activity_addmonitorpreview_header);
+		devicepwdet = (EditText) findViewById(R.id.activity_addmonitorpreview_devicepwdet);
+		deviceidet = (EditText) findViewById(R.id.activity_addmonitorpreview_deviceidet);
+		devicenameet = (EditText) findViewById(R.id.activity_addmonitorpreview_devicenameet);
+		tjbtn = (Button) findViewById(R.id.activity_addmonitorpreview_tjbtn);
 	}
 }

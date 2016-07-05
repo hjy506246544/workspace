@@ -1,6 +1,7 @@
 package com.gvs.controlpanel.adapter;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.gvs.controlpanel.R;
 
@@ -24,6 +25,15 @@ public class IconAdapter2 extends BaseAdapter {
 	private Context ctext;
 	private ArrayList<String> mNameList = new ArrayList<String>();
 	private ArrayList<Drawable> mDrawableList = new ArrayList<Drawable>();
+    private HashMap<String,Boolean> states=new HashMap<String,Boolean>();//用于记录每个RadioButton的状态，并保证只可选一个
+
+    public HashMap<String, Boolean> getStates() {
+		return states;
+	}
+
+	public void setStates(HashMap<String, Boolean> states) {
+		this.states = states;
+	}
 
 	public IconAdapter2(Context context, ArrayList<String> nameList,
 			ArrayList<Drawable> drawableList) {
@@ -76,6 +86,16 @@ public class IconAdapter2 extends BaseAdapter {
 		// set name
 		viewTag.mName.setText(mNameList.get(position));
 
+
+		boolean res=false;
+        if(states.get(String.valueOf(position)) == null || states.get(String.valueOf(position))== false){
+           res=false;
+           states.put(String.valueOf(position), false);
+        }
+        else
+           res = true;
+
+        viewTag.namecb.setChecked(res);
 		// set icon
 		viewTag.mIcon.setBackgroundDrawable(mDrawableList.get(position));
 

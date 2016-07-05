@@ -36,7 +36,7 @@ public class VideoPlaybackFragment extends FragmentBase{
 			"2016-6-16 1小时50分", "2016-6-16 50分", "2016-6-16 10分"};
 	// 设置适配器的图片资源
     private int[] image = new int[] {
-            R.drawable.afjk_logo, R.drawable.afjk_logo,R.drawable.afjk_logo};
+            R.drawable.icon_afjk_logo, R.drawable.icon_afjk_logo,R.drawable.icon_afjk_logo};
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -58,28 +58,28 @@ public class VideoPlaybackFragment extends FragmentBase{
 	}
 
 	private void initView(View view, Bundle savedInstanceState) {
-		listView = (ListView) view.findViewById(R.id.listview);
-		allyeartv = (TextView) view.findViewById(R.id.allyeartv);
-		liutv = (TextView) view.findViewById(R.id.liutv);
-		wutv = (TextView) view.findViewById(R.id.wutv);
-		sitv = (TextView) view.findViewById(R.id.sitv);
-		santv = (TextView) view.findViewById(R.id.santv);
-		ertv = (TextView) view.findViewById(R.id.ertv);
-		yitv = (TextView) view.findViewById(R.id.yitv);
-		allmonthtv = (TextView) view.findViewById(R.id.allmonthtv);
-		januarytv = (TextView) view.findViewById(R.id.januarytv);
-		februarytv = (TextView) view.findViewById(R.id.februarytv);
-		marchtv = (TextView) view.findViewById(R.id.marchtv);
-		apriltv = (TextView) view.findViewById(R.id.apriltv);
-		maytv = (TextView) view.findViewById(R.id.maytv);
-		junetv = (TextView) view.findViewById(R.id.junetv);
-		julytv = (TextView) view.findViewById(R.id.julytv);
-		augusttv = (TextView) view.findViewById(R.id.augusttv);
-		septembertv = (TextView) view.findViewById(R.id.septembertv);
-		octobertv = (TextView) view.findViewById(R.id.octobertv);
-		novembertv = (TextView) view.findViewById(R.id.novembertv);
-		decembertv = (TextView) view.findViewById(R.id.decembertv);
-		flowLayout  = (FlowLayout) view.findViewById(R.id.flowLayout);
+		listView = (ListView) view.findViewById(R.id.activity_securitymonitor_listview);
+		allyeartv = (TextView) view.findViewById(R.id.activity_securitymonitor_allyeartv);
+		liutv = (TextView) view.findViewById(R.id.activity_securitymonitor_liutv);
+		wutv = (TextView) view.findViewById(R.id.activity_securitymonitor_wutv);
+		sitv = (TextView) view.findViewById(R.id.activity_securitymonitor_sitv);
+		santv = (TextView) view.findViewById(R.id.activity_securitymonitor_santv);
+		ertv = (TextView) view.findViewById(R.id.activity_securitymonitor_ertv);
+		yitv = (TextView) view.findViewById(R.id.activity_securitymonitor_yitv);
+		allmonthtv = (TextView) view.findViewById(R.id.activity_securitymonitor_allmonthtv);
+		januarytv = (TextView) view.findViewById(R.id.activity_securitymonitor_januarytv);
+		februarytv = (TextView) view.findViewById(R.id.activity_securitymonitor_februarytv);
+		marchtv = (TextView) view.findViewById(R.id.activity_securitymonitor_marchtv);
+		apriltv = (TextView) view.findViewById(R.id.activity_securitymonitor_apriltv);
+		maytv = (TextView) view.findViewById(R.id.activity_securitymonitor_maytv);
+		junetv = (TextView) view.findViewById(R.id.activity_securitymonitor_junetv);
+		julytv = (TextView) view.findViewById(R.id.activity_securitymonitor_julytv);
+		augusttv = (TextView) view.findViewById(R.id.activity_securitymonitor_augusttv);
+		septembertv = (TextView) view.findViewById(R.id.activity_securitymonitor_septembertv);
+		octobertv = (TextView) view.findViewById(R.id.activity_securitymonitor_octobertv);
+		novembertv = (TextView) view.findViewById(R.id.activity_securitymonitor_novembertv);
+		decembertv = (TextView) view.findViewById(R.id.activity_securitymonitor_decembertv);
+		flowLayout  = (FlowLayout) view.findViewById(R.id.activity_securitymonitor_flowLayout);
 	}
 
 	@Override

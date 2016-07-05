@@ -43,9 +43,9 @@ public class AddSceneActivity extends FragmentActivityBase {
 	private TextView textView_main_emptyInfo;
 	// 设置适配器的图片资源
     private int[] imgiv = new int[] {
-            R.drawable.scene_light, R.drawable.scene_cl,
-            R.drawable.scene_kt, R.drawable.scene_bgmusic,
-            R.drawable.scene_mode};
+            R.drawable.icon_scene_light2, R.drawable.icon_scene_cl2,
+            R.drawable.icon_scene_kt2, R.drawable.icon_scene_bgmusic,
+            R.drawable.icon_scene_mode};
     // 设置标题
     private String[] nametv = new String[] {
     		"灯光", "窗帘", "空调", "背景音乐", "执行模式"};
@@ -53,10 +53,8 @@ public class AddSceneActivity extends FragmentActivityBase {
     private List listitem = new ArrayList();
 	private int positions;
 	private MySQLiteHelper dbHelper;// 数据库工具类
-	private int img = R.drawable.main_light;
+	private int img = R.drawable.icon_main_light;
 	private SimpleAdapter adapter = null;
-
-
 
 	private static DBHelper dBManager;
 
@@ -174,13 +172,10 @@ public class AddSceneActivity extends FragmentActivityBase {
 
     private void initView() {
 		//header = (Header) findViewById(R.id.header);
-		scenelist = (ListView) findViewById(R.id.scenelist);
-		backiv = (ImageView) findViewById(R.id.backiv);
-		bcbtn = (Button) findViewById(R.id.bcbtn);
-		scenenameet = (EditText) findViewById(R.id.scenenameet);
+		scenelist = (ListView) findViewById(R.id.activity_addscene_scenelist);
+		backiv = (ImageView) findViewById(R.id.activity_addscene_backiv);
+		bcbtn = (Button) findViewById(R.id.activity_addscene_bcbtn);
+		scenenameet = (EditText) findViewById(R.id.activity_addscene_scenenameet);
 		textView_main_emptyInfo = (TextView) findViewById(R.id.textView_main_emptyInfo);
-
-
-
 	}
 }

@@ -28,7 +28,7 @@ public class HomeTheatreActivity extends FragmentActivityBase {
     private void initData() {
     	header.setTitle(getResources().getString(R.string.hometheatre_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -42,6 +42,6 @@ public class HomeTheatreActivity extends FragmentActivityBase {
 	}
 
     private void initView() {
-		header = (Header) findViewById(R.id.header);
+		header = (Header) findViewById(R.id.activity_hometheatre_header);
 	}
 }

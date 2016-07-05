@@ -58,7 +58,7 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
     private void initData() {
     	header.setTitle(getResources().getString(R.string.securitymonitor_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -91,13 +91,13 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
 	}
 
     private void initView() {
-		header = (Header) findViewById(R.id.header);
-        titlerl = (RelativeLayout) findViewById(R.id.titlerl);
-        titlerl2 = (RelativeLayout) findViewById(R.id.titlerl2);
-        tv_title1 = (TextView) findViewById(R.id.tv_title1);
-        tv_title2 = (TextView) findViewById(R.id.tv_title2);
-	    cursor = (ImageView) findViewById(R.id.cursor);
-        pager = (ViewPager) findViewById(R.id.view_pager);
+		header = (Header) findViewById(R.id.activity_securitymonitor_header);
+        titlerl = (RelativeLayout) findViewById(R.id.activity_securitymonitor_titlerl);
+        titlerl2 = (RelativeLayout) findViewById(R.id.activity_securitymonitor_titlerl2);
+        tv_title1 = (TextView) findViewById(R.id.activity_securitymonitor_tv_title1);
+        tv_title2 = (TextView) findViewById(R.id.activity_securitymonitor_tv_title2);
+	    cursor = (ImageView) findViewById(R.id.activity_securitymonitor_cursor);
+        pager = (ViewPager) findViewById(R.id.activity_securitymonitor_view_pager);
 	}
 
     public class MyPagerAdapter extends FragmentPagerAdapter {
@@ -132,7 +132,7 @@ public class SecurityMonitorActivity extends FragmentActivityBase {
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             SecurityMonitorActivity.this.getSupportFragmentManager().beginTransaction()
-                    .add(R.id.view_pager, lists.get(position)).commit();
+                    .add(R.id.activity_securitymonitor_view_pager, lists.get(position)).commit();
             return lists.get(position);
 
         }

@@ -21,7 +21,6 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.RadioButton;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.Toast;
 /**
@@ -124,8 +123,8 @@ public class BgMusicActivity extends FragmentActivityBase {
 	}
 
     private void initView() {
-		backiv = (ImageView) findViewById(R.id.backiv);
-		bcbtn = (Button) findViewById(R.id.bcbtn);
-		lvSongs = (ListView) findViewById(R.id.lvSongs);
+		backiv = (ImageView) findViewById(R.id.backiv_bgMusicActivity);
+		bcbtn = (Button) findViewById(R.id.bcbtn_bgMusicActivity);
+		lvSongs = (ListView) findViewById(R.id.lvSongs_bgMusicActivity);
 	}
 }

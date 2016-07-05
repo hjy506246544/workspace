@@ -61,14 +61,14 @@ public class Activity_Light_Control extends Activity implements
 		prb=(SeekBar) findViewById(R.id.seekbar_light_bar);
 		//mAppName= (TextView) findViewById(R.id.txtview_light_ctrl);
 	    mLightCtrlErea=(LinearLayout)findViewById(R.id.light_ctrl_erea);
-		header = (Header) findViewById(R.id.setup_activity_header);
+		header = (Header) findViewById(R.id.activity_light_header);
 		mBtnDec.setOnClickListener(this);
 		mBtnInc.setOnClickListener(this);
 		mBtnSW=(SlideSwitch) findViewById(R.id.light_slideswitch);
 		Intent itent=getIntent();
 		header.setTitle(getResources().getString(R.string.light_title)+":"+itent.getStringExtra("TITLE_NAME"));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

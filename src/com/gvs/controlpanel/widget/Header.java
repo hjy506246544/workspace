@@ -44,7 +44,7 @@ public class Header extends RelativeLayout {
     public void setTitle(String text) {
     	removeAllViews();//2015-8-4 jia
     	TextView tv = new TextView(getContext());
-        tv.setTextSize(26);
+        tv.setTextSize(36);
         tv.setTextColor(Color.WHITE);
         tv.setText(text);
         tv.getPaint().setFakeBoldText(true);

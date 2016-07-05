@@ -15,8 +15,11 @@ public class SkinSettingManager {
 	public final static String SKIN_PREF = "skinSetting";
 	public SharedPreferences skinSettingPreference;
 
-	private int[] skinResources = { R.drawable.main_bj,R.color.translucent_8,R.drawable.wallpaper_b,R.drawable.wallpaper_c,
-			R.drawable.main_bj2,R.drawable.wallpaper_f
+	private int[] skinResources = {
+			R.drawable.icon_main_bj,R.drawable.wallpaper_a,R.drawable.wallpaper_b,R.drawable.wallpaper_c,
+			R.drawable.icon_main_bj2,R.drawable.wallpaper_f,R.drawable.wallpaper_d,R.drawable.wallpaper_e,
+			R.drawable.wallpaper_g,R.drawable.wallpaper_h,R.drawable.wallpaper_i,R.drawable.wallpaper_j,
+			R.drawable.wallpaper_k,R.drawable.wallpaper_l,R.drawable.wallpaper_n,R.drawable.wallpaper_m
 	};
 
 	private Activity mActivity;

@@ -27,7 +27,7 @@ public class UpdateMonitorPreviewActivity extends FragmentActivityBase {
     private void initData() {
     	header.setTitle(getResources().getString(R.string.updatesxt_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

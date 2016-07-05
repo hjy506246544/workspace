@@ -37,14 +37,14 @@ public class Activity_curtain_control extends Activity implements
 		mBtnstop = (ImageView) findViewById(R.id.blinds_stop);
 		mBtnClose = (ImageView) findViewById(R.id.blinds_close);
 		//mAppName= (TextView) findViewById(R.id.txtview_curtain_ctrl);
-		header = (Header) findViewById(R.id.curtain_activity_header);
+		header = (Header) findViewById(R.id.activity_curtain_header);
 		mBtnOpen.setOnClickListener(this);
 		mBtnstop.setOnClickListener(this);
 		mBtnClose.setOnClickListener(this);
 		Intent itent=getIntent();
 		header.setTitle(getResources().getString(R.string.curtain)+itent.getStringExtra("TITLE_NAME"));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

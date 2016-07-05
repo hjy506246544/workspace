@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.TimeZone;
 import com.gvs.controlpanel.R;
-import com.gvs.controlpanel.activity.SetActivity;
 import com.gvs.controlpanel.activity.aircondition.AirConditionActivity;
 import com.gvs.controlpanel.activity.backgroundmusic.BgMusicActivity;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
@@ -16,6 +15,7 @@ import com.gvs.controlpanel.activity.curtain.CurtainDetailActivity;
 import com.gvs.controlpanel.activity.light.Activity_Light;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
+import com.gvs.controlpanel.activity.set.SetActivity;
 import com.gvs.controlpanel.adapter.Mainthree_GridViewAdapter;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import android.app.Dialog;
@@ -46,16 +46,16 @@ public class MainMenuActivity extends FragmentActivityBase {
 	private long mExitTime;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-    		R.drawable.main_light3_,
-            R.drawable.main_cl3_,
-            R.drawable.main_kt3_,
+    		R.drawable.btn_main_light3_,
+            R.drawable.btn_main_cl3_,
+            R.drawable.btn_main_kt3_,
 
-            R.drawable.main_jtyy3_,
-            R.drawable.main_bgmusic3_,
-            R.drawable.main_scene3_,
-            R.drawable.main_afjk3_,
+            R.drawable.btn_main_jtyy3_,
+            R.drawable.btn_main_bgmusic3_,
+            R.drawable.btn_main_scene3_,
+            R.drawable.btn_main_afjk3_,
 
-            R.drawable.main_set3_};
+            R.drawable.btn_main_set3_};
     // 设置标题
     private String[] title = new String[] {
     		"灯光",
@@ -189,10 +189,10 @@ public class MainMenuActivity extends FragmentActivityBase {
 
 
     private void initView() {
-    	timetv = (TextView) findViewById(R.id.timetv);
+    	timetv = (TextView) findViewById(R.id.main_timetv);
     	weektv = (TextView) findViewById(R.id.weektv);
     	datetv = (TextView) findViewById(R.id.datetv);
-    	main = (RelativeLayout) findViewById(R.id.main);
+    	main = (RelativeLayout) findViewById(R.id.activity_main);
 		listgv=(GridView) findViewById(R.id.listgv2);
 	}
 

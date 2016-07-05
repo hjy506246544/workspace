@@ -84,9 +84,9 @@ public class CurtainDetailActivity extends Activity implements OnItemClickListen
 
 		mDrawableList.add(getResources().getDrawable(R.drawable.btn_add_new));
 
-		header.setTitle(getResources().getString(R.string.curtain));
+		header.setTitle(getResources().getString(R.string.curtain_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

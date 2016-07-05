@@ -60,7 +60,7 @@ public class Activity_Light extends Activity implements OnItemClickListener,
 
 		header.setTitle(getResources().getString(R.string.light_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

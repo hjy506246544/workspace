@@ -54,7 +54,7 @@ public class AirConditionActivity extends Activity implements OnItemClickListene
 		setContentView(R.layout.activity_ac);
 		dBManager = DBHelper.getInstance(this);
 		appicon = (AppIcon) findViewById(R.id.gridview_ac);
-		header = (Header) findViewById(R.id.activity_header);
+		header = (Header) findViewById(R.id.activity_aircondition_header);
 
 		mNameList = new ArrayList<String>();
 		mDrawableList = new ArrayList<Drawable>();
@@ -80,7 +80,7 @@ public class AirConditionActivity extends Activity implements OnItemClickListene
 
 		header.setTitle(getResources().getString(R.string.aircondition_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {

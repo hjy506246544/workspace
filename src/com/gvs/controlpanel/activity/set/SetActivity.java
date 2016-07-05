@@ -1,9 +1,8 @@
-package com.gvs.controlpanel.activity;
+package com.gvs.controlpanel.activity.set;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.activity.main.MainMenuActivity;
 import com.gvs.controlpanel.activity.securitymonitor.AddMonitorPreviewActivity;
-import com.gvs.controlpanel.activity.set.Activity_AddressConfiguration;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import com.gvs.controlpanel.widget.SlideSwitch;
@@ -56,7 +55,7 @@ public class SetActivity extends FragmentActivityBase {
     private void initData() {
     	header.setTitle(getResources().getString(R.string.set_title));
 
-		header.setLeftImageVewRes(R.drawable.return2,new OnClickListener() {
+		header.setLeftImageVewRes(R.drawable.btn_return,new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -167,8 +166,8 @@ public class SetActivity extends FragmentActivityBase {
 	    modeselectionll.setOnClickListener(new OnClickListener() {
 		      @Override
 		      public void onClick(View v) {
-		    	  modeselectioniv.setButtonDrawable(R.drawable.txl_cheaktrue);
-		    	  usermodeiv.setButtonDrawable(R.drawable.txl_cheakfalse);
+		    	  modeselectioniv.setButtonDrawable(R.drawable.btn_cheaktrue);
+		    	  usermodeiv.setButtonDrawable(R.drawable.btn_cheakfalse);
 		    	  new Handler().postDelayed(new Runnable() {
 		  			@Override
 		  			public void run() {
@@ -181,8 +180,8 @@ public class SetActivity extends FragmentActivityBase {
 	    usermodell.setOnClickListener(new OnClickListener() {
 		      @Override
 		      public void onClick(View v) {
-		    	  usermodeiv.setButtonDrawable(R.drawable.txl_cheaktrue);
-		    	  modeselectioniv.setButtonDrawable(R.drawable.txl_cheakfalse);
+		    	  usermodeiv.setButtonDrawable(R.drawable.btn_cheaktrue);
+		    	  modeselectioniv.setButtonDrawable(R.drawable.btn_cheakfalse);
 		    	  new Handler().postDelayed(new Runnable() {
 		  			@Override
 		  			public void run() {
