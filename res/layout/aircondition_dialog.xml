@@ -17,7 +17,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
         android:gravity="center_vertical"
-        android:drawableLeft="@drawable/main_kt"
+        android:drawableLeft="@drawable/icon_main_kt"
         android:drawablePadding="10dp"
         android:text="空调开关"
         android:minHeight="45dp" />
@@ -39,7 +39,7 @@
         android:gravity="center_vertical"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/aircondition_slideswitch"
-        android:drawableLeft="@drawable/main_kt"
+        android:drawableLeft="@drawable/icon_main_kt"
         android:drawablePadding="10dp"
        	android:minHeight="45dp"
         style="@style/app_titleStyle1" />
@@ -58,13 +58,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:background="@drawable/aircondition_minus" />
+            android:background="@drawable/btn_aircondition_minus" />
 
         <TextView
             android:id="@+id/ktwdtv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/aircondition_ktwd"
+            android:background="@drawable/btn_aircondition_ktwd"
             style="@style/app_textStyle6"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/minusib"
@@ -77,7 +77,7 @@
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/ktwdtv"
             android:layout_marginLeft="10dp"
-            android:background="@drawable/aircondition_jia" />
+            android:background="@drawable/icon_aircondition_jia" />
 
     </RelativeLayout>
 

@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
- 	android:background="@drawable/main_bj"
+ 	android:background="@drawable/icon_main_bj"
 	android:id="@+id/main"
     tools:ignore="all" >
 
@@ -20,7 +20,7 @@
             android:layout_marginLeft="10dp"
 	    	android:minHeight="70dp"
         	android:gravity="center"
-            android:src="@drawable/return2" />
+            android:src="@drawable/btn_return" />
         <TextView
             android:id="@+id/timetv"
 	        style="@style/app_titleStyle1"

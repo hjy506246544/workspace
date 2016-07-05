@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
         	android:gravity="center"
-            android:src="@drawable/return2" />
+            android:src="@drawable/btn_return" />
 
         <TextView
 	        style="@style/app_textStyle"

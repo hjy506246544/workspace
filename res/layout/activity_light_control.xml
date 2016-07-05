@@ -5,7 +5,7 @@
     android:background="@color/app_bg" >
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/setup_activity_header"
+        android:id="@+id/activity_light_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
     	android:background="@color/translucent_4"
@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/setup_activity_header"
+        android:layout_below="@id/activity_light_header"
         android:orientation="vertical" >
 
         <ImageView
@@ -24,7 +24,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:src="@drawable/light_bg" />
+            android:src="@drawable/icon_light_bg" />
 
         <View
             android:layout_width="fill_parent"

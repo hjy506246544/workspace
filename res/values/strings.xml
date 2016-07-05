@@ -33,50 +33,61 @@
 	<string name="main_option_menu_title">Launcher menu</string>
 	<string name="unknown">unknown</string>
 
-    <string name="error_no_sdcard">没有SD卡，无法存储录音数据</string>
-    <string name="error_state_record">正在录音中，请先停止录音</string>
-    <string name="error_unknown">无法识别的错误</string>
-    <string name="callwait_ts">Fala多方通正在为你呼叫其他用户，请稍后</string>
-    <string name="callwait_ts2">请等待接听</string>
-    <string name="callwait_ts3">部分用户可能因手机资费套餐类型,</string>
-    <string name="callwait_ts4">由运营商收取接听或漫游费用.</string>
-    <string name="app_btnyes">确定</string>
-    <string name="app_btnno">取消</string>
-    <string name="scene_exists">亲，您已经选择过该场景哦！</string>
-    <string name="bjt_title">背景图替换</string>
-    <string name="set_title">设置</string>
-    <string name="addsxt_title">添加摄像头</string>
-    <string name="updatesxt_title">修改摄像头</string>
-    <string name="config_name">窗帘</string>
-    <string name="curtaindetail_name">窗帘</string>
+    <string name="error_no_sdcard">No SD card, should not be stored data recording</string>
+    <string name="error_state_record">Is the recording, please stop the recording</string>
+    <string name="error_unknown">Unable to identify the error</string>
+    <string name="app_btnyes">sure</string>
+    <string name="app_btnno">cancel</string>
+    <string name="scene_exists">Pro, you have choose the scenario!</string>
+    <string name="bjt_title">background image replace</string>
+    <string name="set_title">set</string>
+    <string name="addsxt_title">add the camera</string>
+    <string name="updatesxt_title">update the camera</string>
+    <string name="config_name">curtain</string>
+    <string name="curtaindetail_name">curtain</string>
+    <string name="bjt_setup">The background to replace</string>
+    <string name="controlcenter_mainmenu_setup2">Setup2</string>
 
     <!-- 灯光 -->
-    <string name="light_title">灯光</string>
+    <string name="light_title">light</string>
 
     <!-- 窗帘 -->
-    <string name="curtain_title">窗帘</string>
+    <string name="curtain_title">curtain</string>
 
     <!-- 空调 -->
-    <string name="aircondition_title">空调</string>
+    <string name="aircondition_title">air-condition</string>
 
     <!-- 电视机 -->
-    <string name="tv_title">电视机</string>
+    <string name="tv_title">TV</string>
 
     <!-- 家庭影院 -->
-    <string name="hometheatre_title">家庭影院</string>
+    <string name="hometheatre_title">home theatre</string>
 
     <!-- 背景音乐 -->
-    <string name="bgmusic_title">背景音乐</string>
+    <string name="bgmusic_title">background music</string>
 
     <!-- 场景 -->
-    <string name="scene_title">场景</string>
+    <string name="scene_title">scene</string>
 
     <!-- 自定义场景 -->
-    <string name="scenezdy_title">自定义场景</string>
-    <string name="scenezdy_ljcj">立即创建</string>
+    <string name="scenezdy_title">a custom scenario</string>
+    <string name="scenezdy_ljcj">immediately create</string>
 
     <!-- 安防监控 -->
-    <string name="securitymonitor_title">安防监控</string>
+    <string name="securitymonitor_title">security and protection monitoring</string>
+    <string name="save">save</string>
+    <string name="video-star">video-star</string>
+    <string name="GVS">GVS</string>
+    <string name="scenezdy_sr">Please enter the name of scene</string>
+    <string name="securitymonitor_monitorpreview_name"> Device name </string>
+    <string name="securitymonitor_monitorpreview_pleasename">Please enter the device name</string>
+    <string name="securitymonitor_monitorpreview_id">Equipment serial number</string>
+    <string name="securitymonitor_monitorpreview_pleaseid">Please enter the device serial number</string>
+    <string name="securitymonitor_monitorpreview_pwd">The device password</string>
+    <string name="securitymonitor_monitorpreview_pleasepwd">Please input password</string>
+    <string name="securitymonitor_monitorpreview_submit">submit</string>
+    <string name="securitymonitor_monitorpreview">Monitor the preview</string>
+    <string name="securitymonitor_videoplay">Video playback</string>
 
 
     <!-- xlistview -->
@@ -140,7 +151,7 @@ limitations under the License.\n</string>
     <string name="controlcenter_add_new">Add new</string>
     <string name="add_curtain_name">input new device name</string>
     <string name="add_curtain_type">set device type</string>
-    
+
     <string name="add_curtain_ok">create success</string>
     <string name="name_have_exist">name have been used</string>
     <string name="curtain">curtain:</string>
@@ -150,4 +161,33 @@ limitations under the License.\n</string>
     <string name="indoor_temp">current temperature</string>
     <string name="set_temp">preset temperature</string>
     <string name="address_setup">Address setup</string>
+    <string name="pwd_set">pwd replace</string>
+    <string name="modeselection_set">Mode selection</string>
+    <string name="room">The sitting room</string>
+    <string name="executedimmediately">Executed immediately</string>
+    <string name="subscribe">To make an appointment</string>
+    <string name="to">to</string>
+
+
+
+    <string name="securitymonitor_videoplay_allyear">allyear</string>
+    <string name="securitymonitor_videoplay_2016">2016</string>
+    <string name="securitymonitor_videoplay_2015">2015</string>
+    <string name="securitymonitor_videoplay_2014">2014</string>
+    <string name="securitymonitor_videoplay_2013">2013</string>
+    <string name="securitymonitor_videoplay_2012">2012</string>
+    <string name="securitymonitor_videoplay_2011">2011</string>
+    <string name="securitymonitor_videoplay_allmonth">allmonth</string>
+    <string name="securitymonitor_videoplay_1">1月</string>
+    <string name="securitymonitor_videoplay_2">2月</string>
+    <string name="securitymonitor_videoplay_3">3月</string>
+    <string name="securitymonitor_videoplay_4">4月</string>
+    <string name="securitymonitor_videoplay_5">5月</string>
+    <string name="securitymonitor_videoplay_6">6月</string>
+    <string name="securitymonitor_videoplay_7">7月</string>
+    <string name="securitymonitor_videoplay_8">8月</string>
+    <string name="securitymonitor_videoplay_9">9月</string>
+    <string name="securitymonitor_videoplay_10">10月</string>
+    <string name="securitymonitor_videoplay_11">11月</string>
+    <string name="securitymonitor_videoplay_12">12月</string>
 </resources>

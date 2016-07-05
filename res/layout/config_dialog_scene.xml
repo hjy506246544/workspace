@@ -61,7 +61,7 @@
         android:layout_below="@+id/ll"
         android:layout_marginLeft="20dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/scene_srk"
+        android:background="@drawable/btn_scene_srk"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:gravity="center_vertical"

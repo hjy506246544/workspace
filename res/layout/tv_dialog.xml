@@ -17,7 +17,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:gravity="center_vertical"
-        android:drawableLeft="@drawable/main_dsj"
+        android:drawableLeft="@drawable/icon_main_dsj"
         android:drawablePadding="10dp"
         android:text="电视机开关"
         android:minHeight="45dp" />

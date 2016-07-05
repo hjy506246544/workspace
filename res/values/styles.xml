@@ -52,7 +52,7 @@
     <style name="optionMenuDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowFrame">@null</item>
         <item name="android:windowNoTitle">true</item>
-        <item name="android:windowBackground">@drawable/round_radius</item>
+        <item name="android:windowBackground">@drawable/btn_round_radius</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
@@ -77,7 +77,7 @@
     </style>
 
     <style name="deleteWidgetsDialog" parent="@android:style/Theme.Dialog">
-        <item name="android:windowBackground">@drawable/round_radius</item>
+        <item name="android:windowBackground">@drawable/btn_round_radius</item>
         <item name="android:backgroundDimEnabled">false</item>
     </style>
 
@@ -89,7 +89,7 @@
 
     <!-- checkbox样式 -->
 	<style name="MyCheckBox" parent="@android:style/Widget.CompoundButton.CheckBox">
-		<item name="android:button">@drawable/txl_checkbox</item>
+		<item name="android:button">@drawable/btn_checkbox</item>
 	</style>
 
 	<!-- 自定义Dialog风格 -->
@@ -116,7 +116,7 @@
     </style>
 
     <style name="app_Style3">
-        <item name="android:textColor">@color/green2</item>
+        <item name="android:textColor">@color/green</item>
         <item name="android:textSize">40sp</item>
     </style>
 
@@ -159,6 +159,11 @@
         <item name="android:textSize">36sp</item>
     </style>
 
+    <style name="Style8">
+        <item name="android:textColor">@color/green</item>
+        <item name="android:textSize">36sp</item>
+    </style>
+
     <!-- app title text文本样式 -->
     <style name="app_titleStyle">
         <item name="android:textColor">@color/black</item>
@@ -186,7 +191,7 @@
     </style>
 
     <style name="app_titleStyle5">
-        <item name="android:textColor">@color/green2</item>
+        <item name="android:textColor">@color/green</item>
         <item name="android:textSize">22sp</item>
     </style>
 

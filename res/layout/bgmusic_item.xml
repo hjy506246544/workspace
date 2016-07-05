@@ -14,6 +14,7 @@
         android:layout_centerVertical="true"
         android:clickable="false"
         android:focusable="false"
+        android:button="@drawable/btn_check_state"
         android:focusableInTouchMode="false"
         android:layout_marginLeft="30dp" />
 
@@ -25,7 +26,6 @@
         android:layout_marginTop="10dp"
         android:layout_toRightOf="@+id/albumPhoto"
         android:layout_marginLeft="15dp"
-        android:text="Title"
         style="@style/app_titleStyle1" />
 
     <TextView
@@ -36,7 +36,6 @@
         android:layout_below="@+id/title"
         android:layout_toRightOf="@+id/albumPhoto"
         android:layout_marginLeft="15dp"
-        android:text="artist"
         style="@style/app_textStyle1" />
 
     <TextView
@@ -48,7 +47,6 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/title"
         android:visibility="gone"
-        android:text="duration"
         style="@style/app_textStyle1" />
 
 </RelativeLayout>

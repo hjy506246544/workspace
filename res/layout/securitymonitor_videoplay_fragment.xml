@@ -5,145 +5,145 @@
     android:orientation="vertical" >
 
 	<com.gvs.controlpanel.widget.FlowLayout
-        android:id="@+id/flowLayout"
+        android:id="@+id/activity_securitymonitor_flowLayout"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
 	    <TextView
-        	android:id="@+id/allyeartv"
+        	android:id="@+id/activity_securitymonitor_allyeartv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="全部年份" />
+            android:text="@string/securitymonitor_videoplay_allyear" />
 
         <TextView
-        	android:id="@+id/liutv"
+        	android:id="@+id/activity_securitymonitor_liutv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2016" />
+            android:text="@string/securitymonitor_videoplay_2016" />
 
         <TextView
-        	android:id="@+id/wutv"
+        	android:id="@+id/activity_securitymonitor_wutv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2015" />
+            android:text="@string/securitymonitor_videoplay_2015" />
 
         <TextView
-        	android:id="@+id/sitv"
+        	android:id="@+id/activity_securitymonitor_sitv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2014" />
+            android:text="@string/securitymonitor_videoplay_2014" />
 
         <TextView
-        	android:id="@+id/santv"
+        	android:id="@+id/activity_securitymonitor_santv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2013" />
+            android:text="@string/securitymonitor_videoplay_2013" />
 
         <TextView
-        	android:id="@+id/ertv"
+        	android:id="@+id/activity_securitymonitor_ertv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2012" />
+            android:text="@string/securitymonitor_videoplay_2012" />
 
         <TextView
-        	android:id="@+id/yitv"
+        	android:id="@+id/activity_securitymonitor_yitv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2011" />
+            android:text="@string/securitymonitor_videoplay_2011" />
 
 	</com.gvs.controlpanel.widget.FlowLayout>
 
 	<com.gvs.controlpanel.widget.FlowLayout
-        android:id="@+id/flowLayout2"
+        android:id="@+id/activity_securitymonitor_flowLayout2"
         android:layout_marginLeft="40dp"
         android:layout_below="@+id/flowLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
 	    <TextView
-        	android:id="@+id/allmonthtv"
+        	android:id="@+id/activity_securitymonitor_allmonthtv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="全部月份" />
+            android:text="@string/securitymonitor_videoplay_allmonth" />
 
         <TextView
-        	android:id="@+id/januarytv"
+        	android:id="@+id/activity_securitymonitor_januarytv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="1月" />
+            android:text="@string/securitymonitor_videoplay_1" />
 
         <TextView
-        	android:id="@+id/februarytv"
+        	android:id="@+id/activity_securitymonitor_februarytv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="2月" />
+            android:text="@string/securitymonitor_videoplay_2" />
 
         <TextView
-        	android:id="@+id/marchtv"
+        	android:id="@+id/activity_securitymonitor_marchtv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="3月" />
+            android:text="@string/securitymonitor_videoplay_3" />
 
         <TextView
-        	android:id="@+id/apriltv"
+        	android:id="@+id/activity_securitymonitor_apriltv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="4月" />
+            android:text="@string/securitymonitor_videoplay_4" />
 
         <TextView
-        	android:id="@+id/maytv"
+        	android:id="@+id/activity_securitymonitor_maytv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="5月" />
+            android:text="@string/securitymonitor_videoplay_5" />
 
         <TextView
-        	android:id="@+id/junetv"
+        	android:id="@+id/activity_securitymonitor_junetv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="6月" />
+            android:text="@string/securitymonitor_videoplay_6" />
 
         <TextView
-        	android:id="@+id/julytv"
+        	android:id="@+id/activity_securitymonitor_julytv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="7月" />
+            android:text="@string/securitymonitor_videoplay_7" />
 
         <TextView
-        	android:id="@+id/augusttv"
+        	android:id="@+id/activity_securitymonitor_augusttv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="8月" />
+            android:text="@string/securitymonitor_videoplay_8" />
 
         <TextView
-        	android:id="@+id/septembertv"
+        	android:id="@+id/activity_securitymonitor_septembertv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="9月" />
+            android:text="@string/securitymonitor_videoplay_9" />
 
         <TextView
-        	android:id="@+id/octobertv"
+        	android:id="@+id/activity_securitymonitor_octobertv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="10月" />
+            android:text="@string/securitymonitor_videoplay_10" />
 
         <TextView
-        	android:id="@+id/novembertv"
+        	android:id="@+id/activity_securitymonitor_novembertv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="11月" />
+            android:text="@string/securitymonitor_videoplay_11" />
 
         <TextView
-        	android:id="@+id/decembertv"
+        	android:id="@+id/activity_securitymonitor_decembertv"
             style="@style/text_flag_01"
             android:background="@drawable/flag_02"
-            android:text="12月" />
+            android:text="@string/securitymonitor_videoplay_12" />
 
 	</com.gvs.controlpanel.widget.FlowLayout>
 
 	<ImageView
-        android:id="@+id/xian"
+        android:id="@+id/activity_securitymonitor_xian"
 	    android:layout_width="match_parent"
 	    android:layout_height="0.2dp"
 	    android:layout_marginTop="10dp"
@@ -151,7 +151,7 @@
 	    android:src="@color/gray" />
 
 	<ListView
-        android:id="@+id/listview"
+        android:id="@+id/activity_securitymonitor_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/xian"

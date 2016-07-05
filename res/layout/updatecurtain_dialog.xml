@@ -48,7 +48,7 @@
 	            android:layout_weight="1"
 	            android:layout_marginLeft="60dp"
 	            android:layout_height="wrap_content"
-	            android:button="@drawable/txl_cheakfalse"
+	            android:button="@drawable/btn_cheakfalse"
 	            android:layout_width="wrap_content" />
 
         </LinearLayout>
@@ -76,7 +76,7 @@
 	            android:layout_weight="1"
 	            android:layout_marginLeft="60dp"
 	            android:layout_height="wrap_content"
-	            android:button="@drawable/txl_cheakfalse"
+	            android:button="@drawable/btn_cheakfalse"
 	            android:layout_width="wrap_content" />
 
         </LinearLayout>
@@ -97,7 +97,7 @@
         android:maxLength="10"
         android:inputType="text"
         android:focusableInTouchMode="true"
-	    android:background="@drawable/scene_srk"
+	    android:background="@drawable/btn_scene_srk"
 	    android:textColorHint="@color/Translucent_gray"
 	    android:hint="请输入窗帘名称"
         android:singleLine="true" />

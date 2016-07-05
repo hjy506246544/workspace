@@ -41,7 +41,7 @@
             android:layout_marginRight="40dp"
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
-            android:src="@drawable/light_bg"/>
+            android:src="@drawable/icon_light_bg"/>
 
         <com.gvs.edwin.activity.AppIcon
             android:id="@+id/gridview_light"

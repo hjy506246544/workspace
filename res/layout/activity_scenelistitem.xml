@@ -8,13 +8,15 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:minHeight="60dp"
+        android:visibility="gone"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal" >
 
         <CheckBox
             android:id="@+id/namecb"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+        	android:button="@drawable/btn_check_state" />
 
         <ImageView
             android:id="@+id/nameiv"
@@ -27,14 +29,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             style="@style/Style5"
-            android:gravity="center_vertical"
-            android:text="卧室1的吊灯" />
+            android:gravity="center_vertical" />
 
         <RadioButton
 	        android:id="@+id/offrb"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        android:gravity="center_vertical"
+        	android:button="@drawable/btn_check_state2"
 	       	android:layout_marginLeft="20dp" />
 
         <TextView
@@ -42,12 +44,13 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             style="@style/Style5"
-            android:text="关" />
+            android:text="@string/off" />
 
         <RadioButton
 	        android:id="@+id/onrb"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
+        	android:button="@drawable/btn_check_state2"
 	        android:gravity="center_vertical"
 	       	android:layout_marginLeft="20dp" />
 
@@ -56,32 +59,41 @@
             android:layout_height="wrap_content"
             style="@style/Style5"
             android:layout_marginLeft="10dp"
-            android:text="开" />
+            android:text="@string/open" />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:orientation="vertical" >
 
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-             >
+            android:layout_marginTop="20dp" >
 
             <RadioButton
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
 		        android:clickable="false"
 		        android:focusable="false"
-		        android:text="立即执行"
+		        android:text="@string/executedimmediately"
             	style="@style/Style5"
-		        android:focusableInTouchMode="false"
-                 />
+        		android:button="@drawable/btn_check_state2"
+		        android:focusableInTouchMode="false" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+		        android:clickable="false"
+		        android:focusable="false"
+		        android:text="@string/subscribe"
+            	style="@style/Style5"
+            	android:layout_marginTop="20dp"
+        		android:button="@drawable/btn_check_state2"
+		        android:focusableInTouchMode="false" />
 
         </RadioGroup>
 
@@ -105,7 +117,7 @@
 		        android:maxLength="10"
 		        android:inputType="text"
 		        android:focusableInTouchMode="true"
-			    android:background="@drawable/scene_srk"
+			    android:background="@drawable/btn_scene_srk"
 			    android:textColorHint="@color/Translucent_gray"
 		        android:singleLine="true" />
 
@@ -116,7 +128,7 @@
 	            android:layout_gravity="center_vertical"
 	            android:layout_marginLeft="10dp"
 	            style="@style/Style6"
-	            android:text="至" />
+	            android:text="@string/to" />
 
 	        <EditText
 		        android:id="@+id/nameet2"
@@ -131,7 +143,7 @@
 		        android:maxLength="10"
 		        android:inputType="text"
 		        android:focusableInTouchMode="true"
-			    android:background="@drawable/scene_srk"
+			    android:background="@drawable/btn_scene_srk"
 			    android:textColorHint="@color/Translucent_gray"
 		        android:singleLine="true" />
         </LinearLayout>

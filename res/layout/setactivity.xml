@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/black2" >
+    android:background="@color/app_bg" >
 
     <com.gvs.controlpanel.widget.Header
         android:id="@+id/setup_activity_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-    	android:background="@color/translucent_8"
+    	android:background="@color/translucent_4"
         android:orientation="vertical" />
 
     <com.gvs.controlpanel.widget.BounceScrollView
@@ -27,8 +27,8 @@
 
 		    <TextView
 		        android:id="@+id/setup_activity_tv_displername"
-		        android:text="选项"
-		        style="@style/Style5"
+		        android:text="@string/controlcenter_mainmenu_setup"
+		        style="@style/Style7"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -44,19 +44,19 @@
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
+		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_titleStyle1"
+		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/set_bjt"
+		            android:drawableLeft="@drawable/icon_set_bjt"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="背景替换" />
+		            android:text="@string/bjt_setup" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -65,7 +65,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -80,19 +80,19 @@
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
+		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_titleStyle1"
+		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/set_address"
+		            android:drawableLeft="@drawable/icon_set_address"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="地址配置" />
+		            android:text="@string/address_setup" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -101,7 +101,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -118,15 +118,15 @@
 		        android:paddingTop="5dp"
 		        android:visibility="gone"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
+		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_titleStyle1"
+		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/set_updatepwd"
+		            android:drawableLeft="@drawable/btn_set_updatepwd"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
@@ -139,7 +139,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -149,8 +149,8 @@
 
 		    <TextView
 		        android:id="@+id/setup_activity_tv_displername"
-		        android:text="模式"
-		        style="@style/Style5"
+		        android:text="@string/controlcenter_mainmenu_setup2"
+		        style="@style/Style7"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
 		        android:layout_marginBottom="5dp"
@@ -166,19 +166,19 @@
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
+		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_titleStyle1"
+		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/set_updatepwd"
+		            android:drawableLeft="@drawable/btn_set_updatepwd"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="密码替换" />
+		            android:text="@string/pwd_set" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -187,7 +187,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -202,19 +202,19 @@
 		        android:minHeight="80dp"
 		        android:paddingTop="5dp"
 		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
+		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
 		        <TextView
-		            style="@style/app_titleStyle1"
+		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/set_modeselect"
+		            android:drawableLeft="@drawable/btn_set_modeselect"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
 		            android:layout_marginLeft="20dp"
-		            android:text="模式选择" />
+		            android:text="@string/modeselection_set" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -223,7 +223,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -247,11 +247,10 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/icon_main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
-		            android:text="选项三" />
+		            android:layout_marginLeft="20dp" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -260,7 +259,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -271,7 +270,6 @@
 
 		    <TextView
 		        android:id="@+id/setup_activity_tv_displername"
-		        android:text="选项3"
 		        style="@style/app_titleStyle1"
 		        android:layout_marginLeft="20dp"
 		        android:layout_marginTop="10dp"
@@ -298,11 +296,10 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/icon_main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
-		            android:text="选项一" />
+		            android:layout_marginLeft="20dp" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -311,7 +308,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -336,11 +333,10 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/icon_main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
-		            android:text="选项二" />
+		            android:layout_marginLeft="20dp" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -349,7 +345,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView
@@ -374,11 +370,10 @@
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/main_set3"
+		            android:drawableLeft="@drawable/icon_main_set3"
 		            android:gravity="center_vertical"
 		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
-		            android:text="选项三" />
+		            android:layout_marginLeft="20dp" />
 
 		        <ImageView
 		            android:layout_width="wrap_content"
@@ -387,7 +382,7 @@
 		            android:layout_centerVertical="true"
 		            android:layout_marginRight="40dp"
 		            android:scaleType="center"
-		            android:src="@drawable/me_yj" />
+		            android:src="@drawable/btn_me_yj" />
 		    </RelativeLayout>
 
 		    <ImageView

@@ -8,7 +8,6 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-    	android:background="@drawable/main_gridviewitem"
     	android:layout_centerInParent="true"
     	android:layout_marginLeft="40dp"
     	android:layout_marginRight="15dp"
@@ -19,7 +18,7 @@
 	        android:id="@+id/iv_headview"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-	        android:src="@drawable/main_scene"
+	        android:src="@drawable/icon_main_scene"
 	        android:layout_marginTop="5dp"
 	        android:layout_gravity="center"
 	        android:scaleType="fitXY" />

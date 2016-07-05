@@ -37,7 +37,7 @@
         	android:id="@+id/cloffiv"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:src="@drawable/main_cl_off_" />
+		    android:src="@drawable/btn_main_cl_off_" />
 
 		<ImageView
         	android:id="@+id/clstopiv"
@@ -45,7 +45,7 @@
 		    android:layout_height="wrap_content"
 		    android:layout_toRightOf="@+id/cloffiv"
 		    android:layout_marginLeft="10dp"
-		    android:src="@drawable/main_cl_off_" />
+		    android:src="@drawable/btn_main_cl_off_" />
 
 		<ImageView
         	android:id="@+id/cloniv"
@@ -53,7 +53,7 @@
 		    android:layout_height="wrap_content"
 		    android:layout_marginLeft="10dp"
 		    android:layout_toRightOf="@+id/clstopiv"
-		    android:src="@drawable/main_cl_on_" />
+		    android:src="@drawable/btn_main_cl_on_" />
 
     </RelativeLayout>
 

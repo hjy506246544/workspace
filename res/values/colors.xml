@@ -153,4 +153,9 @@
 
     <color name="bg_tranparent">#56565656</color>
     <color name="tranparent">#00000000</color>
+
+    <!-- 地址配置 -->
+    <color name="set_address_color">#565656</color>
+    <color name="set_address_color2">#ffffff</color>
+    <color name="set_address_color3">#f2f2f2</color>
 </resources>

@@ -6,7 +6,7 @@
     android:background="@color/app_bg" >
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/header"
+        android:id="@+id/activity_hometheatre_header"
         android:layout_width="match_parent"
         android:layout_height="45dp"
     	android:background="@color/translucent_8"
@@ -15,7 +15,6 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/tv_displername"
-        android:text="选项一······"
         style="@style/app_textStyle"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"

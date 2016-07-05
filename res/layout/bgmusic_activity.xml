@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/main_bj" >
+    android:background="@drawable/icon_main_bj" >
 
     <LinearLayout
-        android:id="@+id/header"
+        android:id="@+id/header_bgMusicActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
     	android:background="@color/translucent_8"
@@ -15,10 +15,10 @@
         android:orientation="horizontal" >
 
         <ImageView
-            android:id="@+id/backiv"
+            android:id="@+id/backiv_bgMusicActivity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/return2" />
+            android:src="@drawable/btn_return" />
 
         <TextView
 	        style="@style/Style5"
@@ -26,13 +26,13 @@
             android:layout_height="wrap_content"
             android:layout_weight="5"
         	android:gravity="center"
-            android:text="背景音乐" />
+            android:text="@string/bgmusic_title" />
 
         <Button
-            android:id="@+id/bcbtn"
+            android:id="@+id/bcbtn_bgMusicActivity"
             android:layout_width="wrap_content"
             android:layout_height="45dp"
-            android:text="保存"
+            android:text="@string/save"
             android:layout_marginRight="35dp"
             android:gravity="center"
             style="@style/app_big_textStyle1"
@@ -40,9 +40,9 @@
     </LinearLayout>
 
 	<ListView
-        android:id="@+id/lvSongs"
+        android:id="@+id/lvSongs_bgMusicActivity"
         android:layout_width="match_parent"
-        android:layout_below="@+id/header"
+        android:layout_below="@+id/header_bgMusicActivity"
         android:layout_height="wrap_content" />
 
 </RelativeLayout>

@@ -17,7 +17,7 @@
 	        android:id="@+id/iv_headview"
 	        android:layout_width="70dp"
 	        android:layout_height="70dp"
-	        android:src="@drawable/afjk_logo"
+	        android:src="@drawable/icon_afjk_logo"
 	        android:layout_gravity="center"
 	        android:scaleType="fitXY" />
 
@@ -32,14 +32,12 @@
 	        	android:id="@+id/lxnametv"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:text="客厅的录影"
 	            style="@style/app_titleStyle6" />
 
 	        <TextView
 	        	android:id="@+id/lxtimetv"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:text="2016-6-16 1小时50分"
 	            android:layout_below="@+id/lxnametv"
 	            style="@style/app_big_textStyle6" />
 
@@ -56,14 +54,14 @@
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_marginRight="30dp"
-	            android:src="@drawable/videoplay" />
+	            android:src="@drawable/btn_videoplay" />
 
 	        <ImageView
 	        	android:id="@+id/deliv"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_toRightOf="@+id/playiv"
-	            android:src="@drawable/del" />
+	            android:src="@drawable/btn_del" />
 
 	    </RelativeLayout>
 

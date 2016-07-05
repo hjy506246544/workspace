@@ -16,7 +16,7 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="10dp"
         android:gravity="center_vertical"
-        android:drawableLeft="@drawable/main_light"
+        android:drawableLeft="@drawable/icon_main_light"
         android:drawablePadding="10dp"
         android:text="RGB颜色选择"
         android:minHeight="45dp" />
@@ -35,7 +35,7 @@
         android:layout_marginLeft="20dp"
         android:gravity="center_vertical"
         android:layout_below="@+id/cpv"
-        android:drawableLeft="@drawable/main_light"
+        android:drawableLeft="@drawable/icon_main_light"
         android:drawablePadding="10dp"
        	android:minHeight="45dp"
         style="@style/app_textStyle1" />

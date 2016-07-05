@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/activity_header"
+        android:id="@+id/activity_aircondition_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
     	android:background="@color/translucent_4"
@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:orientation="vertical"
-        android:layout_below="@id/activity_header">
+        android:layout_below="@id/activity_aircondition_header">
 
         <ImageView
             android:layout_width="match_parent"
@@ -24,7 +24,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:src="@drawable/ac_bg"/>
+            android:src="@drawable/icon_ac_bg"/>
 
         <com.gvs.edwin.activity.AppIcon
             android:id="@+id/gridview_ac"

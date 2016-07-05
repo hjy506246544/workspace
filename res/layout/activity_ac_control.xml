@@ -5,7 +5,7 @@
     android:background="@color/app_bg">
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/activity_header"
+        android:id="@+id/activity_ac_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
     	android:background="@color/translucent_4"
@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/activity_header"
+        android:layout_below="@id/activity_ac_header"
         android:orientation="vertical" >
 
         <ImageView
@@ -24,7 +24,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginLeft="40dp"
             android:layout_marginRight="40dp"
-            android:src="@drawable/ac_bg" />
+            android:src="@drawable/icon_ac_bg" />
 
         <View
             android:layout_width="fill_parent"
@@ -48,7 +48,7 @@
                 android:layout_height="130dp"
                 android:layout_alignParentRight="true" />
         </RelativeLayout>
-
+		<!--2016-07-05 hjy gai
         <View
             android:layout_width="fill_parent"
             android:layout_height="20dp" />
@@ -56,44 +56,41 @@
             android:layout_width="300dp"
             android:layout_height="100dp"
             android:background="@color/bg_tranparent"
-            android:layout_gravity="center_horizontal"
-            >
+            android:layout_gravity="center" >
             <TextView
-            android:id="@+id/indoor_temp_txt"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/indoor_temp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentLeft="true" />
+	            android:id="@+id/indoor_temp_txt"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/indoor_temp"
+	            android:layout_alignParentTop="true"
+	            android:layout_alignParentLeft="true" />
             <TextView
-            android:id="@+id/current_indoor_temp"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/indoor_temp_txt"
-            android:textSize="28sp"
-            android:text="28"  />
+	            android:id="@+id/current_indoor_temp"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/indoor_temp_txt"
+	            android:textSize="28sp"
+	            android:text="28"  />
             <ImageView
-            android:id="@+id/flag_wind_level"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/btn_wind_high_pressed" />
+	            android:id="@+id/flag_wind_level"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentRight="true"
+	            android:background="@drawable/btn_wind_high_pressed" />
             <ImageView
-            android:id="@+id/flag_mode_type"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/flag_wind_level"
-            android:background="@drawable/btn_mode_cold_pressed"
-            android:layout_alignParentRight="true"
-                />
+	            android:id="@+id/flag_mode_type"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_below="@id/flag_wind_level"
+	            android:background="@drawable/btn_mode_cold_pressed"
+	            android:layout_alignParentRight="true" />
 
             <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:textSize="48sp"
-            android:text="25"
-                />
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_centerInParent="true"
+	            android:textSize="48sp"
+	            android:text="25"  />
         </RelativeLayout>
         <View
             android:layout_width="fill_parent"
@@ -200,6 +197,160 @@
                 android:layout_weight="1"
                 android:src="@drawable/btn_wind_high" />
         </LinearLayout>
+         -->
+
+         <RelativeLayout
+             android:layout_width="400dp"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:layout_marginTop="20dp"
+             android:minHeight="100dp"
+             android:background="@drawable/btn_scene_srk" >
+
+             <LinearLayout
+                 android:id="@+id/templl"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentTop="true"
+                 android:layout_marginTop="5dp"
+                 android:layout_marginLeft="10dp"
+                 android:orientation="vertical" >
+
+                 <TextView
+		             android:id="@+id/indoor_temp_txt"
+		             android:text="@string/indoor_temp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     style="@style/app_titleStyle5" />
+
+                 <TextView
+	            	 android:id="@+id/current_indoor_temp"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:gravity="center"
+                     android:text="26℃"
+                     style="@style/app_titleStyle5" />
+
+             </LinearLayout>
+
+             <TextView
+            	 android:id="@+id/current_indoor_temp2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerInParent="true"
+                 android:layout_toRightOf="@+id/templl"
+                 android:gravity="center"
+                 android:text="26℃"
+                 style="@style/app_Style3" />
+
+             <ImageView
+            	 android:id="@+id/current_functionshowiv"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginRight="10dp"
+                 android:layout_marginTop="5dp"
+                 android:layout_alignParentRight="true"
+                 android:layout_alignParentTop="true"
+                 android:src="@drawable/btn_wind_low" />
+
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:layout_gravity="center" >
+
+             <ImageView
+                android:id="@+id/btn_ac_dec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_ac_dec" />
+
+            <TextView
+                android:id="@+id/text_ac_inc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Style8"
+                android:layout_toRightOf="@+id/btn_ac_dec"
+                android:text="@string/adj_temp"
+                android:background="@color/bg_tranparent"
+                android:gravity="center_horizontal"/>
+
+            <ImageView
+                android:id="@+id/btn_ac_inc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/text_ac_inc"
+                android:src="@drawable/btn_ac_inc" />
+
+         </RelativeLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:layout_gravity="center"
+             android:orientation="horizontal" >
+
+             <ImageView
+                android:id="@+id/btn_mode_hot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                android:src="@drawable/btn_mode_hot" />
+
+            <ImageView
+                android:id="@+id/btn_mode_cold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="35dp"
+                android:src="@drawable/btn_mode_cold" />
+
+            <ImageView
+                android:id="@+id/btn_mode_dry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_mode_dry" />
+
+            <ImageView
+                android:id="@+id/btn_mode_wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/btn_mode_wind" />
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:layout_gravity="center"
+             android:orientation="horizontal" >
+
+             <ImageView
+                android:id="@+id/btn_wind_low"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:src="@drawable/btn_wind_low" />
+
+            <ImageView
+                android:id="@+id/btn_wind_mid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/btn_wind_mid" />
+
+            <ImageView
+                android:id="@+id/btn_wind_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:src="@drawable/btn_wind_high" />
+
+         </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

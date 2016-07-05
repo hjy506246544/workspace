@@ -7,7 +7,7 @@
     android:layout_height="match_parent">
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/header"
+        android:id="@+id/activity_addmonitorpreview_header"
         android:layout_width="match_parent"
         android:layout_height="70dp"
     	android:background="@color/black"
@@ -16,22 +16,22 @@
     <com.gvs.controlpanel.widget.BounceScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/header" >
+        android:layout_below="@+id/activity_addmonitorpreview_header" >
 
 	    <RelativeLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content" >
 
 		    <ImageView
-		        android:id="@+id/logoiv"
+		        android:id="@+id/activity_addmonitorpreview_logoiv"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="20dp"
 		        android:layout_below="@+id/header"
-		        android:src="@drawable/monitorpreview_logo" />
+		        android:src="@drawable/btn_monitorpreview_logo" />
 
 		    <RelativeLayout
-		        android:id="@+id/devicenamerl"
+		        android:id="@+id/activity_addmonitorpreview_devicenamerl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="20dp"
@@ -40,16 +40,16 @@
 		        android:layout_below="@+id/logoiv" >
 
 		        <TextView
-		        	android:id="@+id/devicenametv"
+		        	android:id="@+id/activity_addmonitorpreview_devicenametv"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
 		            android:layout_marginLeft="40dp"
 			        style="@style/app_titleStyle2"
-		            android:text=" 设 备 名 称 " />
+		            android:text="@string/securitymonitor_monitorpreview_name" />
 
 		        <EditText
-			        android:id="@+id/devicenameet"
+			        android:id="@+id/activity_addmonitorpreview_devicenameet"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_toRightOf="@+id/devicenametv"
@@ -57,20 +57,20 @@
 		            android:gravity="center_vertical"
 			        android:paddingLeft="10dp"
 			        style="@style/app_big_textStyle2"
-			        android:background="@drawable/monitorpreview_srk"
+			        android:background="@drawable/btn_monitorpreview_srk"
 			        android:focusable="true"
 			        android:minHeight="80dp"
 			        android:maxLength="10"
 			        android:inputType="text"
 			        android:focusableInTouchMode="true"
 				    android:textColorHint="@color/Translucent_gray"
-				    android:hint="请输入设备名称"
+				    android:hint="@string/securitymonitor_monitorpreview_pleasename"
 			        android:singleLine="true" />
 
 		    </RelativeLayout>
 
 		    <RelativeLayout
-		        android:id="@+id/deviceidrl"
+		        android:id="@+id/activity_addmonitorpreview_deviceidrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -78,16 +78,16 @@
 		        android:layout_below="@+id/devicenamerl" >
 
 		        <TextView
-		        	android:id="@+id/deviceidtv"
+		        	android:id="@+id/activity_addmonitorpreview_deviceidtv"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
 		            android:layout_marginLeft="40dp"
 			        style="@style/app_titleStyle2"
-		            android:text=" 设备序列号" />
+		            android:text="@string/securitymonitor_monitorpreview_id" />
 
 		        <EditText
-			        android:id="@+id/deviceidet"
+			        android:id="@+id/activity_addmonitorpreview_deviceidet"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_toRightOf="@+id/deviceidtv"
@@ -95,20 +95,20 @@
 		            android:gravity="center_vertical"
 			        android:paddingLeft="10dp"
 			        style="@style/app_big_textStyle2"
-			        android:background="@drawable/monitorpreview_srk"
+			        android:background="@drawable/btn_monitorpreview_srk"
 			        android:focusable="true"
 			        android:maxLength="20"
 			        android:minHeight="80dp"
 			        android:inputType="text"
 			        android:focusableInTouchMode="true"
 				    android:textColorHint="@color/Translucent_gray"
-				    android:hint="请输入设备序列号"
+				    android:hint="@string/securitymonitor_monitorpreview_pleaseid"
 			        android:singleLine="true" />
 
 		    </RelativeLayout>
 
 		    <RelativeLayout
-		        android:id="@+id/devicepwdrl"
+		        android:id="@+id/activity_addmonitorpreview_devicepwdrl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -116,23 +116,23 @@
 		        android:layout_below="@+id/deviceidrl" >
 
 		        <TextView
-		        	android:id="@+id/devicepwdtv"
+		        	android:id="@+id/activity_addmonitorpreview_devicepwdtv"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
 		            android:layout_marginLeft="40dp"
 			        style="@style/app_titleStyle2"
-		            android:text=" 设 备 密 码 " />
+		            android:text="@string/securitymonitor_monitorpreview_pwd" />
 
 		        <EditText
-			        android:id="@+id/devicepwdet"
+			        android:id="@+id/activity_addmonitorpreview_devicepwdet"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
 			        android:layout_toRightOf="@+id/devicepwdtv"
 		            android:layout_centerVertical="true"
 		            android:gravity="center_vertical"
 			        android:paddingLeft="10dp"
-			        android:background="@drawable/monitorpreview_srk"
+			        android:background="@drawable/btn_monitorpreview_srk"
 			        style="@style/app_big_textStyle2"
 			        android:focusable="true"
 			        android:maxLength="10"
@@ -140,7 +140,7 @@
 			        android:inputType="textPassword"
 			        android:focusableInTouchMode="true"
 				    android:textColorHint="@color/Translucent_gray"
-				    android:hint="请输入设备密码"
+				    android:hint="@string/securitymonitor_monitorpreview_pleasepwd"
 			        android:singleLine="true" />
 
 		        <ImageView
@@ -148,12 +148,12 @@
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
 		            android:layout_marginRight="380dp"
-		            android:src="@drawable/monitorpreview_guanpwd" />
+		            android:src="@drawable/btn_monitorpreview_guanpwd" />
 
 		    </RelativeLayout>
 
 		    <Button
-		        android:id="@+id/tjbtn"
+		        android:id="@+id/activity_addmonitorpreview_tjbtn"
 		        android:layout_width="500dp"
 		        android:layout_height="120dp"
 		        android:layout_marginLeft="315dp"
@@ -164,7 +164,7 @@
 			    style="@style/app_titleStyle2"
 		        android:gravity="center"
 		        android:background="@drawable/monitorpreview_btn_"
-		        android:text="提交" />
+		        android:text="@string/securitymonitor_monitorpreview_submit" />
 
 	    </RelativeLayout>
 

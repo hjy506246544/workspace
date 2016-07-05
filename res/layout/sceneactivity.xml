@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
- 	android:background="@drawable/main_bj"
+ 	android:background="@drawable/icon_main_bj"
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
         	android:minHeight="70dp"
-            android:src="@drawable/return2" />
+            android:src="@drawable/btn_return" />
 
         <TextView
 	        style="@style/Style5"
@@ -40,7 +40,7 @@
             android:gravity="center"
             android:layout_alignParentRight="true"
             style="@style/app_big_textStyle1"
-            android:background="@drawable/scenecreate_" />
+            android:background="@drawable/btn_scenecreate_" />
     </RelativeLayout>
 
     <com.gvs.controlpanel.widget.swipemenulistview.SwipeMenuListView

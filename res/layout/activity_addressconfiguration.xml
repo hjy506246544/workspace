@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg01"
+    android:background="@color/set_address_color"
     android:orientation="vertical"
     tools:ignore="all" >
 
@@ -10,15 +10,14 @@
         android:id="@+id/activity_addressconfiguration_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:background="@color/translucent_8"
+        android:background="@color/translucent_4"
         android:orientation="vertical" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="40dp"
-        android:layout_below="@id/activity_addressconfiguration_header"
-        android:background="@color/translucent_8" >
+        android:layout_below="@id/activity_addressconfiguration_header" >
 
         <RadioGroup
             android:id="@+id/activity_addressconfiguration_radiogroup"
@@ -32,8 +31,9 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:drawablePadding="10dp"
-                style="@style/Style5"
-                android:drawableRight="@drawable/scene_light"
+                style="@style/Style7"
+        		android:button="@drawable/btn_check_state2"
+                android:drawableRight="@drawable/icon_scene_light"
                 android:text="@string/light_title"/>
 
             <RadioButton
@@ -43,8 +43,9 @@
                 android:layout_marginLeft="80dp"
                 android:layout_weight="1"
                 android:drawablePadding="15dp"
-                style="@style/Style5"
-                android:drawableRight="@drawable/scene_cl"
+        		android:button="@drawable/btn_check_state2"
+                style="@style/Style7"
+                android:drawableRight="@drawable/icon_scene_cl"
                 android:text="@string/curtain_title"/>
 
             <RadioButton
@@ -53,22 +54,20 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="80dp"
                 android:layout_weight="1"
-                style="@style/Style5"
+                style="@style/Style7"
+        		android:button="@drawable/btn_check_state2"
                 android:drawablePadding="15dp"
                 android:text="@string/aircondition_title"
-                android:drawableRight="@drawable/scene_kt" />
+                android:drawableRight="@drawable/icon_scene_kt" />
         </RadioGroup>
 
-
-            <ListView
-            android:id="@+id/activity_addressconfiguration_list"
-            android:layout_width="300dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@id/activity_addressconfiguration_radiogroup"
-            android:background="@color/bg_tranparent">
-
-            </ListView>
+        <ListView
+	         android:id="@+id/activity_addressconfiguration_list"
+	         android:layout_width="300dp"
+	         android:layout_height="match_parent"
+	         android:layout_alignParentLeft="true"
+	         android:layout_below="@id/activity_addressconfiguration_radiogroup"
+	         android:background="@color/set_address_color2" />
 
         <FrameLayout
             android:id="@+id/activity_addressconfiguration_fragment"
@@ -77,9 +76,7 @@
             android:layout_alignParentRight="true"
             android:layout_toRightOf="@id/activity_addressconfiguration_list"
             android:layout_below="@id/activity_addressconfiguration_radiogroup"
-            android:background="@color/bg_tranparent">
-
-        </FrameLayout>
+            android:background="@color/set_address_color3" />
     </RelativeLayout>
 
 </RelativeLayout>

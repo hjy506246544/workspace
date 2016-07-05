@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:background="@drawable/main_bj"
+    android:background="@color/set_address_color3"
     android:layout_height="match_parent" >
 
     <View
@@ -51,7 +51,7 @@
             android:layout_height="wrap_content"
             android:entries="@array/address"
             android:gravity="center"
-            android:background="@drawable/set_config_bg"
+            android:background="@drawable/btn_set_config_bg"
             android:layout_weight="1" />
 
    		<TextView
@@ -66,9 +66,9 @@
             android:id="@+id/address_config_fragment_spinner2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/address"
+            android:entries="@array/address2"
             android:gravity="center"
-            android:background="@drawable/set_config_bg"
+            android:background="@drawable/btn_set_config_bg"
             android:layout_weight="1" />
 
 
@@ -84,9 +84,9 @@
             android:id="@+id/address_config_fragment_spinner3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:entries="@array/address"
+            android:entries="@array/address3"
             android:gravity="center"
-            android:background="@drawable/set_config_bg"
+            android:background="@drawable/btn_set_config_bg"
             android:layout_weight="1" />
 
     </LinearLayout>

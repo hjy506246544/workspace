@@ -5,7 +5,7 @@
     android:background="@color/app_bg" >
 
     <com.gvs.controlpanel.widget.Header
-        android:id="@+id/curtain_activity_header"
+        android:id="@+id/activity_curtain_header"
         android:layout_width="match_parent"
         android:layout_height="80dp"
     	android:background="@color/translucent_4"
@@ -14,7 +14,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:layout_below="@id/curtain_activity_header"
+        android:layout_below="@id/activity_curtain_header"
         android:orientation="vertical" >
 
         <ImageView

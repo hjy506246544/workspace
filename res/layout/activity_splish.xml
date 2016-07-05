@@ -9,13 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/actionsheet_bottom_normal" />
+        android:src="@drawable/btn_actionsheet_bottom_normal" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="300dp"
         android:layout_alignParentBottom="true"
-        android:background="@drawable/actionsheet_bottom_normal" />
+        android:background="@drawable/btn_actionsheet_bottom_normal" />
 
     <LinearLayout
         android:layout_marginBottom="18dp"
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:src="@drawable/actionsheet_bottom_normal" />
+            android:src="@drawable/btn_actionsheet_bottom_normal" />
 
         <TextView
             android:id="@+id/activity_splish_app_name"

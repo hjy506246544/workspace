@@ -2,8 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-	android:id="@+id/main"
- 	android:background="@drawable/main_bj"
+	android:id="@+id/activity_main"
+ 	android:background="@drawable/icon_main_bj"
     tools:ignore="all" >
 
 	<RelativeLayout
@@ -18,61 +18,61 @@
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
 	        style="@style/app_Style4"
-	        android:text="GVS" />
+	        android:text="@string/GVS" />
 	    <ImageView
             android:id="@+id/logoiv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
         	android:layout_toRightOf="@+id/gvstv"
-            android:src="@drawable/r" />
+            android:src="@drawable/icon_r" />
 	    <TextView
             android:id="@+id/sstv"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
         	android:layout_toRightOf="@+id/logoiv"
 	        style="@style/app_Style4"
-	        android:text="视声" />
+	        android:text="@string/video-star" />
     </RelativeLayout>
 
-		<RelativeLayout
-		    android:id="@+id/daterl"
-		    android:layout_below="@+id/header"
-	    	android:background="@color/translucent_8"
-		    android:layout_width="match_parent"
-		    android:layout_height="wrap_content" >
+	<RelativeLayout
+	    android:id="@+id/daterl"
+	    android:layout_below="@+id/header"
+    	android:background="@color/translucent_8"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+
+	    <TextView
+	    	android:id="@+id/main_timetv"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_marginLeft="40dp"
+	        style="@style/app_Style5" />
+
+	    <RelativeLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="match_parent"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="10dp"
+        	android:layout_toRightOf="@+id/main_timetv" >
 
 		    <TextView
-		    	android:id="@+id/timetv"
+		    	android:id="@+id/datetv"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-		    	android:layout_marginLeft="40dp"
-		        style="@style/app_Style5" />
+		        style="@style/Style6" />
 
-		    <RelativeLayout
+		    <TextView
+		    	android:id="@+id/weektv"
 		        android:layout_width="wrap_content"
-		        android:layout_height="match_parent"
-		        android:layout_marginTop="10dp"
-		        android:layout_marginLeft="10dp"
-	        	android:layout_toRightOf="@+id/timetv" >
-
-			    <TextView
-			    	android:id="@+id/datetv"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-			        style="@style/Style6" />
-
-			    <TextView
-			    	android:id="@+id/weektv"
-			        android:layout_width="wrap_content"
-			        android:layout_height="wrap_content"
-		        	android:layout_below="@+id/datetv"
-			        style="@style/Style6" />
-		    </RelativeLayout>
+		        android:layout_height="wrap_content"
+	        	android:layout_below="@+id/datetv"
+		        style="@style/Style6" />
+	    </RelativeLayout>
 
 	    <GridView
 		    android:id="@+id/listgv2"
-        	android:layout_below="@+id/timetv"
+        	android:layout_below="@+id/main_timetv"
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
 		    android:dividerHeight="0dp"
@@ -83,7 +83,7 @@
 		    android:layout_marginTop="60dp"
 		    android:listSelector="@android:color/transparent"
 	        android:stretchMode="columnWidth"
-	        android:verticalSpacing="100dp" />
+	        android:verticalSpacing="40dp" />
 		</RelativeLayout>
 
 </RelativeLayout>

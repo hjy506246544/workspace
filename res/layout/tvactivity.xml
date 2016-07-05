@@ -15,7 +15,6 @@
     <TextView
         android:textColor="@color/black"
         android:id="@+id/tv_displername"
-        android:text="选项一······"
         style="@style/app_textStyle"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"

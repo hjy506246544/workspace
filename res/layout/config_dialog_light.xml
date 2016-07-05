@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginBottom="60dp"
-    android:background="@drawable/bg_dialog"
+    android:background="@drawable/bg_white2"
     android:minHeight="300dp"
     android:orientation="vertical"
     tools:ignore="all" >
@@ -40,6 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawablePadding="10dp"
+        		android:button="@drawable/btn_check_state2"
                 android:drawableRight="@drawable/icon_light_droplight" />
 
             <RadioButton
@@ -47,6 +48,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="40dp"
+        		android:button="@drawable/btn_check_state2"
                 android:drawablePadding="10dp"
                 android:drawableRight="@drawable/icon_light_energysaving"/>
 			<!--
@@ -78,7 +80,7 @@
         android:layout_below="@+id/ll"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/scene_srk"
+        android:background="@drawable/btn_scene_srk"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:gravity="center_vertical"

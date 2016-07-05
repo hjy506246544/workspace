@@ -2,26 +2,26 @@
 <resources>
     <string name="hello">Hello World, Launcher!</string>
     <string name="application_name">TvdLauncher</string>
-    <string name="activity_not_found">没有找到该应用程序</string>     
-    <string name="permlab_read_settings">阅读首页的设置和快捷键</string>   
-    <string name="permdesc_read_settings">允许应用程序读取首页的设置和快捷键。</string>   
+    <string name="activity_not_found">没有找到该应用程序</string>
+    <string name="permlab_read_settings">阅读首页的设置和快捷键</string>
+    <string name="permdesc_read_settings">允许应用程序读取首页的设置和快捷键。</string>
     <string name="permlab_write_settings">写首页的设置和快捷键</string>
-    <string name="permdesc_write_settings">允许应用程序来改变首页的设置和快捷键。</string>         
-    <string name="gadget_error_text">载入小部件失败</string>    
-    <string name="out_of_space">屏幕上没有足够的空间</string>    
+    <string name="permdesc_write_settings">允许应用程序来改变首页的设置和快捷键。</string>
+    <string name="gadget_error_text">载入小部件失败</string>
+    <string name="out_of_space">屏幕上没有足够的空间</string>
     <string name="wallpaper_instructions">设置壁纸</string>
     <string name="pick_wallpaper">壁纸</string>
-    <string name="chooser_wallpaper">选择壁纸</string>  
-      
+    <string name="chooser_wallpaper">选择壁纸</string>
+
     <string name="startup_bar_title_1">应用</string>
     <string name="startup_bar_title_2">设置</string>
     <string name="startup_bar_title_3">文件浏览</string>
     <string name="startup_bar_title_4">我的最爱</string>
-    <string name="startup_bar_title_5">网页浏览</string>            
-    <string name="add_favorites_app_success">添加该应用到“喜爱应用”成功</string>   
+    <string name="startup_bar_title_5">网页浏览</string>
+    <string name="add_favorites_app_success">添加该应用到“喜爱应用”成功</string>
     <string name="add_favorites_app">添加该应用到“喜爱应用”中</string>
     <string name="del_favorites_app_success">从“喜爱应用”列表中删除该应用成功</string>
-    <string name="delete_favorites_app">从“喜爱应用”列表中删除该应用</string>    
+    <string name="delete_favorites_app">从“喜爱应用”列表中删除该应用</string>
     <string name="uninstall_app">卸载该应用程序</string>
     <string name="add_widgets">添加小部件</string>
     <string name="del_widget">删除小部件</string>
@@ -31,7 +31,7 @@
     <string name="workspace_is_empty">当前工作区为空</string>
     <string name="main_option_menu_title">桌面设置</string>
     <string name="unknown">未知</string>
-    
+
     <string name="controlcenter_mainmenu_light">灯光</string>
     <string name="controlcenter_mainmenu_curtain">窗帘</string>
     <string name="controlcenter_mainmenu_ac">空调</string>
@@ -40,6 +40,7 @@
     <string name="controlcenter_mainmenu_scene">场景</string>
     <string name="controlcenter_mainmenu_monitor">安防</string>
     <string name="controlcenter_mainmenu_setup">设置</string>
+    <string name="controlcenter_mainmenu_setup2">设置2</string>
     <string name="controlcenter_add_new">添加</string>
     <string name="app_name">控制中心</string>
     <string name="add_curtain_name">输入新建对象的名字</string>
@@ -53,4 +54,91 @@
     <string name="indoor_temp">室内温度</string>
     <string name="set_temp">设定温度</string>
     <string name="address_setup">地址配置</string>
+    <string name="bjt_setup">背景替换</string>
+
+
+    <string name="error_no_sdcard">没有SD卡，无法存储录音数据</string>
+    <string name="error_state_record">正在录音中，请先停止录音</string>
+    <string name="error_unknown">无法识别的错误</string>
+    <string name="app_btnyes">确定</string>
+    <string name="app_btnno">取消</string>
+    <string name="scene_exists">亲，您已经选择过该场景哦！</string>
+    <string name="bjt_title">背景图替换</string>
+    <string name="set_title">设置</string>
+    <string name="addsxt_title">添加摄像头</string>
+    <string name="updatesxt_title">修改摄像头</string>
+    <string name="config_name">窗帘</string>
+    <string name="curtaindetail_name">窗帘</string>
+
+    <!-- 灯光 -->
+    <string name="light_title">灯光</string>
+
+    <!-- 窗帘 -->
+    <string name="curtain_title">窗帘</string>
+
+    <!-- 空调 -->
+    <string name="aircondition_title">空调</string>
+
+    <!-- 电视机 -->
+    <string name="tv_title">电视机</string>
+
+    <!-- 家庭影院 -->
+    <string name="hometheatre_title">家庭影院</string>
+
+    <!-- 背景音乐 -->
+    <string name="bgmusic_title">背景音乐</string>
+
+    <!-- 场景 -->
+    <string name="scene_title">场景</string>
+
+    <!-- 自定义场景 -->
+    <string name="scenezdy_title">自定义场景</string>
+    <string name="scenezdy_ljcj">立即创建</string>
+    <string name="scenezdy_sr">请输入场景名称</string>
+
+    <!-- 安防监控 -->
+    <string name="securitymonitor_title">安防监控</string>
+
+    <string name="save">保存</string>
+    <string name="video-star">视声</string>
+    <string name="GVS">GVS</string>
+    <string name="securitymonitor_monitorpreview_name"> 设 备 名 称 </string>
+    <string name="securitymonitor_monitorpreview_pleasename">请输入设备名称</string>
+    <string name="securitymonitor_monitorpreview_id"> 设备序列号</string>
+    <string name="securitymonitor_monitorpreview_pleaseid">请输入设备序列号</string>
+    <string name="securitymonitor_monitorpreview_pwd"> 设 备 密 码 </string>
+    <string name="securitymonitor_monitorpreview_pleasepwd">请输入设备密码</string>
+    <string name="securitymonitor_monitorpreview_submit">提交</string>
+    <string name="securitymonitor_monitorpreview">监控预览</string>
+    <string name="securitymonitor_videoplay">影像回放</string>
+    <string name="pwd_set">密码替换</string>
+    <string name="modeselection_set">模式选择</string>
+    <string name="room">客厅</string>
+    <string name="executedimmediately">立即执行</string>
+    <string name="subscribe">预约</string>
+    <string name="to">至</string>
+    <string name="open">开</string>
+    <string name="off">关</string>
+
+
+    <string name="securitymonitor_videoplay_allyear">全部年份</string>
+    <string name="securitymonitor_videoplay_2016">2016</string>
+    <string name="securitymonitor_videoplay_2015">2015</string>
+    <string name="securitymonitor_videoplay_2014">2014</string>
+    <string name="securitymonitor_videoplay_2013">2013</string>
+    <string name="securitymonitor_videoplay_2012">2012</string>
+    <string name="securitymonitor_videoplay_2011">2011</string>
+    <string name="securitymonitor_videoplay_allmonth">全部月份</string>
+    <string name="securitymonitor_videoplay_1">1月</string>
+    <string name="securitymonitor_videoplay_2">2月</string>
+    <string name="securitymonitor_videoplay_3">3月</string>
+    <string name="securitymonitor_videoplay_4">4月</string>
+    <string name="securitymonitor_videoplay_5">5月</string>
+    <string name="securitymonitor_videoplay_6">6月</string>
+    <string name="securitymonitor_videoplay_7">7月</string>
+    <string name="securitymonitor_videoplay_8">8月</string>
+    <string name="securitymonitor_videoplay_9">9月</string>
+    <string name="securitymonitor_videoplay_10">10月</string>
+    <string name="securitymonitor_videoplay_11">11月</string>
+    <string name="securitymonitor_videoplay_12">12月</string>
 </resources>
