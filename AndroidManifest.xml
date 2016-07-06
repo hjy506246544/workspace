@@ -32,9 +32,6 @@
 
         </activity>
 
-
-
-
 		<!-- 灯光 -->
         <activity
             android:name="com.gvs.controlpanel.activity.light.Activity_Light"
