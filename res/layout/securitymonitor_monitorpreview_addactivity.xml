@@ -16,7 +16,7 @@
     <com.gvs.controlpanel.widget.BounceScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/activity_addmonitorpreview_header" >
+        android:layout_below="@id/activity_addmonitorpreview_header" >
 
 	    <RelativeLayout
 	        android:layout_width="match_parent"
@@ -27,7 +27,7 @@
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:layout_marginTop="20dp"
-		        android:layout_below="@+id/header"
+		        android:layout_below="@id/header"
 		        android:src="@drawable/btn_monitorpreview_logo" />
 
 		    <RelativeLayout
@@ -37,7 +37,7 @@
 		        android:layout_marginTop="20dp"
 		        android:layout_marginLeft="300dp"
 		        android:minHeight="80dp"
-		        android:layout_below="@+id/logoiv" >
+		        android:layout_below="@id/logoiv" >
 
 		        <TextView
 		        	android:id="@+id/activity_addmonitorpreview_devicenametv"
@@ -52,7 +52,7 @@
 			        android:id="@+id/activity_addmonitorpreview_devicenameet"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
-			        android:layout_toRightOf="@+id/devicenametv"
+			        android:layout_toRightOf="@id/activity_addmonitorpreview_devicenametv"
 		            android:layout_centerVertical="true"
 		            android:gravity="center_vertical"
 			        android:paddingLeft="10dp"
@@ -75,7 +75,7 @@
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:layout_marginLeft="300dp"
-		        android:layout_below="@+id/devicenamerl" >
+		        android:layout_below="@id/activity_addmonitorpreview_devicenamerl" >
 
 		        <TextView
 		        	android:id="@+id/activity_addmonitorpreview_deviceidtv"
@@ -90,7 +90,7 @@
 			        android:id="@+id/activity_addmonitorpreview_deviceidet"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
-			        android:layout_toRightOf="@+id/deviceidtv"
+			        android:layout_toRightOf="@id/activity_addmonitorpreview_deviceidtv"
 		            android:layout_centerVertical="true"
 		            android:gravity="center_vertical"
 			        android:paddingLeft="10dp"
@@ -113,7 +113,7 @@
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
 		        android:layout_marginLeft="300dp"
-		        android:layout_below="@+id/deviceidrl" >
+		        android:layout_below="@id/activity_addmonitorpreview_deviceidrl" >
 
 		        <TextView
 		        	android:id="@+id/activity_addmonitorpreview_devicepwdtv"
@@ -128,7 +128,7 @@
 			        android:id="@+id/activity_addmonitorpreview_devicepwdet"
 			        android:layout_width="wrap_content"
 			        android:layout_height="wrap_content"
-			        android:layout_toRightOf="@+id/devicepwdtv"
+			        android:layout_toRightOf="@id/activity_addmonitorpreview_devicepwdtv"
 		            android:layout_centerVertical="true"
 		            android:gravity="center_vertical"
 			        android:paddingLeft="10dp"
@@ -159,7 +159,7 @@
 		        android:layout_marginLeft="315dp"
 		        android:layout_marginRight="120dp"
 		        android:layout_marginTop="40dp"
-		        android:layout_below="@+id/devicepwdrl"
+		        android:layout_below="@id/activity_addmonitorpreview_devicepwdrl"
 		        android:layout_alignParentBottom="true"
 			    style="@style/app_titleStyle2"
 		        android:gravity="center"

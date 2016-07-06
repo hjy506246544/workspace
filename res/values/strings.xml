@@ -47,6 +47,8 @@
     <string name="curtaindetail_name">curtain</string>
     <string name="bjt_setup">The background to replace</string>
     <string name="controlcenter_mainmenu_setup2">Setup2</string>
+    <string name="open">open</string>
+    <string name="off">off</string>
 
     <!-- 灯光 -->
     <string name="light_title">light</string>
@@ -55,7 +57,7 @@
     <string name="curtain_title">curtain</string>
 
     <!-- 空调 -->
-    <string name="aircondition_title">air-condition</string>
+    <string name="aircondition_title">air condition</string>
 
     <!-- 电视机 -->
     <string name="tv_title">TV</string>
@@ -76,7 +78,7 @@
     <!-- 安防监控 -->
     <string name="securitymonitor_title">security and protection monitoring</string>
     <string name="save">save</string>
-    <string name="video-star">video-star</string>
+    <string name="videostar">video-star</string>
     <string name="GVS">GVS</string>
     <string name="scenezdy_sr">Please enter the name of scene</string>
     <string name="securitymonitor_monitorpreview_name"> Device name </string>

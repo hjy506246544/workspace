@@ -58,7 +58,7 @@
 	<com.gvs.controlpanel.widget.FlowLayout
         android:id="@+id/activity_securitymonitor_flowLayout2"
         android:layout_marginLeft="40dp"
-        android:layout_below="@+id/flowLayout"
+        android:layout_below="@id/activity_securitymonitor_flowLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
 
@@ -147,14 +147,14 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="0.2dp"
 	    android:layout_marginTop="10dp"
-	    android:layout_below="@+id/flowLayout2"
+	    android:layout_below="@id/activity_securitymonitor_flowLayout2"
 	    android:src="@color/gray" />
 
 	<ListView
         android:id="@+id/activity_securitymonitor_listview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/xian"
+        android:layout_below="@id/xian"
         android:cacheColorHint="@android:color/transparent"
         android:divider="@null"
         android:dividerHeight="0dp"

@@ -352,7 +352,6 @@ public class Activity_AddressConfiguration extends Activity {
 
         		if (mList.isEmpty()) {
         			ToastUtils.show(ApplicationSmart.getInstance().getApplicationContext(), getResources().getString(R.string.target_not_exist));
-
         		} else {
         			mList.get(0).setAddress(10);///////////////////////////////////////save
                     dBManager.saveCurtainEntity(mList.get(0));

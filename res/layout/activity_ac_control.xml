@@ -239,7 +239,7 @@
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
                  android:layout_centerInParent="true"
-                 android:layout_toRightOf="@+id/templl"
+                 android:layout_toRightOf="@id/templl"
                  android:gravity="center"
                  android:text="26℃"
                  style="@style/app_Style3" />
@@ -273,7 +273,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 style="@style/Style8"
-                android:layout_toRightOf="@+id/btn_ac_dec"
+                android:layout_toRightOf="@id/btn_ac_dec"
                 android:text="@string/adj_temp"
                 android:background="@color/bg_tranparent"
                 android:gravity="center_horizontal"/>
@@ -282,7 +282,7 @@
                 android:id="@+id/btn_ac_inc"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@+id/text_ac_inc"
+                android:layout_toRightOf="@id/text_ac_inc"
                 android:src="@drawable/btn_ac_inc" />
 
          </RelativeLayout>

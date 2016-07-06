@@ -100,7 +100,7 @@
     <string name="securitymonitor_title">安防监控</string>
 
     <string name="save">保存</string>
-    <string name="video-star">视声</string>
+    <string name="videostar">视声</string>
     <string name="GVS">GVS</string>
     <string name="securitymonitor_monitorpreview_name"> 设 备 名 称 </string>
     <string name="securitymonitor_monitorpreview_pleasename">请输入设备名称</string>

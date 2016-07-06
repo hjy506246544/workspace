@@ -24,20 +24,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
-        	android:layout_toRightOf="@+id/gvstv"
+        	android:layout_toRightOf="@id/gvstv"
             android:src="@drawable/icon_r" />
 	    <TextView
             android:id="@+id/sstv"
 	        android:layout_width="wrap_content"
 	        android:layout_height="wrap_content"
-        	android:layout_toRightOf="@+id/logoiv"
+        	android:layout_toRightOf="@id/logoiv"
 	        style="@style/app_Style4"
-	        android:text="@string/video-star" />
+	        android:text="@string/videostar" />
     </RelativeLayout>
 
 	<RelativeLayout
 	    android:id="@+id/daterl"
-	    android:layout_below="@+id/header"
+	    android:layout_below="@id/header"
     	android:background="@color/translucent_8"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content" >
@@ -54,7 +54,7 @@
 	        android:layout_height="match_parent"
 	        android:layout_marginTop="10dp"
 	        android:layout_marginLeft="10dp"
-        	android:layout_toRightOf="@+id/main_timetv" >
+        	android:layout_toRightOf="@id/main_timetv" >
 
 		    <TextView
 		    	android:id="@+id/datetv"
@@ -66,13 +66,13 @@
 		    	android:id="@+id/weektv"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content"
-	        	android:layout_below="@+id/datetv"
+	        	android:layout_below="@id/datetv"
 		        style="@style/Style6" />
 	    </RelativeLayout>
 
 	    <GridView
 		    android:id="@+id/listgv2"
-        	android:layout_below="@+id/main_timetv"
+        	android:layout_below="@id/main_timetv"
 		    android:layout_width="match_parent"
 		    android:layout_height="match_parent"
 		    android:dividerHeight="0dp"

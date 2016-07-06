@@ -26,7 +26,7 @@
 	        android:layout_height="wrap_content"
 	        android:layout_centerVertical="true"
 	        android:layout_marginLeft="10dp"
-	        android:layout_toRightOf="@+id/iv_headview" >
+	        android:layout_toRightOf="@id/iv_headview" >
 
 	        <TextView
 	        	android:id="@+id/lxnametv"
@@ -38,7 +38,7 @@
 	        	android:id="@+id/lxtimetv"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:layout_below="@+id/lxnametv"
+	            android:layout_below="@id/lxnametv"
 	            style="@style/app_big_textStyle6" />
 
 	    </RelativeLayout>
@@ -60,7 +60,7 @@
 	        	android:id="@+id/deliv"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:layout_toRightOf="@+id/playiv"
+	            android:layout_toRightOf="@id/playiv"
 	            android:src="@drawable/btn_del" />
 
 	    </RelativeLayout>
@@ -72,6 +72,6 @@
 	    android:layout_width="match_parent"
 	    android:layout_height="0.2dp"
 	    android:layout_marginLeft="40dp"
-	    android:layout_below="@+id/rl"
+	    android:layout_below="@id/rl"
 	    android:src="@color/gray" />
 </RelativeLayout>

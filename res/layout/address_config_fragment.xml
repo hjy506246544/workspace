@@ -22,7 +22,6 @@
 	        android:id="@+id/address_config_fragment_iv"
 		    android:layout_width="wrap_content"
 		    android:layout_height="wrap_content"
-		    android:layout_centerVertical="true"
 	        android:layout_marginLeft="40dp" />
 
 		<TextView
@@ -31,7 +30,6 @@
 	        android:layout_height="wrap_content"
 	        style="@style/app_titleStyle1"
 	        android:gravity="center_vertical"
-	        android:layout_below="@+id/iv"
 	        android:layout_marginTop="25dp"
 	        android:layout_marginLeft="40dp"
 	        android:text="@string/config_name" />

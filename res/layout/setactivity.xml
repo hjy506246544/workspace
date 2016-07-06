@@ -17,7 +17,7 @@
     <com.gvs.controlpanel.widget.BounceScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/setup_activity_header" >
+        android:layout_below="@id/setup_activity_header" >
         <LinearLayout
 	        android:layout_width="match_parent"
 	        android:layout_height="wrap_content"
