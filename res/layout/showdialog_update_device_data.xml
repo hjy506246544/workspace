@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white2"
+    android:minHeight="200dp"
+    android:layout_marginBottom="40dp"
+    tools:ignore="all">
+
+    <TextView
+        android:id="@+id/updata_device_title"
+        style="@style/app_titleStyle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/btn_set_updatepwd"
+        android:drawablePadding="10dp"
+        android:text="@string/update_device_data"
+        android:minHeight="45dp" />
+
+    <LinearLayout 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/updata_device_title"
+        >
+    <Button
+        android:id="@+id/btn_updata_device_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/btn_"
+        style="@style/app_titleStyle1"
+        android:text="@string/update_device_data"
+        android:minHeight="70dp" />
+    <View 
+        android:layout_width="100dp"
+        android:layout_height="fill_parent"/>
+    <Button
+        android:id="@+id/btn_updata_device_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:background="@drawable/btn_"
+        style="@style/app_titleStyle1"
+        android:text="@string/create_device_data"
+        android:minHeight="70dp" />
+    </LinearLayout>
+   
+</RelativeLayout>
