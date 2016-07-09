@@ -1,5 +1,4 @@
 package com.gvs.controlpanel.activity.securitymonitor;
-import cn.bmob.v3.listener.SaveListener;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.activity.base.FragmentActivityBase;
 import com.gvs.controlpanel.bean.Camera;
@@ -66,20 +65,20 @@ public class AddMonitorPreviewActivity extends FragmentActivityBase {
 				camera.setDeviceName(devicename);
 				camera.setDeviceId(deviceid);
 				camera.setDevicePwd(devicepwd);
-				camera.save(AddMonitorPreviewActivity.this, new SaveListener() {
-
-					@Override
-					public void onSuccess() {
-						ToastUtils.show(AddMonitorPreviewActivity.this,"添加摄像头成功!");
-						setResult(RESULT_OK);
-						finish();
-					}
-
-					@Override
-					public void onFailure(int arg0, String arg1) {
-						ToastUtils.show(AddMonitorPreviewActivity.this,"添加摄像头失败:"+arg0);
-					}
-				});
+//				camera.save(AddMonitorPreviewActivity.this, new SaveListener() {
+//
+//					@Override
+//					public void onSuccess() {
+//						ToastUtils.show(AddMonitorPreviewActivity.this,"添加摄像头成功!");
+//						setResult(RESULT_OK);
+//						finish();
+//					}
+//
+//					@Override
+//					public void onFailure(int arg0, String arg1) {
+//						ToastUtils.show(AddMonitorPreviewActivity.this,"添加摄像头失败:"+arg0);
+//					}
+//				});
 			}
 		});
 	}

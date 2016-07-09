@@ -1,11 +1,10 @@
 package com.gvs.controlpanel.bean;
-import cn.bmob.v3.BmobObject;
 /**
  * 安防监控
  * @author hjy
  *
  */
-public class Camera extends BmobObject{
+public class Camera/* extends BmobObject*/{
 	private String deviceName;
 	private String deviceId;
 	private String devicePwd;

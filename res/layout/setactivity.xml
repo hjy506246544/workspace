@@ -24,7 +24,7 @@
 	        android:layout_marginLeft="40dp"
 	        android:layout_marginRight="40dp"
 	        android:orientation="vertical" >
-
+			<!--
 		    <TextView
 		        android:id="@+id/setup_activity_tv_displername"
 		        android:text="@string/controlcenter_mainmenu_setup"
@@ -36,9 +36,9 @@
 		        android:gravity="center_vertical"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" />
-
+		    -->
 		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl"
+		        android:id="@+id/setup_activity_rl"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -47,18 +47,27 @@
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_setname"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set" />
+
 		        <TextView
+		        	android:id="@+id/setup_activity_tv_setname"
 		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/icon_set_bjt"
+		            android:layout_toRightOf="@id/setup_activity_iv_setname"
+		            android:layout_marginLeft="5dp"
 		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
-		            android:text="@string/bjt_setup" />
+		            android:text="@string/controlcenter_mainmenu_setup" />
 
 		        <ImageView
+		        	android:id="@+id/setup_activity_iv_return"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
@@ -69,12 +78,13 @@
 		    </RelativeLayout>
 
 		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian"
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl2"
+		        android:id="@+id/setup_activity_rl_backgroundimg"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -83,18 +93,27 @@
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_backgroundimg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_bjt" />
+
 		        <TextView
+		        	android:id="@+id/setup_activity_tv_backgroundimg"
 		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/icon_set_address"
+		            android:layout_toRightOf="@id/setup_activity_iv_backgroundimg"
+		            android:layout_marginLeft="5dp"
 		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
-		            android:text="@string/address_setup" />
+		            android:text="@string/bjt_setup" />
 
 		        <ImageView
+		        	android:id="@+id/setup_activity_iv_backgroundimgreturn"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
@@ -105,6 +124,55 @@
 		    </RelativeLayout>
 
 		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian2"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:visibility="gone"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_setaddress"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:visibility="gone"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_setaddress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_address" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_setaddress"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_setaddress"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/address_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_setaddressreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian3"
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:visibility="gone"
@@ -143,10 +211,11 @@
 		    </RelativeLayout>
 
 		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian4"
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:background="@drawable/cxian2"/>
-
+			<!--
 		    <TextView
 		        android:id="@+id/setup_activity_tv_displername"
 		        android:text="@string/controlcenter_mainmenu_setup2"
@@ -158,9 +227,10 @@
 		        android:gravity="center_vertical"
 		        android:layout_width="wrap_content"
 		        android:layout_height="wrap_content" />
+			-->
 
 		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl4"
+		        android:id="@+id/setup_activity_rl2"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -169,18 +239,73 @@
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_setname2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_settwo" />
+
 		        <TextView
+		        	android:id="@+id/setup_activity_tv_setname2"
 		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/btn_set_updatepwd"
+		            android:layout_toRightOf="@id/setup_activity_iv_setname2"
+		            android:layout_marginLeft="5dp"
 		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
+		            android:text="@string/controlcenter_mainmenu_setup2" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_return2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian7"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_updatepwd"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_updatepwd"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
 		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/btn_set_updatepwd" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_updatepwd"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_updatepwd"
+		            android:layout_marginLeft="5dp"
 		            android:text="@string/pwd_set" />
 
 		        <ImageView
+		        	android:id="@+id/setup_activity_iv_updatepwdreturn"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
@@ -191,12 +316,13 @@
 		    </RelativeLayout>
 
 		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian5"
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:background="@drawable/cxian2"/>
 
 		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl5"
+		        android:id="@+id/setup_activity_rl_modeselect"
 		        android:layout_width="match_parent"
 		        android:layout_height="wrap_content"
 		        android:minHeight="80dp"
@@ -205,18 +331,27 @@
 		     	android:background="@drawable/bjt_"
 		        android:orientation="horizontal" >
 
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_modeselect"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/btn_set_modeselect" />
+
 		        <TextView
+		        	android:id="@+id/setup_activity_tv_modeselect"
 		            style="@style/app_titleStyle2"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/btn_set_modeselect"
 		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp"
+		            android:layout_toRightOf="@id/setup_activity_iv_modeselect"
+		            android:layout_marginLeft="5dp"
 		            android:text="@string/modeselection_set" />
 
 		        <ImageView
+		        	android:id="@+id/setup_activity_iv_modeselectionreturn"
 		            android:layout_width="wrap_content"
 		            android:layout_height="wrap_content"
 		            android:layout_alignParentRight="true"
@@ -227,163 +362,10 @@
 		    </RelativeLayout>
 
 		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian6"
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
 		        android:background="@drawable/cxian2"/>
-
-		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl6"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:minHeight="80dp"
-		        android:paddingTop="5dp"
-		        android:visibility="gone"
-		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
-		        android:orientation="horizontal" >
-
-		        <TextView
-		            style="@style/app_titleStyle1"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/icon_main_set3"
-		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp" />
-
-		        <ImageView
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_alignParentRight="true"
-		            android:layout_centerVertical="true"
-		            android:layout_marginRight="40dp"
-		            android:scaleType="center"
-		            android:src="@drawable/btn_me_yj" />
-		    </RelativeLayout>
-
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="1dp"
-		        android:visibility="gone"
-		        android:background="@drawable/cxian2"/>
-
-		    <TextView
-		        android:id="@+id/setup_activity_tv_displername"
-		        style="@style/app_titleStyle1"
-		        android:layout_marginLeft="20dp"
-		        android:layout_marginTop="10dp"
-		        android:visibility="gone"
-		        android:layout_marginBottom="5dp"
-		        android:layout_gravity="center_vertical"
-		        android:gravity="center_vertical"
-		        android:layout_width="wrap_content"
-		        android:layout_height="wrap_content" />
-
-		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:minHeight="80dp"
-		        android:paddingTop="5dp"
-		        android:visibility="gone"
-		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
-		        android:orientation="horizontal" >
-
-		        <TextView
-		            style="@style/app_titleStyle1"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/icon_main_set3"
-		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp" />
-
-		        <ImageView
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_alignParentRight="true"
-		            android:layout_centerVertical="true"
-		            android:layout_marginRight="40dp"
-		            android:scaleType="center"
-		            android:src="@drawable/btn_me_yj" />
-		    </RelativeLayout>
-
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="1dp"
-		        android:visibility="gone"
-		        android:background="@drawable/cxian2"/>
-
-		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl2"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:minHeight="80dp"
-		        android:paddingTop="5dp"
-		        android:visibility="gone"
-		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
-		        android:orientation="horizontal" >
-
-		        <TextView
-		            style="@style/app_titleStyle1"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/icon_main_set3"
-		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp" />
-
-		        <ImageView
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_alignParentRight="true"
-		            android:layout_centerVertical="true"
-		            android:layout_marginRight="40dp"
-		            android:scaleType="center"
-		            android:src="@drawable/btn_me_yj" />
-		    </RelativeLayout>
-
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="1dp"
-		        android:visibility="gone"
-		        android:background="@drawable/cxian2"/>
-
-		    <RelativeLayout
-		        android:id="@+id/setup_activity_xxrl3"
-		        android:layout_width="match_parent"
-		        android:layout_height="wrap_content"
-		        android:minHeight="80dp"
-		        android:paddingTop="5dp"
-		        android:visibility="gone"
-		        android:paddingBottom="5dp"
-		     	android:background="@drawable/bjt2_"
-		        android:orientation="horizontal" >
-
-		        <TextView
-		            style="@style/app_titleStyle1"
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_centerVertical="true"
-		            android:drawableLeft="@drawable/icon_main_set3"
-		            android:gravity="center_vertical"
-		            android:drawablePadding="5dp"
-		            android:layout_marginLeft="20dp" />
-
-		        <ImageView
-		            android:layout_width="wrap_content"
-		            android:layout_height="wrap_content"
-		            android:layout_alignParentRight="true"
-		            android:layout_centerVertical="true"
-		            android:layout_marginRight="40dp"
-		            android:scaleType="center"
-		            android:src="@drawable/btn_me_yj" />
-		    </RelativeLayout>
 
 		    <ImageView
 		        android:layout_width="match_parent"

@@ -26,8 +26,6 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -114,7 +112,7 @@ public class MainMenuActivity extends FragmentActivityBase {
 			mWay ="六";
 		}
 
-		SimpleDateFormat timeformat = new SimpleDateFormat("hh:mm");
+		SimpleDateFormat timeformat = new SimpleDateFormat("HH:mm");
 		long timeStamp = System.currentTimeMillis();
 		timetv.setText(/*mHour + ":" + mMinute*/timeformat.format(new Date(timeStamp)));
 		SimpleDateFormat dateformat = new SimpleDateFormat("yyyy-MM-dd");

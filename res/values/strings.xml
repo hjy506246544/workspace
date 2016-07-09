@@ -192,4 +192,7 @@ limitations under the License.\n</string>
     <string name="securitymonitor_videoplay_10">10月</string>
     <string name="securitymonitor_videoplay_11">11月</string>
     <string name="securitymonitor_videoplay_12">12月</string>
+    <string name="update_device_data">update device data</string>
+    <string name="create_device_data">create device data</string>
+    
 </resources>

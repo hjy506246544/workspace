@@ -24,18 +24,12 @@ public class DaoSession extends AbstractDaoSession {
     private final DaoConfig lightEntityDaoConfig;
     private final DaoConfig bgMusicSelectedListEntityDaoConfig;
     private final DaoConfig sceneEntityDaoConfig;
-    private final DaoConfig sceneItemLightEntityDaoConfig;
-    private final DaoConfig sceneItemCurtainEntityDaoConfig;
-    private final DaoConfig sceneItemACEntityDaoConfig;
 
     private final ACEntityDao aCEntityDao;
     private final CurtainEntityDao curtainEntityDao;
     private final LightEntityDao lightEntityDao;
     private final BgMusicSelectedListEntityDao bgMusicSelectedListEntityDao;
     private final SceneEntityDao sceneEntityDao;
-    private final SceneItemLightEntityDao sceneItemLightEntityDao;
-    private final SceneItemCurtainEntityDao sceneItemCurtainEntityDao;
-    private final SceneItemACEntityDao sceneItemACEntityDao;
 
     public DaoSession(SQLiteDatabase db, IdentityScopeType type, Map<Class<? extends AbstractDao<?, ?>>, DaoConfig>
             daoConfigMap) {
@@ -56,32 +50,17 @@ public class DaoSession extends AbstractDaoSession {
         sceneEntityDaoConfig = daoConfigMap.get(SceneEntityDao.class).clone();
         sceneEntityDaoConfig.initIdentityScope(type);
 
-        sceneItemLightEntityDaoConfig = daoConfigMap.get(SceneItemLightEntityDao.class).clone();
-        sceneItemLightEntityDaoConfig.initIdentityScope(type);
-
-        sceneItemCurtainEntityDaoConfig = daoConfigMap.get(SceneItemCurtainEntityDao.class).clone();
-        sceneItemCurtainEntityDaoConfig.initIdentityScope(type);
-
-        sceneItemACEntityDaoConfig = daoConfigMap.get(SceneItemACEntityDao.class).clone();
-        sceneItemACEntityDaoConfig.initIdentityScope(type);
-
         aCEntityDao = new ACEntityDao(aCEntityDaoConfig, this);
         curtainEntityDao = new CurtainEntityDao(curtainEntityDaoConfig, this);
         lightEntityDao = new LightEntityDao(lightEntityDaoConfig, this);
         bgMusicSelectedListEntityDao = new BgMusicSelectedListEntityDao(bgMusicSelectedListEntityDaoConfig, this);
         sceneEntityDao = new SceneEntityDao(sceneEntityDaoConfig, this);
-        sceneItemLightEntityDao = new SceneItemLightEntityDao(sceneItemLightEntityDaoConfig, this);
-        sceneItemCurtainEntityDao = new SceneItemCurtainEntityDao(sceneItemCurtainEntityDaoConfig, this);
-        sceneItemACEntityDao = new SceneItemACEntityDao(sceneItemACEntityDaoConfig, this);
 
         registerDao(ACEntity.class, aCEntityDao);
         registerDao(CurtainEntity.class, curtainEntityDao);
         registerDao(LightEntity.class, lightEntityDao);
         registerDao(BgMusicSelectedListEntity.class, bgMusicSelectedListEntityDao);
         registerDao(SceneEntity.class, sceneEntityDao);
-        registerDao(SceneItemLightEntity.class, sceneItemLightEntityDao);
-        registerDao(SceneItemCurtainEntity.class, sceneItemCurtainEntityDao);
-        registerDao(SceneItemACEntity.class, sceneItemACEntityDao);
     }
     
     public void clear() {
@@ -90,9 +69,6 @@ public class DaoSession extends AbstractDaoSession {
         lightEntityDaoConfig.getIdentityScope().clear();
         bgMusicSelectedListEntityDaoConfig.getIdentityScope().clear();
         sceneEntityDaoConfig.getIdentityScope().clear();
-        sceneItemLightEntityDaoConfig.getIdentityScope().clear();
-        sceneItemCurtainEntityDaoConfig.getIdentityScope().clear();
-        sceneItemACEntityDaoConfig.getIdentityScope().clear();
     }
 
     public ACEntityDao getACEntityDao() {
@@ -113,18 +89,6 @@ public class DaoSession extends AbstractDaoSession {
 
     public SceneEntityDao getSceneEntityDao() {
         return sceneEntityDao;
-    }
-
-    public SceneItemLightEntityDao getSceneItemLightEntityDao() {
-        return sceneItemLightEntityDao;
-    }
-
-    public SceneItemCurtainEntityDao getSceneItemCurtainEntityDao() {
-        return sceneItemCurtainEntityDao;
-    }
-
-    public SceneItemACEntityDao getSceneItemACEntityDao() {
-        return sceneItemACEntityDao;
     }
 
 }

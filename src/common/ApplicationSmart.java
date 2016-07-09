@@ -16,14 +16,11 @@ public class ApplicationSmart extends Application {
 	private static DaoMaster daoMaster;
 	private static DaoSession daoSession;
 	public static SQLiteDatabase db;
-	public static final String DB_NAME = "3.gvs.controlcenter.db";
+	public static final String DB_NAME = "gvs.edwin.controlcenter.db";
     static public ApplicationSmart instance;
-
 
 	@Override
 	public void onCreate() {
-		// TODO Auto-generated method stub
-
 		super.onCreate();
         this.instance=this;
 	}
@@ -34,7 +31,7 @@ public class ApplicationSmart extends Application {
 
 	/**
 	 * create DaoMaster
-	 * 
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -49,7 +46,7 @@ public class ApplicationSmart extends Application {
 
 	/**
 	 * get DaoSession
-	 * 
+	 *
 	 * @param context
 	 * @return
 	 */
@@ -65,7 +62,7 @@ public class ApplicationSmart extends Application {
 
 	/**
 	 * create Datebase
-	 * 
+	 *
 	 * @param context
 	 * @return
 	 */

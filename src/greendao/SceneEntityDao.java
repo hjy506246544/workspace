@@ -22,13 +22,12 @@ public class SceneEntityDao extends AbstractDao<SceneEntity, Long> {
     */
     public static class Properties {
         public final static Property Id = new Property(0, Long.class, "id", true, "_id");
-        public final static Property StrText = new Property(1, String.class, "strText", false, "STR_TEXT");
+        public final static Property StrName = new Property(1, String.class, "strName", false, "STR_NAME");
         public final static Property IconId = new Property(2, int.class, "iconId", false, "ICON_ID");
-        public final static Property IsLight = new Property(3, boolean.class, "isLight", false, "IS_LIGHT");
-        public final static Property IsAC = new Property(4, boolean.class, "isAC", false, "IS_AC");
-        public final static Property IsCurtain = new Property(5, boolean.class, "isCurtain", false, "IS_CURTAIN");
-        public final static Property IsBgMusic = new Property(6, boolean.class, "isBgMusic", false, "IS_BG_MUSIC");
-        public final static Property IsPreTime = new Property(7, boolean.class, "isPreTime", false, "IS_PRE_TIME");
+        public final static Property StrType = new Property(3, String.class, "strType", false, "STR_TYPE");
+        public final static Property StrSubitemName = new Property(4, String.class, "strSubitemName", false, "STR_SUBITEM_NAME");
+        public final static Property Action = new Property(5, int.class, "action", false, "ACTION");
+        public final static Property ExeTimeSegment = new Property(6, int.class, "exeTimeSegment", false, "EXE_TIME_SEGMENT");
     };
 
 
@@ -45,13 +44,12 @@ public class SceneEntityDao extends AbstractDao<SceneEntity, Long> {
         String constraint = ifNotExists? "IF NOT EXISTS ": "";
         db.execSQL("CREATE TABLE " + constraint + "\"SCENE_ENTITY\" (" + //
                 "\"_id\" INTEGER PRIMARY KEY AUTOINCREMENT ," + // 0: id
-                "\"STR_TEXT\" TEXT NOT NULL ," + // 1: strText
+                "\"STR_NAME\" TEXT NOT NULL ," + // 1: strName
                 "\"ICON_ID\" INTEGER NOT NULL ," + // 2: iconId
-                "\"IS_LIGHT\" INTEGER NOT NULL ," + // 3: isLight
-                "\"IS_AC\" INTEGER NOT NULL ," + // 4: isAC
-                "\"IS_CURTAIN\" INTEGER NOT NULL ," + // 5: isCurtain
-                "\"IS_BG_MUSIC\" INTEGER NOT NULL ," + // 6: isBgMusic
-                "\"IS_PRE_TIME\" INTEGER NOT NULL );"); // 7: isPreTime
+                "\"STR_TYPE\" TEXT NOT NULL ," + // 3: strType
+                "\"STR_SUBITEM_NAME\" TEXT NOT NULL ," + // 4: strSubitemName
+                "\"ACTION\" INTEGER NOT NULL ," + // 5: action
+                "\"EXE_TIME_SEGMENT\" INTEGER NOT NULL );"); // 6: exeTimeSegment
     }
 
     /** Drops the underlying database table. */
@@ -69,13 +67,12 @@ public class SceneEntityDao extends AbstractDao<SceneEntity, Long> {
         if (id != null) {
             stmt.bindLong(1, id);
         }
-        stmt.bindString(2, entity.getStrText());
+        stmt.bindString(2, entity.getStrName());
         stmt.bindLong(3, entity.getIconId());
-        stmt.bindLong(4, entity.getIsLight() ? 1L: 0L);
-        stmt.bindLong(5, entity.getIsAC() ? 1L: 0L);
-        stmt.bindLong(6, entity.getIsCurtain() ? 1L: 0L);
-        stmt.bindLong(7, entity.getIsBgMusic() ? 1L: 0L);
-        stmt.bindLong(8, entity.getIsPreTime() ? 1L: 0L);
+        stmt.bindString(4, entity.getStrType());
+        stmt.bindString(5, entity.getStrSubitemName());
+        stmt.bindLong(6, entity.getAction());
+        stmt.bindLong(7, entity.getExeTimeSegment());
     }
 
     /** @inheritdoc */
@@ -89,13 +86,12 @@ public class SceneEntityDao extends AbstractDao<SceneEntity, Long> {
     public SceneEntity readEntity(Cursor cursor, int offset) {
         SceneEntity entity = new SceneEntity( //
             cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0), // id
-            cursor.getString(offset + 1), // strText
+            cursor.getString(offset + 1), // strName
             cursor.getInt(offset + 2), // iconId
-            cursor.getShort(offset + 3) != 0, // isLight
-            cursor.getShort(offset + 4) != 0, // isAC
-            cursor.getShort(offset + 5) != 0, // isCurtain
-            cursor.getShort(offset + 6) != 0, // isBgMusic
-            cursor.getShort(offset + 7) != 0 // isPreTime
+            cursor.getString(offset + 3), // strType
+            cursor.getString(offset + 4), // strSubitemName
+            cursor.getInt(offset + 5), // action
+            cursor.getInt(offset + 6) // exeTimeSegment
         );
         return entity;
     }
@@ -104,13 +100,12 @@ public class SceneEntityDao extends AbstractDao<SceneEntity, Long> {
     @Override
     public void readEntity(Cursor cursor, SceneEntity entity, int offset) {
         entity.setId(cursor.isNull(offset + 0) ? null : cursor.getLong(offset + 0));
-        entity.setStrText(cursor.getString(offset + 1));
+        entity.setStrName(cursor.getString(offset + 1));
         entity.setIconId(cursor.getInt(offset + 2));
-        entity.setIsLight(cursor.getShort(offset + 3) != 0);
-        entity.setIsAC(cursor.getShort(offset + 4) != 0);
-        entity.setIsCurtain(cursor.getShort(offset + 5) != 0);
-        entity.setIsBgMusic(cursor.getShort(offset + 6) != 0);
-        entity.setIsPreTime(cursor.getShort(offset + 7) != 0);
+        entity.setStrType(cursor.getString(offset + 3));
+        entity.setStrSubitemName(cursor.getString(offset + 4));
+        entity.setAction(cursor.getInt(offset + 5));
+        entity.setExeTimeSegment(cursor.getInt(offset + 6));
      }
     
     /** @inheritdoc */

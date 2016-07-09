@@ -16,7 +16,7 @@ import android.widget.ImageView;
  */
 public class BjtActivity extends FragmentActivityBase implements OnClickListener {
 	private SkinSettingManager mSettingManager;
-	private ImageView iv1,iv2,iv3,iv4,iv5,iv6,iv7,iv8,iv9,iv10,iv11,iv12,iv13,iv14,iv15,iv16;
+	private ImageView /*iv1,iv2,*/iv3,iv4,/*iv5,iv6,iv7,iv8,iv9,iv10,iv11,iv12,iv13,iv14,*/iv15,iv16;
 	public Header header;
 
     @Override
@@ -32,14 +32,17 @@ public class BjtActivity extends FragmentActivityBase implements OnClickListener
     	//初始化皮肤
 		mSettingManager=new SkinSettingManager(this);
 		mSettingManager.initSkins();
+		/*
 		iv1=(ImageView) findViewById(R.id.imageView1);
 		iv1.setOnClickListener(BjtActivity.this);
 		iv2=(ImageView) findViewById(R.id.imageView2);
 		iv2.setOnClickListener(BjtActivity.this);
+		*/
 		iv3=(ImageView) findViewById(R.id.imageView3);
 		iv3.setOnClickListener(BjtActivity.this);
 		iv4=(ImageView) findViewById(R.id.imageView4);
 		iv4.setOnClickListener(BjtActivity.this);
+		/*
 		iv5=(ImageView) findViewById(R.id.imageView5);
 		iv5.setOnClickListener(BjtActivity.this);
 		iv6=(ImageView) findViewById(R.id.imageView6);
@@ -60,6 +63,7 @@ public class BjtActivity extends FragmentActivityBase implements OnClickListener
 		iv13.setOnClickListener(BjtActivity.this);
 		iv14=(ImageView) findViewById(R.id.imageView14);
 		iv14.setOnClickListener(BjtActivity.this);
+		*/
 		iv15=(ImageView) findViewById(R.id.imageView15);
 		iv15.setOnClickListener(BjtActivity.this);
 		iv16=(ImageView) findViewById(R.id.imageView16);
@@ -69,18 +73,21 @@ public class BjtActivity extends FragmentActivityBase implements OnClickListener
     @Override
 	public void onClick(View v) {
 		switch (v.getId()) {
+		/*
 		case R.id.imageView1:
 			mSettingManager.toggleSkins(0);
 			break;
 		case R.id.imageView2:
 			mSettingManager.toggleSkins(1);
 			break;
+		*/
 		case R.id.imageView3:
-			mSettingManager.toggleSkins(2);
+			mSettingManager.toggleSkins(0);
 			break;
 		case R.id.imageView4:
-			mSettingManager.toggleSkins(3);
+			mSettingManager.toggleSkins(1);
 			break;
+			/*
 		case R.id.imageView5:
 			mSettingManager.toggleSkins(4);
 			break;
@@ -111,11 +118,12 @@ public class BjtActivity extends FragmentActivityBase implements OnClickListener
 		case R.id.imageView14:
 			mSettingManager.toggleSkins(13);
 			break;
+			 */
 		case R.id.imageView15:
-			mSettingManager.toggleSkins(14);
+			mSettingManager.toggleSkins(2);
 			break;
 		case R.id.imageView16:
-			mSettingManager.toggleSkins(15);
+			mSettingManager.toggleSkins(3);
 			break;
 		}
 	}

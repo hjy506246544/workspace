@@ -9,13 +9,14 @@ public class SceneEntity {
 
     private Long id;
 
-    private String strText;
+    private String strName;
     private int iconId;
-    private boolean isLight;
-    private boolean isAC;
-    private boolean isCurtain;
-    private boolean isBgMusic;
-    private boolean isPreTime;
+
+    private String strType;
+
+    private String strSubitemName;
+    private int action;
+    private int exeTimeSegment;
 
     public SceneEntity() {
     }
@@ -24,15 +25,14 @@ public class SceneEntity {
         this.id = id;
     }
 
-    public SceneEntity(Long id, String strText, int iconId, boolean isLight, boolean isAC, boolean isCurtain, boolean isBgMusic, boolean isPreTime) {
+    public SceneEntity(Long id, String strName, int iconId, String strType, String strSubitemName, int action, int exeTimeSegment) {
         this.id = id;
-        this.strText = strText;
+        this.strName = strName;
         this.iconId = iconId;
-        this.isLight = isLight;
-        this.isAC = isAC;
-        this.isCurtain = isCurtain;
-        this.isBgMusic = isBgMusic;
-        this.isPreTime = isPreTime;
+        this.strType = strType;
+        this.strSubitemName = strSubitemName;
+        this.action = action;
+        this.exeTimeSegment = exeTimeSegment;
     }
 
     public Long getId() {
@@ -43,13 +43,13 @@ public class SceneEntity {
         this.id = id;
     }
 
-    public String getStrText() {
-        return strText;
+    public String getStrName() {
+        return strName;
     }
 
     /** Not-null value; ensure this value is available before it is saved to the database. */
-    public void setStrText( String strText) {
-        this.strText = strText;
+    public void setStrName( String strName) {
+        this.strName = strName;
     }
 
     public int getIconId() {
@@ -60,44 +60,38 @@ public class SceneEntity {
         this.iconId = iconId;
     }
 
-    public boolean getIsLight() {
-        return isLight;
+    public String getStrType() {
+        return strType;
     }
 
-    public void setIsLight(boolean isLight) {
-        this.isLight = isLight;
+    /** Not-null value; ensure this value is available before it is saved to the database. */
+    public void setStrType( String strType) {
+        this.strType = strType;
     }
 
-    public boolean getIsAC() {
-        return isAC;
+    public String getStrSubitemName() {
+        return strSubitemName;
     }
 
-    public void setIsAC(boolean isAC) {
-        this.isAC = isAC;
+    /** Not-null value; ensure this value is available before it is saved to the database. */
+    public void setStrSubitemName( String strSubitemName) {
+        this.strSubitemName = strSubitemName;
     }
 
-    public boolean getIsCurtain() {
-        return isCurtain;
+    public int getAction() {
+        return action;
     }
 
-    public void setIsCurtain(boolean isCurtain) {
-        this.isCurtain = isCurtain;
+    public void setAction(int action) {
+        this.action = action;
     }
 
-    public boolean getIsBgMusic() {
-        return isBgMusic;
+    public int getExeTimeSegment() {
+        return exeTimeSegment;
     }
 
-    public void setIsBgMusic(boolean isBgMusic) {
-        this.isBgMusic = isBgMusic;
-    }
-
-    public boolean getIsPreTime() {
-        return isPreTime;
-    }
-
-    public void setIsPreTime(boolean isPreTime) {
-        this.isPreTime = isPreTime;
+    public void setExeTimeSegment(int exeTimeSegment) {
+        this.exeTimeSegment = exeTimeSegment;
     }
 
 }
