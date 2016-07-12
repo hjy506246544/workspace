@@ -6,10 +6,12 @@ import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
+import com.gvs.controlpanel.widget.LoadingDialog;
 import com.gvs.edwin.activity.AppIcon;
 import com.gvs.edwin.activity.IconAdapter;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -39,7 +41,7 @@ public class Activity_Light extends Activity implements OnItemClickListener,
 	public boolean isDeleteMode = false;
 	boolean isType1 = false;
 	private DBHelper dBManager;
-    private ProgressDialog progressDialog;
+	private DialogFragment mLoadingDialog;
 
 	public boolean getDeleteMode() {
 		return isDeleteMode;
@@ -57,11 +59,7 @@ public class Activity_Light extends Activity implements OnItemClickListener,
 		appicon = (AppIcon) findViewById(R.id.gridview_light);
 		header = (Header) findViewById(R.id.light_activity_header);
 
-		mNameList = new ArrayList<String>();
-		mDrawableList = new ArrayList<Drawable>();
-
 		header.setTitle(getResources().getString(R.string.light_title));
-
 		header.setLeftImageVewRes(R.drawable.btn_return, new OnClickListener() {
 
 			@Override
@@ -70,18 +68,13 @@ public class Activity_Light extends Activity implements OnItemClickListener,
 			}
 		});
 
-		appicon.setAdapter(new IconAdapter(this, mNameList, mDrawableList));
 		appicon.setOnItemClickListener(this);
 		appicon.setOnItemLongClickListener(this);
 
-		//	    弹出要给ProgressDialog
-        progressDialog = new ProgressDialog(Activity_Light.this);
-        progressDialog.setTitle("提示信息");
-        progressDialog.setMessage("正在加载中，请稍后......");
-        //    设置setCancelable(false); 表示我们不能取消这个弹出框，等下载完成之后再让弹出框消失
-        progressDialog.setCancelable(false);
-        //    设置ProgressDialog样式为圆圈的形式
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+		mLoadingDialog = new LoadingDialog();
+		mLoadingDialog.show(getFragmentManager(), "LoadingDialog");
+		LightAsyncTask asyncTask = new LightAsyncTask();
+		asyncTask.execute(500);
 		/*
 		List<LightEntity> listentity = dBManager.loadAllLightEntity();
 		if (!listentity.isEmpty()) {
@@ -95,8 +88,6 @@ public class Activity_Light extends Activity implements OnItemClickListener,
 			}
 		}
 		*/
-        LightAsyncTask asyncTask = new LightAsyncTask();
-        asyncTask.execute(500);
 
 	}
 
@@ -239,46 +230,35 @@ public class Activity_Light extends Activity implements OnItemClickListener,
      *
      */
     public class LightAsyncTask extends AsyncTask<Integer, Integer, String>{
-
-		@Override
-	    protected void onPreExecute(){
-	        super.onPreExecute();
-	        //    在onPreExecute()中我们让ProgressDialog显示出来
-	        progressDialog.show();
-	    }
 	    @Override
 	    protected String doInBackground(Integer... params) {
 	    	List<LightEntity> listentity = dBManager.loadAllLightEntity();
+	    	mNameList = new ArrayList<String>();
+			mDrawableList = new ArrayList<Drawable>();
 			if (!listentity.isEmpty()) {
-				for(int i=0;i<=params.length;i++){
-					progressDialog.setProgress(i);
-					publishProgress(i);
-					try {
-						for (int j = 0; j < listentity.size(); j++) {
-							LightEntity tmpEntity = listentity.get(j);
+				try {
+					for (int j = 0; j < listentity.size(); j++) {
+						LightEntity tmpEntity = listentity.get(j);
 
-							mNameList.add(tmpEntity.getStrText());
-							mDrawableList.add(getResources().getDrawable(
-									tmpEntity.getIconId()));
+						mNameList.add(tmpEntity.getStrText());
+						mDrawableList.add(getResources().getDrawable(
+								tmpEntity.getIconId()));
 
-						}
-						Thread.sleep(params[0]);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
 					}
+					Thread.sleep(params[0]);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
 			}
-	    	return "执行完毕";
+	    	return null;
 	    }
-	    @Override
-	    protected void onProgressUpdate(Integer... values){
-	        super.onProgressUpdate(values);
-	    }
+
 	    @Override
 	    protected void onPostExecute(String result){
 	        super.onPostExecute(result);
 	        //    使ProgressDialog框消失
-	        progressDialog.dismiss();
+	        mLoadingDialog.dismiss();
+			appicon.setAdapter(new IconAdapter(Activity_Light.this, mNameList, mDrawableList));
 	    }
 	}
 }

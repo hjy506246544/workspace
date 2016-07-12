@@ -184,8 +184,6 @@ public class MainMenuActivity extends FragmentActivityBase {
 		});
 	}
 
-
-
     private void initView() {
     	timetv = (TextView) findViewById(R.id.main_timetv);
     	weektv = (TextView) findViewById(R.id.weektv);

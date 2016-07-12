@@ -6,10 +6,12 @@ import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
+import com.gvs.controlpanel.widget.LoadingDialog;
 import com.gvs.edwin.activity.AppIcon;
 import com.gvs.edwin.activity.IconAdapter;
 import android.app.Activity;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -40,6 +42,7 @@ public class AirConditionActivity extends Activity implements
 	boolean isType1 = false;
 	private DBHelper dBManager;
     private ProgressDialog progressDialog;
+	private DialogFragment mLoadingDialog;
 
 	public boolean getDeleteMode() {
 		return isDeleteMode;
@@ -57,23 +60,24 @@ public class AirConditionActivity extends Activity implements
 		appicon = (AppIcon) findViewById(R.id.gridview_ac);
 		header = (Header) findViewById(R.id.activity_aircondition_header);
 
-		mNameList = new ArrayList<String>();
-		mDrawableList = new ArrayList<Drawable>();
-
-		appicon.setAdapter(new IconAdapter(this, mNameList, mDrawableList));
+//		mNameList = new ArrayList<String>();
+//		mDrawableList = new ArrayList<Drawable>();
+//
+//		appicon.setAdapter(new IconAdapter(this, mNameList, mDrawableList));
 		appicon.setOnItemClickListener(this);
 		appicon.setOnItemLongClickListener(this);
 
 		//	    弹出要给ProgressDialog
-        progressDialog = new ProgressDialog(AirConditionActivity.this);
-        progressDialog.setTitle("提示信息");
-        progressDialog.setMessage("正在加载中，请稍后......");
-        //    设置setCancelable(false); 表示我们不能取消这个弹出框，等下载完成之后再让弹出框消失
-        progressDialog.setCancelable(false);
-        //    设置ProgressDialog样式为圆圈的形式
-        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+//        progressDialog = new ProgressDialog(AirConditionActivity.this);
+//        progressDialog.setTitle("提示信息");
+//        progressDialog.setMessage("正在加载中，请稍后......");
+//        //    设置setCancelable(false); 表示我们不能取消这个弹出框，等下载完成之后再让弹出框消失
+//        progressDialog.setCancelable(false);
+//        //    设置ProgressDialog样式为圆圈的形式
+//        progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+//        progressDialog.show();
 
-        /*2016-07-09
+		/*2016-07-09
 		List<ACEntity> listentity = dBManager.loadAllACEntity();
 		if (!listentity.isEmpty()) {
 			for (int i = 0; i < listentity.size(); i++) {
@@ -85,7 +89,9 @@ public class AirConditionActivity extends Activity implements
 
 			}
 		}
-        */
+		 */
+		mLoadingDialog = new LoadingDialog();
+		mLoadingDialog.show(getFragmentManager(), "LoadingDialog");
         AirConditionAsyncTask asyncTask = new AirConditionAsyncTask();
         asyncTask.execute(500);
 
@@ -241,44 +247,35 @@ public class AirConditionActivity extends Activity implements
      *
      */
     public class AirConditionAsyncTask extends AsyncTask<Integer, Integer, String>{
-
-		@Override
-	    protected void onPreExecute(){
-	        super.onPreExecute();
-	        //    在onPreExecute()中我们让ProgressDialog显示出来
-	        progressDialog.show();
-	    }
 	    @Override
 	    protected String doInBackground(Integer... params) {
 	    	List<ACEntity> listentity = dBManager.loadAllACEntity();
+			mNameList = new ArrayList<String>();
+			mDrawableList = new ArrayList<Drawable>();
 			if (!listentity.isEmpty()) {
-				for(int i=0;i<=params.length;i++){
-					progressDialog.setProgress(i);
-					publishProgress(i);
-					try {
-						for (int j = 0; j < listentity.size(); j++) {
-							ACEntity tmpEntity = listentity.get(j);
-							mNameList.add(tmpEntity.getStrText());
-							mDrawableList.add(getResources().getDrawable(
-									tmpEntity.getIconId()));
-						}
-						Thread.sleep(params[0]);
-					} catch (InterruptedException e) {
-						e.printStackTrace();
+				try {
+					//数据库
+					for (int j = 0; j < listentity.size(); j++) {
+						ACEntity tmpEntity = listentity.get(j);
+						mNameList.add(tmpEntity.getStrText());
+						mDrawableList.add(getResources().getDrawable(
+								tmpEntity.getIconId()));
 					}
+					Thread.sleep(params[0]);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
 				}
 			}
-	    	return "执行完毕";
+	    	return null;
 	    }
-	    @Override
-	    protected void onProgressUpdate(Integer... values){
-	        super.onProgressUpdate(values);
-	    }
+
 	    @Override
 	    protected void onPostExecute(String result){
 	        super.onPostExecute(result);
 	        //    使ProgressDialog框消失
-	        progressDialog.dismiss();
+	        //progressDialog.dismiss();
+	        mLoadingDialog.dismiss();
+			appicon.setAdapter(new IconAdapter(AirConditionActivity.this, mNameList, mDrawableList));
 	    }
 	}
 }

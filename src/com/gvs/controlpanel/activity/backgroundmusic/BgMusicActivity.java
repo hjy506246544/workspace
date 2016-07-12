@@ -8,10 +8,13 @@ import com.gvs.controlpanel.adapter.BgMusicAdapter.viewhodler;
 import com.gvs.controlpanel.bean.MusicInfo;
 import com.gvs.controlpanel.util.Saomiao;
 import com.gvs.controlpanel.util.ToastUtils;
+import com.gvs.controlpanel.widget.LoadingDialog;
 import android.annotation.SuppressLint;
+import android.app.DialogFragment;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,14 +42,15 @@ public class BgMusicActivity extends FragmentActivityBase {
 	private Saomiao saomiao;
 	private int pos;
     public List<ResolveInfo> mAllApps = new ArrayList<ResolveInfo>();
+	private DialogFragment mLoadingDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bgmusic_activity);
-		saomiao=new Saomiao();
-		musicList=new ArrayList<MusicInfo>();
-		musicList=saomiao.query(this);
+//		saomiao=new Saomiao();
+//		musicList=new ArrayList<MusicInfo>();
+//		musicList=saomiao.query(this);
 		initView();
 		initData();
 		initListener();
@@ -54,9 +58,12 @@ public class BgMusicActivity extends FragmentActivityBase {
 
     @SuppressLint("InlinedApi")
     private void initData() {
-		bgMusicAdapter = new BgMusicAdapter(BgMusicActivity.this, musicList);
-		lvSongs.setAdapter(bgMusicAdapter);
-
+//		bgMusicAdapter = new BgMusicAdapter(BgMusicActivity.this, musicList);
+//		lvSongs.setAdapter(bgMusicAdapter);
+    	mLoadingDialog = new LoadingDialog();
+		mLoadingDialog.show(getFragmentManager(), "LoadingDialog");
+		BgMusicAsyncTask asyncTask = new BgMusicAsyncTask();
+        asyncTask.execute(500);
 	}
 
 	private void initListener() {
@@ -126,5 +133,28 @@ public class BgMusicActivity extends FragmentActivityBase {
 		backiv = (ImageView) findViewById(R.id.backiv_bgMusicActivity);
 		bcbtn = (Button) findViewById(R.id.bcbtn_bgMusicActivity);
 		lvSongs = (ListView) findViewById(R.id.lvSongs_bgMusicActivity);
+	}
+
+    public class BgMusicAsyncTask extends AsyncTask<Integer, Integer, String>{
+	    @Override
+	    protected String doInBackground(Integer... params) {
+			try {
+				saomiao=new Saomiao();
+				musicList=new ArrayList<MusicInfo>();
+				musicList=saomiao.query(BgMusicActivity.this);
+				Thread.sleep(params[0]);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+	    	return null;
+	    }
+
+	    @Override
+	    protected void onPostExecute(String result){
+	        super.onPostExecute(result);
+	        mLoadingDialog.dismiss();
+	        bgMusicAdapter = new BgMusicAdapter(BgMusicActivity.this, musicList);
+			lvSongs.setAdapter(bgMusicAdapter);
+	    }
 	}
 }

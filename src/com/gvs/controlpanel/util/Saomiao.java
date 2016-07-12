@@ -55,8 +55,6 @@ public class Saomiao {
 				arraylist.add(MusicInfo);
 
 			}
-
-
 		}
 		return arraylist;
 
