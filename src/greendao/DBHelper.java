@@ -3,6 +3,15 @@ package greendao;
 
 
 
+import greendao.bean.ACEntity;
+import greendao.bean.CurtainEntity;
+import greendao.bean.LightEntity;
+import greendao.bean.SceneEntity;
+import greendao.dao.ACEntityDao;
+import greendao.dao.CurtainEntityDao;
+import greendao.dao.LightEntityDao;
+import greendao.dao.SceneEntityDao;
+
 import java.util.List;
 
 import common.ApplicationSmart;
@@ -75,8 +84,8 @@ public class DBHelper {
 	public  List<CurtainEntity> select(String strText)
     {
         return  mCurtainEntityDao.queryBuilder()
-                .where(greendao.CurtainEntityDao.Properties.StrText.eq(strText))
-                .orderAsc(greendao.CurtainEntityDao.Properties.Id).limit(5)
+                .where(greendao.dao.CurtainEntityDao.Properties.StrText.eq(strText))
+                .orderAsc(greendao.dao.CurtainEntityDao.Properties.Id).limit(5)
                 .list();
     }
 	
@@ -108,8 +117,8 @@ public class DBHelper {
 	public  List<ACEntity> select_AC(String strText)
     {
         return  mACEntityDao.queryBuilder()
-                .where(greendao.ACEntityDao.Properties.StrText.eq(strText))
-                .orderAsc(greendao.ACEntityDao.Properties.Id).limit(5)
+                .where(greendao.dao.ACEntityDao.Properties.StrText.eq(strText))
+                .orderAsc(greendao.dao.ACEntityDao.Properties.Id).limit(5)
                 .list();
     }
 	/*******************************light***********************/
@@ -137,8 +146,8 @@ public class DBHelper {
 	public  List<LightEntity> select_Light(String strText)
     {
         return  mLightEntityDao.queryBuilder()
-                .where(greendao.LightEntityDao.Properties.StrText.eq(strText))
-                .orderAsc(greendao.LightEntityDao.Properties.Id).limit(5)
+                .where(greendao.dao.LightEntityDao.Properties.StrText.eq(strText))
+                .orderAsc(greendao.dao.LightEntityDao.Properties.Id).limit(5)
                 .list();
     }
 	/*******************************scene***********************/
@@ -166,8 +175,8 @@ public class DBHelper {
 	public  List<SceneEntity> select_Scene(String strText)
     {
         return  mSceneEntityDao.queryBuilder()
-                .where(greendao.SceneEntityDao.Properties.StrName.eq(strText))
-                .orderAsc(greendao.SceneEntityDao.Properties.Id).limit(5)
+                .where(greendao.dao.SceneEntityDao.Properties.StrName.eq(strText))
+                .orderAsc(greendao.dao.SceneEntityDao.Properties.Id).limit(5)
                 .list();
     }
 	

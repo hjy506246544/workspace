@@ -1,12 +1,10 @@
 package com.gvs.controlpanel.activity.curtain;
-import greendao.CurtainEntity;
 import greendao.DBHelper;
+import greendao.bean.CurtainEntity;
 import java.util.List;
 import com.gvs.controlpanel.R;
-import com.gvs.controlpanel.activity.light.Activity_Light;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

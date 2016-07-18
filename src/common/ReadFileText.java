@@ -1,11 +1,11 @@
 package common;
 
-import greendao.ACEntity;
-import greendao.CurtainEntity;
 import greendao.DBHelper;
 import greendao.DaoMaster;
-import greendao.LightEntity;
-import greendao.SceneEntity;
+import greendao.bean.ACEntity;
+import greendao.bean.CurtainEntity;
+import greendao.bean.LightEntity;
+import greendao.bean.SceneEntity;
 
 import java.io.BufferedReader;
 import java.io.File;

@@ -1,5 +1,6 @@
 package com.gvs.controlpanel.widget.swipemenulistview;
-import com.gvs.controlpanel.adapter.SceneAdapter;
+import com.gvs.controlpanel.adapter.IconAdapter2;
+
 import android.content.Context;
 import android.support.v4.view.MotionEventCompat;
 import android.util.AttributeSet;
@@ -53,7 +54,7 @@ public class SwipeMenuListView extends ListView {
 	}
 
 	public void setListViewHeightBasedOnChildren(SwipeMenuListView listView) {
-		SceneAdapter cAdapter = (SceneAdapter) listView.getAdapter();
+		IconAdapter2 cAdapter = (IconAdapter2) listView.getAdapter();
 		if (cAdapter == null) {
 			return;
 		}

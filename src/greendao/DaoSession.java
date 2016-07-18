@@ -2,6 +2,17 @@ package greendao;
 
 import android.database.sqlite.SQLiteDatabase;
 
+import greendao.bean.ACEntity;
+import greendao.bean.BgMusicSelectedListEntity;
+import greendao.bean.CurtainEntity;
+import greendao.bean.LightEntity;
+import greendao.bean.SceneEntity;
+import greendao.dao.ACEntityDao;
+import greendao.dao.BgMusicSelectedListEntityDao;
+import greendao.dao.CurtainEntityDao;
+import greendao.dao.LightEntityDao;
+import greendao.dao.SceneEntityDao;
+
 import java.util.Map;
 
 import de.greenrobot.dao.AbstractDao;

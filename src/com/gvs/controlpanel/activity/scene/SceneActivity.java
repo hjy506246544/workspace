@@ -1,6 +1,7 @@
 package com.gvs.controlpanel.activity.scene;
-import greendao.SceneEntity;
 import greendao.DBHelper;
+import greendao.bean.SceneEntity;
+
 import java.util.ArrayList;
 import java.util.List;
 import com.gvs.controlpanel.R;

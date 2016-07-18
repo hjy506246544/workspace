@@ -1,6 +1,7 @@
 package com.gvs.controlpanel.activity.curtain;
-import greendao.CurtainEntity;
 import greendao.DBHelper;
+import greendao.bean.CurtainEntity;
+
 import java.util.ArrayList;
 import java.util.List;
 import com.gvs.controlpanel.R;

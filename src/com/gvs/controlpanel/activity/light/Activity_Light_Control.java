@@ -1,34 +1,19 @@
 package com.gvs.controlpanel.activity.light;
-
-import greendao.CurtainEntity;
 import greendao.DBHelper;
-import greendao.LightEntity;
-
-import java.util.ArrayList;
+import greendao.bean.LightEntity;
 import java.util.List;
-import java.util.zip.Inflater;
-
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.util.ToastUtils;
 import com.gvs.controlpanel.widget.Header;
 import com.gvs.controlpanel.widget.SlideSwitch;
 import com.gvs.controlpanel.widget.SlideSwitch.OnStateChangedListener;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.DragEvent;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.View.OnDragListener;
-import android.view.View.OnTouchListener;
-
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Toast;
 import android.widget.SeekBar.OnSeekBarChangeListener;
@@ -37,10 +22,7 @@ import android.widget.TextView;
 public class Activity_Light_Control extends Activity implements
 		OnClickListener, OnSeekBarChangeListener {
 	public Header header;
-	ImageView mBtnDec;
-	ImageView mBtnInc;
-	ImageView mTypeIcon;
-	ImageView mBtnRGB;
+	ImageView mBtnDec,mBtnInc,mTypeIcon,mBtnRGB;
 	SeekBar prb;
 	LinearLayout mLightCtrlErea;
 	TextView mAppName;

@@ -1,8 +1,8 @@
 package com.gvs.controlpanel.activity.set;
-import greendao.ACEntity;
-import greendao.CurtainEntity;
 import greendao.DBHelper;
-import greendao.LightEntity;
+import greendao.bean.ACEntity;
+import greendao.bean.CurtainEntity;
+import greendao.bean.LightEntity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import java.util.ArrayList;

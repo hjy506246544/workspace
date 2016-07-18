@@ -16,7 +16,7 @@ import com.gvs.controlpanel.activity.light.Activity_Light;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.activity.set.SetActivity;
-import com.gvs.controlpanel.adapter.Mainthree_GridViewAdapter;
+import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import android.app.Dialog;
 import android.content.Context;
@@ -40,18 +40,18 @@ public class MainMenuActivity extends FragmentActivityBase {
 	private GridView listgv;
 	private RelativeLayout main;
 	private TextView timetv,datetv,weektv;
-	private Mainthree_GridViewAdapter gridViewAdapter;
+	private Main_GridViewAdapter gridViewAdapter;
 	private long mExitTime;
 	// 设置适配器的图片资源
     private int[] imageId = new int[] {
-    		R.drawable.btn_main_light3_,
-            R.drawable.btn_main_cl3_,
-            R.drawable.btn_main_kt3_,
+    		R.drawable.btn_main_light_,
+            R.drawable.btn_main_cl_,
+            R.drawable.btn_main_kt_,
 
-            R.drawable.btn_main_jtyy3_,
-            R.drawable.btn_main_bgmusic3_,
-            R.drawable.btn_main_scene3_,
-            R.drawable.btn_main_afjk3_,
+            R.drawable.btn_main_jtyy_,
+            R.drawable.btn_main_bgmusic_,
+            R.drawable.btn_main_scene_,
+            R.drawable.btn_main_afjk_,
 
             R.drawable.btn_main_set3_};
     // 设置标题
@@ -73,7 +73,7 @@ public class MainMenuActivity extends FragmentActivityBase {
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.mainthree_activity);
+        setContentView(R.layout.main_activity);
 		initView();
 		initData();
 		initListener();
@@ -122,7 +122,7 @@ public class MainMenuActivity extends FragmentActivityBase {
 		        "-" + mDay*/dateformat.format(new Date(dateStamp)));
 		weektv.setText("星期" + mWay);
 
-		gridViewAdapter=new Mainthree_GridViewAdapter(MainMenuActivity.this,listitem);
+		gridViewAdapter=new Main_GridViewAdapter(MainMenuActivity.this,listitem);
 		listgv.setAdapter(gridViewAdapter);
 	}
 

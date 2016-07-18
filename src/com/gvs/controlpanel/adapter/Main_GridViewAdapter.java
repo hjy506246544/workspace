@@ -18,7 +18,6 @@ import android.widget.TextView;
  *
  */
 public class Main_GridViewAdapter extends BaseAdapter {
-	private MainMenuActivity activity;
 	private List listitem;
 	private Context context;
 	public Main_GridViewAdapter(Context context,List listitem){
@@ -52,9 +51,9 @@ public class Main_GridViewAdapter extends BaseAdapter {
 		ViewHolder holder=null;
 		if(view==null){
 			ViewHolder viewHolder=new ViewHolder();
-			view=LayoutInflater.from(parent.getContext()).inflate(R.layout.gridview, null);
-			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.iv_headview);
-			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.nametv);
+			view=LayoutInflater.from(parent.getContext()).inflate(R.layout.main_gridview, null);
+			viewHolder.iv_headView=(ImageView) view.findViewById(R.id.maingridview_icon);
+			viewHolder.tv_displerName=(TextView) view.findViewById(R.id.maingridview_name);
 			view.setTag(R.drawable.ic_launcher,viewHolder);
 		}
 		holder=(ViewHolder) view.getTag(R.drawable.ic_launcher);

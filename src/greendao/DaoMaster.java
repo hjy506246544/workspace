@@ -1,5 +1,10 @@
 package greendao;
 
+import greendao.dao.ACEntityDao;
+import greendao.dao.BgMusicSelectedListEntityDao;
+import greendao.dao.CurtainEntityDao;
+import greendao.dao.LightEntityDao;
+import greendao.dao.SceneEntityDao;
 import de.greenrobot.dao.AbstractDaoMaster;
 import de.greenrobot.dao.identityscope.IdentityScopeType;
 import android.content.Context;

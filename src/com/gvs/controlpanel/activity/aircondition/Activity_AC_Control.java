@@ -1,7 +1,8 @@
 package com.gvs.controlpanel.activity.aircondition;
 
 import greendao.DBHelper;
-import greendao.ACEntity;
+import greendao.bean.ACEntity;
+
 import java.util.List;
 import com.gvs.controlpanel.R;
 import com.gvs.controlpanel.util.ToastUtils;

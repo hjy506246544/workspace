@@ -1,6 +1,6 @@
 package com.gvs.controlpanel.activity.light;
 import greendao.DBHelper;
-import greendao.LightEntity;
+import greendao.bean.LightEntity;
 import java.util.ArrayList;
 import java.util.List;
 import com.gvs.controlpanel.R;
@@ -12,7 +12,6 @@ import com.gvs.edwin.activity.IconAdapter;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DialogFragment;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
