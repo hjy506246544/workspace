@@ -25,6 +25,17 @@
     <string name="uninstall_app">卸载该应用程序</string>
     <string name="add_widgets">添加小部件</string>
     <string name="del_widget">删除小部件</string>
+
+    <string name="signal_strength">信号强度</string>
+    <string name="security_level">安全性</string>
+    <string name="password">密码</string>
+    <string name="show_password">显示密码</string>
+    <string name="connect">连接</string>
+    <string name="disconnect">忘记</string>
+    <string name="cancel">取消</string>
+    <string name="conn_status">连接状态</string>
+    <string name="ip_address">IP地址</string>
+
     <string name="del_widget_dialog_instruct">上下键选择条目，OK键确定删除</string>
     <string name="set_the_wallpaper">设置桌面壁纸</string>
     <string name="widget_picker_title">选择小部件</string>
@@ -56,6 +67,29 @@
     <string name="address_setup">地址配置</string>
     <string name="bjt_setup">背景替换</string>
 
+    <string name="controlcenter_mainmenu_WirelessandInternet">无线和网络</string>
+    <string name="controlcenter_mainmenu_equipment">设备</string>
+    <string name="controlcenter_mainmenu_personal">个人</string>
+    <string name="controlcenter_mainmenu_system">系统</string>
+    <string name="aboutdevice_set">关于设备</string>
+    <string name="aboutdevice">关于设备</string>
+    <string name="bluetooth_setup">蓝牙</string>
+    <string name="more_setup">更多...</string>
+    <string name="wifi_setup">Wi-Fi</string>
+    <string name="show_set">显示</string>
+    <string name="language_set">语言</string>
+    <string name="systemupdate_set">系统更新</string>
+    <string name="legalinformation_set">法律信息</string>
+    <string name="modelnumber_set">型号</string>
+    <string name="androidversion_set">Android 版本</string>
+    <string name="firmwareversion_set">固件版本</string>
+    <string name="kernelversion_set">内核版本</string>
+    <string name="versionnumber_set">版本号</string>
+    <string name="companyinformation_set">公司信息</string>
+    <string name="videostar_set">视声集团</string>
+    <string name="videostarwebsite_set">http://www.video-star.com.cn/</string>
+
+    <string name="wifi_systemset">无线网络</string>
 
     <string name="error_no_sdcard">没有SD卡，无法存储录音数据</string>
     <string name="error_state_record">正在录音中，请先停止录音</string>

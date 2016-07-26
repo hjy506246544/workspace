@@ -365,11 +365,7 @@
 		        android:id="@+id/setup_activity_iv_xian6"
 		        android:layout_width="match_parent"
 		        android:layout_height="1dp"
-		        android:background="@drawable/cxian2"/>
-
-		    <ImageView
-		        android:layout_width="match_parent"
-		        android:layout_height="1dp"
+		        android:layout_marginBottom="40dp"
 		        android:background="@drawable/cxian2"/>
 		</LinearLayout>
 

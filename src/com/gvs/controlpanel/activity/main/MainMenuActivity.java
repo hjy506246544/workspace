@@ -16,6 +16,7 @@ import com.gvs.controlpanel.activity.light.Activity_Light;
 import com.gvs.controlpanel.activity.scene.SceneActivity;
 import com.gvs.controlpanel.activity.securitymonitor.SecurityMonitorActivity;
 import com.gvs.controlpanel.activity.set.SetActivity;
+import com.gvs.controlpanel.activity.systemset.SystemSetActivity;
 import com.gvs.controlpanel.adapter.Main_GridViewAdapter;
 import com.gvs.controlpanel.util.SkinSettingManager;
 import android.app.Dialog;
@@ -53,7 +54,8 @@ public class MainMenuActivity extends FragmentActivityBase {
             R.drawable.btn_main_scene_,
             R.drawable.btn_main_afjk_,
 
-            R.drawable.btn_main_set3_};
+            R.drawable.btn_main_set3_,
+            R.drawable.btn_main_systemset_};
     // 设置标题
     private String[] title = new String[] {
     		"灯光",
@@ -64,6 +66,7 @@ public class MainMenuActivity extends FragmentActivityBase {
     		"场景",
     		"安防监控",
     		"设置",
+    		"系统设置"
     		};
 
     private List listitem = new ArrayList();
@@ -178,6 +181,10 @@ public class MainMenuActivity extends FragmentActivityBase {
 				}else if (position==7) {
 					//设置按钮
 					Intent intent = new Intent(MainMenuActivity.this,SetActivity.class);
+					startActivity(intent);
+				}else if (position==8) {
+					//设置按钮
+					Intent intent = new Intent(MainMenuActivity.this,SystemSetActivity.class);
 					startActivity(intent);
 				}
 			}

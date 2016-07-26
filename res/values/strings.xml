@@ -32,6 +32,15 @@
 	<string name="workspace_is_empty">Current workspace is empty</string>
 	<string name="main_option_menu_title">Launcher menu</string>
 	<string name="unknown">unknown</string>
+    <string name="signal_strength">signal strength</string>
+    <string name="security_level">security</string>
+    <string name="password">password</string>
+    <string name="show_password">show password</string>
+    <string name="connect">connect</string>
+    <string name="disconnect">disconnect</string>
+    <string name="cancel">cancel</string>
+    <string name="conn_status">conn status</string>
+    <string name="ip_address">ip address</string>
 
     <string name="error_no_sdcard">No SD card, should not be stored data recording</string>
     <string name="error_state_record">Is the recording, please stop the recording</string>
@@ -170,7 +179,29 @@ limitations under the License.\n</string>
     <string name="subscribe">To make an appointment</string>
     <string name="to">to</string>
 
+    <string name="show_set">show</string>
+    <string name="controlcenter_mainmenu_WirelessandInternet">Wireless and Internet</string>
+    <string name="wifi_setup">Wi-Fi</string>
+    <string name="bluetooth_setup">bluetooth</string>
+    <string name="more_setup">more...</string>
+    <string name="controlcenter_mainmenu_equipment">equipment</string>
+    <string name="controlcenter_mainmenu_personal">personal</string>
+    <string name="controlcenter_mainmenu_system">system</string>
+    <string name="language_set">language</string>
+    <string name="aboutdevice_set">about device</string>
+    <string name="systemupdate_set">system update</string>
+    <string name="legalinformation_set">legal information</string>
+    <string name="modelnumber_set">model number</string>
+    <string name="androidversion_set">android version</string>
+    <string name="firmwareversion_set">Firmware Version</string>
+    <string name="kernelversion_set">Kernel version</string>
+    <string name="versionnumber_set">version number</string>
+    <string name="companyinformation_set">company information</string>
+    <string name="videostar_set">GVS</string>
+    <string name="videostarwebsite_set">http://www.video-star.com.cn/</string>
 
+
+    <string name="wifi_systemset">wireless network</string>
 
     <string name="securitymonitor_videoplay_allyear">allyear</string>
     <string name="securitymonitor_videoplay_2016">2016</string>
@@ -194,5 +225,5 @@ limitations under the License.\n</string>
     <string name="securitymonitor_videoplay_12">12月</string>
     <string name="update_device_data">update device data</string>
     <string name="create_device_data">create device data</string>
-    
+
 </resources>
