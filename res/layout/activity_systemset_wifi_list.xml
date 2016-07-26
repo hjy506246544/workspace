@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_bg" >
+
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/systemset_activity_wifiheader"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+    	android:background="@color/translucent_4"
+        android:orientation="vertical" />
+
+    <RelativeLayout
+        android:id="@+id/systemset_activity_rl_wifi"
+        android:layout_below="@id/systemset_activity_wifiheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="80dp"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="horizontal" >
+
+		    <TextView
+		        android:id="@+id/txt_title"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_centerVertical="true"
+		        android:layout_marginLeft="20dp"
+				style="@style/app_titleStyle2"
+            	android:text="@string/wifi_systemset" />
+
+		    <ToggleButton
+		        android:id="@+id/systemset_activity_wifislideswitch"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentRight="true"
+		        android:background="@drawable/selector_butn_toggle"
+		        android:checked="true"
+		        android:layout_marginRight="40dp"
+		        android:text=""
+		        android:textOff=""
+		        android:textOn="" />
+    </RelativeLayout>
+
+    <com.gvs.controlpanel.widget.MyListView
+        android:id="@+id/systemset_activity_listView"
+        android:layout_below="@id/systemset_activity_rl_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:cacheColorHint="#00000000"
+        android:divider="@drawable/list_separator"
+        android:dividerHeight="1.0dip"
+        android:listSelector="#00000000" />
+
+    <TextView
+       	android:id="@+id/setup_activity_tv_ts"
+        style="@style/app_titleStyle2"
+        android:layout_below="@id/systemset_activity_rl_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="40dp"
+        android:visibility="gone"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

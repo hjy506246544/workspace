@@ -1,0 +1,633 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="all"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/app_bg" >
+
+    <com.gvs.controlpanel.widget.Header
+        android:id="@+id/setup_activity_header"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+    	android:background="@color/translucent_4"
+        android:orientation="vertical" />
+
+    <com.gvs.controlpanel.widget.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/setup_activity_header" >
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+		    <TextView
+		        android:id="@+id/setup_activity_tv_displername"
+		        android:text="@string/controlcenter_mainmenu_WirelessandInternet"
+		        style="@style/Style7"
+		        android:layout_marginLeft="40dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_wifi"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingLeft="20dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_wifi"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_wifi" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_wifi"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/setup_activity_iv_wifi"
+		            android:layout_marginLeft="5dp"
+		            android:gravity="center_vertical"
+		            android:text="@string/wifi_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_wifireturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		        <!--
+		        <com.gvs.controlpanel.widget.SlideSwitch
+	                android:id="@+id/setup_activity_iv_wifislideswitch"
+	                android:layout_width="130dp"
+	                android:layout_height="130dp"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center" />
+		             -->
+
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_bluetooth"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="20dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_bluetooth"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_bluetooth" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_bluetooth"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/setup_activity_iv_bluetooth"
+		            android:layout_marginLeft="5dp"
+		            android:gravity="center_vertical"
+		            android:text="@string/bluetooth_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_bluetoothreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_more"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="20dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_more"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:visibility="invisible"
+		            android:src="@drawable/icon_set_bjt" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_more"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/setup_activity_iv_more"
+		            android:layout_marginLeft="5dp"
+		            android:gravity="center_vertical"
+		            android:text="@string/more_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_morereturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <!--
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_backgroundimg"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_backgroundimg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_bjt" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_backgroundimg"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/setup_activity_iv_backgroundimg"
+		            android:layout_marginLeft="5dp"
+		            android:gravity="center_vertical"
+		            android:text="@string/bjt_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_backgroundimgreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+			-->
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian2"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:visibility="gone"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_setaddress"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="20dp"
+		        android:visibility="gone"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_setaddress"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_address" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_setaddress"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_setaddress"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/address_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_setaddressreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian4"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+		    <TextView
+		        android:id="@+id/setup_activity_tv_displername"
+		        android:text="@string/controlcenter_mainmenu_equipment"
+		        style="@style/Style7"
+		        android:layout_marginLeft="40dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian5"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_show"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="20dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_show"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_show" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_show"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_show"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/show_set" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_showreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:visibility="gone"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_backgroundimg2"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingLeft="20dp"
+		        android:paddingBottom="5dp"
+		        android:visibility="gone"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_backgroundimg"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_bjt" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_backgroundimg"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:layout_toRightOf="@id/setup_activity_iv_backgroundimg"
+		            android:layout_marginLeft="5dp"
+		            android:gravity="center_vertical"
+		            android:text="@string/bjt_setup" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_backgroundimgreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian6"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <TextView
+		        android:id="@+id/setup_activity_tv_displername"
+		        android:text="@string/controlcenter_mainmenu_personal"
+		        style="@style/Style7"
+		        android:layout_marginLeft="40dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian7"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_language"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="20dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_language"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_language" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_language"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_language"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/language_set" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_languagereturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian8"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:visibility="gone"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_updatepwd"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="20dp"
+		        android:visibility="gone"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_updatepwd"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/btn_set_updatepwd" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_updatepwd"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_updatepwd"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/pwd_set" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_updatepwdreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian5"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:visibility="gone"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_modeselect"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="20dp"
+		        android:visibility="gone"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_modeselect"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/btn_set_modeselect" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_modeselect"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_modeselect"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/modeselection_set" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_modeselectionreturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian6"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <TextView
+		        android:id="@+id/setup_activity_tv_displername"
+		        android:text="@string/controlcenter_mainmenu_system"
+		        style="@style/Style7"
+		        android:layout_marginLeft="40dp"
+		        android:layout_marginTop="10dp"
+		        android:layout_marginBottom="5dp"
+		        android:layout_gravity="center_vertical"
+		        android:gravity="center_vertical"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content" />
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian9"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:background="@drawable/cxian2"/>
+
+		    <RelativeLayout
+		        android:id="@+id/setup_activity_rl_aboutdevice"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:minHeight="80dp"
+		        android:paddingTop="5dp"
+		        android:paddingBottom="5dp"
+		        android:paddingLeft="20dp"
+		     	android:background="@drawable/bjt_"
+		        android:orientation="horizontal" >
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_aboutdevice"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_marginLeft="20dp"
+		            android:layout_centerVertical="true"
+		            android:src="@drawable/icon_set_aboutdevice" />
+
+		        <TextView
+		        	android:id="@+id/setup_activity_tv_aboutdevice"
+		            style="@style/app_titleStyle2"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_centerVertical="true"
+		            android:gravity="center_vertical"
+		            android:layout_toRightOf="@id/setup_activity_iv_aboutdevice"
+		            android:layout_marginLeft="5dp"
+		            android:text="@string/aboutdevice_set" />
+
+		        <ImageView
+		        	android:id="@+id/setup_activity_iv_aboutdevicereturn"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		            android:layout_centerVertical="true"
+		            android:layout_marginRight="40dp"
+		            android:scaleType="center"
+		            android:src="@drawable/btn_me_yj" />
+		    </RelativeLayout>
+
+		    <ImageView
+		        android:id="@+id/setup_activity_iv_xian10"
+		        android:layout_width="match_parent"
+		        android:layout_height="1dp"
+		        android:layout_marginBottom="40dp"
+		        android:background="@drawable/cxian2"/>
+
+		</LinearLayout>
+
+    </com.gvs.controlpanel.widget.BounceScrollView>
+
+</RelativeLayout>
